@@ -3,343 +3,400 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Đăng Ký Tài Khoản - [Bài tập] Bootstrap Carousel & Forms CodeGym</title>
+    <title>iPhone 16 Pro - [Bài tập] Trang Giới Thiệu Sản Phẩm Apple Style</title>
     <!-- Bootstrap 5.3.3 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome 6.5.2 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <!-- Custom CSS -->
+    <!-- Custom CSS tối giản -->
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="product_page.css">
 </head>
-<body class="bg-light min-vh-100 d-flex flex-column">
+<body class="bg-black text-white">
 
     <!-- ==========================================
-         THANH ĐIỀU HƯỚNG NAVBAR
+         1. THANH ĐIỀU HƯỚNG CHÍNH (APPLE GLOBAL NAV)
+         Sử dụng Flexbox và Display utilities
          ========================================== -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow-sm">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark bg-opacity-75 sticky-top backdrop-blur border-bottom border-secondary border-opacity-25">
         <div class="container">
-            <a class="navbar-brand fw-bold text-info" href="#">
-                <i class="fas fa-gem me-2"></i>NovaPortal
+            <a class="navbar-brand fs-4 text-white me-4" href="#" aria-label="Apple">
+                <i class="fab fa-apple"></i>
             </a>
-            <div class="ms-auto text-white-50 small d-none d-sm-block">
-                <span>Đã có tài khoản? </span>
-                <a href="#" class="btn btn-outline-info btn-sm ms-2 px-3 rounded-pill">Đăng Nhập</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#appleNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="appleNav">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0 small fw-medium gap-lg-4">
+                    <li class="nav-item"><a class="nav-link text-white-50 hover-white" href="#">Mac</a></li>
+                    <li class="nav-item"><a class="nav-link text-white-50 hover-white" href="#">iPad</a></li>
+                    <li class="nav-item"><a class="nav-link text-white active" href="#">iPhone</a></li>
+                    <li class="nav-item"><a class="nav-link text-white-50 hover-white" href="#">Watch</a></li>
+                    <li class="nav-item"><a class="nav-link text-white-50 hover-white" href="#">AirPods</a></li>
+                    <li class="nav-item"><a class="nav-link text-white-50 hover-white" href="#">Phụ Kiện</a></li>
+                    <li class="nav-item"><a class="nav-link text-white-50 hover-white" href="#">Hỗ Trợ</a></li>
+                </ul>
+                <div class="d-flex align-items-center gap-3 text-white-50">
+                    <a href="#" class="text-white-50 hover-white"><i class="fas fa-magnifying-glass"></i></a>
+                    <a href="#" class="text-white-50 hover-white"><i class="fas fa-bag-shopping"></i></a>
+                </div>
             </div>
         </div>
     </nav>
 
     <!-- ==========================================
-         MAIN CONTENT: CARD GIAO DIỆN ĐĂNG KÝ KẾT HỢP CAROUSEL
-         Bố cục Bootstrap Grid 2 cột:
-         - Cột 1: Carousel giới thiệu lợi ích dịch vụ (col-lg-6)
-         - Cột 2: Form đăng ký tài khoản (col-lg-6)
+         THANH ĐIỀU HƯỚNG SẢN PHẨM (SUB-NAV RIBBON)
+         Sử dụng d-flex, justify-content-between, align-items-center
          ========================================== -->
-    <main class="container my-auto py-5">
-        <div class="row justify-content-center">
-            <div class="col-12 col-xl-11">
+    <div class="bg-black border-bottom border-secondary border-opacity-25 py-2 sticky-top sub-nav">
+        <div class="container d-flex justify-content-between align-items-center">
+            <span class="fw-bold fs-5 text-white">iPhone 16 Pro</span>
+            <div class="d-flex align-items-center gap-3">
+                <a href="#overview" class="text-decoration-none text-white small d-none d-md-inline">Tổng quan</a>
+                <a href="#specs" class="text-decoration-none text-white-50 small d-none d-md-inline">Thông số kỹ thuật</a>
+                <a href="#compare" class="text-decoration-none text-white-50 small d-none d-md-inline">So sánh</a>
+                <a href="#buy" class="btn btn-primary btn-sm rounded-pill px-3 fw-semibold">Mua ngay</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==========================================
+         2. HERO SECTION: SHOWCASE IPHONE 16 PRO
+         Ứng dụng Display Property, Margin, Padding và Flexbox Center
+         ========================================== -->
+    <header class="py-5 text-center position-relative overflow-hidden" id="overview">
+        <div class="container py-lg-4">
+            <!-- Badge & Tiêu đề chính -->
+            <span class="text-warning small text-uppercase fw-bold letter-spacing mb-2 d-inline-block">
+                Mới Ra Mắt
+            </span>
+            <h1 class="display-3 fw-bold mb-2 tracking-tight">iPhone 16 Pro</h1>
+            <p class="fs-3 text-secondary mb-3 fw-medium">
+                Xin chào, Apple Intelligence.
+            </p>
+            <p class="small text-white-50 col-md-6 mx-auto mb-4">
+                Từ 28.999.000đ hoặc 1.182.000đ/tháng trong 24 tháng với 0% lãi suất.
+            </p>
+
+            <!-- Cặp nút Call to action căn giữa bằng Flexbox -->
+            <div class="d-flex justify-content-center align-items-center gap-3 flex-wrap mb-5">
+                <a href="#buy" class="btn btn-primary rounded-pill px-4 py-2 fw-semibold">
+                    Mua ngay
+                </a>
+                <a href="#specs" class="btn btn-outline-light rounded-pill px-4 py-2 fw-semibold">
+                    Tìm hiểu thêm <i class="fas fa-chevron-right ms-1 small"></i>
+                </a>
+            </div>
+
+            <!-- Hình ảnh mô phỏng sản phẩm nổi bật (img-fluid) -->
+            <div class="hero-image-box mx-auto my-3">
+                <img src="images/iphone16pro.png" 
+                     alt="iPhone 16 Pro Titanium" 
+                     class="img-fluid hero-phone-img"
+                     onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1695048133142-1a20484d2569?auto=format&fit=crop&w=800&q=80'">
+            </div>
+
+            <!-- Dòng giới thiệu chất liệu Titan cấp 5 -->
+            <div class="d-flex justify-content-center align-items-center gap-2 mt-4 text-white-50 small">
+                <i class="fas fa-shield-halved text-warning"></i>
+                <span>Thiết kế Titan Cấp 5 &bull; Màn hình Super Retina XDR với viền mỏng nhất từ trước đến nay</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- ==========================================
+         3. BENTO GRID HIGHLIGHTS: CÁC ĐỘT PHÁ CÔNG NGHỆ
+         Sử dụng Bootstrap Grid System (row, col-*) kết hợp Flexbox
+         ========================================== -->
+    <section class="py-5 bg-dark bg-opacity-50 border-top border-bottom border-secondary border-opacity-25" id="specs">
+        <div class="container py-lg-4">
+            
+            <div class="text-center mb-5">
+                <span class="text-info small text-uppercase fw-bold">Điểm nhấn công nghệ</span>
+                <h2 class="display-5 fw-bold mt-1 text-white">Đột phá mọi giới hạn.</h2>
+                <p class="text-secondary col-md-6 mx-auto">
+                    Được thiết kế tỉ mỉ để mang đến sức mạnh xử lý vượt trội, hệ thống camera chuẩn studio và thời lượng pin dẫn đầu.
+                </p>
+            </div>
+
+            <!-- Bento Box Grid Layout -->
+            <div class="row g-4">
                 
-                <div class="card border-0 shadow-lg rounded-4 overflow-hidden bg-white">
-                    <div class="row g-0">
-                        
-                        <!-- ==========================================
-                             CỘT 1: CAROUSEL QUẢNG BÁ LỢI ÍCH DỊCH VỤ
-                             (col-lg-6, hiển thị trên cả Mobile và Desktop)
-                             ========================================== -->
-                        <div class="col-lg-6 bg-dark position-relative d-flex flex-column justify-content-between p-0">
-                            
-                            <!-- Carousel Lợi Ích -->
-                            <div id="benefitCarousel" class="carousel slide h-100 d-flex flex-column" data-bs-ride="carousel" data-bs-interval="4000">
-                                <!-- Indicators -->
-                                <div class="carousel-indicators mb-4">
-                                    <button type="button" data-bs-target="#benefitCarousel" data-bs-slide-to="0" class="active" aria-current="true"></button>
-                                    <button type="button" data-bs-target="#benefitCarousel" data-bs-slide-to="1"></button>
-                                    <button type="button" data-bs-target="#benefitCarousel" data-bs-slide-to="2"></button>
-                                </div>
-
-                                <div class="carousel-inner h-100">
-                                    <!-- Slide 1: Lợi ích Bảo mật -->
-                                    <div class="carousel-item active h-100">
-                                        <div class="carousel-slide-bg position-relative h-100">
-                                            <img src="image1.jpg" 
-                                                 class="d-block w-100 h-100 object-fit-cover carousel-media" 
-                                                 alt="Bảo mật an toàn"
-                                                 onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=800&h=900&q=80'">
-                                            <div class="carousel-overlay position-absolute top-0 start-0 w-100 h-100 bg-dark bg-opacity-75 d-flex flex-column justify-content-end p-4 p-md-5 text-white">
-                                                <div class="badge bg-primary px-3 py-2 rounded-pill fs-6 mb-3 align-self-start">
-                                                    <i class="fas fa-shield-alt me-1"></i> Lợi ích số 1
-                                                </div>
-                                                <h3 class="fw-bold mb-2 display-6 fs-3">Bảo Mật An Toàn Tuyệt Đối</h3>
-                                                <p class="text-white-50 mb-4">
-                                                    Hệ thống mã hóa dữ liệu 256-bit chuẩn quốc tế kết hợp xác thực 2 lớp (2FA), bảo vệ tài khoản của bạn trước mọi nguy cơ rò rỉ.
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <!-- Slide 2: Lợi ích Tốc độ & Đồng bộ -->
-                                    <div class="carousel-item h-100">
-                                        <div class="carousel-slide-bg position-relative h-100">
-                                            <img src="image2.jpg" 
-                                                 class="d-block w-100 h-100 object-fit-cover carousel-media" 
-                                                 alt="Đồng bộ tốc độ cao"
-                                                 onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&h=900&q=80'">
-                                            <div class="carousel-overlay position-absolute top-0 start-0 w-100 h-100 bg-dark bg-opacity-75 d-flex flex-column justify-content-end p-4 p-md-5 text-white">
-                                                <div class="badge bg-success px-3 py-2 rounded-pill fs-6 mb-3 align-self-start">
-                                                    <i class="fas fa-bolt me-1"></i> Lợi ích số 2
-                                                </div>
-                                                <h3 class="fw-bold mb-2 display-6 fs-3">Đồng Bộ Siêu Tốc Đa Nền Tảng</h3>
-                                                <p class="text-white-50 mb-4">
-                                                    Truy cập dữ liệu tức thì mọi lúc, mọi nơi trên máy tính bảng, điện thoại và máy tính để bàn với tốc độ tải dưới 0.5 giây.
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <!-- Slide 3: Lợi ích Hỗ trợ 24/7 -->
-                                    <div class="carousel-item h-100">
-                                        <div class="carousel-slide-bg position-relative h-100">
-                                            <img src="image3.jpg" 
-                                                 class="d-block w-100 h-100 object-fit-cover carousel-media" 
-                                                 alt="Hỗ trợ 24/7"
-                                                 onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&h=900&q=80'">
-                                            <div class="carousel-overlay position-absolute top-0 start-0 w-100 h-100 bg-dark bg-opacity-75 d-flex flex-column justify-content-end p-4 p-md-5 text-white">
-                                                <div class="badge bg-info text-dark px-3 py-2 rounded-pill fs-6 mb-3 align-self-start">
-                                                    <i class="fas fa-headset me-1"></i> Lợi ích số 3
-                                                </div>
-                                                <h3 class="fw-bold mb-2 display-6 fs-3">Đội Ngũ Hỗ Trợ Chuyên Nghiệp 24/7</h3>
-                                                <p class="text-white-50 mb-4">
-                                                    Các chuyên gia kỹ thuật hàng đầu luôn sẵn sàng giải đáp thắc mắc và đồng hành cùng sự phát triển của doanh nghiệp bạn.
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Controls -->
-                                <button class="carousel-control-prev" type="button" data-bs-target="#benefitCarousel" data-bs-slide="prev">
-                                    <span class="carousel-control-prev-icon"></span>
-                                    <span class="visually-hidden">Previous</span>
-                                </button>
-                                <button class="carousel-control-next" type="button" data-bs-target="#benefitCarousel" data-bs-slide="next">
-                                    <span class="carousel-control-next-icon"></span>
-                                    <span class="visually-hidden">Next</span>
-                                </button>
+                <!-- Card 1: Camera Control (col-lg-8) -->
+                <div class="col-12 col-lg-8">
+                    <div class="card bg-dark text-white border-secondary border-opacity-50 rounded-4 p-4 p-md-5 h-100 d-flex flex-column justify-content-between bento-card">
+                        <div>
+                            <div class="d-flex align-items-center gap-2 text-warning mb-3">
+                                <i class="fas fa-camera fs-4"></i>
+                                <span class="fw-semibold">ĐIỀU KHIỂN CAMERA MỚI</span>
                             </div>
-
+                            <h3 class="fw-bold mb-3">Chụp trọn khoảnh khắc. Không trượt một giây.</h3>
+                            <p class="text-white-50 leading-relaxed mb-4">
+                                Phím Điều Khiển Camera hoàn toàn mới mang đến cách thức nhanh chóng và dễ dàng hơn để truy cập công cụ camera như zoom, độ phơi sáng và chiều sâu trường ảnh chỉ với một thao tác trượt ngón tay.
+                            </p>
                         </div>
-
-                        <!-- ==========================================
-                             CỘT 2: FORM ĐĂNG KÝ TÀI KHOẢN
-                             (col-lg-6, sử dụng Bootstrap Forms & input-group)
-                             ========================================== -->
-                        <div class="col-lg-6 p-4 p-md-5 d-flex flex-column justify-content-center">
-                            
-                            <!-- Tiêu đề Form -->
-                            <div class="mb-4 text-center text-lg-start">
-                                <span class="badge bg-primary-subtle text-primary px-3 py-2 rounded-pill fw-bold mb-2">
-                                    Khởi Tạo Tài Khoản
-                                </span>
-                                <h2 class="fw-bold text-dark mb-1">Đăng Ký Người Dùng</h2>
-                                <p class="text-muted small">
-                                    Trải nghiệm đầy đủ các tính năng độc quyền bằng cách hoàn tất biểu mẫu dưới đây.
-                                </p>
-                            </div>
-
-                            <!-- Thông báo thành công -->
-                            <div class="alert alert-success alert-dismissible fade d-none" id="registerAlert" role="alert">
-                                <strong>🎉 Chúc mừng!</strong> Bạn đã đăng ký tài khoản thành công.
-                                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
-                            </div>
-
-                            <!-- Form Đăng Ký -->
-                            <form id="registrationForm" class="needs-validation" novalidate>
-                                
-                                <!-- 1. Trường Họ và Tên -->
-                                <div class="mb-3">
-                                    <label for="fullName" class="form-label fw-semibold">
-                                        Họ và tên <span class="text-danger">*</span>
-                                    </label>
-                                    <div class="input-group">
-                                        <span class="input-group-text bg-light text-muted">
-                                            <i class="fas fa-user"></i>
-                                        </span>
-                                        <input type="text" class="form-control" id="fullName" placeholder="Nhập họ và tên đầy đủ" required>
-                                        <div class="invalid-feedback">Vui lòng nhập họ và tên của bạn.</div>
-                                    </div>
-                                </div>
-
-                                <!-- 2. Trường Email -->
-                                <div class="mb-3">
-                                    <label for="userEmail" class="form-label fw-semibold">
-                                        Địa chỉ Email <span class="text-danger">*</span>
-                                    </label>
-                                    <div class="input-group">
-                                        <span class="input-group-text bg-light text-muted">
-                                            <i class="fas fa-envelope"></i>
-                                        </span>
-                                        <input type="email" class="form-control" id="userEmail" placeholder="name@example.com" required>
-                                        <div class="invalid-feedback">Vui lòng nhập địa chỉ email hợp lệ.</div>
-                                    </div>
-                                </div>
-
-                                <!-- 3. Trường Mật Khẩu -->
-                                <div class="mb-3">
-                                    <label for="userPassword" class="form-label fw-semibold">
-                                        Mật khẩu <span class="text-danger">*</span>
-                                    </label>
-                                    <div class="input-group">
-                                        <span class="input-group-text bg-light text-muted">
-                                            <i class="fas fa-lock"></i>
-                                        </span>
-                                        <input type="password" class="form-control" id="userPassword" placeholder="Nhập mật khẩu (tối thiểu 8 ký tự)" minlength="8" required>
-                                        <div class="invalid-feedback">Mật khẩu phải chứa ít nhất 8 ký tự.</div>
-                                    </div>
-                                </div>
-
-                                <!-- 4. Trường Xác Nhận Mật Khẩu -->
-                                <div class="mb-4">
-                                    <label for="confirmPassword" class="form-label fw-semibold">
-                                        Xác nhận mật khẩu <span class="text-danger">*</span>
-                                    </label>
-                                    <div class="input-group">
-                                        <span class="input-group-text bg-light text-muted">
-                                            <i class="fas fa-shield-alt"></i>
-                                        </span>
-                                        <input type="password" class="form-control" id="confirmPassword" placeholder="Nhập lại mật khẩu" required>
-                                        <div class="invalid-feedback" id="confirmFeedback">Vui lòng nhập lại chính xác mật khẩu.</div>
-                                    </div>
-                                </div>
-
-                                <!-- Điều khoản dịch vụ -->
-                                <div class="mb-4">
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" id="termsCheck" required>
-                                        <label class="form-check-label small text-muted" for="termsCheck">
-                                            Tôi đồng ý với <a href="#" class="text-primary text-decoration-none">Điều khoản sử dụng</a> và <a href="#" class="text-primary text-decoration-none">Chính sách bảo mật</a>.
-                                        </label>
-                                        <div class="invalid-feedback">Bạn phải đồng ý với điều khoản trước khi tạo tài khoản.</div>
-                                    </div>
-                                </div>
-
-                                <!-- Nút Submit (btn-primary) -->
-                                <div class="d-grid mb-3">
-                                    <button type="submit" class="btn btn-primary btn-lg shadow-sm fw-semibold">
-                                        <i class="fas fa-user-plus me-2"></i>Đăng Ký Tài Khoản
-                                    </button>
-                                </div>
-
-                                <!-- Chuyển đổi đăng nhập -->
-                                <div class="text-center">
-                                    <small class="text-muted">
-                                        Đã có tài khoản? 
-                                        <a href="#" class="text-primary fw-semibold text-decoration-none">Đăng nhập ngay</a>
-                                    </small>
-                                </div>
-                            </form>
-
+                        <div class="d-flex flex-wrap gap-4 pt-3 border-top border-secondary border-opacity-25 text-white-50">
+                            <div><strong class="text-white fs-5">48MP</strong> Fusion Camera</div>
+                            <div><strong class="text-white fs-5">5x</strong> Telephoto Quang Học</div>
+                            <div><strong class="text-white fs-5">4K 120 fps</strong> Dolby Vision</div>
                         </div>
+                    </div>
+                </div>
 
+                <!-- Card 2: Chip A18 Pro (col-lg-4) -->
+                <div class="col-12 col-lg-4">
+                    <div class="card bg-dark text-white border-secondary border-opacity-50 rounded-4 p-4 p-md-5 h-100 d-flex flex-column justify-content-between bento-card">
+                        <div>
+                            <div class="d-flex align-items-center gap-2 text-primary mb-3">
+                                <i class="fas fa-microchip fs-4"></i>
+                                <span class="fw-semibold">CHIP A18 PRO</span>
+                            </div>
+                            <h3 class="fw-bold mb-3">Sức mạnh quái vật.</h3>
+                            <p class="text-white-50 leading-relaxed">
+                                GPU 6 lõi đẳng cấp chuyên nghiệp mang đến hiệu năng đồ họa nhanh hơn đến 20%, hỗ trợ dò tia Ray Tracing bằng phần cứng cho trải nghiệm chơi game AAA sống động tuyệt đối.
+                            </p>
+                        </div>
+                        <div class="pt-3 border-top border-secondary border-opacity-25">
+                            <span class="badge bg-primary-subtle text-primary px-3 py-2 rounded-pill fw-semibold">
+                                Nhanh hơn 15% &bull; Tiết kiệm pin 20%
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3: Khung Titan Cấp 5 (col-lg-4) -->
+                <div class="col-12 col-lg-4">
+                    <div class="card bg-dark text-white border-secondary border-opacity-50 rounded-4 p-4 p-md-5 h-100 d-flex flex-column justify-content-between bento-card">
+                        <div>
+                            <div class="d-flex align-items-center gap-2 text-info mb-3">
+                                <i class="fas fa-shield-alt fs-4"></i>
+                                <span class="fw-semibold">VẬT LIỆU CAO CẤP</span>
+                            </div>
+                            <h3 class="fw-bold mb-3">Titan siêu nhẹ. Bền bỉ đỉnh cao.</h3>
+                            <p class="text-white-50 leading-relaxed">
+                                Lớp hoàn thiện Titan Cấp 5 mờ tinh xảo, chống trầy xước và mang lại trọng lượng nhẹ bất ngờ khi cầm trên tay mỗi ngày.
+                            </p>
+                        </div>
+                        <div class="pt-3 border-top border-secondary border-opacity-25 text-white-50">
+                            <i class="fas fa-gem me-1 text-info"></i> 4 màu sắc Titan cao cấp
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 4: Pin 33 giờ (col-lg-8) -->
+                <div class="col-12 col-lg-8">
+                    <div class="card bg-dark text-white border-secondary border-opacity-50 rounded-4 p-4 p-md-5 h-100 d-flex flex-column justify-content-between bento-card">
+                        <div>
+                            <div class="d-flex align-items-center gap-2 text-success mb-3">
+                                <i class="fas fa-battery-full fs-4"></i>
+                                <span class="fw-semibold">THỜI LƯỢNG PIN VƯỢT TRỘI</span>
+                            </div>
+                            <h3 class="fw-bold mb-3">Thời lượng pin nhảy vọt. Dùng cả ngày dài.</h3>
+                            <p class="text-white-50 leading-relaxed mb-4">
+                                Thiết kế bên trong được tối ưu hóa cùng khả năng quản lý năng lượng thông minh của chip A18 Pro mang đến thời lượng xem video lên đến 33 giờ trên iPhone 16 Pro Max.
+                            </p>
+                        </div>
+                        <div class="d-flex flex-wrap gap-4 pt-3 border-top border-secondary border-opacity-25 text-white-50">
+                            <div><strong class="text-success fs-4">Lên đến 33 giờ</strong> xem video liên tục</div>
+                            <div><strong class="text-success fs-4">Sạc nhanh MagSafe</strong> 50% trong 30 phút</div>
+                        </div>
                     </div>
                 </div>
 
             </div>
         </div>
+    </section>
 
-        <!-- ==========================================
-             BẢNG PHÂN TÍCH KỸ THUẬT BOOTSTRAP ĐÃ ỨNG DỤNG
-             ========================================== -->
-        <div class="row justify-content-center mt-5">
-            <div class="col-12 col-xl-11">
-                <div class="card border-0 shadow-sm rounded-4 p-4 bg-white">
-                    <h4 class="fw-bold mb-3 text-dark">📋 Bảng Phân Tích Các Thành Phần Bootstrap Đã Áp Dụng</h4>
-                    <div class="table-responsive">
-                        <table class="table table-hover align-middle mb-0">
-                            <thead class="table-dark">
-                                <tr>
-                                    <th scope="col">Thành phần</th>
-                                    <th scope="col">Class Bootstrap</th>
-                                    <th scope="col">Mục đích & Tác dụng kỹ thuật</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td><strong>1. Bootstrap Grid</strong></td>
-                                    <td><code>.row .g-0 &rarr; .col-lg-6</code></td>
-                                    <td>Chia 2 cột cân đối (50% - 50%) trên Desktop, tự động xếp dọc tiện lợi trên Mobile</td>
-                                </tr>
-                                <tr>
-                                    <td><strong>2. Bootstrap Carousel</strong></td>
-                                    <td><code>.carousel .slide .carousel-item .carousel-indicators</code></td>
-                                    <td>Trình chiếu các lợi ích của dịch vụ với hình ảnh và caption trực quan, chuyển slide tự động</td>
-                                </tr>
-                                <tr>
-                                    <td><strong>3. Input Groups</strong></td>
-                                    <td><code>.input-group .input-group-text</code></td>
-                                    <td>Gắn kèm các biểu tượng Font Awesome (User, Mail, Lock) vào trước ô nhập liệu</td>
-                                </tr>
-                                <tr>
-                                    <td><strong>4. Form Controls</strong></td>
-                                    <td><code>.form-control .form-label .form-check-input</code></td>
-                                    <td>Định dạng các trường nhập liệu Họ tên, Email, Mật khẩu, Xác nhận mật khẩu chuẩn thẩm mỹ</td>
-                                </tr>
-                                <tr>
-                                    <td><strong>5. Buttons & Shadows</strong></td>
-                                    <td><code>.btn .btn-primary .btn-lg .shadow-lg .rounded-4</code></td>
-                                    <td>Tạo nút bấm kêu gọi hành động lớn, bo tròn góc thẻ và hiệu ứng đổ bóng sâu chuyên nghiệp</td>
-                                </tr>
-                            </tbody>
-                        </table>
+    <!-- ==========================================
+         4. SO SÁNH DÒNG SẢN PHẨM (COMPARISON SECTION)
+         Grid 3 cột cân đối (col-md-4)
+         ========================================== -->
+    <section class="py-5 bg-black" id="compare">
+        <div class="container py-lg-4 text-center">
+            
+            <h2 class="display-5 fw-bold mb-2">Chọn chiếc iPhone phù hợp với bạn.</h2>
+            <p class="text-secondary mb-5">So sánh chi tiết các mẫu iPhone thế hệ mới nhất.</p>
+
+            <div class="row g-4 text-start">
+                
+                <!-- Cột 1: iPhone 16 Pro Max -->
+                <div class="col-12 col-md-4">
+                    <div class="card bg-dark text-white border-secondary border-opacity-50 rounded-4 p-4 h-100 d-flex flex-column justify-content-between compare-card">
+                        <div>
+                            <div class="text-center py-4">
+                                <i class="fas fa-mobile-screen fs-1 text-warning mb-3"></i>
+                                <h4 class="fw-bold">iPhone 16 Pro Max</h4>
+                                <p class="text-secondary small">Đỉnh cao màn hình lớn & pin khủng</p>
+                                <div class="fs-4 fw-bold text-white mb-2">Từ 34.999.000đ</div>
+                            </div>
+                            <hr class="border-secondary border-opacity-25 my-3">
+                            <ul class="list-unstyled small text-white-50 space-y-3">
+                                <li class="mb-2"><i class="fas fa-display text-white me-2"></i><strong>6.9 inch</strong> Super Retina XDR</li>
+                                <li class="mb-2"><i class="fas fa-microchip text-white me-2"></i>Chip <strong>A18 Pro</strong> với GPU 6 lõi</li>
+                                <li class="mb-2"><i class="fas fa-camera text-white me-2"></i>Hệ thống camera Pro (48MP + 5x Tele)</li>
+                                <li class="mb-2"><i class="fas fa-battery-three-quarters text-white me-2"></i>Lên đến <strong>33 giờ</strong> xem video</li>
+                            </ul>
+                        </div>
+                        <div class="pt-4">
+                            <a href="#buy" class="btn btn-primary rounded-pill w-100 py-2 fw-semibold">Chọn mua</a>
+                        </div>
                     </div>
                 </div>
+
+                <!-- Cột 2: iPhone 16 Pro (Nổi bật) -->
+                <div class="col-12 col-md-4">
+                    <div class="card bg-dark text-white border-primary border-opacity-75 rounded-4 p-4 h-100 d-flex flex-column justify-content-between compare-card position-relative shadow-lg">
+                        <span class="position-absolute top-0 start-50 translate-middle badge bg-primary px-3 py-2 rounded-pill">
+                            Lựa chọn Pro tiêu chuẩn
+                        </span>
+                        <div>
+                            <div class="text-center py-4">
+                                <i class="fas fa-mobile-screen fs-1 text-info mb-3"></i>
+                                <h4 class="fw-bold">iPhone 16 Pro</h4>
+                                <p class="text-secondary small">Cân bằng hoàn hảo kích thước & sức mạnh</p>
+                                <div class="fs-4 fw-bold text-white mb-2">Từ 28.999.000đ</div>
+                            </div>
+                            <hr class="border-secondary border-opacity-25 my-3">
+                            <ul class="list-unstyled small text-white-50 space-y-3">
+                                <li class="mb-2"><i class="fas fa-display text-white me-2"></i><strong>6.3 inch</strong> Super Retina XDR</li>
+                                <li class="mb-2"><i class="fas fa-microchip text-white me-2"></i>Chip <strong>A18 Pro</strong> với GPU 6 lõi</li>
+                                <li class="mb-2"><i class="fas fa-camera text-white me-2"></i>Hệ thống camera Pro (48MP + 5x Tele)</li>
+                                <li class="mb-2"><i class="fas fa-battery-three-quarters text-white me-2"></i>Lên đến <strong>27 giờ</strong> xem video</li>
+                            </ul>
+                        </div>
+                        <div class="pt-4">
+                            <a href="#buy" class="btn btn-primary rounded-pill w-100 py-2 fw-semibold">Chọn mua</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cột 3: iPhone 16 -->
+                <div class="col-12 col-md-4">
+                    <div class="card bg-dark text-white border-secondary border-opacity-50 rounded-4 p-4 h-100 d-flex flex-column justify-content-between compare-card">
+                        <div>
+                            <div class="text-center py-4">
+                                <i class="fas fa-mobile-screen fs-1 text-success mb-3"></i>
+                                <h4 class="fw-bold">iPhone 16</h4>
+                                <p class="text-secondary small">Trải nghiệm thế hệ mới đầy màu sắc</p>
+                                <div class="fs-4 fw-bold text-white mb-2">Từ 22.999.000đ</div>
+                            </div>
+                            <hr class="border-secondary border-opacity-25 my-3">
+                            <ul class="list-unstyled small text-white-50 space-y-3">
+                                <li class="mb-2"><i class="fas fa-display text-white me-2"></i><strong>6.1 inch</strong> Super Retina XDR</li>
+                                <li class="mb-2"><i class="fas fa-microchip text-white me-2"></i>Chip <strong>A18</strong> với GPU 5 lõi</li>
+                                <li class="mb-2"><i class="fas fa-camera text-white me-2"></i>Hệ thống 2 camera tiên tiến (48MP Fusion)</li>
+                                <li class="mb-2"><i class="fas fa-battery-three-quarters text-white me-2"></i>Lên đến <strong>22 giờ</strong> xem video</li>
+                            </ul>
+                        </div>
+                        <div class="pt-4">
+                            <a href="#buy" class="btn btn-outline-light rounded-pill w-100 py-2 fw-semibold">Chọn mua</a>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
-    </main>
+    </section>
 
-    <!-- FOOTER -->
-    <footer class="bg-dark text-white text-center py-4 border-top mt-auto">
+    <!-- ==========================================
+         5. APPLE PERKS (FLEXBOX JUSTIFY-CONTENT & MARGIN/PADDING)
+         ========================================== -->
+    <section class="py-5 bg-dark bg-opacity-75 border-top border-secondary border-opacity-25" id="buy">
         <div class="container">
-            <p class="mb-1">&copy; 2026 NovaPortal. All rights reserved.</p>
-            <small class="text-secondary">
-                Học viên thực hiện: <strong>Vũ Đức Đạt (VuDucDat2006)</strong> &bull; [Bài tập] Tạo Trang Đăng Ký Người Dùng &bull; CodeGym
-            </small>
+            <div class="d-flex flex-wrap justify-content-around align-items-center gap-4 text-center py-3">
+                <div class="perk-item">
+                    <i class="fas fa-truck-fast fs-2 text-primary mb-2"></i>
+                    <h5 class="fw-bold fs-6 mb-1">Giao hàng miễn phí</h5>
+                    <small class="text-white-50">Nhận hàng tận nhà nhanh chóng</small>
+                </div>
+                <div class="perk-item">
+                    <i class="fas fa-arrow-right-arrow-left fs-2 text-success mb-2"></i>
+                    <h5 class="fw-bold fs-6 mb-1">Thu cũ đổi mới</h5>
+                    <small class="text-white-50">Tiết kiệm lên đến 18.000.000đ</small>
+                </div>
+                <div class="perk-item">
+                    <i class="fas fa-credit-card fs-2 text-warning mb-2"></i>
+                    <h5 class="fw-bold fs-6 mb-1">Trả góp 0% lãi suất</h5>
+                    <small class="text-white-50">Kỳ hạn linh hoạt lên đến 24 tháng</small>
+                </div>
+                <div class="perk-item">
+                    <i class="fas fa-comments fs-2 text-info mb-2"></i>
+                    <h5 class="fw-bold fs-6 mb-1">Tư vấn chuyên gia</h5>
+                    <small class="text-white-50">Hỗ trợ kỹ thuật trực tuyến 24/7</small>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         BẢNG PHÂN TÍCH KỸ THUẬT BOOTSTRAP ĐÃ ỨNG DỤNG
+         ========================================== -->
+    <section class="py-5 bg-black border-top border-secondary border-opacity-25">
+        <div class="container">
+            <div class="card bg-dark text-white border-secondary border-opacity-50 rounded-4 p-4 p-md-5">
+                <h4 class="fw-bold mb-3 text-warning">📋 Bảng Phân Tích Kỹ Thuật Bootstrap Trong Trang Sản Phẩm</h4>
+                <div class="table-responsive">
+                    <table class="table table-dark table-hover align-middle mb-0">
+                        <thead>
+                            <tr class="text-secondary">
+                                <th scope="col">Yêu cầu</th>
+                                <th scope="col">Class Bootstrap áp dụng</th>
+                                <th scope="col">Mục đích & Tác dụng kỹ thuật</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>1. Grid System</strong></td>
+                                <td><code>.container, .row, .col-lg-8, .col-lg-4, .g-4</code></td>
+                                <td>Bố cục dạng Bento Grid hiện đại của Apple; tự động chuyển đổi thành 1 cột trên điện thoại di động</td>
+                            </tr>
+                            <tr>
+                                <td><strong>2. Margin & Padding</strong></td>
+                                <td><code>.py-5, .my-4, .px-4, .p-md-5, .mb-3, .mt-2, .mx-auto</code></td>
+                                <td>Tạo nhịp thở khoảng cách thoáng đãng chuẩn phong cách tối giản cao cấp của Apple</td>
+                            </tr>
+                            <tr>
+                                <td><strong>3. Flexbox Center & Justify</strong></td>
+                                <td><code>.d-flex, .justify-content-center, .justify-content-between, .align-items-center, .gap-3</code></td>
+                                <td>Căn giữa các nút bấm CTA, dàn đều thanh điều hướng phụ và phân bổ đều các tiện ích dịch vụ</td>
+                            </tr>
+                            <tr>
+                                <td><strong>4. Font Awesome</strong></td>
+                                <td><code>fab fa-apple, fas fa-camera, fas fa-microchip, fas fa-battery-full</code></td>
+                                <td>Biểu tượng vector công nghệ sắc nét làm nổi bật các tính năng cốt lõi của iPhone 16 Pro</td>
+                            </tr>
+                            <tr>
+                                <td><strong>5. Tối ưu CSS</strong></td>
+                                <td>Ưu tiên tối đa utility classes có sẵn của Bootstrap</td>
+                                <td>Hạn chế viết CSS mới, tuân thủ đúng yêu cầu đề bài</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         FOOTER APPLE STYLE
+         ========================================== -->
+    <footer class="bg-black py-5 border-top border-secondary border-opacity-25 text-secondary small">
+        <div class="container">
+            <p class="mb-3 text-white-50" style="font-size: 0.8rem; line-height: 1.5;">
+                1. Màn hình có các góc bo tròn theo đường cong tuyệt đẹp và nằm trong một hình chữ nhật chuẩn. Khi tính theo hình chữ nhật chuẩn, kích thước màn hình theo đường chéo là 6.27 inch (iPhone 16 Pro) hoặc 6.86 inch (iPhone 16 Pro Max). Diện tích hiển thị thực tế nhỏ hơn.<br>
+                2. Apple Intelligence có sẵn ở phiên bản beta trên tất cả các mẫu iPhone 16 với Siri và ngôn ngữ thiết bị được đặt thành tiếng Anh (Mỹ).
+            </p>
+            <hr class="border-secondary border-opacity-25 my-3">
+            <div class="d-flex flex-wrap justify-content-between align-items-center py-2">
+                <p class="mb-0">&copy; 2026 Apple Inc. All rights reserved. &bull; Bản mô phỏng bài tập CodeGym</p>
+                <div class="text-white-50">
+                    Học viên thực hiện: <strong class="text-white">Vũ Đức Đạt (VuDucDat2006)</strong>
+                </div>
+            </div>
         </div>
     </footer>
 
     <!-- Bootstrap 5.3.3 JavaScript Bundle -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
-    <!-- Script tương tác xác thực Form -->
-    <script>
-        (() => {
-            'use strict';
-            const form = document.getElementById('registrationForm');
-            const password = document.getElementById('userPassword');
-            const confirm = document.getElementById('confirmPassword');
-            const alertBox = document.getElementById('registerAlert');
-
-            form.addEventListener('submit', event => {
-                let isValid = form.checkValidity();
-
-                if (password.value !== confirm.value) {
-                    confirm.setCustomValidity('Mật khẩu không khớp!');
-                    isValid = false;
-                } else {
-                    confirm.setCustomValidity('');
-                }
-
-                if (!isValid) {
-                    event.preventDefault();
-                    event.stopPropagation();
-                } else {
-                    event.preventDefault();
-                    alertBox.classList.remove('d-none');
-                    alertBox.classList.add('show');
-                    window.scrollTo({ top: alertBox.offsetTop - 80, behavior: 'smooth' });
-                }
-
-                form.classList.add('was-validated');
-            }, false);
-        })();
-    </script>
 </body>
 </html>

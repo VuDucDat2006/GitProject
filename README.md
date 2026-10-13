@@ -1,80 +1,89 @@
-# [Bài tập] Tạo Trang Đăng Ký Người Dùng
+# [Bài tập] Thiết kế Trang Giới Thiệu Sản Phẩm (Apple iPhone Product Page Showcase)
 
-Dự án bài tập áp dụng kết hợp các thành phần của **Bootstrap Forms**, **Bootstrap Carousel**, **Input Groups** và **Bootstrap Grid** để xây dựng một giao diện đăng ký tài khoản người dùng chuyên nghiệp, chuẩn phong cách Auth UI quốc tế.
+Dự án mô phỏng trang giới thiệu sản phẩm cao cấp theo phong cách chính hãng của **Apple iPhone 16 Pro**, xây dựng bằng **Bootstrap 5.3.3**, **Font Awesome 6.5.2** và tối giản hóa CSS tùy biến theo đúng yêu cầu bài tập của CodeGym.
 
 ---
 
 ## 🎯 Mục Tiêu Bài Tập
-- Luyện tập sử dụng **Bootstrap Carousel** để hiển thị hình ảnh và nội dung quảng bá các lợi ích của dịch vụ.
-- Sử dụng **Bootstrap Form** để tạo form đăng ký với 4 trường thông tin bắt buộc: **Họ tên**, **Email**, **Mật khẩu**, **Xác nhận mật khẩu**.
-- Ứng dụng các lớp điều khiển biểu mẫu: `form-control`, `input-group`, `input-group-text`, `btn-primary`, `form-check`.
-- Tận dụng **Bootstrap Grid** (`row g-0`, `col-lg-6`) để căn chỉnh bố cục 2 cột cân đối: Carousel bên trái và Form bên phải.
-- Ưu tiên sử dụng tối đa các lớp Bootstrap có sẵn, hạn chế viết CSS thủ công.
+- Luyện tập việc sử dụng các thuộc tính **display** (`d-flex`, `d-none`, `d-md-inline`, `d-inline-block`).
+- Áp dụng **margin** và **padding** hợp lý (`py-5`, `my-4`, `px-4`, `p-md-5`, `mb-3`, `mx-auto`) để căn chỉnh khoảng cách thoáng đãng theo phong cách Apple.
+- Sử dụng **Flexbox** và các thuộc tính `justify-content` (`justify-content-center`, `justify-content-between`, `justify-content-around`), `align-items` (`align-items-center`) để bố trí nội dung linh hoạt.
+- Tận dụng hệ thống icon công nghệ từ **Font Awesome 6**.
+- Hạn chế tối đa việc viết thêm CSS mới, ưu tiên tận dụng các utility classes có sẵn của **Bootstrap 5**.
 
 ---
 
-## 🏛️ Cấu Trúc Bố Cục Trang Web
+## 🚀 Các Thành Phần Giao Diện Chính
 
-```plaintext
-Container (.container)
-│
-└── Card Tổng Thể (.card .rounded-4 .shadow-lg)
-    └── Hàng Ngang (.row .g-0)
-        │
-        ├── Cột Trái (.col-lg-6): Bootstrap Carousel Lợi Ích Dịch Vụ
-        │   ├── Slide 1: Bảo Mật An Toàn Tuyệt Đối (Mã hóa 256-bit, 2FA)
-        │   ├── Slide 2: Đồng Bộ Siêu Tốc Đa Nền Tảng (< 0.5s)
-        │   └── Slide 3: Đội Ngũ Hỗ Trợ Chuyên Nghiệp 24/7
-        │
-        └── Cột Phải (.col-lg-6): Form Đăng Ký Người Dùng
-            ├── Họ và tên (Input-group + Icon User)
-            ├── Email (Input-group + Icon Envelope)
-            ├── Mật khẩu (Input-group + Icon Lock)
-            ├── Xác nhận mật khẩu (Input-group + Icon Shield)
-            ├── Checkbox đồng ý điều khoản dịch vụ
-            └── Nút Đăng Ký Tài Khoản (btn-primary btn-lg)
-```
+1. **Apple Global Navigation (Thanh điều hướng toàn cầu)**:
+   - Sử dụng `.navbar-expand-lg`, `.bg-dark`, `.bg-opacity-75`, `.sticky-top` kết hợp `.backdrop-blur`.
+   - Logo quả táo Apple `<i class="fab fa-apple"></i>`, danh mục sản phẩm (Mac, iPad, iPhone, Watch, AirPods...) và icon tìm kiếm/giỏ hàng.
+
+2. **Product Sub-Navigation Ribbon (Thanh điều hướng sản phẩm)**:
+   - Định dạng `sticky-top`, sử dụng `d-flex justify-content-between align-items-center`.
+   - Chứa tên sản phẩm `iPhone 16 Pro`, liên kết nhanh đến các section và nút CTA **Mua ngay** `.btn-primary.rounded-pill`.
+
+3. **Hero Section (Giới thiệu iPhone 16 Pro)**:
+   - Sử dụng Display utilities, Typography lớn (`.display-3`), căn giữa hoàn toàn bằng Flexbox và Margin tự động (`.mx-auto`).
+   - Hình ảnh render sắc nét của iPhone 16 Pro Titanium Cấp 5 với cụm camera 3 mắt và viền màn hình siêu mỏng.
+   - Nhóm nút kêu gọi hành động (Call To Action): *Mua ngay* và *Tìm hiểu thêm*.
+
+4. **Bento Grid Highlights (Điểm nhấn công nghệ đột phá)**:
+   - Áp dụng **Bootstrap Grid System** linh hoạt với các tỷ lệ kết hợp (`col-lg-8` và `col-lg-4`) theo xu hướng Bento Box của Apple:
+     - **Điều Khiển Camera Mới**: Phím cảm ứng lực mới, camera Fusion 48MP, 4K 120 fps Dolby Vision.
+     - **Chip A18 Pro**: GPU 6 lõi, Ray Tracing phần cứng, hiệu năng vượt trội.
+     - **Khung Titan Cấp 5**: Vật liệu hàng không vũ trụ siêu nhẹ, bền bỉ.
+     - **Pin Vượt Trội**: Lên đến 33 giờ xem video, sạc nhanh không dây MagSafe.
+
+5. **Comparison Lineup (So sánh các dòng iPhone)**:
+   - Bố cục 3 cột cân đối (`col-md-4`) hiển thị:
+     - **iPhone 16 Pro Max** (6.9 inch)
+     - **iPhone 16 Pro** (6.3 inch - Card nổi bật với viền xanh công nghệ và huy hiệu `badge`)
+     - **iPhone 16** (6.1 inch tiêu chuẩn)
+
+6. **Apple Store Services & Perks**:
+   - Sử dụng `d-flex flex-wrap justify-content-around align-items-center gap-4` để phân bổ đều các tiện ích: Giao hàng miễn phí, Thu cũ đổi mới, Trả góp 0%, Tư vấn trực tuyến 24/7.
+
+7. **Bảng Phân Tích Kỹ Thuật**:
+   - Bảng tổng hợp rõ ràng các class Bootstrap và mục đích kỹ thuật đã được vận dụng trong bài học.
+
+8. **Footer Chuẩn Apple**:
+   - Thông tin pháp lý, bản quyền, ghi chú kích thước màn hình và thông tin sinh viên thực hiện.
 
 ---
 
-## 📋 Bảng Phân Tích Kỹ Thuật Bootstrap
+## 📋 Bảng Phân Tích Kỹ Thuật Bootstrap Áp Dụng
 
-| Thành phần | Class Bootstrap chính | Tác dụng kỹ thuật |
+| Nhóm thuộc tính | Lớp Bootstrap sử dụng | Mục đích kỹ thuật |
 | :--- | :--- | :--- |
-| **Bố cục lưới Grid** | `.row .g-0 &rarr; .col-lg-6` | Chia 2 cột tỷ lệ 50:50 trên Desktop, loại bỏ khoảng cách giữa 2 cột (`g-0`) và tự xếp chồng trên Mobile |
-| **Trình chiếu Carousel** | `.carousel .slide .carousel-item` | Slideshow tự động chuyển đổi slide mỗi 4 giây giới thiệu 3 lợi ích vượt trội |
-| **Input Groups** | `.input-group .input-group-text` | Ghép biểu tượng Font Awesome vào đầu mỗi ô nhập liệu tạo cảm giác cao cấp |
-| **Form Controls** | `.form-control .form-label` | Ô nhập dữ liệu bo tròn góc, có viền nét và phản hồi trạng thái focus xanh sáng |
-| **Nút bấm Submit** | `.btn .btn-primary .btn-lg` | Nút gửi màu xanh thương hiệu, kích thước lớn dễ thao tác |
-| **Xác thực Client** | `.needs-validation .was-validated` | Kiểm tra tính hợp lệ dữ liệu và so khớp mật khẩu ngay trên trình duyệt |
+| **Grid System** | `.container`, `.row`, `.col-lg-8`, `.col-lg-4`, `.col-md-4`, `.g-4` | Chia layout Bento và so sánh 3 cột; co giãn responsive từ Mobile lên Desktop |
+| **Display Utilities** | `.d-flex`, `.d-none`, `.d-md-inline`, `.d-inline-block` | Quản lý hiển thị linh hoạt theo breakpoint màn hình |
+| **Flexbox & Justify** | `.justify-content-center`, `.justify-content-between`, `.justify-content-around`, `.align-items-center`, `.gap-3` | Căn giữa nút CTA, dàn đều thanh điều hướng và phân bổ cân đối dịch vụ |
+| **Spacing (Margin/Padding)**| `.py-5`, `.my-4`, `.px-4`, `.p-md-5`, `.mb-3`, `.mt-2`, `.mx-auto` | Tạo khoảng cách nhịp điệu thoáng đãng, sang trọng |
+| **Colors & Borders** | `.bg-black`, `.bg-dark`, `.text-white`, `.border-secondary`, `.rounded-4`, `.rounded-pill` | Bảng màu tối Dark Theme cao cấp đặc trưng của các dòng Pro |
+| **Icons** | Font Awesome 6 (`fab fa-apple`, `fas fa-camera`, `fas fa-microchip`, `fas fa-battery-full`...) | Tăng tính trực quan và sinh động cho sản phẩm |
 
 ---
 
-## 📁 Cấu Trúc Thư Mục
-```plaintext
+## 🛠️ Cấu Trúc Thư Mục Dự Án
+
+```
 GitProject/
-├── index.html       # Mã nguồn giao diện đăng ký kết hợp Carousel & Form hoàn chỉnh
-├── style.css        # Tùy biến CSS tối giản: Font Plus Jakarta Sans, chiều cao Carousel
-├── image1.jpg       # Hình ảnh minh họa slide 1
-├── image2.jpg       # Hình ảnh minh họa slide 2
-├── image3.jpg       # Hình ảnh minh họa slide 3
-└── README.md        # Tài liệu thuyết minh dự án và hướng dẫn kiểm tra
+├── index.html              # Trang chủ giới thiệu sản phẩm Apple iPhone 16 Pro
+├── product_page.html       # Bản sao dự phòng cho cấu trúc trang sản phẩm
+├── style.css               # CSS tối giản (Hiệu ứng kính mờ, typography, hover)
+├── product_page.css        # Bản CSS đồng bộ
+├── images/
+│   └── iphone16pro.png     # Ảnh mô phỏng iPhone 16 Pro Titanium
+└── README.md               # Tài liệu thuyết minh bài tập
 ```
 
 ---
 
-## 🔍 Hướng Dẫn Kiểm Tra & Chạy Thử
-1. **Mở trực tiếp trên Trình duyệt**: Mở file `index.html` bằng bất kỳ trình duyệt web nào (Chrome, Edge, Firefox).
-2. **Kiểm tra Carousel**: Cột bên trái tự động chuyển đổi giữa 3 slide giới thiệu lợi ích dịch vụ với hiệu ứng phủ tối (Overlay) và text trắng nổi bật.
-3. **Kiểm tra Form Đăng Ký**:
-   - Các trường Họ tên, Email, Mật khẩu, Xác nhận mật khẩu đều có biểu tượng icon trực quan ở đầu ô (`input-group-text`).
-   - Thử bấm **Đăng Ký Tài Khoản** khi chưa điền thông tin $\rightarrow$ Form báo lỗi viền đỏ.
-   - Nhập 2 mật khẩu khác nhau $\rightarrow$ Form báo lỗi *Mật khẩu không khớp!*.
-   - Nhập đầy đủ thông tin hợp lệ $\rightarrow$ Xuất hiện thông báo xanh **🎉 Chúc mừng! Bạn đã đăng ký tài khoản thành công**.
-4. **Kiểm tra Mobile**: Bấm `F12` $\rightarrow$ `Ctrl + Shift + M` để thấy giao diện co giãn Responsive 100%, Carousel và Form tự xếp dọc ngăn nắp.
+## 💻 Cách Khởi Chạy & Kiểm Tra
+1. Mở trực tiếp tệp `index.html` trong trình duyệt web (Google Chrome, Microsoft Edge, Firefox).
+2. Nhấn phím `F12` và chọn chế độ **Device Toolbar** để kiểm tra tính responsive trên các kích thước màn hình: Mobile (375px), Tablet (768px), Desktop (1200px+).
 
 ---
-
-**Tác giả thực hiện:** Vũ Đức Đạt (VuDucDat2006)  
-**Khóa học:** CodeGym Web Development  
-**Nhánh GitHub:** [bootstrap-user-registration](https://github.com/VuDucDat2006/GitProject/tree/bootstrap-user-registration)
+*Tác giả: Vũ Đức Đạt (VuDucDat2006)*  
+*Khoá học: Front-End Web Development - CodeGym*
