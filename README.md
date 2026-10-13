@@ -1,26 +1,20 @@
 ﻿# GitProject
 
-Dự án thực hành các thao tác cơ bản với Git và GitHub (CodeGym).
+Dự án thực hành các thao tác cơ bản với Git, GitHub và HTML cơ bản (CodeGym).
 
-## Mục Tiêu Thực Hành
-- Làm quen và thực hành các thao tác cơ bản với Git và GitHub.
-- Nắm được quy trình làm việc từ tạo repository, clone dự án về máy tính, đến đẩy mã nguồn lên GitHub.
+## Nhánh: `company-meeting-schedule`
+Bài tập: **[Bài tập] Gộp ô trong bảng với rowspan và colspan**
 
-## Cấu Trúc Dự Án
-```plaintext
-GitProject/
-├── README.md
-└── source/
-    ├── index.html
-    └── news.html
-```
+### Mục tiêu:
+- Luyện tập sử dụng `rowspan` và `colspan` để gộp ô trong bảng HTML.
+- Trình bày lịch họp công ty một cách khoa học, chuyên nghiệp:
+  - Tiêu đề chính `<h1>`: "Lịch họp công ty".
+  - Các cột: `Ngày`, `Giờ`, `Nội dung cuộc họp`.
+  - Sử dụng thuộc tính `rowspan` để gộp ô trong cột Ngày khi có nhiều cuộc họp trong cùng một ngày (Thứ Hai, Thứ Ba, Thứ Năm, Thứ Sáu).
+  - Sử dụng thuộc tính `colspan` để gộp ô khi cuộc họp kéo dài nhiều giờ hoặc diễn ra cả ngày (Thứ Tư, chiều Thứ Sáu).
 
-## Các Bước Đã Thực Hiện
-1. Tạo repository `GitProject` trên GitHub.
-2. Clone repository về máy tính cá nhân bằng lệnh `git clone`.
-3. Tạo file `README.md`, đưa vào Staging Area (`git add`) và commit (`git commit -m "Add README.md"`).
-4. Đẩy file `README.md` lên GitHub (`git push origin main`).
-5. Tạo thư mục `source` chứa `index.html` và `news.html`.
-6. Đẩy thư mục `source` lên GitHub (`git add source/`, `git commit -m "Add source files"`, `git push origin main`).
+### Cấu trúc file:
+- `index.html`: File HTML chính hiển thị lịch họp công ty.
+- `meeting_schedule.html`: File dự phòng tương đương.
 
 Tác giả: Vũ Đức Đạt (VuDucDat2006)
