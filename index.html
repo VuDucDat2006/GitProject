@@ -1,0 +1,352 @@
+﻿<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KidCartoon HD - Trang Web Xem Phim Hoáº¡t HÃ¬nh Trá»±c Tuyáº¿n Cho Tráº» Em</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- 1. HEADER Cá» Äá»ŠNH (FIXED HEADER & HEAD-LINK) -->
+    <header class="header">
+        <div class="header-container">
+            <!-- Logo bÃªn trÃ¡i -->
+            <div class="logo">
+                <a href="#home">
+                    <span class="logo-icon">ðŸŒŸ</span>
+                    <span class="logo-text">KidCartoon<span class="logo-sub">HD</span></span>
+                </a>
+            </div>
+
+            <!-- Thanh tÃ¬m kiáº¿m & bá»™ lá»c lá»c theo tiÃªu chÃ­ Ä‘á» bÃ i -->
+            <div class="search-sort-box">
+                <div class="search-bar">
+                    <input type="text" id="searchInput" placeholder="TÃ¬m kiáº¿m phim hoáº¡t hÃ¬nh..." onkeyup="filterVideos()">
+                    <button type="button" class="btn-search">ðŸ”</button>
+                </div>
+                <div class="sort-bar">
+                    <label for="sortSelect">Sáº¯p xáº¿p:</label>
+                    <select id="sortSelect" onchange="sortVideos(this.value)">
+                        <option value="newest">Má»›i cáº­p nháº­t</option>
+                        <option value="views">Nhiá»u lÆ°á»£t xem nháº¥t</option>
+                        <option value="rating">ÄÃ¡nh giÃ¡ cao nháº¥t</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Head-link: Chá»©a cÃ¡c liÃªn káº¿t trang chÃ­nh -->
+            <nav class="head-link">
+                <ul>
+                    <li><a href="#home" class="active">Trang chá»§</a></li>
+                    <li><a href="#vietnam">Hoáº¡t hÃ¬nh Viá»‡t</a></li>
+                    <li><a href="#world">Quá»‘c táº¿</a></li>
+                    <li><a href="#fairy">Cá»• tÃ­ch</a></li>
+                    <li><a href="#contact">LiÃªn há»‡</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- 2. KHU Vá»°C THÃ”NG BÃO CAM Káº¾T CHáº¤T LÆ¯á»¢NG & AN TOÃ€N TRáºº EM -->
+    <div class="safety-banner">
+        <div class="banner-inner">
+            <span class="shield-badge">ðŸ›¡ï¸ 100% An ToÃ n Cho Tráº»</span>
+            <span>Ná»™i dung chá»n lá»c giÃ¡o dá»¥c &bull; Thuyáº¿t minh tiáº¿ng Viá»‡t &bull; Cháº¥t lÆ°á»£ng HD/FullHD &bull; HoÃ n toÃ n khÃ´ng quáº£ng cÃ¡o</span>
+        </div>
+    </div>
+
+    <!-- 3. KHU Vá»°C Ná»˜I DUNG CHÃNH (CONTENT: LEFT & RIGHT) -->
+    <div class="content-wrapper">
+        <div class="main-layout">
+            
+            <!-- LEFT CONTENT: DANH SÃCH CÃC VIDEO CÃ“ Sáº´N (MENU) -->
+            <aside class="left-content">
+                <div class="sidebar-header">
+                    <h3>ðŸ“º Danh SÃ¡ch Táº­p Phim (<span id="videoCount">5</span>)</h3>
+                    <p class="sidebar-subtitle">Nháº¥p vÃ o phim Ä‘á»ƒ xem ngay bÃªn pháº£i</p>
+                </div>
+
+                <div class="video-list" id="videoList">
+                    <!-- Video 1: HTML5 Video -->
+                    <div class="video-item active" onclick="switchVideo(0)" data-views="250000" data-date="2026-10-10">
+                        <div class="thumb-wrapper">
+                            <img src="https://images.unsplash.com/photo-1534447677768-be436bb09401?w=300&auto=format&fit=crop&q=60" alt="ChÃº Thá» Vui Nhá»™n">
+                            <span class="duration">10:34</span>
+                            <span class="quality-badge">FullHD</span>
+                        </div>
+                        <div class="video-info">
+                            <h4 class="video-title">Táº­p 1: Cuá»™c PhiÃªu LÆ°u Cá»§a ChÃº Thá» Vui Nhá»™n</h4>
+                            <p class="video-meta">ðŸ‘ï¸ 250k lÆ°á»£t xem &bull; 2 ngÃ y trÆ°á»›c</p>
+                            <span class="tag-type tag-html5">HTML5 Video</span>
+                        </div>
+                    </div>
+
+                    <!-- Video 2: YouTube Embed 1 -->
+                    <div class="video-item" onclick="switchVideo(1)" data-views="420000" data-date="2026-10-08">
+                        <div class="thumb-wrapper">
+                            <img src="https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?w=300&auto=format&fit=crop&q=60" alt="Tom vÃ  Jerry">
+                            <span class="duration">12:15</span>
+                            <span class="quality-badge">HD 720p</span>
+                        </div>
+                        <div class="video-info">
+                            <h4 class="video-title">Táº­p 2: Nhá»¯ng TrÃ² Nghá»‹ch Ngá»£m Cá»§a MÃ¨o VÃ  Chuá»™t</h4>
+                            <p class="video-meta">ðŸ‘ï¸ 420k lÆ°á»£t xem &bull; 4 ngÃ y trÆ°á»›c</p>
+                            <span class="tag-type tag-youtube">YouTube Embed</span>
+                        </div>
+                    </div>
+
+                    <!-- Video 3: YouTube Embed 2 -->
+                    <div class="video-item" onclick="switchVideo(2)" data-views="180000" data-date="2026-10-05">
+                        <div class="thumb-wrapper">
+                            <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=300&auto=format&fit=crop&q=60" alt="Doraemon">
+                            <span class="duration">15:00</span>
+                            <span class="quality-badge">FullHD</span>
+                        </div>
+                        <div class="video-info">
+                            <h4 class="video-title">Táº­p 3: Chiáº¿c TÃºi Tháº§n Ká»³ Cá»§a ChÃº MÃ¨o MÃ¡y</h4>
+                            <p class="video-meta">ðŸ‘ï¸ 180k lÆ°á»£t xem &bull; 1 tuáº§n trÆ°á»›c</p>
+                            <span class="tag-type tag-youtube">YouTube Embed</span>
+                        </div>
+                    </div>
+
+                    <!-- Video 4: HTML5 Video 2 -->
+                    <div class="video-item" onclick="switchVideo(3)" data-views="310000" data-date="2026-10-02">
+                        <div class="thumb-wrapper">
+                            <img src="https://images.unsplash.com/photo-1509198397868-475647b2a1e5?w=300&auto=format&fit=crop&q=60" alt="Hoáº¡t hÃ¬nh Dáº¿ MÃ¨n">
+                            <span class="duration">08:45</span>
+                            <span class="quality-badge">HD 720p</span>
+                        </div>
+                        <div class="video-info">
+                            <h4 class="video-title">Táº­p 4: BÃ i Há»c Äáº§u Äá»i Cá»§a ChÃº Dáº¿ MÃ¨n</h4>
+                            <p class="video-meta">ðŸ‘ï¸ 310k lÆ°á»£t xem &bull; 2 tuáº§n trÆ°á»›c</p>
+                            <span class="tag-type tag-html5">HTML5 Video</span>
+                        </div>
+                    </div>
+
+                    <!-- Video 5: YouTube Embed 3 -->
+                    <div class="video-item" onclick="switchVideo(4)" data-views="550000" data-date="2026-09-28">
+                        <div class="thumb-wrapper">
+                            <img src="https://images.unsplash.com/photo-1563089145-599997674d42?w=300&auto=format&fit=crop&q=60" alt="Cá»• tÃ­ch CÃ¢y Kháº¿">
+                            <span class="duration">14:20</span>
+                            <span class="quality-badge">FullHD</span>
+                        </div>
+                        <div class="video-info">
+                            <h4 class="video-title">Táº­p 5: Cá»• TÃ­ch Sá»± TÃ­ch CÃ¢y Kháº¿ Thuyáº¿t Minh</h4>
+                            <p class="video-meta">ðŸ‘ï¸ 550k lÆ°á»£t xem &bull; 3 tuáº§n trÆ°á»›c</p>
+                            <span class="tag-type tag-youtube">YouTube Embed</span>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- RIGHT CONTENT: KHU Vá»°C PHÃT VIDEO CHÃNH -->
+            <main class="right-content">
+                <!-- KHUNG CHá»¨A VIDEO PLAYER (Máº¶C Äá»ŠNH HIá»‚N THá»Š VIDEO Äáº¦U TIÃŠN) -->
+                <div class="player-container">
+                    <!-- Player HTML5 Video -->
+                    <div id="html5PlayerBox" class="player-box">
+                        <video id="mainHtml5Video" controls preload="metadata" poster="https://images.unsplash.com/photo-1534447677768-be436bb09401?w=800&auto=format&fit=crop&q=80">
+                            <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/mp4">
+                            TrÃ¬nh duyá»‡t cá»§a báº¡n khÃ´ng há»— trá»£ tháº» video HTML5.
+                        </video>
+                    </div>
+
+                    <!-- Player YouTube Iframe -->
+                    <div id="youtubePlayerBox" class="player-box" style="display: none;">
+                        <iframe id="mainYoutubeIframe" src="" title="Hoáº¡t hÃ¬nh vui nhá»™n" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
+
+                <!-- THÃ”NG TIN PHIM ÄANG XEM -->
+                <div class="current-video-details">
+                    <div class="details-header">
+                        <h2 id="currentVideoTitle">Táº­p 1: Cuá»™c PhiÃªu LÆ°u Cá»§a ChÃº Thá» Vui Nhá»™n</h2>
+                        <div class="action-buttons">
+                            <button class="btn-action">â­ YÃªu thÃ­ch</button>
+                            <button class="btn-action">ðŸ”— Chia sáº»</button>
+                            <span class="quality-tag">1080p FullHD</span>
+                        </div>
+                    </div>
+
+                    <div class="details-meta">
+                        <span id="currentVideoMeta">ðŸ‘ï¸ 250,000 lÆ°á»£t xem &bull; ÄÃ£ cáº­p nháº­t 2 ngÃ y trÆ°á»›c &bull; Thuyáº¿t minh tiáº¿ng Viá»‡t chuáº©n</span>
+                    </div>
+
+                    <hr class="divider">
+
+                    <div class="video-description">
+                        <h3>ðŸ“– Giá»›i thiá»‡u táº­p phim:</h3>
+                        <p id="currentVideoDesc">
+                            Phim hoáº¡t hÃ¬nh 3D sinh Ä‘á»™ng ká»ƒ vá» cuá»™c phiÃªu lÆ°u lÃ½ thÃº cá»§a chÃº thá» tráº¯ng trong khu rá»«ng xanh tÆ°Æ¡i mÃ¡t. Phim mang tÃ­nh giÃ¡o dá»¥c nháº¹ nhÃ ng vá» tÃ¬nh báº¡n, lÃ²ng dÅ©ng cáº£m vÃ  tinh tháº§n tÆ°Æ¡ng thÃ¢n tÆ°Æ¡ng Ã¡i, cá»±c ká»³ thÃ­ch há»£p cho cÃ¡c báº¡n nhá» tá»« 3 Ä‘áº¿n 12 tuá»•i thÆ°á»Ÿng thá»©c.
+                        </p>
+                    </div>
+
+                    <!-- DANH SÃCH BÃ€I Há»ŒC VÃ€ TÃNH NÄ‚NG Ná»”I Báº¬T -->
+                    <div class="educational-features">
+                        <div class="feature-item">
+                            <span class="feat-icon">ðŸŽ™ï¸</span>
+                            <div>
+                                <strong>Thuyáº¿t Minh Thuáº§n Viá»‡t</strong>
+                                <p>Giá»ng Ä‘á»c áº¥m Ã¡p, chuáº©n ngá»¯ Ã¢m, dá»… hiá»ƒu Ä‘á»‘i vá»›i cÃ¡c bÃ©.</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feat-icon">ðŸš«</span>
+                            <div>
+                                <strong>Cam Káº¿t 0% Quáº£ng CÃ¡o</strong>
+                                <p>KhÃ´ng quáº£ng cÃ¡o cáº¯t ngang luá»“ng phim Ä‘á»ƒ tráº» táº­p trung thÆ°á»Ÿng thá»©c.</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feat-icon">ðŸ›¡ï¸</span>
+                            <div>
+                                <strong>Kiá»ƒm Duyá»‡t 3 Lá»›p</strong>
+                                <p>Loáº¡i bá» hoÃ n toÃ n cÃ¡c ná»™i dung pháº£n cáº£m, báº¡o lá»±c hay Ä‘á»™c háº¡i.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <!-- 4. FOOTER HIá»‚N THá»Š THÃ”NG TIN Báº¢N QUYá»€N -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-col">
+                <h4>ðŸŒŸ KidCartoon HD</h4>
+                <p>Website xem phim hoáº¡t hÃ¬nh trá»±c tuyáº¿n cháº¥t lÆ°á»£ng cao, an toÃ n vÃ  bá»• Ã­ch sá»‘ 1 dÃ nh cho tráº» em Viá»‡t Nam.</p>
+            </div>
+            <div class="footer-col">
+                <h4>LiÃªn Káº¿t Nhanh</h4>
+                <ul>
+                    <li><a href="#about">Vá» chÃºng tÃ´i</a></li>
+                    <li><a href="#policy">ChÃ­nh sÃ¡ch báº£o vá»‡ tráº» em</a></li>
+                    <li><a href="#terms">Äiá»u khoáº£n sá»­ dá»¥ng</a></li>
+                    <li><a href="#support">Há»— trá»£ phá»¥ huynh</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Báº£n Quyá»n &amp; TÃ¡c Giáº£</h4>
+                <p>&copy; 2026 <strong>KidCartoon HD</strong>. Táº¥t cáº£ quyá»n Ä‘Æ°á»£c báº£o lÆ°u.</p>
+                <p>Dá»± Ã¡n thá»±c hÃ nh Front-End Web - Há»c viÃªn: <strong>VÅ© Äá»©c Äáº¡t (VuDucDat2006)</strong></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JAVASCRIPT ÄIá»€U KHIá»‚N CHUYá»‚N VIDEO & Bá»˜ Lá»ŒC -->
+    <script>
+        const videoData = [
+            {
+                type: 'html5',
+                src: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4',
+                poster: 'https://images.unsplash.com/photo-1534447677768-be436bb09401?w=800&auto=format&fit=crop&q=80',
+                title: 'Táº­p 1: Cuá»™c PhiÃªu LÆ°u Cá»§a ChÃº Thá» Vui Nhá»™n',
+                meta: 'ðŸ‘ï¸ 250,000 lÆ°á»£t xem â€¢ ÄÃ£ cáº­p nháº­t 2 ngÃ y trÆ°á»›c â€¢ Thuyáº¿t minh tiáº¿ng Viá»‡t chuáº©n',
+                desc: 'Phim hoáº¡t hÃ¬nh 3D sinh Ä‘á»™ng ká»ƒ vá» cuá»™c phiÃªu lÆ°u lÃ½ thÃº cá»§a chÃº thá» tráº¯ng trong khu rá»«ng xanh tÆ°Æ¡i mÃ¡t. Phim mang tÃ­nh giÃ¡o dá»¥c nháº¹ nhÃ ng vá» tÃ¬nh báº¡n, lÃ²ng dÅ©ng cáº£m vÃ  tinh tháº§n tÆ°Æ¡ng thÃ¢n tÆ°Æ¡ng Ã¡i.'
+            },
+            {
+                type: 'youtube',
+                src: 'https://www.youtube.com/embed/jviI5b1R74M?autoplay=1',
+                title: 'Táº­p 2: Nhá»¯ng TrÃ² Nghá»‹ch Ngá»£m Cá»§a MÃ¨o VÃ  Chuá»™t',
+                meta: 'ðŸ‘ï¸ 420,000 lÆ°á»£t xem â€¢ ÄÃ£ cáº­p nháº­t 4 ngÃ y trÆ°á»›c â€¢ Báº£n quyá»n Warner Bros Animation',
+                desc: 'Táº­p phim hoáº¡t hÃ¬nh kinh Ä‘iá»ƒn vá»›i nhá»¯ng mÃ n rÆ°á»£t Ä‘uá»•i dÃ­ dá»m, thÃ´ng minh vÃ  Ä‘áº§y tiáº¿ng cÆ°á»i giá»¯a chÃº mÃ¨o xÃ¡m vÃ  chÃº chuá»™t lanh lá»£i. GiÃºp tráº» em thÆ° giÃ£n sáº£ng khoÃ¡i sau nhá»¯ng giá» há»c táº­p cÄƒng tháº³ng.'
+            },
+            {
+                type: 'youtube',
+                src: 'https://www.youtube.com/embed/kXYiU_JCYtU?autoplay=1',
+                title: 'Táº­p 3: Chiáº¿c TÃºi Tháº§n Ká»³ Cá»§a ChÃº MÃ¨o MÃ¡y',
+                meta: 'ðŸ‘ï¸ 180,000 lÆ°á»£t xem â€¢ ÄÃ£ cáº­p nháº­t 1 tuáº§n trÆ°á»›c â€¢ Lá»“ng tiáº¿ng Viá»‡t HTV3',
+                desc: 'KhÃ¡m phÃ¡ tháº¿ giá»›i báº£o bá»‘i tÆ°Æ¡ng lai cá»§a chÃº mÃ¨o mÃ¡y thÃ´ng minh. Má»—i táº­p phim lÃ  má»™t bÃ i há»c sÃ¢u sáº¯c vá» tÃ­nh trung thá»±c, chÄƒm chá»‰ vÃ  lÃ²ng hiáº¿u tháº£o cá»§a cÃ¡c báº¡n nhá».'
+            },
+            {
+                type: 'html5',
+                src: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4',
+                poster: 'https://images.unsplash.com/photo-1509198397868-475647b2a1e5?w=800&auto=format&fit=crop&q=80',
+                title: 'Táº­p 4: BÃ i Há»c Äáº§u Äá»i Cá»§a ChÃº Dáº¿ MÃ¨n',
+                meta: 'ðŸ‘ï¸ 310,000 lÆ°á»£t xem â€¢ ÄÃ£ cáº­p nháº­t 2 tuáº§n trÆ°á»›c â€¢ Hoáº¡t hÃ¬nh Viá»‡t Nam Ä‘áº·c sáº¯c',
+                desc: 'Chuyá»ƒn thá»ƒ tá»« tÃ¡c pháº©m vÄƒn há»c thiáº¿u nhi Viá»‡t Nam ná»•i tiáº¿ng. Dáº¿ MÃ¨n phiÃªu lÆ°u kÃ½ mang láº¡i nhiá»u bÃ i há»c nhÃ¢n vÄƒn vá» lÃ²ng khiÃªm tá»‘n, biáº¿t trÃ¢n trá»ng báº¡n bÃ¨ vÃ  tÃ¬nh yÃªu thÆ°Æ¡ng muÃ´n loÃ i.'
+            },
+            {
+                type: 'youtube',
+                src: 'https://www.youtube.com/embed/fJ9rUzIMcZQ?autoplay=1',
+                title: 'Táº­p 5: Cá»• TÃ­ch Sá»± TÃ­ch CÃ¢y Kháº¿ Thuyáº¿t Minh',
+                meta: 'ðŸ‘ï¸ 550,000 lÆ°á»£t xem â€¢ ÄÃ£ cáº­p nháº­t 3 tuáº§n trÆ°á»›c â€¢ Cá»• tÃ­ch dÃ¢n gian Viá»‡t Nam',
+                desc: 'CÃ¢u chuyá»‡n dÃ¢n gian dáº¡y bÃ© vá» lÃ²ng nhÃ¢n háº­u, sá»± chá»‹u thÆ°Æ¡ng chá»‹u khÃ³ vÃ  bÃ i há»c Ä‘Ã­ch Ä‘Ã¡ng cho thÃ³i tham lam, Ã­ch ká»· thÃ´ng qua sá»± tÃ­ch Äƒn kháº¿ tráº£ vÃ ng kinh Ä‘iá»ƒn.'
+            }
+        ];
+
+        function switchVideo(index) {
+            const data = videoData[index];
+            if (!data) return;
+
+            // Highlight má»¥c Ä‘ang chá»n trong danh sÃ¡ch Left Content
+            const items = document.querySelectorAll('.video-item');
+            items.forEach((item, idx) => {
+                if (idx === index) item.classList.add('active');
+                else item.classList.remove('active');
+            });
+
+            // Äiá»u khiá»ƒn Player tÆ°Æ¡ng á»©ng
+            const html5Box = document.getElementById('html5PlayerBox');
+            const ytBox = document.getElementById('youtubePlayerBox');
+            const html5Video = document.getElementById('mainHtml5Video');
+            const ytIframe = document.getElementById('mainYoutubeIframe');
+
+            if (data.type === 'html5') {
+                ytIframe.src = '';
+                ytBox.style.display = 'none';
+                html5Box.style.display = 'block';
+                html5Video.src = data.src;
+                html5Video.poster = data.poster || '';
+                html5Video.play().catch(e => console.log('Autoplay prevented:', e));
+            } else {
+                html5Video.pause();
+                html5Box.style.display = 'none';
+                ytBox.style.display = 'block';
+                ytIframe.src = data.src;
+            }
+
+            // Cáº­p nháº­t thÃ´ng tin chi tiáº¿t
+            document.getElementById('currentVideoTitle').innerText = data.title;
+            document.getElementById('currentVideoMeta').innerText = data.meta;
+            document.getElementById('currentVideoDesc').innerText = data.desc;
+        }
+
+        // TÃ¬m kiáº¿m video theo tÃªn
+        function filterVideos() {
+            const input = document.getElementById('searchInput').value.toLowerCase();
+            const items = document.querySelectorAll('.video-item');
+            let count = 0;
+            items.forEach(item => {
+                const title = item.querySelector('.video-title').innerText.toLowerCase();
+                if (title.includes(input)) {
+                    item.style.display = 'flex';
+                    count++;
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+            document.getElementById('videoCount').innerText = count;
+        }
+
+        // Sáº¯p xáº¿p video theo lÆ°á»£t xem hoáº·c má»›i cáº­p nháº­t
+        function sortVideos(criteria) {
+            const list = document.getElementById('videoList');
+            const items = Array.from(list.children);
+
+            items.sort((a, b) => {
+                if (criteria === 'views') {
+                    return parseInt(b.getAttribute('data-views')) - parseInt(a.getAttribute('data-views'));
+                } else if (criteria === 'newest') {
+                    return new Date(b.getAttribute('data-date')) - new Date(a.getAttribute('data-date'));
+                }
+                return 0;
+            });
+
+            items.forEach(item => list.appendChild(item));
+        }
+    </script>
+</body>
+</html>
