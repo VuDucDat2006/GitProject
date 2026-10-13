@@ -1,26 +1,27 @@
-﻿# GitProject
+﻿# [Thực hành] Tạo bố cục cơ bản (Basic Website Layout)
 
-Dự án thực hành các thao tác cơ bản với Git và GitHub (CodeGym).
+Dự án thực hành sử dụng thẻ \<div>\ kết hợp CSS để xây dựng bố cục trang web 3 cột kinh điển bao gồm các phân vùng: \#main\, \#head\, \#head-link\, \#left\, \#content\, \#right\ và \#footer\.
 
-## Mục Tiêu Thực Hành
-- Làm quen và thực hành các thao tác cơ bản với Git và GitHub.
-- Nắm được quy trình làm việc từ tạo repository, clone dự án về máy tính, đến đẩy mã nguồn lên GitHub.
+## 📌 Phân Vùng Chức Năng Bố Cục
+1. **\#main\**: Khối bao bọc toàn bộ nội dung, cố định độ rộng (\980px\) và căn giữa màn hình (\margin: 0 auto;\).
+2. **\#head\**: Phân vùng đầu trang (\height: 110px;\, Logo & Banner).
+3. **\#head-link\**: Phân vùng chứa thanh menu liên kết đầu trang (\Home\, \Students\, \Courses\, \News\, \About\, \Contact\).
+4. **\#left\**: Phân vùng bên trái (\width: 200px;\, \min-height: 520px;\, \loat: left;\) chứa menu danh mục.
+5. **\#content\**: Phân vùng nội dung chính (\width: 530px;\, \min-height: 520px;\, \loat: left;\) chứa Hot news, Photo slide, các bản tin chi tiết.
+6. **\#right\**: Phân vùng bên phải (\width: 210px;\, \min-height: 520px;\, \loat: left;\) chứa Lịch học, Biểu đồ thống kê và thông tin học viên.
+7. **\#footer\**: Phân vùng cuối trang với thuộc tính \clear: both;\ để xóa float và đẩy xuống dưới ôm trọn 3 cột.
 
-## Cấu Trúc Dự Án
-```plaintext
+## 🛠 Cấu Trúc Thư Mục
+\\\plaintext
 GitProject/
-├── README.md
-└── source/
-    ├── index.html
-    └── news.html
-```
+├── index.html       # Cấu trúc HTML5 phân vùng với các ID chuẩn
+├── style.css        # Hệ thống định dạng CSS bố cục
+└── README.md        # Hướng dẫn chi tiết dự án
+\\\
 
-## Các Bước Đã Thực Hiện
-1. Tạo repository `GitProject` trên GitHub.
-2. Clone repository về máy tính cá nhân bằng lệnh `git clone`.
-3. Tạo file `README.md`, đưa vào Staging Area (`git add`) và commit (`git commit -m "Add README.md"`).
-4. Đẩy file `README.md` lên GitHub (`git push origin main`).
-5. Tạo thư mục `source` chứa `index.html` và `news.html`.
-6. Đẩy thư mục `source` lên GitHub (`git add source/`, `git commit -m "Add source files"`, `git push origin main`).
+## 🚀 Cách Xem Và Kiểm Tra Dự Án
+- Mở trực tiếp file \index.html\ trên bất kỳ trình duyệt web nào.
+- Quan sát trang web hiển thị chuẩn xác đầy đủ 6 phân vùng: đầu trang, thanh liên kết, 3 cột nội dung ở giữa và chân trang.
+- Xem trực tiếp trên GitHub: [Basic Website Layout](https://github.com/VuDucDat2006/GitProject/tree/basic-website-layout)
 
 Tác giả: Vũ Đức Đạt (VuDucDat2006)
