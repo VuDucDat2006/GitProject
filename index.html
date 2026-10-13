@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Navbar - [Thá»±c hÃ nh] CodeGym</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+
+    <!-- 1. THANH ÄIá»€U HÆ¯á»šNG RESPONSIVE THEO Äá»€ BÃ€I -->
+    <nav class="navbar">
+        <div class="logo">MyWebsite</div>
+        <ul class="nav-links">
+            <li><a href="#home">Trang chá»§</a></li>
+            <li><a href="#about">Giá»›i thiá»‡u</a></li>
+            <li><a href="#services">Dá»‹ch vá»¥</a></li>
+            <li><a href="#contact">LiÃªn há»‡</a></li>
+        </ul>
+        <div class="menu-icon">â˜°</div>
+    </nav>
+
+    <!-- 2. KHU Vá»°C Ná»˜I DUNG MÃ” Táº¢ & HÆ¯á»šNG DáºªN TEST -->
+    <main class="content-container">
+        <div class="card-hero">
+            <span class="badge">Flexbox &bull; Media Queries &bull; JavaScript</span>
+            <h1>[Thá»±c hÃ nh] Táº¡o thanh Ä‘iá»u hÆ°á»›ng Responsive</h1>
+            <p class="subtitle">Thanh menu tá»± Ä‘á»™ng thÃ­ch á»©ng trÃªn cáº£ mÃ n hÃ¬nh mÃ¡y tÃ­nh (Desktop) vÃ  Ä‘iá»‡n thoáº¡i di Ä‘á»™ng (Mobile).</p>
+            
+            <div class="instructions-box">
+                <h3>ðŸ“± HÆ°á»›ng dáº«n kiá»ƒm tra tÃ­nh nÄƒng:</h3>
+                <ul>
+                    <li><strong>TrÃªn mÃ n hÃ¬nh Desktop (rá»™ng &gt; 768px):</strong> Menu hiá»ƒn thá»‹ Ä‘áº§y Ä‘á»§ dáº¡ng hÃ ng ngang, biá»ƒu tÆ°á»£ng <code>â˜°</code> tá»± Ä‘á»™ng áº©n.</li>
+                    <li><strong>TrÃªn mÃ n hÃ¬nh Mobile (rá»™ng &le; 768px):</strong>
+                        <ul>
+                            <li>Menu danh sÃ¡ch áº©n Ä‘i vÃ  biá»ƒu tÆ°á»£ng Hamburger <code>â˜°</code> xuáº¥t hiá»‡n á»Ÿ gÃ³c pháº£i.</li>
+                            <li>Nháº¥n vÃ o biá»ƒu tÆ°á»£ng <code>â˜°</code>: Menu sáº½ trÆ°á»£t má»Ÿ ra mÆ°á»£t mÃ  nhá» JavaScript <code>classList.toggle("active")</code>.</li>
+                            <li>Nháº¥n láº¡i vÃ o <code>â˜°</code> hoáº·c chá»n má»™t má»¥c: Menu sáº½ tá»± Ä‘á»™ng Ä‘Ã³ng láº¡i.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="demo-resize-hint">
+                <p>ðŸ’¡ <em>Máº¹o:</em> HÃ£y báº¥m phÃ­m <code>F12</code> trong trÃ¬nh duyá»‡t, chá»n biá»ƒu tÆ°á»£ng <strong>Device Toggle Toolbar</strong> (hoáº·c co nhá» chiá»u rá»™ng cá»­a sá»• trÃ¬nh duyá»‡t xuá»‘ng dÆ°á»›i 768px) Ä‘á»ƒ tráº£i nghiá»‡m giao diá»‡n mobile ngay láº­p tá»©c!</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- 3. FOOTER Báº¢N QUYá»€N -->
+    <footer class="page-footer">
+        <p>&copy; 2026 CodeGym Practice &bull; Há»c viÃªn thá»±c hiá»‡n: <strong>VÅ© Äá»©c Äáº¡t (VuDucDat2006)</strong></p>
+    </footer>
+
+</body>
+</html>
