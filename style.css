@@ -1,152 +1,206 @@
 /* ========================================================
-   [Bài tập] Tạo Landing Page với Bootstrap và Hình Ảnh
+   [Thực hành] Tạo layout trong Bootstrap (poly.css)
    Tác giả: Vũ Đức Đạt (VuDucDat2006)
    ======================================================== */
 
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
-
-:root {
-    --primary-color: #0d6efd;
-    --primary-dark: #0a58ca;
-    --accent-color: #0dcaf0;
-    --dark-bg: #111827;
-    --card-hover-y: -6px;
-    --transition-smooth: 0.28s ease;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
 body {
-    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    color: #1f2937;
+    background-color: #e9ebee;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    color: #333333;
+}
+
+.container {
     background-color: #ffffff;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    padding: 0 20px 20px 20px;
+    margin-top: 15px;
+    margin-bottom: 25px;
+    border-radius: 6px;
 }
 
 /* ==========================================
-   1. Navbar
+   Bước 3: Định dạng Header & .shopping-mall
    ========================================== */
-.navbar {
-    background-color: var(--dark-bg) !important;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+header {
+    position: relative;
+    background: linear-gradient(135deg, #1f3c88 0%, #070d59 100%);
+    min-height: 140px;
+    border-radius: 6px 6px 0 0;
+    margin-left: -20px;
+    margin-right: -20px;
+    padding: 15px 25px;
+    overflow: hidden;
 }
 
-.navbar-brand {
-    font-size: 1.35rem;
-    letter-spacing: -0.5px;
-}
-
-/* ==========================================
-   2. Hero / Banner Section
-   (Thay thế hoàn hảo cho Jumbotron trong Bootstrap 5)
-   ========================================== */
-.hero-section {
-    background: radial-gradient(circle at 80% 20%, #1e3a8a 0%, #0f172a 70%) !important;
-}
-
-.hero-overlay {
+.shopping-mall {
     position: absolute;
-    inset: 0;
-    background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.03' fill-rule='evenodd'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/svg%3E");
-    pointer-events: none;
+    bottom: 20px;
+    left: 25px;
+    font-variant: small-caps;
+    z-index: 2;
 }
 
-.hero-image-wrapper {
-    transition: transform var(--transition-smooth);
+.shopping-mall > h1 {
+    font-family: Impact, sans-serif;
+    font-size: 50px;
+    color: white;
+    letter-spacing: 0.3px;
+    text-shadow: 0 0 2px black;
+    padding-bottom: 0px;
+    border-bottom: 1px dotted gray;
+    margin: 0px;
 }
 
-.hero-image-wrapper:hover {
-    transform: translateY(-4px) scale(1.01);
+.shopping-mall > h5 {
+    margin-top: 5px;
+    letter-spacing: 0.5px;
+    color: #e0e0e0;
+}
+
+header img.pull-right {
+    height: 110px;
+    object-fit: contain;
+    position: absolute;
+    right: 25px;
+    bottom: 15px;
+    z-index: 1;
 }
 
 /* ==========================================
-   3. About Section
+   Bước 4: Định dạng Navbar
    ========================================== */
-.about-image-card {
-    transition: transform var(--transition-smooth);
+.navbar-inverse {
+    background-color: #222222;
+    border-color: #080808;
+    border-radius: 4px;
+    margin-top: 15px;
+    margin-bottom: 20px;
 }
 
-.about-image-card:hover {
+.navbar-inverse .navbar-nav > li > a {
+    color: #cccccc;
+    font-weight: 500;
+}
+
+.navbar-inverse .navbar-nav > li > a:hover,
+.navbar-inverse .navbar-nav > .active > a {
+    color: #ffffff;
+    background-color: #080808;
+}
+
+.navbar-inverse .navbar-nav > li > a .glyphicon {
+    margin-right: 5px;
+}
+
+/* ==========================================
+   Bước 5: Định dạng Giỏ Hàng (.poly-cart) & Aside
+   ========================================== */
+.poly-cart {
+    margin-top: 5px;
+}
+
+.poly-cart ul {
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
+    font-variant: small-caps;
+}
+
+.poly-cart ul li {
+    padding: 2px 0;
+    font-size: 13px;
+}
+
+.poly-cart .panel-body img {
+    padding: 0;
+    max-height: 60px;
+    object-fit: contain;
+}
+
+.poly-cart .panel-heading strong {
+    font-variant: small-caps;
+    font-size: larger;
+    text-shadow: 0 0 2px darkgray;
+}
+
+.panel-default > .panel-heading {
+    background-color: #f5f5f5;
+    font-weight: bold;
+}
+
+.list-group-item:hover {
+    background-color: #f0f7fd;
+    color: #1f3c88;
+}
+
+/* ==========================================
+   Bước 6: Định dạng Sản Phẩm (.poly-prod)
+   ========================================== */
+.poly-prod {
+    text-align: center;
+    padding: 5px;
+}
+
+.poly-prod .panel {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border-radius: 6px;
+}
+
+.poly-prod .panel:hover {
     transform: translateY(-4px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.12);
 }
 
-.floating-stat {
-    animation: floatStat 3s ease-in-out infinite alternate;
+.poly-prod .panel-heading {
+    background-color: #f7f9fa;
+    border-bottom: 1px solid #e1e4e8;
 }
 
-@keyframes floatStat {
-    0% { transform: translateY(0); }
-    100% { transform: translateY(-8px); }
+.poly-prod .panel-title {
+    font-size: 16px;
+    font-weight: bold;
+    color: #1f3c88;
 }
 
-/* ==========================================
-   4. Feature Cards
-   ========================================== */
-.feature-card {
-    transition: transform var(--transition-smooth), box-shadow var(--transition-smooth);
-    border: 1px solid rgba(0, 0, 0, 0.06) !important;
-}
-
-.feature-card:hover {
-    transform: translateY(var(--card-hover-y));
-    box-shadow: 0 14px 28px rgba(13, 110, 253, 0.1) !important;
-    border-color: rgba(13, 110, 253, 0.2) !important;
-}
-
-.feature-icon {
-    font-size: 2.4rem;
-    width: 64px;
-    height: 64px;
-    line-height: 64px;
-    border-radius: 16px;
-    margin: 0 auto;
-    background: #eff6ff;
+.poly-prod .panel-body {
+    padding: 10px;
+    background-color: #ffffff;
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: transform var(--transition-smooth);
+    min-height: 170px;
 }
 
-.feature-card:hover .feature-icon {
-    transform: scale(1.15) rotate(6deg);
-    background: #dbeafe;
+.poly-prod .panel-body img {
+    height: 150px;
+    max-width: 95%;
+    object-fit: contain;
 }
 
-/* ==========================================
-   5. CTA Section
-   ========================================== */
-.cta-section {
-    background: linear-gradient(135deg, #0d6efd 0%, #0056b3 50%, #003e80 100%) !important;
-}
-
-.cta-btn {
-    transition: transform var(--transition-smooth), box-shadow var(--transition-smooth);
-}
-
-.cta-btn:hover {
-    transform: translateY(-3px) scale(1.02);
-    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.3) !important;
+.poly-prod .panel-footer {
+    font-weight: bold;
+    color: #d9534f;
+    font-size: 15px;
+    background-color: #fbfbfb;
 }
 
 /* ==========================================
-   6. Technical Table & Code
+   Footer
    ========================================== */
-.table th, .table td {
-    vertical-align: middle;
+footer.panel {
+    margin-top: 25px;
+    margin-bottom: 0px;
+    border-radius: 0 0 6px 6px;
 }
 
-code {
-    background-color: #f1f5f9;
-    color: #d63384;
-    padding: 0.15rem 0.4rem;
-    border-radius: 4px;
-    font-size: 0.875em;
+footer .panel-heading {
+    background-color: #2b3e50 !important;
+    color: #ffffff !important;
+    border: none;
+    padding: 15px;
 }
 
-/* ==========================================
-   7. Footer
-   ========================================== */
-footer {
-    background-color: var(--dark-bg) !important;
+footer p {
+    margin: 0;
+    font-weight: 500;
 }

@@ -1,80 +1,110 @@
-# [Bài tập] Tạo Landing Page với Bootstrap và Hình Ảnh
+# [Thực hành] Tạo layout trong Bootstrap
 
-Dự án bài tập thực hành áp dụng toàn diện **Bootstrap Containers**, **Grid System**, **Bootstrap Buttons** và **Bootstrap Images** (`.img-fluid`) để xây dựng một Landing Page hiện đại, chuẩn thẩm mỹ UI/UX cao cấp và tương thích Responsive mượt mà trên mọi thiết bị.
-
----
-
-## 🎯 Mục Tiêu Bài Tập
-- Luyện tập sử dụng **Bootstrap Containers** và **Grid System** để bố trí các phân vùng trang web cân đối, hài hòa.
-- Ứng dụng **Bootstrap Images**, đặc biệt là lớp `.img-fluid` (`max-width: 100%; height: auto;`), để hình ảnh co giãn linh hoạt và không bị tràn khung trên thiết bị di động.
-- Sử dụng **Bootstrap Buttons** (`btn-primary`, `btn-lg`, `btn-light`, `rounded-pill`) để tạo các nút kêu gọi hành động (Call to Action - CTA) nổi bật.
-- Nắm vững sự thay đổi quan trọng giữa các phiên bản Bootstrap: **Bootstrap 5 đã loại bỏ hoàn toàn component Jumbotron**; thay vào đó, khu vực Banner/Hero được tự xây dựng bằng các lớp tiện ích (`container`, `py-5`, `bg-*`, `text-center`, flex utilities) kết hợp CSS tùy biến.
+Dự án bài tập thực hành áp dụng toàn diện các thành phần của framework **Bootstrap 3.3.7** (`container`, `header`, `navbar-inverse`, `glyphicons`, `panel`, `list-group`, `grid system col-sm-9 / col-sm-3 / col-sm-4`) để xây dựng một trang web mua sắm trực tuyến (**Online Shopping Mall**) hoàn chỉnh.
 
 ---
 
-## 🏛️ Cấu Trúc 4 Phân Vùng Cốt Lõi
-
-```plaintext
-Landing Page
-│
-├── 1. Banner / Hero (Tự xây dựng theo chuẩn Bootstrap 5, không dùng .jumbotron)
-│   ├── Tiêu đề lớn & đoạn giới thiệu ấn tượng
-│   ├── Cặp nút CTA: "Đăng Ký Ngay" & "Xem Thêm"
-│   └── Hình ảnh công nghệ nổi bật (img-fluid rounded-4 shadow)
-│
-├── 2. Giới thiệu (About Showcase)
-│   ├── Row 2 cột: Hình ảnh sản phẩm (img-fluid) + Nội dung mô tả tính năng
-│   └── Huy hiệu thống kê nổi bật (Floating Stat Badge)
-│
-├── 3. Tính năng (Features)
-│   ├── Row 4 cột trên Desktop (col-lg-3), 2 cột Tablet (col-md-6), 1 cột Mobile (col-12)
-│   └── 4 Card tính năng: Tốc độ siêu tốc ⚡, Bảo mật 🛡️, Responsive 📱, Hỗ trợ 24/7 🎧
-│
-└── 4. Kêu Gọi Hành Động (CTA Section)
-    └── Khối biểu ngữ kêu gọi đăng ký dùng thử 30 ngày với nút bấm lớn
-```
+## 🎯 Mục Tiêu Bài Thực Hành
+- Sử dụng các thành phần có sẵn của Bootstrap để tạo bố cục và nội dung trang web cơ bản.
+- Áp dụng hệ thống lưới Bootstrap Grid (`col-sm-9`, `col-sm-3`, `col-sm-4`, `col-sm-5`, `col-sm-7`).
+- Thiết kế thanh điều hướng tối màu (`navbar-inverse`) tích hợp hệ thống biểu tượng **Glyphicons**.
+- Sử dụng các khối giao diện **Panel** (`panel-heading`, `panel-body`, `panel-footer`) để thiết kế sản phẩm, giỏ hàng và danh mục.
+- Tùy biến kiểu dáng nâng cao qua file `poly.css` (`.shopping-mall`, `.poly-cart`, `.poly-prod`).
 
 ---
 
-## 📋 Bảng Phân Tích Kỹ Thuật Bootstrap 5 & Images
+## 🚀 Các Bước Thực Hiện Chi Tiết
 
-| Phân vùng | Class Bootstrap áp dụng | Tác dụng kỹ thuật |
-| :--- | :--- | :--- |
-| **Hero / Banner** | `.hero-section .container .py-5` | Khu vực đầu trang tự dựng thay thế cho Jumbotron cũ, có gradient và họa tiết |
-| **Ảnh Banner** | `.img-fluid .rounded-4 .shadow` | Hình ảnh tự động co giãn 100% độ rộng cột, bo tròn 4 góc 16px và đổ bóng |
-| **Khối Giới thiệu** | `.row .align-items-center &rarr; .col-lg-6` | Căn giữa theo trục dọc 2 cột ảnh và chữ trên máy tính, tự xếp chồng trên điện thoại |
-| **Lưới Tính năng** | `.row &rarr; .col-12 .col-md-6 .col-lg-3` | Chia 4 cột cân đối ($12/4 = 3$) trên Desktop, 2 cột trên Tablet và 1 cột trên Mobile |
-| **Thẻ Tính năng** | `.card .h-100 .p-4 .border-0 .shadow-sm` | Khối thẻ tính năng có chiều cao bằng nhau 100%, hiệu ứng hover bay nhẹ |
-| **Nút bấm CTA** | `.btn .btn-primary .btn-lg, .btn-light` | Nút bấm nổi bật kích thước lớn, bo tròn mềm mại và chuyển màu khi rê chuột |
-| **Chân trang** | `.bg-dark .text-white .py-4` | Phần chân trang màu tối hiển thị bản quyền và sinh viên thực hiện |
+### Bước 1: Tạo file `layout.html`
+- Khởi tạo cấu trúc HTML5 và nhúng thư viện Bootstrap 3.3.7 & jQuery 3.2.1 qua CDN:
+  ```html
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  ```
+- Phân chia bố cục khung tổng thể:
+  - Khung bao bọc: `<div class="container" style="height: auto">`
+  - Header: `<header class="row">`
+  - Menu điều hướng: `<nav class="navbar navbar-inverse">`
+  - Thân trang chia 2 cột: `<div class="row">` gồm `<article class="col-sm-9">` và `<aside class="col-sm-3">`
+  - Chân trang: `<footer class="panel panel-default">`
+
+### Bước 2 & 3: Thiết kế Header & Định dạng `.shopping-mall`
+- Đặt tiêu đề lớn, khẩu hiệu và hình ảnh trang trí đẩy sang mép phải bằng `.pull-right`:
+  ```html
+  <header class="row">
+      <div class="shopping-mall">
+          <h1>Online shopping mall</h1>
+          <h5>The center point of the professional programming</h5>
+      </div>
+      <img class="pull-right" src="images/header-object.png" alt="Header Object"/>
+  </header>
+  ```
+- Định dạng CSS cho `.shopping-mall` trong `poly.css`:
+  ```css
+  header { position: relative; }
+  .shopping-mall { position: absolute; bottom: 20px; font-variant: small-caps; }
+  .shopping-mall > h1 { font-family: Impact; font-size: 50px; color: white; text-shadow: 0 0 2px black; }
+  .shopping-mall > h5 { margin-top: 5px; letter-spacing: 0.5px; }
+  ```
+
+### Bước 4: Thiết kế Menu `<nav class="navbar navbar-inverse">`
+- Đổi từ `.navbar-default` sang `.navbar-inverse` cho nền tối sang trọng.
+- Bổ sung các icon Glyphicons chuẩn vào từng mục menu:
+  - `<span class="glyphicon glyphicon-home"></span> Trang chủ`
+  - `<span class="glyphicon glyphicon-list-alt"></span> Giới thiệu`
+  - `<span class="glyphicon glyphicon-earphone"></span> Liên hệ`
+  - `<span class="glyphicon glyphicon-envelope"></span> Góp ý`
+  - `<span class="glyphicon glyphicon-question-sign"></span> Hỏi đáp`
+  - `<span class="glyphicon glyphicon-user"></span> Tài khoản` (Menu con thả xuống: Đăng nhập, Đăng ký, Quên mật khẩu)
+
+### Bước 5: Thiết kế Cột Phụ `<aside class="col-sm-3">`
+1. **Giỏ hàng (`.poly-cart`)**: Panel chia 2 phần (`col-sm-5` hình ảnh giỏ hàng + `col-sm-7` thông tin số lượng 100 items, tổng tiền $56.8 và link xem giỏ hàng).
+2. **Ô tìm kiếm**: Panel chứa ô input `form-control` placeholder `Keywords`.
+3. **Chủng loại hàng**: Panel kết hợp `list-group` hiển thị danh sách: *Điện thoại di động, Máy tính xách tay, Máy tính để bàn, Quạt máy, Tivi, Tủ lạnh*.
+
+### Bước 6: Thiết kế Cột Sản Phẩm `<article class="col-sm-9">`
+- Sử dụng lưới chia mỗi hàng 3 sản phẩm, mỗi sản phẩm chiếm 4 cột (`col-sm-4 poly-prod`).
+- Ứng dụng cấu trúc Panel cho từng sản phẩm:
+  - `.panel-heading`: Tên sản phẩm (*Nokia, Samsung Galaxy, Apple iPhone, Dell, Sony, HP*).
+  - `.panel-body`: Hình ảnh sản phẩm `computer.png`.
+  - `.panel-footer`: Đơn giá (ví dụ: `$ 100.25`).
+- Định dạng `.poly-prod` trong `poly.css`:
+  ```css
+  .poly-prod { text-align: center; padding: 5px; }
+  .poly-prod .panel-body img { height: 150px; max-width: 95%; object-fit: contain; }
+  ```
+
+### Bước 7: Kiểm tra & Chạy Thử
+- Mở file `layout.html` trên trình duyệt và kiểm tra toàn bộ giao diện theo bản mẫu chuẩn: `http://demo.codegym.vn/web/15/layout-bootstrap/`.
 
 ---
 
 ## 📁 Cấu Trúc Thư Mục
 ```plaintext
 GitProject/
-├── index.html       # Mã nguồn Landing Page hoàn chỉnh chuẩn Bootstrap 5.3
-├── style.css        # Tùy biến thẩm mỹ: Google Font Plus Jakarta Sans, Hero Radial Gradient, Card Hover
-└── README.md        # Tài liệu thuyết minh dự án và hướng dẫn kiểm tra
+├── index.html           # File giao diện chính (bản sao của layout.html phục vụ GitHub Pages)
+├── layout.html          # File bài tập layout.html chuẩn theo giáo trình
+├── poly.css             # File định dạng CSS cho Shopping Mall, Giỏ hàng, Sản phẩm
+├── images/              # Thư mục hình ảnh dự án
+│   ├── header-object.png# Ảnh biểu tượng trang trí header
+│   ├── shoppingcart.gif # Ảnh biểu tượng giỏ hàng
+│   └── computer.png     # Ảnh sản phẩm điện tử máy tính
+└── README.md            # Tài liệu thuyết minh dự án và hướng dẫn nộp bài
 ```
 
 ---
 
-## 🔍 Hướng Dẫn Kiểm Tra & Chạy Thử
-1. **Mở trực tiếp trên Trình duyệt**: Mở file `index.html` bằng bất kỳ trình duyệt web nào (Chrome, Edge, Firefox, Cốc Cốc).
-2. **Kiểm tra trên Desktop (> 992px)**:
-   - Thanh Navbar cố định trên cùng (`sticky-top`) với nút đăng ký bo tròn viền.
-   - Khu vực Hero Banner hiển thị 2 cột cân đối: chữ bên trái và hình ảnh sắc nét bên phải.
-   - Khối Giới thiệu ảnh và nội dung song song.
-   - Khối Tính năng dàn trải đều 4 cột trên 1 hàng ngang, thẻ card có hiệu ứng bay nhẹ khi rê chuột.
-   - Khối CTA cuối trang nổi bật với nút bấm lớn.
-3. **Kiểm tra trên Mobile (< 768px)**:
-   - Nhấn `F12` $\rightarrow$ Nhấn tổ hợp `Ctrl + Shift + M` để bật chế độ giả lập điện thoại.
-   - Hình ảnh tự động co nhỏ vừa vặn với chiều rộng màn hình nhờ thuộc tính `.img-fluid`, không gây thanh cuộn ngang vỡ trang.
-   - Tất cả các khối tự động chuyển thành 1 cột dọc thẳng đứng dễ đọc và thao tác ngón tay.
+## 🔍 Hướng Dẫn Chạy & Kiểm Tra
+1. Mở file `layout.html` hoặc `index.html` trực tiếp bằng trình duyệt (Chrome, Edge, Firefox).
+2. Kiểm tra các thành phần:
+   - Header chữ lớn `Online shopping mall` font Impact bóng đổ cùng ảnh góc phải.
+   - Thanh Navbar màu đen với đầy đủ icon Glyphicons và menu Tài khoản xổ xuống.
+   - Thân trang chia 2 cột: Bên trái là lưới sản phẩm 3 cột đều đặn (`col-sm-4`), bên phải là Giỏ hàng, Ô tìm kiếm và Danh mục chủng loại.
+   - Chân trang hiển thị thông tin bản quyền CodeGym.
 
 ---
 
 **Tác giả thực hiện:** Vũ Đức Đạt (VuDucDat2006)  
 **Khóa học:** CodeGym Web Development  
-**Nhánh GitHub:** [bootstrap-landing-page-images](https://github.com/VuDucDat2006/GitProject/tree/bootstrap-landing-page-images)
+**Nhánh GitHub:** [bootstrap-layout-practice](https://github.com/VuDucDat2006/GitProject/tree/bootstrap-layout-practice)
