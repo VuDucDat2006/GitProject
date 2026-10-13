@@ -1,0 +1,11 @@
+// ==========================================================================
+// Bước 5: Import tất cả vào main.scss
+// Cấu trúc thư mục theo chuẩn SASS 7-1 Architecture: abstracts, base, layout, components
+// ==========================================================================
+
+@import "abstracts/variables";
+@import "abstracts/mixins";
+@import "base/global";
+@import "layout/container";
+@import "components/buttons";
+@import "components/cards";

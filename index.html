@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chuyển đổi CSS sang SASS Chuẩn - CodeGym Demo</title>
+    <!-- Tệp CSS được biên dịch từ main.scss -->
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* CSS hỗ trợ giao diện demo trực quan */
+        .header-demo {
+            text-align: center;
+            padding: 30px 0 20px;
+        }
+        .header-demo h1 {
+            color: #1e293b;
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+        }
+        .header-demo p {
+            color: #64748b;
+            font-size: 1.1rem;
+        }
+        .badge {
+            display: inline-block;
+            background: #2563eb;
+            color: white;
+            font-size: 13px;
+            font-weight: bold;
+            padding: 4px 12px;
+            border-radius: 20px;
+            margin-bottom: 10px;
+        }
+        .code-comparison {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+        .code-box {
+            background: #1e293b;
+            color: #e2e8f0;
+            padding: 15px;
+            border-radius: 8px;
+            font-family: Consolas, monospace;
+            font-size: 13px;
+            line-height: 1.5;
+            overflow-x: auto;
+        }
+        .actions {
+            margin-top: 15px;
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+        .btn-green {
+            background: #10b981 !important;
+        }
+        .btn-purple {
+            background: #8b5cf6 !important;
+        }
+        .footer-demo {
+            text-align: center;
+            padding: 30px 0;
+            color: #64748b;
+            font-size: 14px;
+            border-top: 1px solid #ddd;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Khung .container theo chuẩn bài học (width: 80%; margin: 0 auto;) -->
+    <div class="container">
+        
+        <header class="header-demo">
+            <span class="badge">SASS Architecture 7-1</span>
+            <h1>Thực Hành Chuyển Đổi CSS Sang SASS Chuẩn</h1>
+            <p>Tối ưu hóa mã CSS truyền thống thành hệ thống SASS dạng module: biến (variables), mixins, nesting và partials.</p>
+        </header>
+
+        <!-- Thẻ .card 1: Demo các thành phần được định dạng -->
+        <div class="card">
+            <h2>🎯 Kết Quả Định Dạng Thẻ Card (.card)</h2>
+            <p style="margin: 12px 0; line-height: 1.6;">
+                Khối nội dung này đang áp dụng trực tiếp lớp <code>.card</code> từ tệp 
+                <code>components/_cards.scss</code> với viền <code>border: 1px solid $border-color</code> và 
+                mixin đổ bóng <code>@include box-shadow;</code>.
+            </p>
+            <div class="actions">
+                <a href="#" class="button">Nút Mặc Định (.button)</a>
+                <a href="#" class="button btn-green">Nút Xanh (Mixin Tái Sử Dụng)</a>
+                <a href="#" class="button btn-purple">Nút Tím (Mixin Tái Sử Dụng)</a>
+            </div>
+        </div>
+
+        <!-- Thẻ .card 2: So sánh kiến trúc mã nguồn -->
+        <div class="card">
+            <h2>📊 So Sánh Kiến Trúc: Trước và Sau Khi Chuyển Đổi</h2>
+            <p style="margin: 10px 0; color: #475569;">
+                Từ 1 tệp CSS nguyên khối đơn lẻ, chúng ta đã chuyển đổi thành 4 thư mục chuẩn modular:
+            </p>
+
+            <div class="code-comparison">
+                <!-- Cột trước khi chuyển đổi -->
+                <div>
+                    <h3 style="color: #ef4444; margin-bottom: 8px;">❌ Trước: CSS Nguyên Khối (styles.css)</h3>
+                    <div class="code-box">
+body {<br>
+&nbsp;&nbsp;font-family: Arial, sans-serif;<br>
+&nbsp;&nbsp;color: #333;<br>
+&nbsp;&nbsp;background: #f4f4f4;<br>
+}<br>
+.container { width: 80%; margin: 0 auto; }<br>
+.button {<br>
+&nbsp;&nbsp;background: blue; color: white;<br>
+&nbsp;&nbsp;padding: 10px 20px; border-radius: 5px;<br>
+}<br>
+.card {<br>
+&nbsp;&nbsp;border: 1px solid #ddd; padding: 20px;<br>
+&nbsp;&nbsp;box-shadow: 2px 2px 10px rgba(0,0,0,0.1);<br>
+}
+                    </div>
+                </div>
+
+                <!-- Cột sau khi chuyển đổi -->
+                <div>
+                    <h3 style="color: #10b981; margin-bottom: 8px;">✔ Sau: SASS Modular (main.scss)</h3>
+                    <div class="code-box">
+// abstracts/<br>
+$primary-color: blue;<br>
+$border-color: #ddd;<br>
+@mixin button-style($bg) { ... }<br>
+@mixin box-shadow { ... }<br><br>
+// base/ & layout/ & components/<br>
+body { color: $text-color; }<br>
+.container { width: 80%; }<br>
+.button { @include button-style($primary-color); }<br>
+.card { @include box-shadow; }
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Thẻ .card 3: Cấu trúc thư mục chuẩn -->
+        <div class="card">
+            <h2>📂 Cấu Trúc Thư Mục Chuẩn SASS Đã Hoàn Thành</h2>
+            <div class="code-box" style="margin-top: 12px; background: #0f172a; color: #38bdf8;">
+📁 abstracts/<br>
+&nbsp;&nbsp;├── _variables.scss &nbsp;&nbsp;(Lưu $primary-color, $text-color, $border-color...)<br>
+&nbsp;&nbsp;└── _mixins.scss &nbsp;&nbsp;&nbsp;&nbsp;(Chứa @mixin button-style, @mixin box-shadow)<br>
+📁 base/<br>
+&nbsp;&nbsp;└── _global.scss &nbsp;&nbsp;&nbsp;&nbsp;(Định dạng thẻ body toàn cục)<br>
+📁 layout/<br>
+&nbsp;&nbsp;└── _container.scss &nbsp;(Định dạng khung bao .container)<br>
+📁 components/<br>
+&nbsp;&nbsp;├── _buttons.scss &nbsp;&nbsp;&nbsp;(Định dạng lớp .button)<br>
+&nbsp;&nbsp;└── _cards.scss &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(Định dạng lớp .card)<br>
+📄 main.scss &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(Nhập toàn bộ partials theo đúng thứ tự)
+            </div>
+        </div>
+
+        <footer class="footer-demo">
+            <p>&copy; 2026 Thực Hành Chuyển Đổi CSS Sang SASS Chuẩn &bull; Thực hiện bởi: <strong>Vũ Đức Đạt (VuDucDat2006)</strong></p>
+            <p style="margin-top: 6px;">Khóa học: Lập trình Web Front-End (CodeGym) &bull; SASS CLI 1.105.1</p>
+        </footer>
+
+    </div>
+
+</body>
+</html>

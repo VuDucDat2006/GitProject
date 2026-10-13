@@ -1,0 +1,17 @@
+// components/_buttons.scss
+// Định dạng nút bấm bằng cách gọi mixin button-style
+.button {
+  @include button-style($primary-color);
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: bold;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+
+  &:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+  }
+}
