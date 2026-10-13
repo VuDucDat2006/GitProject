@@ -1,0 +1,15 @@
+// components/_cards.scss
+// Định dạng thẻ card với biến và mixin box-shadow
+.card {
+  border: 1px solid $border-color;
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  @include box-shadow;
+  transition: transform 0.2s ease;
+
+  &:hover {
+    transform: translateY(-4px);
+  }
+}
