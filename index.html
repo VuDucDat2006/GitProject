@@ -1,0 +1,184 @@
+﻿<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[Thá»±c hÃ nh] CSS | flex-flow Property</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="page-header">
+        <h1>[Thá»±c hÃ nh] CSS | flex-flow Property</h1>
+        <p class="subtitle">TÃ¬m hiá»ƒu vÃ  thá»±c hÃ nh thuá»™c tÃ­nh viáº¿t táº¯t káº¿t há»£p giá»¯a flex-direction vÃ  flex-wrap trong Flexbox</p>
+    </header>
+
+    <main class="container">
+
+        <!-- THÃ”NG TIN NGUYÃŠN LÃ VIáº¾T Táº®T -->
+        <div class="note-box">
+            <span class="note-icon">ðŸ’¡</span>
+            <div>
+                <strong>CÃº phÃ¡p viáº¿t táº¯t (Shorthand):</strong>
+                <code>flex-flow: &lt;flex-direction&gt; &lt;flex-wrap&gt;;</code>
+                <ul>
+                    <li><strong>GiÃ¡ trá»‹ thá»© nháº¥t:</strong> XÃ¡c Ä‘á»‹nh hÆ°á»›ng cá»§a trá»¥c chÃ­nh (<code>row</code>, <code>row-reverse</code>, <code>column</code>, <code>column-reverse</code>).</li>
+                    <li><strong>GiÃ¡ trá»‹ thá»© hai:</strong> XÃ¡c Ä‘á»‹nh kháº£ nÄƒng xuá»‘ng dÃ²ng (<code>nowrap</code>, <code>wrap</code>, <code>wrap-reverse</code>).</li>
+                    <li><strong>GiÃ¡ trá»‹ máº·c Ä‘á»‹nh:</strong> <code>row nowrap</code> (xáº¿p theo hÃ ng tá»« trÃ¡i qua pháº£i, khÃ´ng xuá»‘ng dÃ²ng).</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- ==========================================
+             VÃ Dá»¤ 1: ROW NOWRAP (Máº¶C Äá»ŠNH)
+             ========================================== -->
+        <section class="card">
+            <div class="card-header">
+                <span class="badge badge-blue">VÃ­ dá»¥ 1 (Máº·c Ä‘á»‹nh)</span>
+                <h2>1. <code>flex-flow: row nowrap;</code> (TrÃ¡i qua pháº£i &bull; KhÃ´ng xuá»‘ng dÃ²ng)</h2>
+            </div>
+            <div class="code-banner">
+                <code>flex-flow: row nowrap; /* flex-direction: row; flex-wrap: nowrap; */</code>
+            </div>
+            <p class="desc">
+                Sáº¯p xáº¿p cÃ¡c item náº±m trÃªn cÃ¹ng 1 hÃ ng theo hÆ°á»›ng Ä‘á»c vÄƒn báº£n thÃ´ng thÆ°á»ng (tá»« trÃ¡i qua pháº£i: <strong>1 &rarr; 2 &rarr; 3</strong>) vÃ  khÃ´ng co giÃ£n/xuá»‘ng dÃ²ng khi háº¿t khoáº£ng trá»‘ng.
+            </p>
+
+            <div class="demo-wrapper">
+                <div class="container-1">
+                    <div>1</div>
+                    <div>2</div>
+                    <div>3</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================
+             VÃ Dá»¤ 2: ROW-REVERSE NOWRAP
+             ========================================== -->
+        <section class="card">
+            <div class="card-header">
+                <span class="badge badge-green">VÃ­ dá»¥ 2</span>
+                <h2>2. <code>flex-flow: row-reverse nowrap;</code> (Pháº£i qua trÃ¡i &bull; KhÃ´ng xuá»‘ng dÃ²ng)</h2>
+            </div>
+            <div class="code-banner">
+                <code>flex-flow: row-reverse nowrap; /* flex-direction: row-reverse; flex-wrap: nowrap; */</code>
+            </div>
+            <p class="desc">
+                Sáº¯p xáº¿p cÃ¡c item náº±m trÃªn cÃ¹ng 1 hÃ ng nhÆ°ng theo hÆ°á»›ng ngÆ°á»£c láº¡i vá»›i hÆ°á»›ng Ä‘á»c vÄƒn báº£n (báº¯t Ä‘áº§u tá»« pháº£i qua trÃ¡i: <strong>3 &larr; 2 &larr; 1</strong>) vÃ  khÃ´ng xuá»‘ng dÃ²ng.
+            </p>
+
+            <div class="demo-wrapper">
+                <div class="container-2">
+                    <div>1</div>
+                    <div>2</div>
+                    <div>3</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================
+             VÃ Dá»¤ 3: ROW WRAP (Má»ž Rá»˜NG)
+             ========================================== -->
+        <section class="card">
+            <div class="card-header">
+                <span class="badge badge-orange">VÃ­ dá»¥ 3 (Má»Ÿ rá»™ng)</span>
+                <h2>3. <code>flex-flow: row wrap;</code> (HÃ ng ngang &bull; Tá»± Ä‘á»™ng xuá»‘ng dÃ²ng)</h2>
+            </div>
+            <div class="code-banner">
+                <code>flex-flow: row wrap; /* Khi thiáº¿u diá»‡n tÃ­ch sáº½ bá»c xuá»‘ng dÃ²ng tiáº¿p theo */</code>
+            </div>
+            <p class="desc">
+                CÃ¡c pháº§n tá»­ Ä‘Æ°á»£c dÃ n theo hÃ ng ngang tá»« trÃ¡i qua pháº£i, khi container khÃ´ng Ä‘á»§ chá»— sáº½ tá»± Ä‘á»™ng bá»c thÃ nh dÃ²ng thá»© hai.
+            </p>
+
+            <div class="demo-wrapper">
+                <div class="container-3">
+                    <div>1</div>
+                    <div>2</div>
+                    <div>3</div>
+                    <div>4</div>
+                    <div>5</div>
+                    <div>6</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================
+             VÃ Dá»¤ 4: COLUMN WRAP (Má»ž Rá»˜NG)
+             ========================================== -->
+        <section class="card">
+            <div class="card-header">
+                <span class="badge badge-purple">VÃ­ dá»¥ 4 (Má»Ÿ rá»™ng)</span>
+                <h2>4. <code>flex-flow: column wrap;</code> (Cá»™t dá»c &bull; Nháº£y sang cá»™t má»›i)</h2>
+            </div>
+            <div class="code-banner">
+                <code>flex-flow: column wrap; height: 160px; /* Xáº¿p dá»c, háº¿t chiá»u cao tá»± sang cá»™t má»›i */</code>
+            </div>
+            <p class="desc">
+                CÃ¡c pháº§n tá»­ xáº¿p tá»« trÃªn xuá»‘ng dÆ°á»›i theo chiá»u dá»c. Khi cháº¡m Ä‘Ã¡y khung chá»©a (cao 160px), cÃ¡c pháº§n tá»­ tiáº¿p theo tá»± Ä‘á»™ng nháº£y sang cá»™t káº¿ bÃªn.
+            </p>
+
+            <div class="demo-wrapper">
+                <div class="container-4">
+                    <div>1</div>
+                    <div>2</div>
+                    <div>3</div>
+                    <div>4</div>
+                    <div>5</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tá»”NG Káº¾T & THÃ”NG TIN Há»ŒC VIÃŠN -->
+        <footer class="summary-footer">
+            <h3>ðŸ“‹ Báº£ng tá»•ng há»£p cÃ¡c tá»• há»£p thÆ°á»ng dÃ¹ng cá»§a thuá»™c tÃ­nh flex-flow</h3>
+            <table class="summary-table">
+                <thead>
+                    <tr>
+                        <th>GiÃ¡ trá»‹ flex-flow</th>
+                        <th>flex-direction tÆ°Æ¡ng á»©ng</th>
+                        <th>flex-wrap tÆ°Æ¡ng á»©ng</th>
+                        <th>MÃ´ táº£ hoáº¡t Ä‘á»™ng</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>row nowrap</code> (máº·c Ä‘á»‹nh)</td>
+                        <td><code>row</code> (trÃ¡i sang pháº£i)</td>
+                        <td><code>nowrap</code> (khÃ´ng xuá»‘ng dÃ²ng)</td>
+                        <td>Xáº¿p 1 hÃ ng tá»« trÃ¡i qua pháº£i</td>
+                    </tr>
+                    <tr>
+                        <td><code>row-reverse nowrap</code></td>
+                        <td><code>row-reverse</code> (pháº£i sang trÃ¡i)</td>
+                        <td><code>nowrap</code> (khÃ´ng xuá»‘ng dÃ²ng)</td>
+                        <td>Xáº¿p 1 hÃ ng báº¯t Ä‘áº§u tá»« mÃ©p pháº£i</td>
+                    </tr>
+                    <tr>
+                        <td><code>row wrap</code></td>
+                        <td><code>row</code> (hÃ ng ngang)</td>
+                        <td><code>wrap</code> (xuá»‘ng dÃ²ng)</td>
+                        <td>Xáº¿p hÃ ng ngang, tá»± bá»c nhiá»u dÃ²ng</td>
+                    </tr>
+                    <tr>
+                        <td><code>column nowrap</code></td>
+                        <td><code>column</code> (cá»™t dá»c)</td>
+                        <td><code>nowrap</code> (1 cá»™t duy nháº¥t)</td>
+                        <td>Xáº¿p 1 cá»™t tá»« trÃªn xuá»‘ng dÆ°á»›i</td>
+                    </tr>
+                    <tr>
+                        <td><code>column wrap</code></td>
+                        <td><code>column</code> (cá»™t dá»c)</td>
+                        <td><code>wrap</code> (sang cá»™t má»›i)</td>
+                        <td>Xáº¿p dá»c, cháº¡m Ä‘Ã¡y nháº£y sang cá»™t má»›i</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p class="student-info">Thá»±c hiá»‡n: <strong>VÅ© Äá»©c Äáº¡t (VuDucDat2006)</strong> &bull; BÃ i thá»±c hÃ nh: CSS | flex-flow Property</p>
+        </footer>
+
+    </main>
+
+</body>
+</html>
