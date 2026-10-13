@@ -1,0 +1,60 @@
+// ==========================================================================
+// scss/layout/_header.scss
+// Định dạng Header: Logo, Tiêu đề trang, Khẩu hiệu và chuyển đổi Mobile
+// ==========================================================================
+
+.header {
+  background: linear-gradient(135deg, $dark-header, $dark-bg);
+  color: $text-white;
+  padding: 25px 30px;
+  border-radius: $border-radius-lg;
+  box-shadow: $shadow-base;
+
+  .header-content {
+    @include flex(flex-start, center, row);
+    gap: 20px;
+
+    @include respond-to('mobile') {
+      flex-direction: column;
+      text-align: center;
+      gap: 12px;
+    }
+  }
+
+  .logo {
+    @include flex(flex-start, center, row);
+    gap: 10px;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 10px 16px;
+    border-radius: $border-radius-base;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+
+    .logo-icon {
+      font-size: 28px;
+    }
+
+    .logo-text {
+      font-size: 20px;
+      font-weight: 700;
+      color: $secondary-color;
+      white-space: nowrap;
+    }
+  }
+
+  .header-slogan {
+    h1 {
+      font-size: 22px;
+      margin-bottom: 4px;
+      font-weight: 700;
+
+      @include respond-to('mobile') {
+        font-size: 19px;
+      }
+    }
+
+    p {
+      font-size: 14px;
+      color: $text-muted;
+    }
+  }
+}

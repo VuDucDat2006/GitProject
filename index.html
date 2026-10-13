@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[Bài tập] Tạo bố cục responsive bằng CSS Grid - CodeGym</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="responsive_grid.css">
+</head>
+<body>
+
+    <div class="grid-layout">
+        <!-- ==========================================
+             1. HEADER: HIỂN THỊ TIÊU ĐỀ TRANG
+             ========================================== -->
+        <header class="header">
+            <div class="header-content">
+                <div class="logo">
+                    <span class="logo-icon">🌐</span>
+                    <span class="logo-text">TechGrid News</span>
+                </div>
+                <div class="header-slogan">
+                    <h1>Cổng Thông Tin Công Nghệ &amp; Thiết Kế Web</h1>
+                    <p>Bài tập thực hành: Tạo bố cục Responsive bằng CSS Grid Layout</p>
+                </div>
+            </div>
+        </header>
+
+        <!-- ==========================================
+             2. NAVIGATION: MENU ĐIỀU HƯỚNG
+             ========================================== -->
+        <nav class="navigation">
+            <ul class="nav-menu">
+                <li><a href="#home" class="active">Trang chủ</a></li>
+                <li><a href="#news">Tin tức</a></li>
+                <li><a href="#html-css">HTML5 &amp; CSS3</a></li>
+                <li><a href="#grid">CSS Grid Master</a></li>
+                <li><a href="#tutorials">Hướng dẫn</a></li>
+                <li><a href="#contact">Liên hệ</a></li>
+            </ul>
+        </nav>
+
+        <!-- ==========================================
+             3. MAIN CONTENT: NỘI DUNG CHÍNH
+             ========================================== -->
+        <main class="main-content">
+            <article class="article-card">
+                <span class="article-category">Chuyên đề CSS Grid</span>
+                <h2 class="article-title">Bí Quyết Xây Dựng Bố Cục Web Đột Phá Bằng CSS Grid Layout</h2>
+                <div class="article-meta">
+                    <span>✍️ Tác giả: <strong>Vũ Đức Đạt (VuDucDat2006)</strong></span>
+                    <span>📅 Ngày xuất bản: 13/10/2026</span>
+                    <span>⏱️ Thời gian đọc: 5 phút</span>
+                </div>
+
+                <div class="article-banner">
+                    <img src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=1200&h=500&q=80" alt="Thiết kế web với CSS Grid" class="banner-img">
+                </div>
+
+                <div class="article-body">
+                    <p>
+                        <strong>CSS Grid Layout</strong> là hệ thống lưới hai chiều (2D) mạnh mẽ nhất từng được giới thiệu trong ngôn ngữ CSS. Khác với <em>Flexbox</em> (hệ thống dàn trang một chiều theo hàng hoặc cột), CSS Grid cho phép chúng ta chia giao diện trang web thành cả hàng (rows) và cột (columns) cùng lúc.
+                    </p>
+
+                    <h3>💡 Tại sao nên sử dụng <code>grid-template-areas</code>?</h3>
+                    <p>
+                        Bằng cách đặt tên cho từng khu vực giao diện như <code>header</code>, <code>nav</code>, <code>main</code>, <code>sidebar</code>, và <code>footer</code>, cấu trúc CSS trở nên trực quan như một bản vẽ kiến trúc:
+                    </p>
+                    <pre class="code-snippet"><code>grid-template-areas:
+    "header  header"
+    "nav     nav"
+    "main    sidebar"
+    "footer  footer";</code></pre>
+
+                    <h3>📱 Cơ chế thích ứng tự động (Responsive):</h3>
+                    <ul>
+                        <li><strong>Màn hình Desktop (&gt; 768px):</strong> Nội dung chính (chiếm 1fr) và Sidebar (cố định 300px) nằm cạnh nhau song song, Header, Nav và Footer trải dài toàn bộ chiều ngang.</li>
+                        <li><strong>Màn hình Mobile (&le; 768px):</strong> Toàn bộ 5 khối tự động chuyển về 1 cột dọc (1fr), xếp theo thứ tự Header &rarr; Navigation &rarr; Main Content &rarr; Sidebar &rarr; Footer, tối ưu thao tác vuốt cuộn trên smartphone.</li>
+                    </ul>
+                </div>
+            </article>
+        </main>
+
+        <!-- ==========================================
+             4. SIDEBAR: NỘI DUNG PHỤ (TIN TỨC, QUẢNG CÁO)
+             ========================================== -->
+        <aside class="sidebar">
+            <!-- Widget 1: Tin tức mới nhất -->
+            <div class="widget">
+                <h3 class="widget-title">🔥 Tin Tức Mới Nhất</h3>
+                <ul class="widget-list">
+                    <li>
+                        <a href="#post1">Lộ trình học Front-end Web Developer 2026</a>
+                        <span class="widget-date">Hôm nay</span>
+                    </li>
+                    <li>
+                        <a href="#post2">So sánh chi tiết CSS Grid vs CSS Flexbox</a>
+                        <span class="widget-date">Hôm qua</span>
+                    </li>
+                    <li>
+                        <a href="#post3">Top 10 mẹo tối ưu Responsive Web Design (RWD)</a>
+                        <span class="widget-date">3 ngày trước</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Widget 2: Khóa học lập trình -->
+            <div class="widget">
+                <h3 class="widget-title">🎓 Khóa Học Nổi Bật</h3>
+                <div class="course-card">
+                    <h4>CodeGym Web Development</h4>
+                    <p>Đào tạo lập trình viên chuyên nghiệp từ cơ bản đến nâng cao.</p>
+                    <a href="#enroll" class="btn-primary">Tìm hiểu ngay &rarr;</a>
+                </div>
+            </div>
+
+            <!-- Widget 3: Khối quảng cáo (Banner Ad) -->
+            <div class="widget ad-widget">
+                <div class="ad-badge">Quảng cáo</div>
+                <div class="ad-content">
+                    <h4>🚀 Cloud Hosting Siêu Tốc</h4>
+                    <p>Trải nghiệm dịch vụ đám mây tối ưu cho lập trình viên Front-end.</p>
+                </div>
+            </div>
+        </aside>
+
+        <!-- ==========================================
+             5. FOOTER: THÔNG TIN CUỐI TRANG
+             ========================================== -->
+        <footer class="footer">
+            <div class="footer-content">
+                <p>&copy; 2026 TechGrid News &bull; [Bài tập] Tạo bố cục responsive bằng CSS Grid &bull; CodeGym</p>
+                <p class="author">Học viên thực hiện: <strong>Vũ Đức Đạt (VuDucDat2006)</strong></p>
+            </div>
+        </footer>
+    </div>
+
+</body>
+</html>

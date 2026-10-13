@@ -1,0 +1,8 @@
+// ==========================================================================
+// scss/components/_buttons.scss
+// Các nút bấm hành động giao diện
+// ==========================================================================
+
+.btn-primary {
+  @include button-style($bg: $primary-color, $hover-bg: $primary-dark, $color: $text-white);
+}

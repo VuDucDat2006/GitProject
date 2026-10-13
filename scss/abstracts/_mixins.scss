@@ -1,0 +1,59 @@
+// ==========================================================================
+// scss/abstracts/_mixins.scss
+// Khai báo các Mixins tái sử dụng cho Flexbox, Card layout, Button và Responsive
+// ==========================================================================
+
+// 1. MIXIN RESPONSIVE MEDIA QUERY
+@mixin respond-to($breakpoint) {
+  @if $breakpoint == 'mobile' {
+    @media (max-width: $breakpoint-mobile) {
+      @content;
+    }
+  } @else {
+    @media (max-width: $breakpoint) {
+      @content;
+    }
+  }
+}
+
+// 2. MIXIN FLEXBOX
+@mixin flex($justify: flex-start, $align: center, $direction: row) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  flex-direction: $direction;
+}
+
+// 3. MIXIN CARD CONTAINER (ĐỊNH DẠNG KHỐI CARD THỐNG NHẤT)
+@mixin card-container($bg: $bg-white, $padding: 20px, $radius: $border-radius-lg, $shadow: $shadow-sm) {
+  background-color: $bg;
+  border-radius: $radius;
+  padding: $padding;
+  box-shadow: $shadow;
+  border: 1px solid $border-color;
+}
+
+// 4. MIXIN BUTTON (ĐỊNH DẠNG NÚT BẤM)
+@mixin button-style($bg: $primary-color, $hover-bg: $primary-dark, $color: $text-white) {
+  display: inline-block;
+  background-color: $bg;
+  color: $color;
+  text-decoration: none;
+  padding: 8px 14px;
+  border-radius: $border-radius-sm;
+  font-size: 13px;
+  font-weight: 600;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+
+  &:hover {
+    background-color: $hover-bg;
+    transform: translateY(-1px);
+  }
+}
+
+// 5. MIXIN CẮT CHỮ HOẶC DẤU 3 CHẤM (TEXT TRUNCATE)
+@mixin text-truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

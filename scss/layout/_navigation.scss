@@ -1,0 +1,55 @@
+// ==========================================================================
+// scss/layout/_navigation.scss
+// Thanh điều hướng: Danh sách menu, hiệu ứng hover, active và mobile stack
+// ==========================================================================
+
+.navigation {
+  background-color: $bg-white;
+  border-radius: $border-radius-base;
+  box-shadow: $shadow-sm;
+  border: 1px solid $border-color;
+  overflow: hidden;
+
+  .nav-menu {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+
+    @include respond-to('mobile') {
+      flex-direction: column;
+    }
+
+    li {
+      flex: 1;
+      min-width: 120px;
+      text-align: center;
+
+      @include respond-to('mobile') {
+        width: 100%;
+      }
+
+      a {
+        display: block;
+        padding: 14px 16px;
+        color: #475569;
+        text-decoration: none;
+        font-size: 14.5px;
+        font-weight: 600;
+        transition: $transition-base;
+        border-bottom: 3px solid transparent;
+
+        @include respond-to('mobile') {
+          padding: 12px 16px;
+          border-bottom: 1px solid #f1f5f9;
+        }
+
+        &:hover,
+        &.active {
+          color: $primary-color;
+          background-color: #f0f9ff;
+          border-bottom: 3px solid $primary-color;
+        }
+      }
+    }
+  }
+}
