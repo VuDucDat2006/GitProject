@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hướng dẫn tạo Fixed Menu & Fixed Footer</title>
+    <style>
+        /* Reset lề cơ bản */
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f9fa;
+            color: #333333;
+            line-height: 1.6;
+        }
+
+        /* 1. FIXED HEADER (NAVBAR) */
+        .navbar {
+            overflow: hidden;
+            background-color: #333333;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.25);
+        }
+
+        .navbar a {
+            float: left;
+            display: block;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 500;
+            transition: background-color 0.2s, color 0.2s;
+        }
+
+        /* Hiệu ứng khi rê chuột vào liên kết */
+        .navbar a:hover {
+            background-color: #dddddd;
+            color: #111111;
+        }
+
+        .navbar a.active {
+            background-color: #04AA6D;
+            color: white;
+        }
+
+        /* 2. KHU VỰC NỘI DUNG CHÍNH (MAIN) */
+        .main {
+            max-width: 900px;
+            margin: 0 auto;
+            /* Đệm khoảng trống phía trên và dưới để tránh bị che bởi Fixed Header và Fixed Footer */
+            padding: 30px 20px;
+            margin-top: 55px;
+            margin-bottom: 50px;
+            /* Chiều cao lớn để hiển thị thanh cuộn (scroll) kiểm tra hiệu ứng fixed */
+            min-height: 1600px;
+        }
+
+        .hero-card {
+            background: #ffffff;
+            border-radius: 8px;
+            padding: 25px 30px;
+            margin-bottom: 25px;
+            border: 1px solid #e1e4e8;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+
+        .hero-card h1 {
+            margin-top: 0;
+            color: #222222;
+            font-size: 28px;
+        }
+
+        .hero-card h2 {
+            color: #04AA6D;
+            font-size: 20px;
+            font-weight: 600;
+        }
+
+        .highlight-box {
+            background-color: #e8f5e9;
+            border-left: 5px solid #04AA6D;
+            padding: 15px 20px;
+            margin: 20px 0;
+            border-radius: 0 4px 4px 0;
+        }
+
+        .section-box {
+            background: #ffffff;
+            border-radius: 8px;
+            padding: 25px 30px;
+            margin-bottom: 25px;
+            border: 1px solid #e1e4e8;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+        }
+
+        .section-box h3 {
+            color: #333333;
+            border-bottom: 2px solid #f0f0f0;
+            padding-bottom: 8px;
+            margin-top: 0;
+        }
+
+        /* 3. FIXED FOOTER */
+        .footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: #333333;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 12px 0;
+            font-size: 14px;
+            z-index: 1000;
+            box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.15);
+        }
+
+        .footer span {
+            color: #04AA6D;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- FIXED HEADER / NAVBAR -->
+    <div class="navbar">
+        <a href="#home" class="active">Home</a>
+        <a href="#news">News</a>
+        <a href="#contact">Contact</a>
+        <a href="#about">About</a>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div class="main">
+        <div class="hero-card" id="home">
+            <h1>Fixed Top Menu & Footer Demo</h1>
+            <h2>Cuộn trang xuống để quan sát hiệu ứng cố định</h2>
+            <div class="highlight-box">
+                <p><strong>💡 Thuộc tính cốt lõi:</strong></p>
+                <ul>
+                    <li><code>position: fixed;</code> &mdash; Cố định phần tử tại vị trí màn hình chỉ định, không bị dịch chuyển khi cuộn trang.</li>
+                    <li><code>top: 0;</code> &mdash; Neo thanh điều hướng bám chặt mép trên cùng của viewport.</li>
+                    <li><code>bottom: 0;</code> &mdash; Neo thanh chân trang bám chặt mép dưới cùng của viewport.</li>
+                    <li><code>width: 100%;</code> &mdash; Kéo rộng toàn bộ chiều ngang trình duyệt.</li>
+                    <li><code>z-index: 1000;</code> &mdash; Đảm bảo menu luôn nổi lên trên các thành phần nội dung cuộn bên dưới.</li>
+                </ul>
+            </div>
+            <p>Thanh điều hướng (Navigation Bar) phía trên và chân trang (Footer) phía dưới sẽ luôn cố định tại chỗ khi bạn lăn con trỏ chuột xuống.</p>
+        </div>
+
+        <div class="section-box" id="news">
+            <h3>Tin tức & Giới thiệu chi tiết (News)</h3>
+            <p>Trang web mẫu này được thiết kế với chiều cao nội dung lớn (<code>min-height: 1600px</code>) để tạo thanh cuộn dọc trình duyệt, giúp bạn dễ dàng kiểm tra hoạt động của <code>position: fixed</code>.</p>
+            <p>Khi sử dụng <code>position: fixed</code> cho header hoặc footer, phần tử sẽ được đưa ra khỏi luồng tài liệu thông thường (normal flow). Do đó, chúng ta cần gán <code>margin-top</code> và <code>margin-bottom</code> cho phần tử nội dung chính (<code>.main</code>) để tránh nội dung bị che khuất bên dưới menu.</p>
+        </div>
+
+        <div class="section-box" id="contact">
+            <h3>Thông tin liên hệ (Contact)</h3>
+            <p>Email: contact@codegym.vn</p>
+            <p>Địa chỉ: CodeGym Vietnam</p>
+            <p>Website: codegym.vn</p>
+        </div>
+
+        <div class="section-box" id="about">
+            <h3>Về bài thực hành (About)</h3>
+            <p>Bài thực hành: <em>[Thực hành] Tạo bố cục các fixed header và fixed footer</em>.</p>
+            <p>Nền tảng: Khóa đào tạo Lập trình viên Front-End / Web Cơ Bản.</p>
+            <p>Người thực hiện: Vũ Đức Đạt (VuDucDat2006).</p>
+        </div>
+
+        <div class="section-box">
+            <h3>Nội dung bổ sung để cuộn trang</h3>
+            <p>Đoạn văn bản mô phỏng dòng nội dung dài 1... Hãy tiếp tục cuộn chuột xuống dưới để cảm nhận thanh navbar và footer luôn nằm ở vị trí cố định.</p>
+            <p>Đoạn văn bản mô phỏng dòng nội dung dài 2... Giao diện fixed navigation mang lại trải nghiệm tiện dụng cho người dùng khi có thể truy cập menu điều hướng bất cứ lúc nào mà không cần phải cuộn ngược trở lại đầu trang.</p>
+            <p>Đoạn văn bản mô phỏng dòng nội dung dài 3... Cố định footer giúp các thông tin bản quyền hoặc nút thao tác quan trọng luôn sẵn sàng trên màn hình.</p>
+        </div>
+    </div>
+
+    <!-- FIXED FOOTER -->
+    <div class="footer">
+        Bản quyền &copy; 2026 <span>CodeGym Practice</span> &mdash; Giao diện cố định với Fixed Header & Footer.
+    </div>
+
+</body>
+</html>
