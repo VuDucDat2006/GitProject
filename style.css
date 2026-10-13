@@ -1,0 +1,141 @@
+/* ========================================================
+   [Thực hành] Tạo Bố Cục 3 Cột bằng Bootstrap Grid và Flexbox
+   Tác giả: Vũ Đức Đạt (VuDucDat2006)
+   ======================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+:root {
+    --primary-color: #0d6efd;
+    --primary-dark: #0a58ca;
+    --dark-bg: #1e2229;
+    --transition-smooth: 0.28s ease;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    color: #2b303a;
+    background-color: #f8fafc;
+}
+
+/* ==========================================
+   1. Navbar & Header
+   ========================================== */
+.navbar {
+    background-color: var(--dark-bg) !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.navbar-brand {
+    font-size: 1.35rem;
+    letter-spacing: -0.5px;
+}
+
+.navbar-nav .nav-link {
+    font-weight: 500;
+    padding: 0.5rem 1rem !important;
+    transition: all var(--transition-smooth);
+}
+
+.navbar-nav .nav-link:hover {
+    color: #0dcaf0 !important;
+}
+
+/* ==========================================
+   2. Grid 3 Cột (Bước 1)
+   ========================================== */
+.grid-box {
+    min-height: 140px;
+    transition: transform var(--transition-smooth), box-shadow var(--transition-smooth);
+}
+
+.grid-box:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08) !important;
+}
+
+/* ==========================================
+   3. Carousel (Bước 4)
+   ========================================== */
+.carousel-img {
+    height: 460px;
+    object-fit: cover;
+    filter: brightness(0.92);
+}
+
+@media (max-width: 768px) {
+    .carousel-img {
+        height: 260px;
+    }
+}
+
+.carousel-caption {
+    bottom: 30px;
+    backdrop-filter: blur(8px);
+    max-width: 700px;
+    margin: 0 auto;
+    left: 10%;
+    right: 10%;
+}
+
+.carousel-indicators [data-bs-target] {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin: 0 5px;
+}
+
+/* ==========================================
+   4. Form Controls (Bước 6)
+   ========================================== */
+.form-control {
+    border-radius: 10px;
+    padding: 0.7rem 1rem;
+    border: 1.5px solid #d1d5db;
+    transition: all var(--transition-smooth);
+}
+
+.form-control:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.15);
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    border-radius: 10px;
+    transition: all var(--transition-smooth);
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-dark);
+    border-color: var(--primary-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(13, 110, 253, 0.25) !important;
+}
+
+/* ==========================================
+   5. Technical Table
+   ========================================== */
+.table th, .table td {
+    vertical-align: middle;
+}
+
+code {
+    background-color: #f1f5f9;
+    color: #d63384;
+    padding: 0.15rem 0.4rem;
+    border-radius: 4px;
+    font-size: 0.875em;
+}
+
+/* ==========================================
+   6. Footer
+   ========================================== */
+footer {
+    background-color: var(--dark-bg) !important;
+}
