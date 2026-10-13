@@ -1,0 +1,179 @@
+﻿<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[Thá»±c hÃ nh] CSS | grid-row-gap Property</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="page-header">
+        <h1>[Thá»±c hÃ nh] CSS | grid-row-gap Property</h1>
+        <p class="subtitle">TÃ¬m hiá»ƒu vÃ  thá»±c hÃ nh thiáº¿t láº­p khoáº£ng cÃ¡ch giá»¯a cÃ¡c hÃ ng (Grid Rows) trong CSS Grid Layout</p>
+    </header>
+
+    <main class="container">
+
+        <!-- THÃ”NG TIN LÆ¯U Ã CHUáº¨N HIá»†N Äáº I -->
+        <div class="note-box">
+            <span class="note-icon">ðŸ’¡</span>
+            <div>
+                <strong>LÆ°u Ã½ vá» chuáº©n CSS hiá»‡n Ä‘áº¡i:</strong> Thuá»™c tÃ­nh <code>grid-row-gap</code> Ä‘Ã£ Ä‘Æ°á»£c W3C chuáº©n hÃ³a thÃ nh <code>row-gap</code> (Ã¡p dá»¥ng cho cáº£ CSS Grid láº«n Flexbox). Trong thá»±c táº¿ vÃ  bÃ i há»c nÃ y, chÃºng ta khai bÃ¡o cáº£ hai thuá»™c tÃ­nh Ä‘á»ƒ vá»«a náº¯m vá»¯ng kiáº¿n thá»©c ná»n táº£ng vá»«a Ä‘áº£m báº£o tÆ°Æ¡ng thÃ­ch tuyá»‡t Ä‘á»‘i trÃªn má»i trÃ¬nh duyá»‡t.
+            </div>
+        </div>
+
+        <!-- ==========================================
+             VÃ Dá»¤ 1: Äá»˜ DÃ€I Cá» Äá»ŠNH (LENGTH: 20PX)
+             ========================================== -->
+        <section class="card">
+            <div class="card-header">
+                <span class="badge badge-blue">VÃ­ dá»¥ 1</span>
+                <h2>Khoáº£ng cÃ¡ch Ä‘o báº±ng Ä‘Æ¡n vá»‹ Ä‘á»™ dÃ i (Length: 20px)</h2>
+            </div>
+            <div class="code-banner">
+                <code>grid-row-gap: 20px; /* Chuáº©n má»›i: row-gap: 20px; */</code>
+            </div>
+            <p class="desc">
+                Thiáº¿t láº­p khoáº£ng cÃ¡ch giá»¯a cÃ¡c hÃ ng trong lÆ°á»›i lÃ  <strong>20px</strong>. Giá»¯a HÃ ng 1 (Ã” 1, Ã” 2) vÃ  HÃ ng 2 (Ã” 3, Ã” 4) xuáº¥t hiá»‡n má»™t khe há»Ÿ ngang Ä‘Ãºng báº±ng 20px, trong khi cÃ¡c cá»™t náº±m sÃ¡t nhau vÃ¬ chÆ°a Ä‘áº·t khoáº£ng cÃ¡ch cá»™t.
+            </p>
+
+            <div class="demo-wrapper">
+                <div class="grid-container example-length">
+                    <div>Ã” 1</div>
+                    <div>Ã” 2</div>
+                    <div>Ã” 3</div>
+                    <div>Ã” 4</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================
+             VÃ Dá»¤ 2: GIÃ TRá»Š PHáº¦N TRÄ‚M (PERCENTAGE: 5%)
+             ========================================== -->
+        <section class="card">
+            <div class="card-header">
+                <span class="badge badge-green">VÃ­ dá»¥ 2</span>
+                <h2>Khoáº£ng cÃ¡ch theo tá»· lá»‡ pháº§n trÄƒm (Percentage: 5%)</h2>
+            </div>
+            <div class="code-banner">
+                <code>grid-row-gap: 5%; height: 360px; /* Khoáº£ng cÃ¡ch hÃ ng = 5% * 360px = 18px */</code>
+            </div>
+            <p class="desc">
+                GiÃ¡ trá»‹ pháº§n trÄƒm Ä‘Æ°á»£c tÃ­nh toÃ¡n dá»±a trÃªn chiá»u cao (<code>height</code>) cá»§a container cha. Vá»›i <code>height: 360px</code>, khoáº£ng cÃ¡ch hÃ ng <code>5%</code> tÆ°Æ¡ng Ä‘Æ°Æ¡ng vá»›i <strong>18px</strong>.
+            </p>
+
+            <div class="demo-wrapper">
+                <div class="grid-container example-percentage">
+                    <div>Ã” 1</div>
+                    <div>Ã” 2</div>
+                    <div>Ã” 3</div>
+                    <div>Ã” 4</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================
+             VÃ Dá»¤ 3: GIÃ TRá»Š TOÃ€N Cá»¤C (GLOBAL VALUES)
+             ========================================== -->
+        <section class="card">
+            <div class="card-header">
+                <span class="badge badge-purple">VÃ­ dá»¥ 3</span>
+                <h2>GiÃ¡ trá»‹ toÃ n cá»¥c (Global Values: initial & inherit)</h2>
+            </div>
+            <div class="code-banner">
+                <code>grid-row-gap: initial; /* Äáº·t vá» giÃ¡ trá»‹ máº·c Ä‘á»‹nh lÃ  0 (khÃ´ng cÃ³ khoáº£ng cÃ¡ch) */</code>
+            </div>
+            <p class="desc">
+                - <code>initial</code>: Äáº·t khoáº£ng cÃ¡ch hÃ ng vá» giÃ¡ trá»‹ máº·c Ä‘á»‹nh cá»§a trÃ¬nh duyá»‡t (báº±ng <code>0</code>, cÃ¡c hÃ ng dÃ­nh sÃ¡t nhau).<br>
+                - <code>inherit</code>: Káº¿ thá»«a giÃ¡ trá»‹ khoáº£ng cÃ¡ch hÃ ng Ä‘Æ°á»£c Ä‘á»‹nh nghÄ©a tá»« pháº§n tá»­ cha bao bá»c.
+            </p>
+
+            <div class="two-columns-demo">
+                <div class="sub-demo">
+                    <h4>Khá»‘i 3A: grid-row-gap: initial (Máº·c Ä‘á»‹nh = 0)</h4>
+                    <div class="grid-container example-initial">
+                        <div>HÃ ng 1 - Ã” A</div>
+                        <div>HÃ ng 1 - Ã” B</div>
+                        <div>HÃ ng 2 - Ã” C</div>
+                        <div>HÃ ng 2 - Ã” D</div>
+                    </div>
+                </div>
+                <div class="sub-demo parent-wrapper">
+                    <h4>Khá»‘i 3B: grid-row-gap: inherit (Káº¿ thá»«a 30px tá»« cha)</h4>
+                    <div class="grid-container example-inherit">
+                        <div>HÃ ng 1 - Ã” X</div>
+                        <div>HÃ ng 1 - Ã” Y</div>
+                        <div>HÃ ng 2 - Ã” Z</div>
+                        <div>HÃ ng 2 - Ã” W</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================
+             VÃ Dá»¤ 4: Má»ž Rá»˜NG - SO SÃNH ROW-GAP VÃ€ GAP
+             ========================================== -->
+        <section class="card">
+            <div class="card-header">
+                <span class="badge badge-coral">VÃ­ dá»¥ 4 (Má»Ÿ rá»™ng)</span>
+                <h2>So sÃ¡nh row-gap, column-gap vÃ  thuá»™c tÃ­nh viáº¿t táº¯t gap</h2>
+            </div>
+            <div class="code-banner">
+                <code>row-gap: 25px; column-gap: 15px; /* Viáº¿t táº¯t: gap: 25px 15px; */</code>
+            </div>
+            <p class="desc">
+                Trong thá»±c táº¿, láº­p trÃ¬nh viÃªn thÆ°á»ng káº¿t há»£p khoáº£ng cÃ¡ch hÃ ng vÃ  khoáº£ng cÃ¡ch cá»™t Ä‘á»ƒ táº¡o ra lÆ°á»›i hoÃ n chá»‰nh vÃ  thÃ´ng thoÃ¡ng.
+            </p>
+
+            <div class="demo-wrapper">
+                <div class="grid-container example-combined">
+                    <div>Ã” 1 (row-gap 25px)</div>
+                    <div>Ã” 2 (col-gap 15px)</div>
+                    <div>Ã” 3 (row-gap 25px)</div>
+                    <div>Ã” 4 (col-gap 15px)</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tá»”NG Káº¾T & THÃ”NG TIN Há»ŒC VIÃŠN -->
+        <footer class="summary-footer">
+            <h3>ðŸ“‹ TÃ³m táº¯t cÃº phÃ¡p thuá»™c tÃ­nh grid-row-gap / row-gap</h3>
+            <table class="summary-table">
+                <thead>
+                    <tr>
+                        <th>CÃº phÃ¡p giÃ¡ trá»‹</th>
+                        <th>ÄÆ¡n vá»‹ minh há»a</th>
+                        <th>MÃ´ táº£ hoáº¡t Ä‘á»™ng</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>length</code></td>
+                        <td><code>20px, 1.5rem, 1em</code></td>
+                        <td>Khoáº£ng cÃ¡ch cá»‘ Ä‘á»‹nh chÃ­nh xÃ¡c giá»¯a cÃ¡c hÃ ng</td>
+                    </tr>
+                    <tr>
+                        <td><code>percentage (%)</code></td>
+                        <td><code>5%, 10%</code></td>
+                        <td>Khoáº£ng cÃ¡ch tÃ­nh theo % chiá»u cao cá»§a grid container</td>
+                    </tr>
+                    <tr>
+                        <td><code>initial</code></td>
+                        <td><code>initial</code></td>
+                        <td>KhÃ´i phá»¥c vá» giÃ¡ trá»‹ máº·c Ä‘á»‹nh ban Ä‘áº§u (0)</td>
+                    </tr>
+                    <tr>
+                        <td><code>inherit</code></td>
+                        <td><code>inherit</code></td>
+                        <td>Káº¿ thá»«a giÃ¡ trá»‹ khoáº£ng cÃ¡ch hÃ ng tá»« tháº» cha</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p class="student-info">Thá»±c hiá»‡n: <strong>VÅ© Äá»©c Äáº¡t (VuDucDat2006)</strong> &bull; BÃ i thá»±c hÃ nh: CSS | grid-row-gap Property</p>
+        </footer>
+
+    </main>
+
+</body>
+</html>
