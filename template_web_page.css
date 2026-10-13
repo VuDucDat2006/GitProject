@@ -1,0 +1,344 @@
+/* ==========================================================================
+   [Thực hành] Template web page using HTML and CSS
+   Styling for Navigation, Hero Sections, Flexbox Row-Reverse, and Footer
+   ========================================================================== */
+
+/* Import Google Fonts theo đúng yêu cầu đề bài */
+@import url('https://fonts.googleapis.com/css2?family=Piazzolla:opsz,wght@8..30,400;8..30,600;8..30,700&family=Ubuntu:wght@400;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333333;
+    background-color: #f8fafc;
+    overflow-x: hidden;
+}
+
+/* ==========================================
+   1. NAVIGATION BAR (THANH ĐIỀU HƯỚNG)
+   Sử dụng Flexbox, sticky top
+   ========================================== */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: sticky;
+    top: 0;
+    cursor: pointer;
+    z-index: 1000;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+.background {
+    background: #111827;
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    background-blend-mode: darken;
+    background-size: cover;
+}
+
+.nav-list {
+    width: 70%;
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 20px;
+}
+
+.logo img {
+    width: 160px;
+    height: auto;
+    border-radius: 50px;
+    transition: transform 0.3s ease;
+}
+
+.logo img:hover {
+    transform: scale(1.05);
+}
+
+.nav-list li {
+    list-style: none;
+    padding: 24px 28px;
+}
+
+.nav-list li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+    padding-bottom: 4px;
+}
+
+.nav-list li a:hover {
+    color: #38bdf8;
+    border-bottom: 2px solid #38bdf8;
+}
+
+.rightNav, .rightnav {
+    width: 30%;
+    text-align: right;
+    padding-right: 35px;
+}
+
+#search {
+    padding: 7px 12px;
+    font-size: 15px;
+    border: 2px solid #64748b;
+    border-radius: 9px;
+    outline: none;
+    background-color: #1e293b;
+    color: #ffffff;
+    transition: all 0.3s ease;
+}
+
+#search:focus {
+    border-color: #38bdf8;
+    box-shadow: 0 0 8px rgba(56, 189, 248, 0.4);
+    background-color: #0f172a;
+}
+
+#search::placeholder {
+    color: #94a3b8;
+}
+
+.btn {
+    padding: 7px 18px;
+    margin: 7px 0 7px 8px;
+    border: 2px solid #ffffff;
+    border-radius: 8px;
+    background: none;
+    color: #ffffff;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background: #38bdf8;
+    border-color: #38bdf8;
+    color: #0f172a;
+    box-shadow: 0 4px 12px rgba(56, 189, 248, 0.3);
+}
+
+.btn-sm {
+    padding: 6px 14px;
+    vertical-align: middle;
+}
+
+/* ==========================================
+   2. SECTIONS 1 & 2 (WEB TECH & C PROGRAMMING)
+   Nền màu đặc trưng & Flexbox căn giữa
+   ========================================== */
+.firstsection {
+    background-color: #1b5e20;
+    background: linear-gradient(135deg, #1b5e20 0%, #2e7d32 100%);
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    border-bottom: 3px solid rgba(255, 255, 255, 0.1);
+}
+
+.secondsection {
+    background-color: #0d47a1;
+    background: linear-gradient(135deg, #0d47a1 0%, #1565c0 100%);
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    border-bottom: 3px solid rgba(255, 255, 255, 0.1);
+}
+
+.box-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    max-width: 80%;
+    margin: auto;
+    height: 80%;
+    width: 100%;
+}
+
+.firstHalf {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.secondHalf {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.secondHalf img {
+    width: 70%;
+    border: 4px solid #ffffff;
+    border-radius: 150px;
+    display: block;
+    margin: auto;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+.text-big {
+    font-family: 'Piazzolla', serif;
+    font-weight: bold;
+    font-size: 38px;
+    margin-bottom: 18px;
+    letter-spacing: -0.5px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.text-small {
+    font-size: 18px;
+    line-height: 1.75;
+    color: #f1f5f9;
+    text-align: justify;
+}
+
+/* ==========================================
+   3. SECTIONS VỚI THUMBNAIL (FLEXBOX & ROW-REVERSE)
+   Điểm trọng tâm: flex-direction: row-reverse
+   ========================================== */
+.section {
+    min-height: 420px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 85%;
+    margin: auto;
+    padding: 50px 0;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+/* Đảo ngược chiều hiển thị của Flexbox (ảnh sang trái, text sang phải) */
+.section-Left, .section-left {
+    flex-direction: row-reverse;
+}
+
+.paras {
+    padding: 0px 50px;
+    flex: 1;
+}
+
+.sectionTag {
+    color: #0f172a;
+    text-shadow: none;
+    border-left: 5px solid #2563eb;
+    padding-left: 15px;
+}
+
+.sectionSubTag {
+    color: #475569;
+    text-align: justify;
+}
+
+.thumbnail {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.thumbnail img {
+    width: 280px;
+    border: 2px solid #0f172a;
+    border-radius: 26px;
+    margin-top: 19px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.thumbnail img:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
+}
+
+.center {
+    text-align: center;
+}
+
+/* ==========================================
+   4. FOOTER (CHÂN TRANG)
+   ========================================== */
+footer.background {
+    border-top: 3px solid #38bdf8;
+}
+
+.text-footer {
+    text-align: center;
+    padding: 35px 0;
+    font-family: 'Ubuntu', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #e2e8f0;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+}
+
+/* ==========================================
+   5. RESPONSIVE MEDIA QUERIES (TƯƠNG THÍCH MOBILE)
+   ========================================== */
+@media screen and (max-width: 992px) {
+    .navbar {
+        flex-direction: column;
+        padding: 15px 0;
+    }
+
+    .nav-list {
+        width: 100%;
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .nav-list li {
+        padding: 10px 15px;
+    }
+
+    .rightNav, .rightnav {
+        width: 100%;
+        text-align: center;
+        padding: 15px 0;
+    }
+
+    .section, .section-Left, .section-left {
+        flex-direction: column !important;
+        height: auto;
+        padding: 40px 20px;
+        text-align: center;
+    }
+
+    .paras {
+        padding: 20px 0;
+    }
+
+    .sectionSubTag, .text-small {
+        text-align: left;
+    }
+
+    .box-main {
+        max-width: 90%;
+        padding: 30px 0;
+    }
+
+    .firstsection, .secondsection {
+        min-height: auto;
+        padding: 30px 0;
+    }
+}
