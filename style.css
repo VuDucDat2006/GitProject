@@ -1,14 +1,14 @@
 /* ========================================================
-   [Thực hành] Tạo Trang Giới Thiệu Doanh Nghiệp với Bootstrap
+   [Bài tập] Thiết kế Trang Web với Bootstrap Grid System
    Tác giả: Vũ Đức Đạt (VuDucDat2006)
    ======================================================== */
 
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
 
 :root {
-    --brand-blue: #0d6efd;
-    --brand-blue-dark: #0a58ca;
-    --brand-dark: #1b1e23;
+    --primary-color: #0d6efd;
+    --primary-dark: #0a58ca;
+    --dark-bg: #1e2229;
     --transition-smooth: 0.28s ease;
 }
 
@@ -18,18 +18,26 @@ html {
 
 body {
     font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    color: #2d3748;
-    background-color: #fcfcfd;
+    background-color: #f6f8fb;
+    color: #2b303a;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 /* ==========================================
-   1. Navbar Tùy Biến
+   1. Header Styling
+   ========================================== */
+.site-header {
+    background: linear-gradient(135deg, #0d6efd 0%, #084298 100%) !important;
+}
+
+/* ==========================================
+   2. Navbar Styling
    ========================================== */
 .navbar {
-    background-color: #ffffff !important;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
-    padding-top: 0.75rem;
-    padding-bottom: 0.75rem;
+    background-color: var(--dark-bg) !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .navbar-brand {
@@ -46,122 +54,111 @@ body {
     font-weight: 500;
     padding: 0.5rem 1rem !important;
     border-radius: 6px;
-    color: #4a5568 !important;
     transition: all var(--transition-smooth);
+    color: rgba(255, 255, 255, 0.8) !important;
 }
 
 .navbar-nav .nav-link:hover {
-    color: var(--brand-blue) !important;
-    background-color: rgba(13, 110, 253, 0.06);
+    color: #ffffff !important;
+    background-color: rgba(255, 255, 255, 0.08);
 }
 
 .navbar-nav .nav-link.active {
-    color: var(--brand-blue) !important;
+    color: #0dcaf0 !important;
     font-weight: 700;
-    background-color: rgba(13, 110, 253, 0.1);
+    background-color: rgba(13, 202, 240, 0.12);
+}
+
+/* Dropdown styling */
+.dropdown-menu {
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+    padding: 0.5rem;
+}
+
+.dropdown-item {
+    border-radius: 6px;
+    padding: 0.5rem 0.85rem;
+    font-weight: 500;
+    transition: all 0.15s ease;
+}
+
+.dropdown-item:hover {
+    background-color: #f1f5f9;
+    color: var(--primary-color);
+    padding-left: 1.1rem;
 }
 
 /* ==========================================
-   2. Hero Banner
+   3. Main Content Cards
    ========================================== */
-.hero-banner {
-    background: linear-gradient(135deg, #0d6efd 0%, #0056b3 50%, #003e80 100%) !important;
-    padding-top: 5rem !important;
-    padding-bottom: 5rem !important;
-}
-
-.hero-banner h1 {
-    letter-spacing: -1px;
-}
-
-.hero-banner .btn-light {
-    color: var(--brand-blue);
+.main-feature-card {
     transition: transform var(--transition-smooth), box-shadow var(--transition-smooth);
 }
 
-.hero-banner .btn-light:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2) !important;
-}
-
-/* Đường gạch ngang trang trí tiêu đề */
-.divider {
-    width: 60px;
-    height: 4px;
-    background: linear-gradient(90deg, #0d6efd, #0dcaf0);
-    border-radius: 2px;
-}
-
-/* ==========================================
-   3. About Feature Cards
-   ========================================== */
-.about-feature {
-    transition: transform var(--transition-smooth), box-shadow var(--transition-smooth);
-    border: 1px solid rgba(0, 0, 0, 0.06) !important;
-}
-
-.about-feature:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.06);
-    background-color: #ffffff !important;
-}
-
-.feature-icon {
-    font-size: 2.2rem;
-}
-
-/* ==========================================
-   4. Services Section (Grid Cards)
-   ========================================== */
-.service-card {
-    transition: transform var(--transition-smooth), box-shadow var(--transition-smooth);
-    border-radius: 16px !important;
-}
-
-.service-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 16px 32px rgba(13, 110, 253, 0.12) !important;
-}
-
-.service-icon {
-    font-size: 2.5rem;
-    width: 68px;
-    height: 68px;
-    line-height: 68px;
-    border-radius: 50%;
-    margin: 0 auto;
-    background: #edf5ff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: transform var(--transition-smooth);
-}
-
-.service-card:hover .service-icon {
-    transform: scale(1.15) rotate(6deg);
-    background: #e0eeff;
-}
-
-/* ==========================================
-   5. Contact Box
-   ========================================== */
-.contact-box {
-    border-radius: 16px !important;
-    background-color: #ffffff;
-    transition: transform var(--transition-smooth), box-shadow var(--transition-smooth);
-}
-
-.contact-box:hover {
-    transform: translateY(-6px);
+.main-feature-card:hover {
+    transform: translateY(-4px);
     box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08) !important;
 }
 
-.contact-icon {
-    font-size: 2.2rem;
+.card-header-gradient {
+    background: linear-gradient(135deg, #0d6efd 0%, #004494 100%);
+}
+
+.feature-box {
+    transition: all var(--transition-smooth);
+}
+
+.feature-box:hover {
+    background-color: #ffffff !important;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
 }
 
 /* ==========================================
-   6. Table & Technical Section
+   4. Sidebar & Sticky Placement
+   ========================================== */
+@media (min-width: 992px) {
+    .sidebar-wrapper {
+        position: sticky;
+        top: 80px;
+    }
+}
+
+.sidebar-card {
+    transition: transform var(--transition-smooth), box-shadow var(--transition-smooth);
+}
+
+.sidebar-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.06) !important;
+}
+
+.hover-primary {
+    transition: color 0.15s ease;
+}
+
+.hover-primary:hover {
+    color: var(--primary-color) !important;
+}
+
+.author-box {
+    background: linear-gradient(135deg, #0d6efd 0%, #0b5ed7 100%) !important;
+}
+
+.author-avatar {
+    font-size: 2.2rem;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ==========================================
+   5. Technical Table
    ========================================== */
 .table th, .table td {
     vertical-align: middle;
@@ -176,8 +173,8 @@ code {
 }
 
 /* ==========================================
-   7. Footer
+   6. Footer
    ========================================== */
-footer {
-    background-color: var(--brand-dark) !important;
+.site-footer {
+    background-color: var(--dark-bg) !important;
 }
