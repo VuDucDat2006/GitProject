@@ -1,26 +1,22 @@
 ﻿# GitProject
 
-Dự án thực hành các thao tác cơ bản với Git và GitHub (CodeGym).
+Dự án thực hành các thao tác cơ bản với Git, GitHub và CSS định kiểu bảng (CodeGym).
 
-## Mục Tiêu Thực Hành
-- Làm quen và thực hành các thao tác cơ bản với Git và GitHub.
-- Nắm được quy trình làm việc từ tạo repository, clone dự án về máy tính, đến đẩy mã nguồn lên GitHub.
+## Nhánh: `css-table-styling`
+Bài tập: **[Thực hành] Bảng trong CSS**
 
-## Cấu Trúc Dự Án
-```plaintext
-GitProject/
-├── README.md
-└── source/
-    ├── index.html
-    └── news.html
-```
+### Các nội dung thực hành:
+1. **Đường viền của bảng**: Sử dụng thuộc tính `border: 1px solid black;` cho `table`, `th`, và `td`.
+2. **Gộp đường viền liền kề**: Sử dụng thuộc tính `border-collapse: collapse;` để loại bỏ đường viền kép.
+3. **Chiều rộng và chiều cao**: Thiết lập `width: 100%;` cho bảng và `height: 50px;` cho ô tiêu đề `th`.
+4. **Căn chỉnh theo chiều ngang**: Sử dụng `text-align: left;` cho các ô tiêu đề `th`.
+5. **Căn chỉnh theo chiều dọc**: Sử dụng `vertical-align: bottom;` và `height: 80px;` cho ô dữ liệu `td`.
+6. **Padding trong bảng**: Sử dụng `padding: 15px;` để tạo khoảng đệm thông thoáng giữa đường viền và nội dung ô.
+7. **Màu sắc trong bảng**: Sử dụng `background-color` và `color` để tạo độ tương phản cho hàng tiêu đề (`#333`, chữ trắng) và hàng dữ liệu (`#f2f2f2`, chữ tối).
+8. **Bảng tổng hợp hoàn chỉnh**: Kết hợp các kỹ thuật trên cùng hiệu ứng hover và giao diện hiện đại.
 
-## Các Bước Đã Thực Hiện
-1. Tạo repository `GitProject` trên GitHub.
-2. Clone repository về máy tính cá nhân bằng lệnh `git clone`.
-3. Tạo file `README.md`, đưa vào Staging Area (`git add`) và commit (`git commit -m "Add README.md"`).
-4. Đẩy file `README.md` lên GitHub (`git push origin main`).
-5. Tạo thư mục `source` chứa `index.html` và `news.html`.
-6. Đẩy thư mục `source` lên GitHub (`git add source/`, `git commit -m "Add source files"`, `git push origin main`).
+### Cấu trúc file:
+- `index.html`: Cấu trúc HTML bài thực hành.
+- `style.css`: Toàn bộ mã CSS định kiểu cho bảng.
 
 Tác giả: Vũ Đức Đạt (VuDucDat2006)

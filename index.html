@@ -1,0 +1,216 @@
+﻿<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[Thá»±c hÃ nh] Báº£ng trong CSS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>[Thá»±c hÃ nh] Äá»‹nh kiá»ƒu báº£ng trong CSS</h1>
+            <p>KhÃ¡m phÃ¡ cÃ¡ch cáº£i thiá»‡n giao diá»‡n báº£ng HTML báº±ng border, border-collapse, width/height, cÄƒn chá»‰nh, padding vÃ  mÃ u sáº¯c.</p>
+        </header>
+
+        <!-- 1. ÄÆ°á»ng viá»n cá»§a báº£ng -->
+        <section class="card">
+            <h2>1. ÄÆ°á»ng viá»n cá»§a báº£ng (ÄÆ°á»ng viá»n kÃ©p máº·c Ä‘á»‹nh)</h2>
+            <p class="description">Sá»­ dá»¥ng <code>border: 1px solid black;</code> cho cáº£ table, th, vÃ  td:</p>
+            <table class="table-border-demo">
+                <tr>
+                    <th>Há» tÃªn</th>
+                    <th>Tuá»•i</th>
+                    <th>Lá»›p</th>
+                </tr>
+                <tr>
+                    <td>Nguyá»…n VÄƒn A</td>
+                    <td>20</td>
+                    <td>Web</td>
+                </tr>
+                <tr>
+                    <td>Tráº§n Thá»‹ B</td>
+                    <td>21</td>
+                    <td>Web</td>
+                </tr>
+            </table>
+        </section>
+
+        <!-- 2. Bá» Ä‘Æ°á»ng viá»n kÃ©p vá»›i border-collapse -->
+        <section class="card">
+            <h2>2. Gá»™p Ä‘Æ°á»ng viá»n liá»n ká» (border-collapse: collapse)</h2>
+            <p class="description">Sá»­ dá»¥ng <code>border-collapse: collapse;</code> Ä‘á»ƒ biáº¿n Ä‘Æ°á»ng viá»n kÃ©p thÃ nh má»™t Ä‘Æ°á»ng viá»n Ä‘Æ¡n gá»n gÃ ng:</p>
+            <table class="table-collapse-demo">
+                <tr>
+                    <th>Há» tÃªn</th>
+                    <th>Tuá»•i</th>
+                    <th>Lá»›p</th>
+                </tr>
+                <tr>
+                    <td>Nguyá»…n VÄƒn A</td>
+                    <td>20</td>
+                    <td>Web</td>
+                </tr>
+                <tr>
+                    <td>Tráº§n Thá»‹ B</td>
+                    <td>21</td>
+                    <td>Web</td>
+                </tr>
+            </table>
+        </section>
+
+        <!-- 3. Chiá»u rá»™ng vÃ  chiá»u cao -->
+        <section class="card">
+            <h2>3. Thiáº¿t láº­p chiá»u rá»™ng & chiá»u cao (width: 100%, height: 50px)</h2>
+            <p class="description">Báº£ng chiáº¿m toÃ n bá»™ chiá»u rá»™ng 100% vÃ  Ã´ tiÃªu Ä‘á» <code>th</code> cÃ³ chiá»u cao 50px:</p>
+            <table class="table-size-demo">
+                <tr>
+                    <th>Há» tÃªn</th>
+                    <th>Tuá»•i</th>
+                    <th>Lá»›p</th>
+                </tr>
+                <tr>
+                    <td>Nguyá»…n VÄƒn A</td>
+                    <td>20</td>
+                    <td>Web</td>
+                </tr>
+                <tr>
+                    <td>Tráº§n Thá»‹ B</td>
+                    <td>21</td>
+                    <td>Web</td>
+                </tr>
+            </table>
+        </section>
+
+        <!-- 4. CÄƒn chá»‰nh theo chiá»u ngang (text-align) -->
+        <section class="card">
+            <h2>4. CÄƒn chá»‰nh theo chiá»u ngang (text-align: left)</h2>
+            <p class="description">Ná»™i dung trong cÃ¡c Ã´ tiÃªu Ä‘á» <code>th</code> Ä‘Æ°á»£c cÄƒn vá» phÃ­a bÃªn trÃ¡i thay vÃ¬ cÄƒn giá»¯a máº·c Ä‘á»‹nh:</p>
+            <table class="table-align-demo">
+                <tr>
+                    <th>Há» tÃªn</th>
+                    <th>Tuá»•i</th>
+                    <th>Lá»›p</th>
+                </tr>
+                <tr>
+                    <td>Nguyá»…n VÄƒn A</td>
+                    <td>20</td>
+                    <td>Web</td>
+                </tr>
+                <tr>
+                    <td>Tráº§n Thá»‹ B</td>
+                    <td>21</td>
+                    <td>Web</td>
+                </tr>
+            </table>
+        </section>
+
+        <!-- 5. CÄƒn chá»‰nh theo chiá»u dá»c (vertical-align) -->
+        <section class="card">
+            <h2>5. CÄƒn chá»‰nh theo chiá»u dá»c (vertical-align: bottom)</h2>
+            <p class="description">Chiá»u cao Ã´ <code>td</code> lÃ  80px vÃ  ná»™i dung Ä‘Æ°á»£c cÄƒn xuá»‘ng Ä‘Ã¡y Ã´ báº±ng <code>vertical-align: bottom;</code>:</p>
+            <table class="table-valign-demo">
+                <tr>
+                    <th>Há» tÃªn</th>
+                    <th>Tuá»•i</th>
+                    <th>Lá»›p</th>
+                </tr>
+                <tr>
+                    <td>Nguyá»…n VÄƒn A</td>
+                    <td>20</td>
+                    <td>Web</td>
+                </tr>
+                <tr>
+                    <td>Tráº§n Thá»‹ B</td>
+                    <td>21</td>
+                    <td>Web</td>
+                </tr>
+            </table>
+        </section>
+
+        <!-- 6. Padding trong báº£ng -->
+        <section class="card">
+            <h2>6. Khoáº£ng cÃ¡ch Ä‘á»‡m trong Ã´ (padding: 15px)</h2>
+            <p class="description">Táº¡o khoáº£ng trá»‘ng 15px giá»¯a viá»n vÃ  ná»™i dung Ã´ giÃºp báº£ng thoÃ¡ng Ä‘Ã£ng, dá»… Ä‘á»c hÆ¡n:</p>
+            <table class="table-padding-demo">
+                <tr>
+                    <th>Há» tÃªn</th>
+                    <th>Tuá»•i</th>
+                    <th>Lá»›p</th>
+                </tr>
+                <tr>
+                    <td>Nguyá»…n VÄƒn A</td>
+                    <td>20</td>
+                    <td>Web</td>
+                </tr>
+                <tr>
+                    <td>Tráº§n Thá»‹ B</td>
+                    <td>21</td>
+                    <td>Web</td>
+                </tr>
+            </table>
+        </section>
+
+        <!-- 7. MÃ u sáº¯c trong báº£ng -->
+        <section class="card">
+            <h2>7. MÃ u sáº¯c trong báº£ng (background-color & color)</h2>
+            <p class="description">TiÃªu Ä‘á» ná»n tá»‘i chá»¯ tráº¯ng káº¿t há»£p Ã´ dá»¯ liá»‡u ná»n xÃ¡m nháº¡t:</p>
+            <table class="table-color-demo">
+                <tr>
+                    <th>Há» tÃªn</th>
+                    <th>Tuá»•i</th>
+                    <th>Lá»›p</th>
+                </tr>
+                <tr>
+                    <td>Nguyá»…n VÄƒn A</td>
+                    <td>20</td>
+                    <td>Web</td>
+                </tr>
+                <tr>
+                    <td>Tráº§n Thá»‹ B</td>
+                    <td>21</td>
+                    <td>Web</td>
+                </tr>
+            </table>
+        </section>
+
+        <!-- 8. Báº£ng hoÃ n thiá»‡n tá»•ng há»£p -->
+        <section class="card">
+            <h2>8. Báº£ng tá»•ng há»£p hoÃ n chá»‰nh (Giao diá»‡n chuáº©n hiá»‡n Ä‘áº¡i)</h2>
+            <p class="description">Káº¿t há»£p border-collapse, padding, text-align, mÃ u sáº¯c vÃ  hiá»‡u á»©ng hover:</p>
+            <table class="table-master-demo">
+                <thead>
+                    <tr>
+                        <th>Há» tÃªn</th>
+                        <th>Tuá»•i</th>
+                        <th>Lá»›p</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Nguyá»…n VÄƒn A</td>
+                        <td>20</td>
+                        <td>Láº­p trÃ¬nh Web Front-end</td>
+                    </tr>
+                    <tr>
+                        <td>Tráº§n Thá»‹ B</td>
+                        <td>21</td>
+                        <td>Láº­p trÃ¬nh Web Back-end</td>
+                    </tr>
+                    <tr>
+                        <td>LÃª VÄƒn C</td>
+                        <td>22</td>
+                        <td>Fullstack JavaScript</td>
+                    </tr>
+                    <tr>
+                        <td>Pháº¡m Thá»‹ D</td>
+                        <td>19</td>
+                        <td>Thiáº¿t káº¿ UI/UX & Web</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </div>
+</body>
+</html>
+
