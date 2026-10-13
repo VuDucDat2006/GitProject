@@ -1,0 +1,218 @@
+/* ========================================================
+   1. RESET & CẤU HÌNH GIAO DIỆN CHUNG
+   ======================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f3f4f6;
+    color: #1f2937;
+    line-height: 1.6;
+    padding: 40px 20px;
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 35px 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+.header {
+    border-bottom: 2px solid #e5e7eb;
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+}
+
+.badge {
+    display: inline-block;
+    background-color: #e0e7ff;
+    color: #4338ca;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 4px 10px;
+    border-radius: 15px;
+    margin-bottom: 8px;
+}
+
+.header h1 {
+    font-size: 26px;
+    color: #111827;
+    margin-bottom: 6px;
+}
+
+.subtitle {
+    font-size: 15px;
+    color: #4b5563;
+}
+
+.subtitle code {
+    background-color: #f3f4f6;
+    padding: 2px 6px;
+    border-radius: 4px;
+    color: #d97706;
+    font-weight: 600;
+}
+
+/* ========================================================
+   2. BÀI THỰC HÀNH CHÍNH THEO ĐÚNG ĐỀ BÀI (OVERFLOW-BOX)
+   ======================================================== */
+.main-exercise-section {
+    background-color: #f9fafb;
+    border: 1px solid #e5e7eb;
+    border-left: 5px solid #2563eb;
+    padding: 25px;
+    border-radius: 0 8px 8px 0;
+    margin-bottom: 35px;
+}
+
+.main-exercise-section h2 {
+    font-size: 18px;
+    color: #1f2937;
+    margin-bottom: 8px;
+}
+
+.main-exercise-section p {
+    font-size: 14.5px;
+    color: #4b5563;
+    margin-bottom: 15px;
+}
+
+.exercise-demo {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 15px;
+}
+
+/* KHỐI ĐỊNH DẠNG THEO YÊU CẦU BƯỚC 2 CỦA BÀI HỌC */
+.overflow-box {
+    width: 300px;
+    height: 100px;
+    background-color: lightgray;
+    padding: 10px;
+    overflow: auto;               /* Thuộc tính cốt lõi của đề bài */
+    border: 2px dashed #6b7280;   /* Viền kẻ đứt làm nổi bật khung 300x100 */
+    border-radius: 6px;
+    font-size: 14px;
+    color: #111827;
+    line-height: 1.5;
+}
+
+.note {
+    font-size: 14px;
+    color: #059669;
+    font-weight: 500;
+}
+
+/* ========================================================
+   3. KHU VỰC SO SÁNH 4 GIÁ TRỊ OVERFLOW
+   ======================================================== */
+.comparison-section h2 {
+    font-size: 20px;
+    color: #111827;
+    margin-bottom: 20px;
+}
+
+.grid-boxes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    padding: 18px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.card-header h3 {
+    font-size: 15px;
+    color: #111827;
+}
+
+.tag {
+    font-size: 11px;
+    font-weight: 600;
+    padding: 2px 8px;
+    border-radius: 12px;
+    background-color: #f3f4f6;
+    color: #6b7280;
+}
+
+.tag.highlight {
+    background-color: #d1fae5;
+    color: #065f46;
+}
+
+.card-desc {
+    font-size: 13px;
+    color: #6b7280;
+    margin-bottom: 12px;
+    min-height: 38px;
+}
+
+/* Khung mẫu so sánh chung */
+.demo-box {
+    width: 100%;
+    height: 90px;
+    background-color: #f3f4f6;
+    padding: 10px;
+    border: 1px solid #d1d5db;
+    border-radius: 4px;
+    font-size: 13px;
+    line-height: 1.45;
+}
+
+/* Áp dụng từng giá trị overflow cụ thể */
+.box-visible {
+    overflow: visible;
+    background-color: #fef2f2;
+    border-color: #fca5a5;
+}
+
+.box-hidden {
+    overflow: hidden;
+    background-color: #fffbeb;
+    border-color: #fde68a;
+}
+
+.box-scroll {
+    overflow: scroll;
+    background-color: #eff6ff;
+    border-color: #bfdbfe;
+}
+
+.box-auto {
+    overflow: auto;
+    background-color: #ecfdf5;
+    border-color: #a7f3d0;
+}
+
+/* ========================================================
+   4. FOOTER THÔNG TIN
+   ======================================================== */
+.footer-info {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #e5e7eb;
+    text-align: center;
+    color: #6b7280;
+    font-size: 13.5px;
+}
