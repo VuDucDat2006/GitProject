@@ -1,26 +1,26 @@
-﻿# GitProject
+﻿# [Bài tập] Sử dụng Box Model 2 - Open Source Records
 
-Dự án thực hành các thao tác cơ bản với Git và GitHub (CodeGym).
+Dự án hoàn thiện trang web giới thiệu ban nhạc **Open Source Records** áp dụng toàn diện mô hình hộp **CSS Box Model** (margin, padding, order, width).
 
-## Mục Tiêu Thực Hành
-- Làm quen và thực hành các thao tác cơ bản với Git và GitHub.
-- Nắm được quy trình làm việc từ tạo repository, clone dự án về máy tính, đến đẩy mã nguồn lên GitHub.
+## 📌 Nội Dung & Mục Tiêu Bài Tập
+1. Hoàn thiện phần CSS còn thiếu trong đoạn mã mẫu cho trang web Open Source Records.
+2. Tiêu đề chính \Open Source Records\ hiển thị trang trọng ở phần đầu với đường gạch chân phân cách.
+3. Menu điều hướng (\About\, \Bands\, \Contact\) chuyển sang dạng ngang (\display: inline-block\) với khoảng cách \margin\ và \padding\ hợp lý.
+4. Tiêu đề \h2\, \h3\ có màu sắc và phân cấp trực quan rõ ràng (\#000000\, \#333333\).
+5. Đoạn văn \p\ sử dụng màu sắc \#444444\, độ giãn dòng thoải mái.
+6. Thẻ liên kết \\ có màu sắc \#440000\ theo đúng yêu cầu đề bài kèm hiệu ứng \:hover\.
+7. Các danh sách \ul\, \li\ (thành viên ban nhạc, tour lưu diễn) có căn lề, viền hộp và đổ bóng rõ ràng.
+8. Thẻ \ody\ được giới hạn độ rộng \width: 640px\ và căn giữa trang bằng \margin: 30px auto\.
 
-## Cấu Trúc Dự Án
-```plaintext
+## 🛠 Cấu Trúc Thư Mục
+\\\plaintext
 GitProject/
-├── README.md
-└── source/
-    ├── index.html
-    └── news.html
-```
+├── index.html       # Toàn bộ mã HTML và CSS Box Model hoàn thiện
+└── README.md        # Tài liệu hướng dẫn và mô tả bài tập
+\\\
 
-## Các Bước Đã Thực Hiện
-1. Tạo repository `GitProject` trên GitHub.
-2. Clone repository về máy tính cá nhân bằng lệnh `git clone`.
-3. Tạo file `README.md`, đưa vào Staging Area (`git add`) và commit (`git commit -m "Add README.md"`).
-4. Đẩy file `README.md` lên GitHub (`git push origin main`).
-5. Tạo thư mục `source` chứa `index.html` và `news.html`.
-6. Đẩy thư mục `source` lên GitHub (`git add source/`, `git commit -m "Add source files"`, `git push origin main`).
+## 🚀 Cách Mở Và Xem Dự Án
+- Mở trực tiếp file \index.html\ bằng bất kỳ trình duyệt nào (Chrome, Edge, Firefox, Cốc Cốc).
+- Hoặc xem trực tiếp trên GitHub: [Open Source Records - Box Model](https://github.com/VuDucDat2006/GitProject/tree/open-source-records-box-model)
 
 Tác giả: Vũ Đức Đạt (VuDucDat2006)
