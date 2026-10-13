@@ -1,26 +1,22 @@
 ﻿# GitProject
 
-Dự án thực hành các thao tác cơ bản với Git và GitHub (CodeGym).
+Dự án thực hành các thao tác cơ bản với Git, GitHub và CSS Box Model (CodeGym).
 
-## Mục Tiêu Thực Hành
-- Làm quen và thực hành các thao tác cơ bản với Git và GitHub.
-- Nắm được quy trình làm việc từ tạo repository, clone dự án về máy tính, đến đẩy mã nguồn lên GitHub.
+## Nhánh: `css-box-model-1`
+Bài tập: **[Thực hành] Sử dụng Box Model 1**
 
-## Cấu Trúc Dự Án
-```plaintext
-GitProject/
-├── README.md
-└── source/
-    ├── index.html
-    └── news.html
-```
+### Nội dung thực hành:
+- Khám phá mô hình hộp CSS (CSS Box Model) bao gồm 4 thành phần:
+  1. **Content**: Nội dung phần tử (`width: 200px`).
+  2. **Padding**: Khoảng đệm bên trong (`padding: 35px`, nền `lightseagreen`).
+  3. **Border**: Đường viền bao quanh (`border: 20px dashed indianred`).
+  4. **Margin**: Khoảng cách lề ngoài (`margin: 25px`).
+- **Công thức tính tổng chiều rộng chiếm chỗ trên trang**:
+  $$\text{Total Width} = \text{width} + \text{padding (trái + phải)} + \text{border (trái + phải)} + \text{margin (trái + phải)}$$
+  $$\text{Total Width} = 200 + (35 + 35) + (20 + 20) + (25 + 25) = 360\text{px}$$
 
-## Các Bước Đã Thực Hiện
-1. Tạo repository `GitProject` trên GitHub.
-2. Clone repository về máy tính cá nhân bằng lệnh `git clone`.
-3. Tạo file `README.md`, đưa vào Staging Area (`git add`) và commit (`git commit -m "Add README.md"`).
-4. Đẩy file `README.md` lên GitHub (`git push origin main`).
-5. Tạo thư mục `source` chứa `index.html` và `news.html`.
-6. Đẩy thư mục `source` lên GitHub (`git add source/`, `git commit -m "Add source files"`, `git push origin main`).
+### Cấu trúc file:
+- `index.html`: Giao diện trực quan kèm công thức và bảng phân tích kích thước chi tiết.
+- `box_model_simple.html`: Đoạn mã nguyên bản theo hướng dẫn thực hành.
 
 Tác giả: Vũ Đức Đạt (VuDucDat2006)
