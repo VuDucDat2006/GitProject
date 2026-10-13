@@ -1,0 +1,203 @@
+/* ========================================================
+   1. RESET & CẤU HÌNH GIAO DIỆN CHUNG
+   ======================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f3f4f6;
+    color: #1f2937;
+    line-height: 1.6;
+    padding: 30px 20px;
+}
+
+.wrapper {
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 35px 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.page-header {
+    border-bottom: 2px solid #e5e7eb;
+    padding-bottom: 20px;
+    margin-bottom: 25px;
+}
+
+.badge {
+    display: inline-block;
+    background-color: #dbeafe;
+    color: #1d4ed8;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 4px 10px;
+    border-radius: 12px;
+    margin-bottom: 8px;
+}
+
+.page-header h1 {
+    font-size: 26px;
+    color: #111827;
+    margin-bottom: 6px;
+}
+
+.description {
+    font-size: 15px;
+    color: #4b5563;
+}
+
+.description code {
+    background-color: #f3f4f6;
+    padding: 2px 6px;
+    border-radius: 4px;
+    color: #d97706;
+    font-weight: 600;
+}
+
+/* ========================================================
+   2. BỐ CỤC CHÍNH BẰNG FLOAT & CLEAR (THEO ĐÚNG ĐỀ BÀI)
+   ======================================================== */
+
+/* Container bao bọc toàn bộ bố cục */
+.container {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+/* Cột bên trái: Chiếm 60%, dạt sang trái */
+.left-column {
+    width: 60%;
+    float: left;
+    background-color: lightblue;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 6px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+/* Cột bên phải: Chiếm 38%, dạt sang phải */
+.right-column {
+    width: 38%;
+    float: right;
+    background-color: lightgreen;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 6px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+/* Xử lý float (Clearfix) - Chống sập chiều cao của khối cha */
+.container::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/* ========================================================
+   3. ĐỊNH DẠNG CHI TIẾT NỘI DUNG BÊN TRONG CÁC CỘT
+   ======================================================== */
+.left-column h2 {
+    font-size: 19px;
+    color: #0c4a6e;
+    margin-bottom: 12px;
+    border-bottom: 2px solid rgba(12, 74, 110, 0.2);
+    padding-bottom: 6px;
+}
+
+.left-column p {
+    font-size: 14.5px;
+    color: #164e63;
+    margin-bottom: 12px;
+}
+
+.highlight-card {
+    background: rgba(255, 255, 255, 0.7);
+    border-left: 4px solid #0284c7;
+    padding: 12px 16px;
+    border-radius: 0 6px 6px 0;
+    margin: 15px 0;
+}
+
+.highlight-card h4 {
+    color: #0369a1;
+    margin-bottom: 5px;
+    font-size: 14.5px;
+}
+
+.highlight-card p {
+    margin-bottom: 0;
+    font-size: 13.5px;
+}
+
+.right-column h3 {
+    font-size: 18px;
+    color: #14532d;
+    margin-bottom: 12px;
+    border-bottom: 2px solid rgba(20, 83, 45, 0.2);
+    padding-bottom: 6px;
+}
+
+.right-column p {
+    font-size: 14px;
+    color: #166534;
+    margin-bottom: 12px;
+}
+
+.sidebar-box {
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 6px;
+    padding: 12px 15px;
+    margin-bottom: 15px;
+}
+
+.sidebar-box h4 {
+    font-size: 14px;
+    color: #15803d;
+    margin-bottom: 8px;
+}
+
+.sidebar-box ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar-box ul li {
+    font-size: 13.5px;
+    color: #14532d;
+    margin-bottom: 6px;
+}
+
+.author-tag {
+    background: rgba(255, 255, 255, 0.5);
+    padding: 10px;
+    border-radius: 4px;
+    font-size: 13px;
+    color: #166534;
+}
+
+.author-tag p {
+    margin-bottom: 4px;
+}
+
+/* ========================================================
+   4. CHÂN TRANG (FOOTER)
+   ======================================================== */
+.page-footer {
+    border-top: 2px solid #e5e7eb;
+    padding-top: 20px;
+    text-align: center;
+    color: #6b7280;
+    font-size: 13.5px;
+}
+
+.page-footer p {
+    margin-bottom: 4px;
+}

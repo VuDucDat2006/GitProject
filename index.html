@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bá»‘ cá»¥c báº±ng Float - [Thá»±c hÃ nh] CodeGym</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="wrapper">
+        <header class="page-header">
+            <span class="badge">CSS Layout</span>
+            <h1>[Thá»±c hÃ nh] Táº¡o bá»‘ cá»¥c hai cá»™t báº±ng Float vÃ  Clear</h1>
+            <p class="description">TÃ¬m hiá»ƒu cÃ¡ch cÄƒn chá»‰nh cÃ¡c cá»™t báº±ng <code>float: left</code>, <code>float: right</code> vÃ  ká»¹ thuáº­t chá»‘ng vá»¡ khung vá»›i <code>clear: both</code> (Clearfix).</p>
+        </header>
+
+        <!-- KHá»I CHá»¨A Bá» Cá»¤C HAI Cá»˜T THEO ÄÃšNG Äá»€ BÃ€I -->
+        <div class="container">
+            <!-- Cá»™t bÃªn trÃ¡i: 60% -->
+            <div class="left-column">
+                <h2>Cá»™t bÃªn trÃ¡i chá»©a ná»™i dung chÃ­nh (60%)</h2>
+                <p>ÄÃ¢y lÃ  khu vá»±c ná»™i dung chÃ­nh cá»§a trang web. ChÃºng ta sá»­ dá»¥ng <code>float: left;</code> Ä‘á»ƒ Ä‘áº©y pháº§n tá»­ nÃ y sang sÃ¡t cáº¡nh trÃ¡i cá»§a khung chá»©a.</p>
+                <p><strong>CÆ¡ cháº¿ hoáº¡t Ä‘á»™ng cá»§a Float:</strong> Khi má»™t pháº§n tá»­ Ä‘Æ°á»£c gÃ¡n <code>float</code>, nÃ³ sáº½ Ä‘Æ°á»£c Ä‘Æ°a ra khá»i dÃ²ng cháº£y tÃ i liá»‡u thÃ´ng thÆ°á»ng nhÆ°ng cÃ¡c ná»™i dung inline xung quanh váº«n cÃ³ thá»ƒ bao bá»c láº¥y nÃ³.</p>
+                <div class="highlight-card">
+                    <h4>ðŸ’¡ Ká»¹ thuáº­t Clearfix (<code>.container::after</code>):</h4>
+                    <p>Náº¿u khÃ´ng cÃ³ bá»™ chá»n <code>clear: both</code>, tháº» <code>.container</code> cha sáº½ bá»‹ sáº­p chiá»u cao (chiá»u cao = 0) do cÃ¡c pháº§n tá»­ con bá»‹ tháº£ ná»•i (floating). Bá»™ chá»n pseudo-element <code>::after</code> vá»›i <code>clear: both</code> giÃºp khung cha tá»± Ä‘á»™ng Ã´m trá»n láº¥y hai cá»™t!</p>
+                </div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+
+            <!-- Cá»™t bÃªn pháº£i: 38% -->
+            <div class="right-column">
+                <h3>Cá»™t bÃªn pháº£i chá»©a sidebar (38%)</h3>
+                <p>ÄÃ¢y lÃ  khu vá»±c sidebar phá»¥, sá»­ dá»¥ng <code>float: right;</code> Ä‘á»ƒ Ä‘áº©y dáº¡t sang sÃ¡t cáº¡nh pháº£i.</p>
+                <div class="sidebar-box">
+                    <h4>Danh má»¥c bÃ i viáº¿t</h4>
+                    <ul>
+                        <li>ðŸ“Œ Giá»›i thiá»‡u CSS Float</li>
+                        <li>ðŸ“Œ Thuá»™c tÃ­nh Clear vÃ  Clearfix</li>
+                        <li>ðŸ“Œ Quáº£n lÃ½ Box-sizing</li>
+                        <li>ðŸ“Œ Thiáº¿t káº¿ Bá»‘ cá»¥c Web</li>
+                    </ul>
+                </div>
+                <div class="author-tag">
+                    <p>Há»c viÃªn: <strong>VÅ© Äá»©c Äáº¡t</strong></p>
+                    <p>GitHub: <code>VuDucDat2006</code></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- PHáº¦N CHÃ‚N TRANG ÄÆ¯á»¢C Äáº¨Y XUá»NG DÆ¯á»šI NHá»œ CLEARFIX -->
+        <footer class="page-footer">
+            <p>âœ… <strong>Khung chÃ¢n trang:</strong> ÄÆ°á»£c Ä‘áº©y xuá»‘ng dÆ°á»›i hai cá»™t má»™t cÃ¡ch chuáº©n xÃ¡c nhá» pháº§n tá»­ cha Ä‘Ã£ dá»n sáº¡ch float.</p>
+            <p>&copy; 2026 CodeGym Practice - Bá»‘ cá»¥c hai cá»™t báº±ng Float vÃ  Clear.</p>
+        </footer>
+    </div>
+
+</body>
+</html>
