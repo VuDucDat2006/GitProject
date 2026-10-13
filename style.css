@@ -1,0 +1,185 @@
+/* ========================================================
+   1. RESET & MÔ HÌNH HỘP BOX-SIZING
+   ======================================================== */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 24px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #f8fafc;
+    color: #1e293b;
+    line-height: 1.5;
+}
+
+.container {
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+h2 {
+    margin-top: 0;
+    margin-bottom: 6px;
+    font-size: 28px;
+    color: #0f172a;
+    font-weight: 700;
+}
+
+h4 {
+    margin-top: 0;
+    margin-bottom: 24px;
+    font-size: 15px;
+    color: #64748b;
+    font-weight: 400;
+}
+
+/* ========================================================
+   2. KHUNG THẺ GALLERY & HIỆU ỨNG HOVER
+   ======================================================== */
+div.gallery {
+    border: 1px solid #e2e8f0;
+    background-color: #ffffff;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    transition: border-color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
+}
+
+div.gallery:hover {
+    border: 1px solid #94a3b8;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+    transform: translateY(-4px);
+}
+
+div.gallery a {
+    display: block;
+    text-decoration: none;
+    overflow: hidden;
+    background-color: #f1f5f9;
+}
+
+div.gallery img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 3 / 2;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.35s ease;
+}
+
+div.gallery:hover img {
+    transform: scale(1.04);
+}
+
+div.desc {
+    padding: 14px 12px;
+    text-align: center;
+    font-size: 14px;
+    color: #334155;
+    font-weight: 500;
+    min-height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ========================================================
+   3. CỘT RESPONSIVE TRÊN DESKTOP (> 700PX: 4 ẢNH / DÒNG)
+   ======================================================== */
+.responsive {
+    padding: 0 8px;
+    float: left;
+    width: 24.99999%;
+    margin-bottom: 16px;
+}
+
+/* ========================================================
+   4. MEDIA QUERY: MÀN HÌNH NHỎ HƠN HOẶC BẰNG 700PX (2 ẢNH / DÒNG)
+   ======================================================== */
+@media only screen and (max-width: 700px) {
+    .responsive {
+        width: 49.99999%;
+        margin: 8px 0;
+    }
+
+    body {
+        padding: 16px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+}
+
+/* ========================================================
+   5. MEDIA QUERY: MÀN HÌNH NHỎ HƠN HOẶC BẰNG 500PX (1 ẢNH / DÒNG)
+   ======================================================== */
+@media only screen and (max-width: 500px) {
+    .responsive {
+        width: 100%;
+        margin: 8px 0;
+    }
+
+    body {
+        padding: 12px;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+}
+
+/* ========================================================
+   6. CLEARFIX NGĂN SỤP ĐỔ CHIỀU CAO DO FLOAT
+   ======================================================== */
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* ========================================================
+   7. PHẦN GIẢI THÍCH & GHI CHÚ
+   ======================================================== */
+.info-section {
+    margin-top: 25px;
+    padding: 18px 22px;
+    background-color: #f1f5f9;
+    border-left: 4px solid #3b82f6;
+    border-radius: 0 6px 6px 0;
+}
+
+.info-section p {
+    margin: 0 0 8px 0;
+    font-size: 14.5px;
+    color: #1e293b;
+}
+
+.info-section ul {
+    margin: 0 0 12px 0;
+    padding-left: 22px;
+}
+
+.info-section li {
+    font-size: 14px;
+    color: #475569;
+    margin-bottom: 6px;
+}
+
+.info-section code {
+    background-color: #e2e8f0;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-weight: 600;
+    color: #0f172a;
+}
+
+.info-section .author {
+    margin-top: 12px;
+    font-size: 13px;
+    color: #64748b;
+    border-top: 1px solid #cbd5e1;
+    padding-top: 10px;
+}
