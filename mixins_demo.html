@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thực Hành Tạo Mixins & Biến Trong SASS - CodeGym Demo</title>
+    <!-- Tệp CSS được biên dịch tự động từ main.scss qua SASS CLI -->
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Phong cách bổ trợ hiển thị trang web demo */
+        body {
+            background-color: #f3f4f6;
+            margin: 0;
+            padding: 40px 20px;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .badge {
+            display: inline-block;
+            background: #ef4444;
+            color: #ffffff;
+            font-size: 13px;
+            font-weight: 700;
+            padding: 4px 12px;
+            border-radius: 20px;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+        }
+        .intro-text {
+            color: #4b5563;
+            font-size: 16px;
+            margin-bottom: 25px;
+            line-height: 1.6;
+        }
+        .grid-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 20px;
+            margin: 25px 0;
+        }
+        .code-box {
+            background: #1e293b;
+            color: #e2e8f0;
+            padding: 16px;
+            border-radius: 8px;
+            font-family: Consolas, Monaco, monospace;
+            font-size: 13.5px;
+            line-height: 1.6;
+            overflow-x: auto;
+            margin-top: 15px;
+        }
+        .button-group {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-top: 15px;
+        }
+        .btn-blue {
+            background: #2563eb !important;
+        }
+        .btn-green {
+            background: #10b981 !important;
+        }
+        .btn-dark {
+            background: #1e293b !important;
+        }
+        .footer-note {
+            text-align: center;
+            color: #6b7280;
+            font-size: 14px;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #e5e7eb;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <!-- Header với tiêu đề h1 áp dụng $font-large: 32px và $text-color: #222 -->
+        <span class="badge">SASS Mixins &amp; Variables</span>
+        <h1>Tối Ưu Hóa CSS Website Bằng SASS Mixins &amp; Biến</h1>
+        <p class="intro-text">
+            Bài thực hành chứng minh sức mạnh của SASS trong việc loại bỏ hoàn toàn việc lặp mã (DRY principle), 
+            quản trị màu sắc và kích thước tập trung, đồng thời nâng cao khả năng tái sử dụng qua mixins.
+        </p>
+
+        <!-- Tiêu đề h2 áp dụng $font-medium: 28px và $text-color: #222 -->
+        <h2>1. Thẻ Card Áp Dụng Mixin @include box-style</h2>
+
+        <!-- Khối thẻ Card áp dụng mixin @include box-style -->
+        <div class="card">
+            <h3 style="font-size: 20px; color: #111827; margin-top: 0; margin-bottom: 8px;">
+                📦 Hộp Card 1: Định dạng qua @mixin box-style
+            </h3>
+            <p style="color: #4b5563; line-height: 1.6; margin: 0 0 15px;">
+                Thẻ này được tạo kiểu bằng mixin <code>@include box-style;</code> với các thuộc tính 
+                <code>background: white</code>, <code>padding: 15px</code>, <code>border-radius: 10px</code> và 
+                đổ bóng <code>box-shadow: $box-shadow-default</code>.
+            </p>
+            <div class="button-group">
+                <!-- Nút .button áp dụng @include button-style($primary-color) -->
+                <a href="#" class="button">Nút Đỏ ($primary-color)</a>
+                <a href="#" class="button btn-blue">Nút Xanh Biển (Tái Sử Dụng)</a>
+                <a href="#" class="button btn-green">Nút Xanh Lá (Tái Sử Dụng)</a>
+            </div>
+        </div>
+
+        <h2 style="margin-top: 35px;">2. Lưới Thẻ Card So Sánh Tính Năng</h2>
+
+        <div class="grid-cards">
+            
+            <div class="card">
+                <h3 style="color: #ef4444; margin-top: 0;">🎨 Biến SASS (Variables)</h3>
+                <p style="color: #4b5563; font-size: 14.5px;">
+                    Các giá trị màu sắc và kích thước được gom chung tại <code>_variables.scss</code>:
+                </p>
+                <div class="code-box" style="font-size: 12.5px;">
+$primary-color: red;<br>
+$text-color: #222;<br>
+$font-large: 32px;<br>
+$font-medium: 28px;<br>
+$padding-standard: 10px 20px;
+                </div>
+            </div>
+
+            <div class="card">
+                <h3 style="color: #2563eb; margin-top: 0;">🧩 Mixins Tái Sử Dụng</h3>
+                <p style="color: #4b5563; font-size: 14.5px;">
+                    Hai mixins cốt lõi giúp tạo kiểu tức thì cho nút bấm và hộp card:
+                </p>
+                <div class="code-box" style="font-size: 12.5px;">
+@mixin button-style($bg-color) {<br>
+&nbsp;&nbsp;background: $bg-color;<br>
+&nbsp;&nbsp;color: white;<br>
+&nbsp;&nbsp;padding: $padding-standard;<br>
+&nbsp;&nbsp;border-radius: 5px;<br>
+}<br>
+@mixin box-style { ... }
+                </div>
+            </div>
+
+            <div class="card">
+                <h3 style="color: #10b981; margin-top: 0;">⚡ Lợi Ích Mang Lại</h3>
+                <p style="color: #4b5563; font-size: 14.5px;">
+                    • Đổi màu toàn trang chỉ với 1 dòng thay đổi biến.<br>
+                    • Không còn copy-paste padding hay border-radius.<br>
+                    • CSS sau biên dịch hoàn toàn tương thích 100% mọi trình duyệt.
+                </p>
+                <a href="#" class="button btn-dark" style="margin-top: 10px; width: 100%; text-align: center; box-sizing: border-box;">
+                    Kiểm Tra Hoàn Tất ✔
+                </a>
+            </div>
+
+        </div>
+
+        <!-- Bảng Phân Tích Cấu Trúc SCSS -->
+        <div class="card" style="margin-top: 30px;">
+            <h3 style="color: #111827; margin-top: 0;">📂 Cấu Trúc Các Tệp SCSS Trong Dự Án</h3>
+            <div class="code-box">
+abstracts/<br>
+&nbsp;&nbsp;├── _variables.scss &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(Định nghĩa: $primary-color, $font-large, $box-shadow-default...)<br>
+&nbsp;&nbsp;└── _mixins.scss &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(Khai báo: @mixin button-style($bg-color), @mixin box-style)<br>
+base/<br>
+&nbsp;&nbsp;└── _typography.scss &nbsp;&nbsp;&nbsp;&nbsp;(Định dạng: h1, h2 theo biến font-size và color)<br>
+components/<br>
+&nbsp;&nbsp;├── _buttons.scss &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(Định dạng: .button với @include button-style)<br>
+&nbsp;&nbsp;└── _cards.scss &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(Định dạng: .card với @include box-style)<br>
+main.scss &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(Gom nhóm tất cả bằng @import)
+            </div>
+        </div>
+
+        <footer class="footer-note">
+            <p>&copy; 2026 Thực Hành Tạo Mixins &amp; Biến Để Tối Ưu CSS &bull; Tác giả: <strong>Vũ Đức Đạt (VuDucDat2006)</strong></p>
+            <p>Khóa học: Lập trình Web Front-End (CodeGym) &bull; SASS CLI Dart Sass 1.105.1</p>
+        </footer>
+
+    </div>
+
+</body>
+</html>

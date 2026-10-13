@@ -1,0 +1,16 @@
+// components/_buttons.scss
+// Áp dụng mixin button-style vào lớp .button
+.button {
+  @include button-style($primary-color);
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+  text-decoration: none;
+  font-weight: bold;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+
+  &:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+  }
+}
