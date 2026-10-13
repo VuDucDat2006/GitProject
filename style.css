@@ -1,0 +1,183 @@
+/* ========================================================
+   [Thực hành] Tạo Trang Giới Thiệu Doanh Nghiệp với Bootstrap
+   Tác giả: Vũ Đức Đạt (VuDucDat2006)
+   ======================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+:root {
+    --brand-blue: #0d6efd;
+    --brand-blue-dark: #0a58ca;
+    --brand-dark: #1b1e23;
+    --transition-smooth: 0.28s ease;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    color: #2d3748;
+    background-color: #fcfcfd;
+}
+
+/* ==========================================
+   1. Navbar Tùy Biến
+   ========================================== */
+.navbar {
+    background-color: #ffffff !important;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+}
+
+.navbar-brand {
+    font-size: 1.35rem;
+    letter-spacing: -0.5px;
+    transition: transform var(--transition-smooth);
+}
+
+.navbar-brand:hover {
+    transform: scale(1.03);
+}
+
+.navbar-nav .nav-link {
+    font-weight: 500;
+    padding: 0.5rem 1rem !important;
+    border-radius: 6px;
+    color: #4a5568 !important;
+    transition: all var(--transition-smooth);
+}
+
+.navbar-nav .nav-link:hover {
+    color: var(--brand-blue) !important;
+    background-color: rgba(13, 110, 253, 0.06);
+}
+
+.navbar-nav .nav-link.active {
+    color: var(--brand-blue) !important;
+    font-weight: 700;
+    background-color: rgba(13, 110, 253, 0.1);
+}
+
+/* ==========================================
+   2. Hero Banner
+   ========================================== */
+.hero-banner {
+    background: linear-gradient(135deg, #0d6efd 0%, #0056b3 50%, #003e80 100%) !important;
+    padding-top: 5rem !important;
+    padding-bottom: 5rem !important;
+}
+
+.hero-banner h1 {
+    letter-spacing: -1px;
+}
+
+.hero-banner .btn-light {
+    color: var(--brand-blue);
+    transition: transform var(--transition-smooth), box-shadow var(--transition-smooth);
+}
+
+.hero-banner .btn-light:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2) !important;
+}
+
+/* Đường gạch ngang trang trí tiêu đề */
+.divider {
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(90deg, #0d6efd, #0dcaf0);
+    border-radius: 2px;
+}
+
+/* ==========================================
+   3. About Feature Cards
+   ========================================== */
+.about-feature {
+    transition: transform var(--transition-smooth), box-shadow var(--transition-smooth);
+    border: 1px solid rgba(0, 0, 0, 0.06) !important;
+}
+
+.about-feature:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.06);
+    background-color: #ffffff !important;
+}
+
+.feature-icon {
+    font-size: 2.2rem;
+}
+
+/* ==========================================
+   4. Services Section (Grid Cards)
+   ========================================== */
+.service-card {
+    transition: transform var(--transition-smooth), box-shadow var(--transition-smooth);
+    border-radius: 16px !important;
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 16px 32px rgba(13, 110, 253, 0.12) !important;
+}
+
+.service-icon {
+    font-size: 2.5rem;
+    width: 68px;
+    height: 68px;
+    line-height: 68px;
+    border-radius: 50%;
+    margin: 0 auto;
+    background: #edf5ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform var(--transition-smooth);
+}
+
+.service-card:hover .service-icon {
+    transform: scale(1.15) rotate(6deg);
+    background: #e0eeff;
+}
+
+/* ==========================================
+   5. Contact Box
+   ========================================== */
+.contact-box {
+    border-radius: 16px !important;
+    background-color: #ffffff;
+    transition: transform var(--transition-smooth), box-shadow var(--transition-smooth);
+}
+
+.contact-box:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08) !important;
+}
+
+.contact-icon {
+    font-size: 2.2rem;
+}
+
+/* ==========================================
+   6. Table & Technical Section
+   ========================================== */
+.table th, .table td {
+    vertical-align: middle;
+}
+
+code {
+    background-color: #f1f5f9;
+    color: #d63384;
+    padding: 0.15rem 0.4rem;
+    border-radius: 4px;
+    font-size: 0.875em;
+}
+
+/* ==========================================
+   7. Footer
+   ========================================== */
+footer {
+    background-color: var(--brand-dark) !important;
+}
