@@ -1,0 +1,68 @@
+// ==========================================================================
+// landing_page_sass/base/_typography.scss
+// Kiểu chữ, tiêu đề, và các lớp tiện ích văn bản
+// ==========================================================================
+
+h1, h2, h3, h4, h5, h6 {
+  color: $secondary-color;
+  font-weight: $font-weight-bold;
+  line-height: $line-height-tight;
+}
+
+h1 {
+  font-size: $font-size-3xl;
+}
+
+h2 {
+  font-size: $font-size-2xl;
+}
+
+h3 {
+  font-size: $font-size-xl;
+}
+
+p {
+  color: $text-color;
+  margin-bottom: $spacing-md;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.section-header {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto $spacing-2xl;
+
+  .section-badge {
+    display: inline-block;
+    background-color: $primary-light;
+    color: $primary-dark;
+    font-size: $font-size-xs;
+    font-weight: $font-weight-bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 6px 14px;
+    border-radius: $radius-full;
+    margin-bottom: $spacing-md;
+  }
+
+  .section-title {
+    font-size: $font-size-2xl;
+    margin-bottom: $spacing-sm;
+    letter-spacing: -0.5px;
+  }
+
+  .section-desc {
+    font-size: $font-size-base;
+    color: $text-light;
+  }
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}

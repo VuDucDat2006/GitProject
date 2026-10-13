@@ -1,0 +1,83 @@
+// ==========================================================================
+// landing_page_sass/abstracts/_variables.scss
+// Hệ thống biến SCSS (Colors, Typography, Spacing, Breakpoints, Shadows)
+// ==========================================================================
+
+// 1. PALETTE MÀU SẮC (COLORS)
+$primary-color: #0284c7;        // Xanh dương chủ đạo hiện đại
+$primary-dark: #0369a1;         // Xanh đậm khi hover / text
+$primary-light: #e0f2fe;        // Xanh nhạt cho card nền / badge
+$primary-subtle: #bae6fd;       // Viền xanh nhẹ
+
+$secondary-color: #0f172a;      // Đen than đậm (Headings)
+$dark-bg: #1e293b;              // Màu tối (Header, Footer)
+$darker-bg: #0f172a;            // Nền chân trang cực tối
+
+$accent-color: #f59e0b;         // Vàng cam tạo điểm nhấn (Badge / Stats / Rating)
+$accent-hover: #d97706;
+$success-color: #10b981;        // Xanh lá thành công
+
+$text-color: #334155;           // Màu chữ body chuẩn
+$text-light: #64748b;           // Màu chữ phụ / mô tả
+$text-white: #ffffff;           // Màu chữ trắng
+$text-footer: #cbd5e1;          // Màu chữ footer
+
+$bg-body: #f8fafc;              // Nền toàn trang web
+$bg-white: #ffffff;             // Nền trắng tinh
+$bg-alt: #f1f5f9;               // Nền xám nhạt xen kẽ section
+$border-color: #e2e8f0;         // Màu đường viền
+
+// 2. TYPOGRAPHY (FONT & CỠ CHỮ)
+$font-family-base: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+$font-family-heading: inherit;
+
+$font-size-xs: 12px;
+$font-size-sm: 14px;
+$font-size-base: 16px;
+$font-size-md: 18px;
+$font-size-lg: 20px;
+$font-size-xl: 24px;
+$font-size-2xl: 30px;
+$font-size-3xl: 38px;
+$font-size-hero: 44px;
+
+$font-weight-normal: 400;
+$font-weight-medium: 500;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+
+$line-height-base: 1.6;
+$line-height-tight: 1.25;
+
+// 3. KHOẢNG CÁCH (SPACING)
+$spacing-xs: 4px;
+$spacing-sm: 8px;
+$spacing-md: 16px;
+$spacing-lg: 24px;
+$spacing-xl: 32px;
+$spacing-2xl: 48px;
+$spacing-section: 70px;
+
+// 4. BO GÓC (BORDER RADIUS)
+$radius-sm: 6px;
+$radius-md: 10px;
+$radius-lg: 16px;
+$radius-full: 9999px;
+
+// 5. ĐỔ BÓNG (BOX SHADOWS)
+$shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.08);
+$shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08);
+$shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.1);
+$shadow-card: 0 4px 16px rgba(15, 23, 42, 0.06);
+$shadow-card-hover: 0 12px 30px rgba(2, 132, 199, 0.16);
+
+// 6. HIỆU ỨNG CHUYỂN ĐỘNG (TRANSITIONS)
+$transition-fast: all 0.2s ease;
+$transition-normal: all 0.3s ease;
+$transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+
+// 7. BREAKPOINTS (RESPONSIVE)
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;
