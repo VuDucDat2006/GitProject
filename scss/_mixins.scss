@@ -1,0 +1,29 @@
+// _mixins.scss - Các hàm mixins tái sử dụng
+@mixin flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin button-style($bg-color, $hover-color) {
+  display: inline-block;
+  padding: 10px 22px;
+  background-color: $bg-color;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background-color: $hover-color;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba($bg-color, 0.4);
+  }
+}
