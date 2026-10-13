@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exciting Adventure - Trang Giới Thiệu Sách | CodeGym</title>
+
+    <!-- Bootstrap 4.6.0 CSS CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+
+    <!-- Font Awesome Icons CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Patua+One&family=Rubik:wght@300;400;500;700&family=Sniglet:wght@400;800&display=swap" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/mobile.css">
+</head>
+<body>
+
+    <!-- ========================================================
+         1. HEADER & BOOK OVERVIEW
+         ======================================================== -->
+    <header id="home">
+        <!-- Thanh điều hướng Navbar -->
+        <div class="container-fluid p-0">
+            <nav class="navbar navbar-expand-lg navbar-dark py-3">
+                <a class="navbar-brand font-weight-bold" href="#home">
+                    <i class="fas fa-book-reader mr-2"></i>AlphaBooks
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" 
+                        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fas fa-align-right text-light"></i>
+                </button>
+            
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <div class="mr-auto"></div>
+                    <ul class="navbar-nav">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#home">HOME</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#author">AUTHOR</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#features">FEATURES</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#prices">PRICES</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#download">DOWNLOAD</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#readers-say">READER’S SAY</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#footer">CONTACT</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+
+        <!-- Book Overview (Hero Banner) -->
+        <div class="container text-center text-md-left hero-content" id="overview">
+            <div class="row align-items-center">
+                <div class="col-md-7 col-sm-12 text-white hero-text-col">
+                    <div class="badge-author mb-2">
+                        <span class="badge badge-pill badge-light px-3 py-2 text-danger font-weight-bold">
+                            ✨ TÁC PHẨM ĐOẠT GIẢI BESTSELLER 2026
+                        </span>
+                    </div>
+                    <h6>AUTHOR: DAVID SMITH</h6>
+                    <h1 class="hero-title">EXCITING ADVENTURE</h1>
+                    <p class="hero-desc">
+                        Cuộc hành trình khai phá tiềm năng, vượt qua giới hạn tư duy và làm chủ tương lai. 
+                        Cuốn sách bán chạy nhất với hơn 250,000 bản được phát hành trên toàn cầu.
+                    </p>
+                    <div class="hero-rating mb-4">
+                        <span class="stars text-warning mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </span>
+                        <small class="text-white-50">4.9 / 5.0 (Hơn 12,500 độc giả đánh giá tích cực)</small>
+                    </div>
+                    <div class="hero-btns">
+                        <a href="#prices" class="btn btn-light primary-btn px-5 py-3 shadow-lg mr-3 mb-2 font-weight-bold text-danger">
+                            <i class="fas fa-shopping-cart mr-2"></i>Mua ngay chỉ $5.99
+                        </a>
+                        <a href="#download" class="btn btn-outline-light primary-btn px-4 py-3 mb-2 font-weight-bold">
+                            <i class="fas fa-file-download mr-2"></i>Đọc thử miễn phí
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Bìa sách minh họa -->
+                <div class="col-md-5 col-sm-12 text-center hero-img-col mt-4 mt-md-0">
+                    <div class="book-mockup-wrapper">
+                        <div class="book-cover-card shadow-lg">
+                            <div class="book-spine"></div>
+                            <div class="book-front">
+                                <div class="book-badge">#1 Best Seller</div>
+                                <div class="book-icon"><i class="fas fa-compass"></i></div>
+                                <h3 class="book-front-title">EXCITING ADVENTURE</h3>
+                                <p class="book-front-sub">Khai Phá Tiềm Năng Bản Thân</p>
+                                <div class="book-author">DAVID SMITH</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- ========================================================
+             2. AUTHOR SECTION (TÁC GIẢ)
+             ======================================================== -->
+        <section class="section-1" id="author">
+            <div class="container text-center">
+                <div class="row align-items-center">
+                    <!-- Ảnh chân dung tác giả -->
+                    <div class="col-md-6 col-12 author-img-col mb-4 mb-md-0">
+                        <div class="author-image-wrapper">
+                            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=700&q=80" 
+                                 alt="Author David Smith" class="author-photo shadow-lg" loading="lazy">
+                            <div class="experience-badge shadow">
+                                <span class="number">15+</span>
+                                <span class="text">Năm nghiên cứu &amp; diễn thuyết</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Bảng thông tin tác giả (Floating Panel) -->
+                    <div class="col-md-6 col-12 author-info-col">
+                        <div class="panel shadow-lg">
+                            <span class="badge badge-danger px-3 py-2 text-uppercase mb-2">Chuyên gia tâm lý &amp; Diễn giả</span>
+                            <h1 class="author-name">David Smith</h1>
+                            <p class="author-role text-muted">Tác giả sách bán chạy thế giới &bull; Cố vấn chiến lược phát triển</p>
+                            <p class="pt-3 author-bio">
+                                David Smith là một trong những chuyên gia hàng đầu về tâm lý học hành vi và phát triển bản thân. 
+                                Trong suốt 15 năm qua, ông đã cố vấn cho hàng ngàn nhà lãnh đạo doanh nghiệp tại thung lũng Silicon 
+                                và truyền cảm hứng cho hàng triệu bạn trẻ trên khắp thế giới.
+                            </p>
+                            <p class="author-quote">
+                                <em>"Cuộc phiêu lưu vĩ đại nhất của đời người không phải là chinh phục những đỉnh núi ngoài kia, 
+                                mà chính là vượt qua những giới hạn vô hình do chính tâm trí bạn dựng nên."</em>
+                            </p>
+                            <div class="author-social pt-3">
+                                <a href="#" class="btn btn-sm btn-outline-danger mr-2"><i class="fab fa-twitter mr-1"></i> Twitter</a>
+                                <a href="#" class="btn btn-sm btn-outline-danger mr-2"><i class="fab fa-linkedin-in mr-1"></i> LinkedIn</a>
+                                <a href="#" class="btn btn-sm btn-outline-danger"><i class="fab fa-facebook-f mr-1"></i> Facebook</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================================
+             3. FEATURES SECTION (ĐẶC ĐIỂM NỔI BẬT & CON SỐ ẤN TƯỢNG)
+             ======================================================== -->
+        <section class="section-2 container-fluid p-0" id="features">
+            <!-- Cover banner có overlay -->
+            <div class="cover">
+                <div class="content text-center">
+                    <h1>Những Đặc Điểm Làm Nên Giá Trị Khác Biệt</h1>
+                    <p>Khám phá hệ thống phương pháp thực chiến, được kiểm chứng khoa học và ứng dụng thành công.</p>
+                </div>
+            </div>
+
+            <!-- Các ô số liệu thống kê (Floating Rectangles) -->
+            <div class="container-fluid text-center">
+                <div class="d-flex flex-wrap justify-content-center numbers">
+                    <div class="rect shadow-lg">
+                        <h1>250k+</h1>
+                        <p>Bản Đã Bán Ra</p>
+                    </div>
+                    <div class="rect shadow-lg">
+                        <h1>98.6%</h1>
+                        <p>Độc Giả Hài Lòng</p>
+                    </div>
+                    <div class="rect shadow-lg">
+                        <h1>28+</h1>
+                        <p>Quốc Gia Xuất Bản</p>
+                    </div>
+                    <div class="rect shadow-lg">
+                        <h1>4.9★</h1>
+                        <p>Đánh Giá Trung Bình</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3 Khối giá trị nổi bật -->
+            <div class="container my-5 features-cards">
+                <div class="row text-center">
+                    <div class="col-md-4 col-12 mb-4">
+                        <div class="feature-box p-4 bg-white rounded shadow-sm h-100">
+                            <div class="feature-icon text-danger mb-3">
+                                <i class="fas fa-lightbulb fa-3x"></i>
+                            </div>
+                            <h4 class="font-weight-bold">Tư Duy Đột Phá</h4>
+                            <p class="text-muted">
+                                Xóa bỏ rào cản tâm lý cố hữu, xây dựng tư duy mở (growth mindset) giúp bạn đón nhận thử thách một cách tự tin.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-12 mb-4">
+                        <div class="feature-box p-4 bg-white rounded shadow-sm h-100">
+                            <div class="feature-icon text-danger mb-3">
+                                <i class="fas fa-tasks fa-3x"></i>
+                            </div>
+                            <h4 class="font-weight-bold">Kế Hoạch 30 Ngày</h4>
+                            <p class="text-muted">
+                                Bộ công cụ và bài tập thực hành chi tiết theo từng ngày giúp bạn thiết lập thói quen kỷ luật và quản trị thời gian.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-12 mb-4">
+                        <div class="feature-box p-4 bg-white rounded shadow-sm h-100">
+                            <div class="feature-icon text-danger mb-3">
+                                <i class="fas fa-rocket fa-3x"></i>
+                            </div>
+                            <h4 class="font-weight-bold">Hành Động Quyết Đoán</h4>
+                            <p class="text-muted">
+                                Phương pháp vượt qua sự trì hoãn, biến ý tưởng thành kết quả thực tế với năng lượng tích cực bền bỉ mỗi ngày.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ========================================================
+                 4. PRICES SECTION (BẢNG GIÁ ẤN BẢN SÁCH)
+                 ======================================================== -->
+            <div class="purchase text-center" id="prices">
+                <h1>Lựa Chọn Ấn Bản Phù Hợp Với Bạn</h1>
+                <p>Đa dạng định dạng từ sách điện tử tiện lợi đến ấn phẩm bìa cứng sang trọng.</p>
+
+                <div class="cards">
+                    <div class="d-flex flex-row justify-content-center flex-wrap">
+                        <!-- Thẻ 1: PDF / E-Book -->
+                        <div class="card shadow-sm">
+                            <div class="card-body">
+                                <div class="title">
+                                    <h5 class="card-title font-weight-bold">PDF / E-Book</h5>
+                                </div>
+                                <p class="card-text">
+                                    Định dạng kỹ thuật số đọc ngay trên điện thoại, máy tính bảng hoặc thiết bị Kindle tiện lợi.
+                                </p>
+                                <ul class="list-unstyled text-left px-4 mb-4 price-features">
+                                    <li><i class="fas fa-check text-success mr-2"></i> Tải ngay sau thanh toán</li>
+                                    <li><i class="fas fa-check text-success mr-2"></i> Hỗ trợ PDF, EPUB, MOBI</li>
+                                    <li><i class="fas fa-check text-success mr-2"></i> Cập nhật nội dung trọn đời</li>
+                                </ul>
+                                <div class="pricing">
+                                    <h1>$5.99</h1>
+                                    <a href="#download" class="btn btn-dark py-2 px-5 mb-5 primary-btn">Mua E-Book Ngay</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Thẻ 2: Bìa mềm (Paperback - Bán chạy nhất) -->
+                        <div class="card shadow popular-card">
+                            <div class="popular-badge">Phổ Biến Nhất</div>
+                            <div class="card-body">
+                                <div class="title">
+                                    <h5 class="card-title font-weight-bold">Bìa Mềm (Paperback)</h5>
+                                </div>
+                                <p class="card-text">
+                                    Ấn bản sách giấy chất lượng cao, mực in sắc nét và giấy xốp cao cấp bảo vệ thị lực.
+                                </p>
+                                <ul class="list-unstyled text-left px-4 mb-4 price-features">
+                                    <li><i class="fas fa-check text-success mr-2"></i> Giao hàng tận nơi toàn quốc</li>
+                                    <li><i class="fas fa-check text-success mr-2"></i> Tặng kèm Bookmark độc quyền</li>
+                                    <li><i class="fas fa-check text-success mr-2"></i> Tặng kèm bản E-Book PDF</li>
+                                </ul>
+                                <div class="pricing">
+                                    <h1>$14.99</h1>
+                                    <a href="#download" class="btn btn-danger py-2 px-5 mb-5 primary-btn text-white">Đặt Mua Bìa Mềm</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Thẻ 3: Bìa cứng đặc biệt (Hardcover Edition) -->
+                        <div class="card shadow-sm">
+                            <div class="card-body">
+                                <div class="title">
+                                    <h5 class="card-title font-weight-bold">Bìa Cứng Đặc Biệt</h5>
+                                </div>
+                                <p class="card-text">
+                                    Ấn bản giới hạn mạ vàng ép nhũ sang trọng, thích hợp lưu giữ và làm quà tặng ý nghĩa.
+                                </p>
+                                <ul class="list-unstyled text-left px-4 mb-4 price-features">
+                                    <li><i class="fas fa-check text-success mr-2"></i> Chữ ký tác giả David Smith</li>
+                                    <li><i class="fas fa-check text-success mr-2"></i> Hộp quà sang trọng &amp; Sổ tay</li>
+                                    <li><i class="fas fa-check text-success mr-2"></i> Bản quyền trọn bộ Audio Book</li>
+                                </ul>
+                                <div class="pricing">
+                                    <h1>$29.99</h1>
+                                    <a href="#download" class="btn btn-dark py-2 px-5 mb-5 primary-btn">Sở Hữu Bản Đặc Biệt</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================================
+             5. DOWNLOAD SECTION (TẢI VỀ TRÊN MỌI NỀN TẢNG)
+             ======================================================== -->
+        <section class="section-3 container-fluid p-0 text-center" id="download">
+            <div class="row">
+                <div class="col-md-12 col-sm-12">
+                    <h1>Tải Ứng Dụng &amp; Đọc Thử Miễn Phí</h1>
+                    <p>
+                        Thưởng thức trọn vẹn cuốn sách trên mọi thiết bị bạn sở hữu. 
+                        Đọc thử 3 chương đầu hoàn toàn miễn phí hoặc tải ứng dụng đọc sách thông minh.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Các khối nền tảng tải ứng dụng -->
+            <div class="platform row justify-content-center">
+                <!-- Nền tảng Máy tính / Website -->
+                <div class="col-md-5 col-sm-12 text-md-right text-center">
+                    <div class="desktop shadow-lg">
+                        <div class="d-flex flex-row align-items-center justify-content-center">
+                            <i class="fas fa-desktop fa-3x py-2 pr-3 text-danger"></i>
+                            <div class="text-left">
+                                <h3 class="pt-1 m-0">Trên Máy Tính</h3>
+                                <p class="p-0 m-0 text-muted">Đọc trên Web &amp; Tải PDF</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Nền tảng Điện thoại di động -->
+                <div class="col-md-5 col-sm-12 text-md-left text-center">
+                    <div class="desktop shadow-lg">
+                        <div class="d-flex flex-row align-items-center justify-content-center">
+                            <i class="fas fa-mobile-alt fa-3x py-2 pr-3 text-danger"></i>
+                            <div class="text-left">
+                                <h3 class="pt-1 m-0">Trên Di Động</h3>
+                                <p class="p-0 m-0 text-muted">App Store &amp; Google Play</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row justify-content-center mt-3 pb-5">
+                <div class="col-12 text-center">
+                    <a href="#" class="btn btn-light primary-btn px-5 py-3 shadow font-weight-bold text-danger">
+                        <i class="fas fa-file-pdf mr-2"></i>Tải 3 Chương Đọc Thử Miễn Phí (PDF)
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================================
+             6. READER’S SAY (Ý KIẾN ĐỘC GIẢ & ĐÁNH GIÁ)
+             ======================================================== -->
+        <section class="section-4" id="readers-say">
+            <div class="container text-center">
+                <h1>Độc Giả Nói Gì Về "Exciting Adventure"?</h1>
+                <p class="text-muted">Lắng nghe cảm nhận thực tế từ hàng ngàn độc giả trên toàn thế giới.</p>
+            </div>
+
+            <div class="team row justify-content-center">
+                <!-- Độc giả 1 -->
+                <div class="col-md-4 col-12 text-center mb-4">
+                    <div class="card mr-md-2 d-inline-block shadow-lg h-100">
+                        <div class="card-img-top pt-4">
+                            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=400&q=80" 
+                                 class="img-fluid border-radius" alt="Reader Blalock Jolene" loading="lazy">
+                        </div>
+                        <div class="card-body">
+                            <div class="stars text-warning mb-2">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                            <h3 class="card-title font-weight-bold">Nguyễn Hoàng Nam</h3>
+                            <p class="card-text text-muted">
+                                "Cuốn sách đã hoàn toàn thay đổi cách tôi nhìn nhận mục tiêu và quản trị thời gian. 
+                                Các bài tập 30 ngày cực kỳ dễ áp dụng và mang lại hiệu quả rõ rệt ngay từ tuần đầu tiên!"
+                            </p>
+                            <p class="text-secondary font-weight-bold mb-0">CEO &bull; TechX Innovation</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Độc giả 2: Khối Carousel Slide trình chiếu luân phiên -->
+                <div class="col-md-4 col-12 text-center mb-4">
+                    <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel" data-interval="4000">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <div class="card mr-md-2 d-inline-block shadow-lg h-100">
+                                    <div class="card-img-top pt-4">
+                                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80" 
+                                             class="img-fluid border-radius" alt="Reader Allen Agnes" loading="lazy">
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="stars text-warning mb-2">
+                                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                        </div>
+                                        <h3 class="card-title font-weight-bold">Trần Mai Linh</h3>
+                                        <p class="card-text text-muted">
+                                            "Lối hành văn của David Smith vô cùng cuốn hút và giàu năng lượng tích cực. 
+                                            Tôi đọc liền một mạch trong 2 ngày cuối tuần và cảm thấy được truyền cảm hứng mạnh mẽ."
+                                        </p>
+                                        <p class="text-secondary font-weight-bold mb-0">Tác giả sách &bull; Content Creator</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="card mr-md-2 d-inline-block shadow-lg h-100">
+                                    <div class="card-img-top pt-4">
+                                        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=400&q=80" 
+                                             class="img-fluid border-radius" alt="Reader Amiel Barbara" loading="lazy">
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="stars text-warning mb-2">
+                                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                        </div>
+                                        <h3 class="card-title font-weight-bold">Lê Quang Huy</h3>
+                                        <p class="card-text text-muted">
+                                            "Một tác phẩm đáng giá từng đồng. Cuốn sách giúp tôi bình tâm đối diện với áp lực khởi nghiệp 
+                                            và tìm ra hướng đi đúng đắn cho công ty trong giai đoạn khó khăn nhất."
+                                        </p>
+                                        <p class="text-secondary font-weight-bold mb-0">Founder &bull; EduPlus Global</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Độc giả 3 -->
+                <div class="col-md-4 col-12 text-center mb-4">
+                    <div class="card mr-md-2 d-inline-block shadow-lg h-100">
+                        <div class="card-img-top pt-4">
+                            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=400&q=80" 
+                                 class="img-fluid border-radius" alt="Reader Olivia Louis" loading="lazy">
+                        </div>
+                        <div class="card-body">
+                            <div class="stars text-warning mb-2">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                            <h3 class="card-title font-weight-bold">Phạm Thùy Dung</h3>
+                            <p class="card-text text-muted">
+                                "Tôi đã mua tặng cuốn sách này cho toàn bộ nhân viên trong phòng ban của mình. 
+                                Năng suất làm việc và tinh thần đoàn kết của đội ngũ đã được cải thiện rõ rệt sau 1 tháng đọc sách!"
+                            </p>
+                            <p class="text-secondary font-weight-bold mb-0">Giám đốc Nhân sự &bull; VinaGroup</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ========================================================
+         7. FOOTER SECTION (CHÂN TRANG)
+         ======================================================== -->
+    <footer id="footer">
+        <div class="container-fluid p-0">
+            <div class="row">
+                <!-- Cột 1: Về chúng tôi -->
+                <div class="col-md-5 col-sm-12 mb-4 mb-md-0">
+                    <h4 class="text-light font-weight-bold mb-3">Về AlphaBooks</h4>
+                    <p class="text-muted pr-md-4">
+                        AlphaBooks cam kết mang đến những tác phẩm tri thức kinh điển và hiện đại, 
+                        đồng hành cùng độc giả Việt Nam trên con đường học tập suốt đời và phát triển bản thân toàn diện.
+                    </p>
+                    <p class="text-muted copyright-text">
+                        Copyright &copy;2026 All rights reserved &bull; 
+                        Sinh viên thực hiện: <span>Vũ Đức Đạt (VuDucDat2006)</span> &bull; CodeGym
+                    </p>
+                </div>
+
+                <!-- Cột 2: Đăng ký nhận tin Newsletter -->
+                <div class="col-md-4 col-sm-12 mb-4 mb-md-0">
+                    <h4 class="text-light font-weight-bold mb-3">Bản Tin Tri Thức</h4>
+                    <p class="text-muted">Đăng ký để nhận thông báo về các chương sách mới và ưu đãi độc quyền:</p>
+                    <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Cảm ơn bạn đã đăng ký nhận bản tin!');">
+                        <div class="input-group">
+                            <input type="email" class="form-control bg-dark text-white border-0" 
+                                   placeholder="Nhập địa chỉ email của bạn..." required>
+                            <div class="input-group-append">
+                                <button class="btn input-group-text border-0" type="submit">
+                                    <i class="fas fa-arrow-right"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Cột 3: Mạng xã hội -->
+                <div class="col-md-3 col-sm-12 text-md-center">
+                    <h4 class="text-light font-weight-bold mb-3">Kết Nối Với Chúng Tôi</h4>
+                    <p class="text-muted">Theo dõi kênh truyền thông chính thức:</p>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon" title="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon" title="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon" title="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- jQuery and Bootstrap 4.6 JS Bundle -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Smooth Scrolling Script -->
+    <script>
+        $(document).ready(function() {
+            // Smooth scroll cho các liên kết menu
+            $('a[href^="#"]').on('click', function(e) {
+                var target = $(this.getAttribute('href'));
+                if (target.length) {
+                    e.preventDefault();
+                    $('html, body').stop().animate({
+                        scrollTop: target.offset().top - 70
+                    }, 800);
+                }
+            });
+        });
+    </script>
+</body>
+</html>
