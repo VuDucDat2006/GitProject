@@ -1,0 +1,173 @@
+﻿<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[Thá»±c hÃ nh] CSS | flex-basis Property</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="page-header">
+        <h1>[Thá»±c hÃ nh] CSS | flex-basis Property</h1>
+        <p class="subtitle">TÃ¬m hiá»ƒu vÃ  thá»±c hÃ nh thiáº¿t láº­p kÃ­ch thÆ°á»›c cÆ¡ sá»Ÿ ban Ä‘áº§u cá»§a Flex Item trÃªn trá»¥c chÃ­nh (Main Axis)</p>
+    </header>
+
+    <main class="container">
+
+        <!-- NGUYÃŠN LÃ Cá»T LÃ•I -->
+        <div class="note-box">
+            <span class="note-icon">ðŸ’¡</span>
+            <div>
+                <strong>NguyÃªn lÃ½ vÃ ng cáº§n ghi nhá»›:</strong> <code>flex-basis</code> phá»¥ thuá»™c cháº·t cháº½ vÃ o trá»¥c chÃ­nh (Main Axis) do <code>flex-direction</code> quyáº¿t Ä‘á»‹nh:
+                <ul>
+                    <li>Khi <code>flex-direction: row</code> (máº·c Ä‘á»‹nh) &rarr; Main Axis lÃ  <strong>chiá»u ngang</strong> &rarr; <code>flex-basis</code> xÃ¡c Ä‘á»‹nh <strong>chiá»u rá»™ng</strong> cÆ¡ sá»Ÿ.</li>
+                    <li>Khi <code>flex-direction: column</code> &rarr; Main Axis lÃ  <strong>chiá»u dá»c</strong> &rarr; <code>flex-basis</code> xÃ¡c Ä‘á»‹nh <strong>chiá»u cao</strong> cÆ¡ sá»Ÿ.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- ==========================================
+             VÃ Dá»¤ 1: Sá»¬ Dá»¤NG FLEX-BASIS Vá»šI ÄÆ N Vá»Š PX
+             ========================================== -->
+        <section class="card">
+            <div class="card-header">
+                <span class="badge badge-blue">VÃ­ dá»¥ 1</span>
+                <h2>Sá»­ dá»¥ng <code>flex-basis</code> vá»›i Ä‘Æ¡n vá»‹ px (Main Axis: Chiá»u ngang)</h2>
+            </div>
+            <div class="code-banner">
+                <code>.item1 { flex-basis: 200px; } .item2 { flex-basis: 100px; } .item3 { flex-basis: 150px; }</code>
+            </div>
+            <p class="desc">
+                Container sá»­ dá»¥ng <code>flex-direction: row</code> máº·c Ä‘á»‹nh. KÃ­ch thÆ°á»›c cÆ¡ sá»Ÿ chiá»u ngang cá»§a tá»«ng Item Ä‘Æ°á»£c Ä‘áº·t láº§n lÆ°á»£t: Item 1 (200px), Item 2 (100px), Item 3 (150px).
+            </p>
+
+            <div class="demo-wrapper">
+                <div class="flex-container example-1">
+                    <div class="item item1">Item 1<br><small>200px</small></div>
+                    <div class="item item2">Item 2<br><small>100px</small></div>
+                    <div class="item item3">Item 3<br><small>150px</small></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================
+             VÃ Dá»¤ 2: THAY Äá»”I THEO FLEX-DIRECTION: COLUMN
+             ========================================== -->
+        <section class="card">
+            <div class="card-header">
+                <span class="badge badge-green">VÃ­ dá»¥ 2</span>
+                <h2><code>flex-basis</code> thay Ä‘á»•i theo <code>flex-direction: column</code> (Main Axis: Chiá»u dá»c)</h2>
+            </div>
+            <div class="code-banner">
+                <code>.container { flex-direction: column; height: 420px; } .item { flex-basis: 100px; }</code>
+            </div>
+            <p class="desc">
+                Khi <code>flex-direction: column</code>, trá»¥c chÃ­nh xoay thÃ nh chiá»u dá»c. VÃ¬ váº­y, <code>flex-basis: 100px</code> tÃ¡c Ä‘á»™ng vÃ o <strong>chiá»u cao</strong> cá»§a má»—i Flex Item trong khung chá»©a cao 420px.
+            </p>
+
+            <div class="demo-wrapper">
+                <div class="flex-container example-2">
+                    <div class="item">Item 1 &bull; flex-basis: 100px (chiá»u dá»c)</div>
+                    <div class="item">Item 2 &bull; flex-basis: 100px (chiá»u dá»c)</div>
+                    <div class="item">Item 3 &bull; flex-basis: 100px (chiá»u dá»c)</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================
+             VÃ Dá»¤ 3: Sá»¬ Dá»¤NG FLEX-BASIS Vá»šI Tá»¶ Lá»† PHáº¦N TRÄ‚M (%)
+             ========================================== -->
+        <section class="card">
+            <div class="card-header">
+                <span class="badge badge-coral">VÃ­ dá»¥ 3</span>
+                <h2>Sá»­ dá»¥ng <code>flex-basis</code> vá»›i tá»· lá»‡ pháº§n trÄƒm (%)</h2>
+            </div>
+            <div class="code-banner">
+                <code>.item { flex-basis: 50%; box-sizing: border-box; }</code>
+            </div>
+            <p class="desc">
+                Má»—i Item cÃ³ kÃ­ch thÆ°á»›c cÆ¡ sá»Ÿ báº±ng <strong>50%</strong> kÃ­ch thÆ°á»›c cá»§a Flex Container theo trá»¥c chÃ­nh, táº¡o thÃ nh 2 cá»™t Ä‘á»u nhau cÃ³ kháº£ nÄƒng co dÃ£n linh hoáº¡t theo Ä‘á»™ rá»™ng mÃ n hÃ¬nh.
+            </p>
+
+            <div class="demo-wrapper">
+                <div class="flex-container example-3">
+                    <div class="item">Item 1 (50%)</div>
+                    <div class="item">Item 2 (50%)</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================
+             VÃ Dá»¤ 4: Káº¾T Há»¢P FLEX-BASIS Vá»šI FLEX-GROW
+             ========================================== -->
+        <section class="card">
+            <div class="card-header">
+                <span class="badge badge-purple">VÃ­ dá»¥ 4</span>
+                <h2>Káº¿t há»£p <code>flex-basis</code> vá»›i <code>flex-grow</code> (PhÃ¢n phá»‘i khÃ´ng gian trá»‘ng)</h2>
+            </div>
+            <div class="code-banner">
+                <code>flex-basis: 100px; | item1: flex-grow: 1; | item2: flex-grow: 2; | item3: flex-grow: 1;</code>
+            </div>
+            <p class="desc">
+                Trong Container rá»™ng <strong>600px</strong> (trá»« gap 20px cÃ²n 580px):<br>
+                1. KÃ­ch thÆ°á»›c cÆ¡ sá»Ÿ ban Ä‘áº§u cá»§a 3 item lÃ  <code>3 &times; 100px = 300px</code>.<br>
+                2. Khoáº£ng trá»‘ng cÃ²n dÆ° <code>280px</code> Ä‘Æ°á»£c phÃ¢n bá»• theo tá»· lá»‡ <code>1 : 2 : 1</code> (4 pháº§n).<br>
+                3. Item 1 nháº­n thÃªm 70px (tá»•ng 170px), Item 2 nháº­n thÃªm 140px (tá»•ng 240px), Item 3 nháº­n thÃªm 70px (tá»•ng 170px).
+            </p>
+
+            <div class="demo-wrapper">
+                <div class="flex-container example-4">
+                    <div class="item item1">Item 1<br><small>basis: 100px &bull; grow: 1</small></div>
+                    <div class="item item2">Item 2<br><small>basis: 100px &bull; grow: 2 (Nháº­n gáº¥p Ä‘Ã´i)</small></div>
+                    <div class="item item3">Item 3<br><small>basis: 100px &bull; grow: 1</small></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tá»”NG Káº¾T & THÃ”NG TIN Há»ŒC VIÃŠN -->
+        <footer class="summary-footer">
+            <h3>ðŸ“‹ Báº£ng tá»•ng há»£p cÃ¡c giÃ¡ trá»‹ cá»§a flex-basis</h3>
+            <table class="summary-table">
+                <thead>
+                    <tr>
+                        <th>CÃº phÃ¡p giÃ¡ trá»‹</th>
+                        <th>Ã nghÄ©a & HÃ nh vi</th>
+                        <th>VÃ­ dá»¥ Ã¡p dá»¥ng</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>length</code> (px, rem, em)</td>
+                        <td>KÃ­ch thÆ°á»›c cÆ¡ sá»Ÿ cá»‘ Ä‘á»‹nh theo Main Axis</td>
+                        <td><code>flex-basis: 200px;</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>percentage (%)</code></td>
+                        <td>KÃ­ch thÆ°á»›c theo % chiá»u rá»™ng/chiá»u cao container</td>
+                        <td><code>flex-basis: 50%;</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>auto</code> (máº·c Ä‘á»‹nh)</td>
+                        <td>Láº¥y theo thuá»™c tÃ­nh <code>width</code>/<code>height</code> hoáº·c ná»™i dung</td>
+                        <td><code>flex-basis: auto;</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>initial</code></td>
+                        <td>KhÃ´i phá»¥c vá» giÃ¡ trá»‹ máº·c Ä‘á»‹nh cá»§a CSS (<code>auto</code>)</td>
+                        <td><code>flex-basis: initial;</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>inherit</code></td>
+                        <td>Káº¿ thá»«a giÃ¡ trá»‹ tá»« pháº§n tá»­ cha bao bá»c</td>
+                        <td><code>flex-basis: inherit;</code></td>
+                    </tr>
+                </tbody>
+            </table>
+            <p class="student-info">Thá»±c hiá»‡n: <strong>VÅ© Äá»©c Äáº¡t (VuDucDat2006)</strong> &bull; BÃ i thá»±c hÃ nh: CSS | flex-basis Property</p>
+        </footer>
+
+    </main>
+
+</body>
+</html>
