@@ -1,0 +1,201 @@
+﻿<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[Thá»±c hÃ nh] CSS | grid-template-columns Property</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="page-header">
+        <h1>[Thá»±c hÃ nh] CSS | grid-template-columns Property</h1>
+        <p class="subtitle">TÃ¬m hiá»ƒu vÃ  thá»±c hÃ nh Ä‘á»‹nh nghÄ©a sá»‘ lÆ°á»£ng vÃ  kÃ­ch thÆ°á»›c cÃ¡c cá»™t trong CSS Grid Layout</p>
+    </header>
+
+    <main class="container">
+
+        <!-- ==========================================
+             VÃ Dá»¤ 1: Táº O 3 Cá»˜T CÃ“ KÃCH THÆ¯á»šC Báº°NG NHAU
+             ========================================== -->
+        <section class="card">
+            <div class="card-header">
+                <span class="badge badge-blue">VÃ­ dá»¥ 1</span>
+                <h2>Táº¡o 3 cá»™t cÃ³ kÃ­ch thÆ°á»›c báº±ng nhau</h2>
+            </div>
+            <div class="code-banner">
+                <code>grid-template-columns: 1fr 1fr 1fr; /* Hoáº·c repeat(3, 1fr); */</code>
+            </div>
+            <p class="desc">
+                ÄÆ¡n vá»‹ <code>1fr</code> biá»ƒu thá»‹ 1 pháº§n phÃ¢n sá»‘ (fraction) cá»§a khÃ´ng gian cÃ²n trá»‘ng. Vá»›i 3 giÃ¡ trá»‹ <code>1fr</code>, lÆ°á»›i Ä‘Æ°á»£c chia thÃ nh 3 cá»™t Ä‘á»u nhau (má»—i cá»™t chiáº¿m 33.33% khÃ´ng gian). 6 Ã´ tá»± Ä‘á»™ng xáº¿p thÃ nh 2 hÃ ng &times; 3 cá»™t.
+            </p>
+
+            <div class="demo-wrapper">
+                <div class="grid-container example-1">
+                    <div>Ã” 1</div>
+                    <div>Ã” 2</div>
+                    <div>Ã” 3</div>
+                    <div>Ã” 4</div>
+                    <div>Ã” 5</div>
+                    <div>Ã” 6</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================
+             VÃ Dá»¤ 2: Táº O CÃC Cá»˜T CÃ“ KÃCH THÆ¯á»šC KHÃC NHAU
+             ========================================== -->
+        <section class="card">
+            <div class="card-header">
+                <span class="badge badge-green">VÃ­ dá»¥ 2</span>
+                <h2>Táº¡o cÃ¡c cá»™t cÃ³ kÃ­ch thÆ°á»›c khÃ¡c nhau (Cá»‘ Ä‘á»‹nh & Co giÃ£n)</h2>
+            </div>
+            <div class="code-banner">
+                <code>grid-template-columns: 100px 200px 1fr;</code>
+            </div>
+            <p class="desc">
+                - <strong>Cá»™t 1:</strong> CÃ³ chiá»u rá»™ng cá»‘ Ä‘á»‹nh <code>100px</code>.<br>
+                - <strong>Cá»™t 2:</strong> CÃ³ chiá»u rá»™ng cá»‘ Ä‘á»‹nh <code>200px</code>.<br>
+                - <strong>Cá»™t 3:</strong> Chiáº¿m toÃ n bá»™ pháº§n khÃ´ng gian cÃ²n láº¡i báº±ng <code>1fr</code>.
+            </p>
+
+            <div class="demo-wrapper">
+                <div class="grid-container example-2">
+                    <div>Cá»™t 1 (100px)</div>
+                    <div>Cá»™t 2 (200px)</div>
+                    <div>Cá»™t 3 (1fr - CÃ²n láº¡i)</div>
+                    <div>Cá»™t 1 (100px)</div>
+                    <div>Cá»™t 2 (200px)</div>
+                    <div>Cá»™t 3 (1fr - CÃ²n láº¡i)</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================
+             VÃ Dá»¤ 3: RÃšT Gá»ŒN Vá»šI HÃ€M REPEAT()
+             ========================================== -->
+        <section class="card">
+            <div class="card-header">
+                <span class="badge badge-coral">VÃ­ dá»¥ 3 (Má»Ÿ rá»™ng)</span>
+                <h2>Sá»­ dá»¥ng hÃ m repeat() Ä‘á»ƒ táº¡o nhiá»u cá»™t Ä‘á»u nhau</h2>
+            </div>
+            <div class="code-banner">
+                <code>grid-template-columns: repeat(4, 1fr);</code>
+            </div>
+            <p class="desc">
+                CÃº phÃ¡p rÃºt gá»n thay tháº¿ cho viá»‡c viáº¿t <code>1fr 1fr 1fr 1fr</code>. Táº¡o 4 cá»™t cÃ³ kÃ­ch thÆ°á»›c báº±ng nhau tuyá»‡t Ä‘á»‘i.
+            </p>
+
+            <div class="demo-wrapper">
+                <div class="grid-container example-3">
+                    <div>Cá»™t 1 (1fr)</div>
+                    <div>Cá»™t 2 (1fr)</div>
+                    <div>Cá»™t 3 (1fr)</div>
+                    <div>Cá»™t 4 (1fr)</div>
+                    <div>Cá»™t 5 (1fr)</div>
+                    <div>Cá»™t 6 (1fr)</div>
+                    <div>Cá»™t 7 (1fr)</div>
+                    <div>Cá»™t 8 (1fr)</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================
+             VÃ Dá»¤ 4: RESPONSIVE Tá»° Äá»˜NG Vá»šI AUTO-FIT & MINMAX()
+             ========================================== -->
+        <section class="card">
+            <div class="card-header">
+                <span class="badge badge-purple">VÃ­ dá»¥ 4 (NÃ¢ng cao)</span>
+                <h2>Responsive tá»± Ä‘á»™ng khÃ´ng cáº§n Media Query (auto-fit & minmax)</h2>
+            </div>
+            <div class="code-banner">
+                <code>grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));</code>
+            </div>
+            <p class="desc">
+                Má»—i cá»™t cÃ³ kÃ­ch thÆ°á»›c tá»‘i thiá»ƒu <code>180px</code> vÃ  co giÃ£n tá»‘i Ä‘a <code>1fr</code>. TrÃ¬nh duyá»‡t tá»± Ä‘á»™ng tÃ­nh sá»‘ cá»™t vá»«a vá»›i Ä‘á»™ rá»™ng mÃ n hÃ¬nh, khi mÃ n hÃ¬nh nhá» sáº½ tá»± Ä‘á»™ng rá»›t dÃ²ng cá»±c ká»³ linh hoáº¡t.
+            </p>
+
+            <div class="demo-wrapper">
+                <div class="grid-container example-4">
+                    <div>Há»™p A (min 180px)</div>
+                    <div>Há»™p B (min 180px)</div>
+                    <div>Há»™p C (min 180px)</div>
+                    <div>Há»™p D (min 180px)</div>
+                    <div>Há»™p E (min 180px)</div>
+                    <div>Há»™p F (min 180px)</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================
+             VÃ Dá»¤ 5: MIN-CONTENT, MAX-CONTENT VÃ€ AUTO
+             ========================================== -->
+        <section class="card">
+            <div class="card-header">
+                <span class="badge badge-amber">VÃ­ dá»¥ 5 (GiÃ¡ trá»‹ Ä‘áº·c biá»‡t)</span>
+                <h2>PhÃ¢n biá»‡t min-content, max-content vÃ  auto</h2>
+            </div>
+            <div class="code-banner">
+                <code>grid-template-columns: min-content max-content auto;</code>
+            </div>
+            <p class="desc">
+                - <code>min-content</code>: Co láº¡i báº±ng kÃ­ch thÆ°á»›c tá»« dÃ i nháº¥t bÃªn trong.<br>
+                - <code>max-content</code>: Giá»¯ nguyÃªn dÃ²ng khÃ´ng xuá»‘ng dÃ²ng báº¥t ká»ƒ Ä‘á»™ rá»™ng.<br>
+                - <code>auto</code>: Tá»± Ä‘á»™ng láº¥p Ä‘áº§y pháº§n diá»‡n tÃ­ch cÃ²n láº¡i.
+            </p>
+
+            <div class="demo-wrapper">
+                <div class="grid-container example-5">
+                    <div><strong>min-content:</strong> Tá»«DÃ iNháº¥tKhÃ´ngBá»‹Cáº¯t</div>
+                    <div><strong>max-content:</strong> DÃ²ng chá»¯ nÃ y khÃ´ng bá»‹ ngáº¯t dÃ²ng</div>
+                    <div><strong>auto:</strong> Tá»± chiáº¿m khÃ´ng gian cÃ²n láº¡i</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tá»”NG Káº¾T & THÃ”NG TIN Há»ŒC VIÃŠN -->
+        <footer class="summary-footer">
+            <h3>ðŸ“‹ TÃ³m táº¯t cÃº phÃ¡p & GiÃ¡ trá»‹ cá»§a grid-template-columns</h3>
+            <table class="summary-table">
+                <thead>
+                    <tr>
+                        <th>GiÃ¡ trá»‹</th>
+                        <th>Ã nghÄ©a / MÃ´ táº£</th>
+                        <th>VÃ­ dá»¥ minh há»a</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>1fr, 2fr...</code></td>
+                        <td>Tá»· lá»‡ pháº§n trÄƒm khÃ´ng gian trá»‘ng (Fractional Unit)</td>
+                        <td><code>grid-template-columns: 1fr 2fr;</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>px, %, rem</code></td>
+                        <td>Äá»™ rá»™ng kÃ­ch thÆ°á»›c cá»‘ Ä‘á»‹nh cá»¥ thá»ƒ</td>
+                        <td><code>grid-template-columns: 200px 50%;</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>repeat(n, size)</code></td>
+                        <td>Láº·p láº¡i <em>n</em> cá»™t cÃ³ cÃ¹ng kÃ­ch thÆ°á»›c <em>size</em></td>
+                        <td><code>grid-template-columns: repeat(3, 1fr);</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>minmax(min, max)</code></td>
+                        <td>Giá»›i háº¡n dáº£i kÃ­ch thÆ°á»›c tá»« nhá» nháº¥t Ä‘áº¿n lá»›n nháº¥t</td>
+                        <td><code>grid-template-columns: minmax(150px, 1fr);</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>auto</code></td>
+                        <td>TrÃ¬nh duyá»‡t tá»± Ä‘á»™ng tÃ­nh toÃ¡n dá»±a trÃªn khÃ´ng gian sáºµn cÃ³</td>
+                        <td><code>grid-template-columns: auto 1fr;</code></td>
+                    </tr>
+                </tbody>
+            </table>
+            <p class="student-info">Thá»±c hiá»‡n: <strong>VÅ© Äá»©c Äáº¡t (VuDucDat2006)</strong> &bull; BÃ i thá»±c hÃ nh: CSS | grid-template-columns Property</p>
+        </footer>
+
+    </main>
+
+</body>
+</html>
