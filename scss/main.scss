@@ -1,0 +1,23 @@
+// ==========================================================================
+// scss/main.scss - Tệp SCSS chính tổng hợp toàn bộ hệ thống Responsive Grid
+// ==========================================================================
+
+// 1. ABSTRACTS (Biến & Mixins)
+@import "abstracts/variables";
+@import "abstracts/mixins";
+
+// 2. BASE (Reset & Typography)
+@import "base/reset";
+@import "base/typography";
+
+// 3. LAYOUT (Bố cục Grid, Header, Navigation, Sidebar, Footer)
+@import "layout/grid";
+@import "layout/header";
+@import "layout/navigation";
+@import "layout/sidebar";
+@import "layout/footer";
+
+// 4. COMPONENTS (Article, Buttons, Badges)
+@import "components/article";
+@import "components/buttons";
+@import "components/badges";

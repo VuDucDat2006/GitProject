@@ -1,0 +1,54 @@
+// ==========================================================================
+// scss/abstracts/_variables.scss
+// Quản lý tập trung toàn bộ biến màu sắc, typography, kích thước & breakpoint
+// ==========================================================================
+
+// 1. BẢNG MÀU CHỦ ĐẠO (COLOR PALETTE)
+$primary-color: #0284c7;        // Xanh dương chủ đạo
+$primary-dark: #0369a1;         // Xanh dương đậm khi hover
+$primary-light: #e0f2fe;        // Xanh nhạt cho badges/highlights
+$secondary-color: #38bdf8;      // Xanh cyan điểm nhấn
+$accent-color: #f59e0b;         // Vàng cam cho chú ý
+
+// 2. MÀU NỀN & VĂN BẢN (BACKGROUND & TEXT)
+$bg-body: #f1f5f9;              // Nền trang xám sáng hiện đại
+$bg-white: #ffffff;             // Nền thẻ Card / Navigation
+$dark-bg: #0f172a;              // Nền đen than cho snippet / header sâu
+$dark-header: #1e293b;          // Nền header và footer
+
+$text-dark: #0f172a;            // Màu chữ tiêu đề chính
+$text-main: #334155;            // Màu chữ nội dung bài viết
+$text-muted: #64748b;           // Màu chữ phụ / ngày tháng
+$text-white: #ffffff;           // Màu chữ trắng
+
+// 3. MÀU KHỐI QUẢNG CÁO (BANNER AD WIDGET)
+$ad-gradient-start: #fef3c7;
+$ad-gradient-end: #fde68a;
+$ad-border: #fcd34d;
+$ad-text-dark: #78350f;
+$ad-text-muted: #92400e;
+
+// 4. ĐƯỜNG VIỀN & HIỆU ỨNG ĐỔ BÓNG (BORDERS & SHADOWS)
+$border-color: #e2e8f0;
+$border-radius-sm: 6px;
+$border-radius-base: 8px;
+$border-radius-lg: 10px;
+$border-radius-full: 20px;
+
+$shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.05);
+$shadow-base: 0 4px 15px rgba(0, 0, 0, 0.1);
+$shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.15);
+
+// 5. KÍCH THƯỚC BỐ CỤC LƯỚI GRID (LAYOUT SIZES)
+$max-width-container: 1240px;
+$sidebar-width: 320px;
+$grid-gap-desktop: 20px;
+$grid-gap-mobile: 15px;
+
+// 6. TYPOGRAPHY & CHUYỂN ĐỘNG (FONTS & TRANSITIONS)
+$font-family-base: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+$font-family-code: "Fira Code", Consolas, Monaco, monospace;
+$transition-base: all 0.2s ease;
+
+// 7. RESPONSIVE BREAKPOINT
+$breakpoint-mobile: 768px;

@@ -1,0 +1,11 @@
+// ==========================================================================
+// scss/base/_typography.scss
+// Cấu hình phông chữ, màu sắc cơ bản và chiều cao dòng
+// ==========================================================================
+
+body {
+  font-family: $font-family-base;
+  background-color: $bg-body;
+  color: $text-dark;
+  line-height: 1.6;
+}

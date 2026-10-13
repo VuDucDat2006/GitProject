@@ -1,0 +1,41 @@
+// ==========================================================================
+// scss/layout/_grid.scss
+// Hệ thống lưới 2 chiều CSS Grid Layout Container & gán Grid Areas
+// ==========================================================================
+
+.grid-layout {
+  display: grid;
+  grid-template-columns: 1fr $sidebar-width;
+  grid-template-rows: auto auto 1fr auto;
+  grid-template-areas:
+    "header  header"
+    "nav     nav"
+    "main    sidebar"
+    "footer  footer";
+  gap: $grid-gap-desktop;
+  min-height: 100vh;
+  max-width: $max-width-container;
+  margin: 0 auto;
+  padding: 20px;
+
+  // Responsive tự động chuyển thành 1 cột trên Mobile (<= 768px)
+  @include respond-to('mobile') {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto auto;
+    grid-template-areas:
+      "header"
+      "nav"
+      "main"
+      "sidebar"
+      "footer";
+    gap: $grid-gap-mobile;
+    padding: 12px;
+  }
+}
+
+// Gán từng phân vùng vào vị trí Grid Area tương ứng
+.header       { grid-area: header; }
+.navigation   { grid-area: nav; }
+.main-content { grid-area: main; }
+.sidebar      { grid-area: sidebar; }
+.footer       { grid-area: footer; }

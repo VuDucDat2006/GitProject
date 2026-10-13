@@ -1,0 +1,17 @@
+// ==========================================================================
+// scss/components/_badges.scss
+// Các huy hiệu nhãn phân loại (Badges & Tags)
+// ==========================================================================
+
+.article-category {
+  display: inline-block;
+  background-color: $primary-light;
+  color: $primary-color;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: $border-radius-full;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+  letter-spacing: 0.5px;
+}

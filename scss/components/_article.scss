@@ -1,0 +1,89 @@
+// ==========================================================================
+// scss/components/_article.scss
+// Bài viết chính: Thẻ Article, Tiêu đề, Meta thông tin, Banner, Nội dung & Code
+// ==========================================================================
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+
+  .article-card {
+    @include card-container($bg: $bg-white, $padding: 30px, $radius: $border-radius-lg);
+
+    @include respond-to('mobile') {
+      padding: 20px 16px;
+    }
+
+    .article-title {
+      font-size: 26px;
+      color: $text-dark;
+      line-height: 1.35;
+      margin-bottom: 12px;
+      font-weight: 700;
+
+      @include respond-to('mobile') {
+        font-size: 21px;
+      }
+    }
+
+    .article-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      font-size: 13.5px;
+      color: $text-muted;
+      margin-bottom: 20px;
+      padding-bottom: 15px;
+      border-bottom: 1px solid #f1f5f9;
+    }
+
+    .article-banner {
+      margin-bottom: 24px;
+      border-radius: $border-radius-base;
+      overflow: hidden;
+
+      .banner-img {
+        width: 100%;
+        height: auto;
+        max-height: 380px;
+        object-fit: cover;
+        display: block;
+      }
+    }
+
+    .article-body {
+      font-size: 15.5px;
+      color: $text-main;
+      line-height: 1.75;
+
+      p {
+        margin-bottom: 16px;
+      }
+
+      h3 {
+        font-size: 18px;
+        color: $text-dark;
+        margin: 22px 0 10px 0;
+      }
+
+      ul {
+        margin: 12px 0 16px 20px;
+
+        li {
+          margin-bottom: 8px;
+        }
+      }
+
+      .code-snippet {
+        background-color: $dark-bg;
+        color: $secondary-color;
+        padding: 16px 20px;
+        border-radius: $border-radius-sm;
+        font-family: $font-family-code;
+        font-size: 14px;
+        margin: 15px 0 20px 0;
+        overflow-x: auto;
+      }
+    }
+  }
+}

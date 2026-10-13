@@ -1,0 +1,104 @@
+// ==========================================================================
+// scss/layout/_sidebar.scss
+// Thanh bên Sidebar: Danh sách widget tin tức, khóa học và quảng cáo
+// ==========================================================================
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  .widget {
+    @include card-container($bg: $bg-white, $padding: 20px, $radius: $border-radius-lg);
+
+    .widget-title {
+      font-size: 16px;
+      color: $text-dark;
+      margin-bottom: 14px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid $border-color;
+      font-weight: 700;
+    }
+
+    .widget-list {
+      list-style: none;
+
+      li {
+        padding: 10px 0;
+        border-bottom: 1px dashed #f1f5f9;
+
+        &:last-child {
+          border-bottom: none;
+          padding-bottom: 0;
+        }
+
+        a {
+          display: block;
+          color: $text-main;
+          text-decoration: none;
+          font-size: 14px;
+          font-weight: 500;
+          line-height: 1.4;
+          transition: color 0.2s ease;
+
+          &:hover {
+            color: $primary-color;
+          }
+        }
+
+        .widget-date {
+          display: block;
+          font-size: 12px;
+          color: $text-muted;
+          margin-top: 4px;
+        }
+      }
+    }
+
+    .course-card {
+      h4 {
+        color: $primary-color;
+        font-size: 15px;
+        margin-bottom: 6px;
+      }
+
+      p {
+        font-size: 13.5px;
+        color: $text-muted;
+        margin-bottom: 12px;
+      }
+    }
+
+    &.ad-widget {
+      background: linear-gradient(135deg, $ad-gradient-start, $ad-gradient-end);
+      border: 1px solid $ad-border;
+      position: relative;
+
+      .ad-badge {
+        position: absolute;
+        top: 10px;
+        right: 12px;
+        background-color: rgba(0, 0, 0, 0.1);
+        color: $ad-text-dark;
+        font-size: 10px;
+        font-weight: bold;
+        text-transform: uppercase;
+        padding: 2px 6px;
+        border-radius: 4px;
+      }
+
+      .ad-content {
+        h4 {
+          color: $ad-text-dark;
+          font-size: 15px;
+          margin-bottom: 4px;
+        }
+
+        p {
+          color: $ad-text-muted;
+          font-size: 13px;
+        }
+      }
+    }
+  }
+}
