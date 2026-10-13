@@ -1,0 +1,129 @@
+/* ========================================================
+   1. ĐỊNH DẠNG BODY & RESET CƠ BẢN
+   ======================================================== */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f8f9fa;
+    color: #333333;
+    margin: 0;
+    padding: 40px 20px;
+    line-height: 1.6;
+}
+
+/* Tiêu đề chính h1 */
+h1 {
+    font-size: 28px;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+/* ========================================================
+   2. THANH ĐIỀU HƯỚNG NAV (DISPLAY: INLINE-BLOCK)
+   ======================================================== */
+nav {
+    background-color: #ffffff;
+    display: inline-block;
+    padding: 12px 25px;
+    border-radius: 30px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    margin-bottom: 25px;
+}
+
+nav a {
+    display: inline-block;       /* Cho phép liên kết nhận margin, padding và nằm cùng hàng */
+    margin: 0 15px;
+    text-decoration: none;
+    color: #333333;
+    font-weight: bold;
+    font-size: 15px;
+    padding: 6px 12px;
+    border-radius: 4px;
+    transition: all 0.25s ease;
+}
+
+nav a:hover {
+    color: #0284c7;
+    background-color: #e0f2fe;
+}
+
+/* ========================================================
+   3. KHỐI SECTION VÀ 3 CỘT .BOX (DISPLAY: INLINE-BLOCK)
+   ======================================================== */
+section {
+    margin-top: 20px;
+    max-width: 1100px;           /* Áp dụng thuộc tính max-width theo mục tiêu bài học */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.box {
+    display: inline-block;       /* Cốt lõi: Xếp các cột nằm ngang mà vẫn nhận width và height */
+    width: 30%;                  /* Chiếm khoảng 30% chiều rộng mỗi cột */
+    padding: 25px 20px;
+    background-color: lightblue; /* Màu nền xanh nhạt theo yêu cầu bài học */
+    margin: 10px;
+    vertical-align: top;         /* Canh thẳng hàng đỉnh trên của 3 cột */
+    border-radius: 8px;
+    text-align: left;
+    min-height: 180px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.box:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.1);
+}
+
+.box h3 {
+    margin-top: 0;
+    color: #0369a1;
+    font-size: 18px;
+    margin-bottom: 10px;
+    border-bottom: 2px solid rgba(3, 105, 161, 0.2);
+    padding-bottom: 6px;
+}
+
+.box p {
+    font-size: 14px;
+    color: #1e293b;
+    margin-bottom: 0;
+    line-height: 1.55;
+}
+
+.box code {
+    background-color: rgba(255, 255, 255, 0.6);
+    padding: 2px 5px;
+    border-radius: 3px;
+    font-weight: bold;
+    color: #0c4a6e;
+}
+
+/* ========================================================
+   4. NỘI DUNG CHÂN TRANG FOOTER
+   ======================================================== */
+footer {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #e2e8f0;
+    color: #64748b;
+    font-size: 14px;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Tương thích màn hình nhỏ */
+@media (max-width: 768px) {
+    .box {
+        width: 90%;
+        display: block;
+        margin: 15px auto;
+    }
+}
