@@ -1,26 +1,24 @@
 ﻿# GitProject
 
-Dự án thực hành các thao tác cơ bản với Git và GitHub (CodeGym).
+Dự án thực hành các thao tác cơ bản với Git, GitHub và CSS Box Model (CodeGym).
 
-## Mục Tiêu Thực Hành
-- Làm quen và thực hành các thao tác cơ bản với Git và GitHub.
-- Nắm được quy trình làm việc từ tạo repository, clone dự án về máy tính, đến đẩy mã nguồn lên GitHub.
+## Nhánh: `box-model-layout-cards`
+Bài tập: **[Bài tập] Sử dụng Box Model 1 - Xây dựng bố cục với Mô hình hộp CSS**
 
-## Cấu Trúc Dự Án
-```plaintext
-GitProject/
-├── README.md
-└── source/
-    ├── index.html
-    └── news.html
-```
+### Mục tiêu:
+- Nắm vững sự khác biệt giữa `box-sizing: content-box` và `box-sizing: border-box`.
+- Tạo 3 phần tử `div` có class `.card` với các thuộc tính:
+  - `width: 280px; height: 150px;`
+  - `padding: 20px;`
+  - `border: 5px solid #3498db;`
+  - `margin: 20px;`
+- Thiết lập riêng cho từng thẻ:
+  - **Thẻ 1 (`.card:nth-child(1)`)**: `box-sizing: content-box; background-color: #2ecc71;` (Tổng kích thước hiển thị: 330px × 200px).
+  - **Thẻ 2 (`.card:nth-child(2)`)**: `box-sizing: border-box; background-color: #f1c40f;` (Tổng kích thước hiển thị: 280px × 150px).
+  - **Thẻ 3 (`.card:nth-child(3)`)**: `box-sizing: border-box; background-color: #e74c3c;` (Tổng kích thước hiển thị: 280px × 150px).
 
-## Các Bước Đã Thực Hiện
-1. Tạo repository `GitProject` trên GitHub.
-2. Clone repository về máy tính cá nhân bằng lệnh `git clone`.
-3. Tạo file `README.md`, đưa vào Staging Area (`git add`) và commit (`git commit -m "Add README.md"`).
-4. Đẩy file `README.md` lên GitHub (`git push origin main`).
-5. Tạo thư mục `source` chứa `index.html` và `news.html`.
-6. Đẩy thư mục `source` lên GitHub (`git add source/`, `git commit -m "Add source files"`, `git push origin main`).
+### Cấu trúc file:
+- `index.html`: Cấu trúc tài liệu HTML gồm 3 thẻ card và bảng so sánh kích thước computed.
+- `style.css`: Quy tắc CSS theo đúng đặc tả của bài tập.
 
 Tác giả: Vũ Đức Đạt (VuDucDat2006)

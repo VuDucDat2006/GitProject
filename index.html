@@ -1,0 +1,88 @@
+﻿<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[Bài tập] Sử dụng Box Model 1 - Xây dựng bố cục với Mô hình hộp</title>
+    <!-- Liên kết file CSS vào HTML -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="page-header">
+        <h1>Xây dựng bố cục với Mô hình hộp CSS (Box Model)</h1>
+        <p>So sánh sự khác biệt trực quan giữa <code>box-sizing: content-box</code> và <code>box-sizing: border-box</code></p>
+    </header>
+
+    <!-- Ba phần tử div có cùng class "card" -->
+    <main class="cards-wrapper">
+        <!-- Thẻ thứ nhất (.card:nth-child(1)) -->
+        <div class="card">
+            <h3>Thẻ 1 (content-box)</h3>
+            <p>Màu xanh lá cây (#2ecc71). Kích thước hiển thị thực tế: 330px × 200px.</p>
+        </div>
+
+        <!-- Thẻ thứ hai (.card:nth-child(2)) -->
+        <div class="card">
+            <h3>Thẻ 2 (border-box)</h3>
+            <p>Màu vàng (#f1c40f). Kích thước hiển thị thực tế: 280px × 150px.</p>
+        </div>
+
+        <!-- Thẻ thứ ba (.card:nth-child(3)) -->
+        <div class="card">
+            <h3>Thẻ 3 (border-box)</h3>
+            <p>Màu đỏ (#e74c3c). Kích thước hiển thị thực tế: 280px × 150px.</p>
+        </div>
+    </main>
+
+    <!-- Bảng so sánh kiểm tra với Developer Tools (Tab Computed) -->
+    <section class="comparison-section">
+        <h2>Bảng đối chiếu kích thước thực tế (DevTools F12 - Tab Computed)</h2>
+        <table class="comparison-table">
+            <thead>
+                <tr>
+                    <th>Tiêu chí</th>
+                    <th>Thẻ 1 (.card:nth-child(1))</th>
+                    <th>Thẻ 2 & Thẻ 3 (.card:nth-child(2, 3))</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Thuộc tính box-sizing</strong></td>
+                    <td><code>content-box</code> (mặc định)</td>
+                    <td><code>border-box</code></td>
+                </tr>
+                <tr>
+                    <td><strong>Màu nền (background-color)</strong></td>
+                    <td><span class="color-badge bg-green">#2ecc71 (Xanh lá)</span></td>
+                    <td><span class="color-badge bg-yellow">#f1c40f</span> & <span class="color-badge bg-red">#e74c3c</span></td>
+                </tr>
+                <tr>
+                    <td><strong>Kích thước vùng Content</strong></td>
+                    <td>280px × 150px (cố định)</td>
+                    <td>230px × 100px (bị co lại)</td>
+                </tr>
+                <tr>
+                    <td><strong>Padding (4 cạnh)</strong></td>
+                    <td>20px (cộng thêm 40px mỗi chiều)</td>
+                    <td>20px (tính vào trong width/height)</td>
+                </tr>
+                <tr>
+                    <td><strong>Border (4 cạnh)</strong></td>
+                    <td>5px solid #3498db (+10px mỗi chiều)</td>
+                    <td>5px solid #3498db (tính vào trong)</td>
+                </tr>
+                <tr class="highlight-row">
+                    <td><strong>Tổng kích thước hiển thị</strong><br>(width + padding + border)</td>
+                    <td><strong>330px × 200px</strong><br><small>(280 + 40 + 10 = 330px ngang)</small></td>
+                    <td><strong>280px × 150px</strong><br><small>(Đúng bằng width/height khai báo)</small></td>
+                </tr>
+                <tr>
+                    <td><strong>Margin (4 cạnh)</strong></td>
+                    <td>20px (khoảng cách bên ngoài)</td>
+                    <td>20px (khoảng cách bên ngoài)</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+</body>
+</html>
