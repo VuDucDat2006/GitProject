@@ -1,0 +1,219 @@
+﻿<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[Thá»±c hÃ nh] CSS | flex-wrap property</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="page-header">
+        <h1>[Thá»±c hÃ nh] CSS | flex-wrap Property</h1>
+        <p class="subtitle">TÃ¬m hiá»ƒu vÃ  thá»±c hÃ nh kiá»ƒm soÃ¡t hiá»‡n tÆ°á»£ng xuá»‘ng dÃ²ng cá»§a cÃ¡c Flex Items trong CSS Flexbox</p>
+    </header>
+
+    <main class="container">
+
+        <!-- ==========================================
+             PHáº¦N 1: Bá»˜ ÄIá»€U KHIá»‚N TÆ¯Æ NG TÃC Tá»”NG Há»¢P
+             ========================================== -->
+        <section class="card interactive-card">
+            <div class="card-header">
+                <span class="badge badge-indigo">VÃ­ dá»¥ tÆ°Æ¡ng tÃ¡c tá»•ng há»£p</span>
+                <h2>Thá»­ nghiá»‡m chuyá»ƒn Ä‘á»•i trá»±c tiáº¿p giÃ¡ trá»‹ <code>flex-wrap</code></h2>
+            </div>
+            <p class="desc">
+                Nháº¥n vÃ o cÃ¡c nÃºt bÃªn dÆ°á»›i Ä‘á»ƒ quan sÃ¡t ngay láº­p tá»©c cÃ¡ch cÃ¡c Flex Items (kÃ­ch thÆ°á»›c 180px &times; 80px) tá»± Ä‘á»™ng thay Ä‘á»•i cÃ¡ch sáº¯p xáº¿p khi náº±m trong Flex Container rá»™ng 600px:
+            </p>
+
+            <div class="control-buttons">
+                <button class="btn active" onclick="setFlexWrap('wrap', this)">flex-wrap: wrap</button>
+                <button class="btn" onclick="setFlexWrap('nowrap', this)">flex-wrap: nowrap</button>
+                <button class="btn" onclick="setFlexWrap('wrap-reverse', this)">flex-wrap: wrap-reverse</button>
+                <button class="btn" onclick="setFlexWrap('initial', this)">flex-wrap: initial</button>
+            </div>
+
+            <div class="status-banner">
+                GiÃ¡ trá»‹ hiá»‡n táº¡i Ä‘ang Ã¡p dá»¥ng: <code id="current-value">flex-wrap: wrap;</code>
+            </div>
+
+            <div class="demo-wrapper">
+                <div class="interactive-container" id="interactiveBox">
+                    <div class="item">1</div>
+                    <div class="item">2</div>
+                    <div class="item">3</div>
+                    <div class="item">4</div>
+                    <div class="item">5</div>
+                    <div class="item">6</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================
+             VÃ Dá»¤ 1: FLEX-WRAP: WRAP
+             ========================================== -->
+        <section class="card">
+            <div class="card-header">
+                <span class="badge badge-blue">GiÃ¡ trá»‹ 1</span>
+                <h2><code>flex-wrap: wrap;</code> (Cho phÃ©p xuá»‘ng dÃ²ng)</h2>
+            </div>
+            <div class="code-banner">
+                <code>flex-wrap: wrap; /* Container width: 500px, 6 items width: 150px */</code>
+            </div>
+            <p class="desc">
+                Container rá»™ng 500px khÃ´ng Ä‘á»§ chá»©a cáº£ 6 pháº§n tá»­ (má»—i pháº§n tá»­ rá»™ng 150px) trÃªn cÃ¹ng 1 dÃ²ng. Vá»›i <code>wrap</code>, cÃ¡c pháº§n tá»­ sáº½ tá»± Ä‘á»™ng bá»c thÃ nh nhiá»u dÃ²ng theo hÆ°á»›ng tá»« trÃªn xuá»‘ng dÆ°á»›i (Cross Axis thuáº­n).
+            </p>
+
+            <div class="demo-wrapper">
+                <div class="flex-container example-wrap">
+                    <div>Item 1</div>
+                    <div>Item 2</div>
+                    <div>Item 3</div>
+                    <div>Item 4</div>
+                    <div>Item 5</div>
+                    <div>Item 6</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================
+             VÃ Dá»¤ 2: FLEX-WRAP: NOWRAP
+             ========================================== -->
+        <section class="card">
+            <div class="card-header">
+                <span class="badge badge-green">GiÃ¡ trá»‹ 2 (Máº·c Ä‘á»‹nh)</span>
+                <h2><code>flex-wrap: nowrap;</code> (KhÃ´ng cho phÃ©p xuá»‘ng dÃ²ng)</h2>
+            </div>
+            <div class="code-banner">
+                <code>flex-wrap: nowrap; /* Container width: 400px, 4 items width: 150px */</code>
+            </div>
+            <p class="desc">
+                <code>nowrap</code> lÃ  giÃ¡ trá»‹ máº·c Ä‘á»‹nh cá»§a <code>flex-wrap</code>. ToÃ n bá»™ cÃ¡c pháº§n tá»­ buá»™c pháº£i náº±m trÃªn 1 dÃ²ng duy nháº¥t, cÃ¡c pháº§n tá»­ tá»± Ä‘á»™ng co láº¡i theo thuá»™c tÃ­nh <code>flex-shrink</code> Ä‘á»ƒ vá»«a vá»›i kÃ­ch thÆ°á»›c cá»§a Container.
+            </p>
+
+            <div class="demo-wrapper">
+                <div class="flex-container example-nowrap">
+                    <div>Item 1</div>
+                    <div>Item 2</div>
+                    <div>Item 3</div>
+                    <div>Item 4</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================
+             VÃ Dá»¤ 3: FLEX-WRAP: WRAP-REVERSE
+             ========================================== -->
+        <section class="card">
+            <div class="card-header">
+                <span class="badge badge-coral">GiÃ¡ trá»‹ 3</span>
+                <h2><code>flex-wrap: wrap-reverse;</code> (Xuá»‘ng dÃ²ng &amp; Äáº£o hÆ°á»›ng Cross Axis)</h2>
+            </div>
+            <div class="code-banner">
+                <code>flex-wrap: wrap-reverse; /* HÃ ng má»›i Ä‘Æ°á»£c xáº¿p theo chiá»u ngÆ°á»£c láº¡i (tá»« dÆ°á»›i lÃªn) */</code>
+            </div>
+            <p class="desc">
+                <code>wrap-reverse</code> cho phÃ©p bá»c thÃ nh nhiá»u dÃ²ng nhÆ°ng Ä‘áº£o ngÆ°á»£c trá»¥c vuÃ´ng gÃ³c (Cross Axis). HÃ ng chá»©a Item 1, 2, 3 náº±m á»Ÿ Ä‘Ã¡y, cÃ²n hÃ ng má»›i sinh ra chá»©a Item 4, 5, 6 Ä‘Æ°á»£c Ä‘áº©y lÃªn phÃ­a trÃªn. Thá»© tá»± cÃ¡c item trong má»—i dÃ²ng váº«n giá»¯ nguyÃªn.
+            </p>
+
+            <div class="demo-wrapper">
+                <div class="flex-container example-wrap-reverse">
+                    <div>Item 1</div>
+                    <div>Item 2</div>
+                    <div>Item 3</div>
+                    <div>Item 4</div>
+                    <div>Item 5</div>
+                    <div>Item 6</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================
+             VÃ Dá»¤ 4: FLEX-WRAP: INITIAL
+             ========================================== -->
+        <section class="card">
+            <div class="card-header">
+                <span class="badge badge-amber">GiÃ¡ trá»‹ 4</span>
+                <h2><code>flex-wrap: initial;</code> (KhÃ´i phá»¥c giÃ¡ trá»‹ máº·c Ä‘á»‹nh)</h2>
+            </div>
+            <div class="code-banner">
+                <code>flex-wrap: initial; /* KhÃ´i phá»¥c vá» giÃ¡ trá»‹ máº·c Ä‘á»‹nh cá»§a CSS: nowrap */</code>
+            </div>
+            <p class="desc">
+                Tá»« khÃ³a <code>initial</code> Ä‘Æ°a thuá»™c tÃ­nh vá» giÃ¡ trá»‹ máº·c Ä‘á»‹nh cá»§a tiÃªu chuáº©n CSS. Äá»‘i vá»›i <code>flex-wrap</code>, giÃ¡ trá»‹ máº·c Ä‘á»‹nh lÃ  <code>nowrap</code>, do Ä‘Ã³ cÃ¡c pháº§n tá»­ sáº½ khÃ´ng Ä‘Æ°á»£c bá»c thÃ nh nhiá»u dÃ²ng.
+            </p>
+
+            <div class="demo-wrapper">
+                <div class="flex-container example-initial">
+                    <div>Item 1</div>
+                    <div>Item 2</div>
+                    <div>Item 3</div>
+                    <div>Item 4</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tá»”NG Káº¾T & THÃ”NG TIN Há»ŒC VIÃŠN -->
+        <footer class="summary-footer">
+            <h3>ðŸ“‹ Báº£ng so sÃ¡nh 4 giÃ¡ trá»‹ cá»§a thuá»™c tÃ­nh flex-wrap</h3>
+            <table class="summary-table">
+                <thead>
+                    <tr>
+                        <th>GiÃ¡ trá»‹</th>
+                        <th>Kháº£ nÄƒng xuá»‘ng dÃ²ng</th>
+                        <th>HÆ°á»›ng Cross Axis</th>
+                        <th>HÃ nh vi khi thiáº¿u chá»—</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>nowrap</code> (máº·c Ä‘á»‹nh)</td>
+                        <td>âŒ KhÃ´ng cho phÃ©p</td>
+                        <td>BÃ¬nh thÆ°á»ng</td>
+                        <td>CÃ¡c pháº§n tá»­ co nhá» láº¡i trÃªn 1 dÃ²ng duy nháº¥t</td>
+                    </tr>
+                    <tr>
+                        <td><code>wrap</code></td>
+                        <td>âœ… Cho phÃ©p</td>
+                        <td>Tá»« trÃªn xuá»‘ng dÆ°á»›i (&darr;)</td>
+                        <td>Bá»c thÃ nh cÃ¡c dÃ²ng má»›i theo hÆ°á»›ng thÃ´ng thÆ°á»ng</td>
+                    </tr>
+                    <tr>
+                        <td><code>wrap-reverse</code></td>
+                        <td>âœ… Cho phÃ©p</td>
+                        <td>Tá»« dÆ°á»›i lÃªn trÃªn (&uarr;)</td>
+                        <td>Bá»c thÃ nh cÃ¡c dÃ²ng má»›i vá»›i hÆ°á»›ng trá»¥c phá»¥ bá»‹ Ä‘áº£o ngÆ°á»£c</td>
+                    </tr>
+                    <tr>
+                        <td><code>initial</code></td>
+                        <td>âŒ KhÃ´ng cho phÃ©p</td>
+                        <td>BÃ¬nh thÆ°á»ng</td>
+                        <td>Trá»Ÿ vá» giÃ¡ trá»‹ máº·c Ä‘á»‹nh cá»§a trÃ¬nh duyá»‡t (<code>nowrap</code>)</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p class="student-info">Thá»±c hiá»‡n: <strong>VÅ© Äá»©c Äáº¡t (VuDucDat2006)</strong> &bull; BÃ i thá»±c hÃ nh: CSS | flex-wrap Property</p>
+        </footer>
+
+    </main>
+
+    <!-- SCRIPT TÆ¯Æ NG TÃC CHUYá»‚N Äá»”I FLEX-WRAP -->
+    <script>
+        function setFlexWrap(val, btnElement) {
+            var box = document.getElementById('interactiveBox');
+            var status = document.getElementById('current-value');
+            
+            box.style.flexWrap = val;
+            status.textContent = 'flex-wrap: ' + val + ';';
+            
+            var buttons = document.querySelectorAll('.control-buttons .btn');
+            buttons.forEach(function(btn) {
+                btn.classList.remove('active');
+            });
+            btnElement.classList.add('active');
+        }
+    </script>
+
+</body>
+</html>
