@@ -1,0 +1,154 @@
+/* ========================================================
+   [Thực hành] Xây dựng Landing Page với Bootstrap - Custom Styles
+   Tác giả: Vũ Đức Đạt (VuDucDat2006)
+   ======================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+:root {
+    --brand-primary: #0d6efd;
+    --brand-primary-dark: #0a58ca;
+    --brand-dark: #1e2229;
+    --transition-smooth: 0.28s ease;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    color: #2b303a;
+    background-color: #fdfdfe;
+}
+
+/* ==========================================
+   1. Navbar Styling
+   ========================================== */
+.navbar {
+    background-color: var(--brand-dark) !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.navbar-brand {
+    font-size: 1.35rem;
+    letter-spacing: -0.5px;
+    transition: transform var(--transition-smooth);
+}
+
+.navbar-brand:hover {
+    transform: scale(1.04);
+}
+
+.navbar-nav .nav-link {
+    font-weight: 500;
+    padding: 0.5rem 1rem !important;
+    border-radius: 6px;
+    transition: all var(--transition-smooth);
+    color: rgba(255, 255, 255, 0.8) !important;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #ffffff !important;
+    background-color: rgba(255, 255, 255, 0.08);
+}
+
+.navbar-nav .nav-link.active {
+    color: #0dcaf0 !important;
+    font-weight: 600;
+    background-color: rgba(13, 202, 240, 0.12);
+}
+
+/* ==========================================
+   2. Hero Section
+   ========================================== */
+.hero-section {
+    background: linear-gradient(135deg, #0d6efd 0%, #0b5ed7 50%, #0048ba 100%) !important;
+    position: relative;
+    overflow: hidden;
+    padding-top: 5rem !important;
+    padding-bottom: 5rem !important;
+}
+
+.hero-section h1 {
+    letter-spacing: -1px;
+}
+
+.hero-section .btn-light {
+    color: var(--brand-primary);
+    transition: transform var(--transition-smooth), box-shadow var(--transition-smooth);
+}
+
+.hero-section .btn-light:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18) !important;
+    color: var(--brand-primary-dark);
+}
+
+/* ==========================================
+   3. Service Cards (Grid System)
+   ========================================== */
+.service-card {
+    transition: transform var(--transition-smooth), box-shadow var(--transition-smooth);
+    border-radius: 16px !important;
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 16px 32px rgba(13, 110, 253, 0.12) !important;
+}
+
+.card-icon {
+    font-size: 2.5rem;
+    width: 68px;
+    height: 68px;
+    line-height: 68px;
+    border-radius: 50%;
+    margin: 0 auto;
+    background: #eef5ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform var(--transition-smooth);
+}
+
+.service-card:hover .card-icon {
+    transform: scale(1.15) rotate(5deg);
+    background: #e0eeff;
+}
+
+/* ==========================================
+   4. About & Feature Badges
+   ========================================== */
+.about-card {
+    border-radius: 16px;
+}
+
+.feature-badge {
+    font-size: 2.2rem;
+}
+
+/* ==========================================
+   5. Technical Table & Code
+   ========================================== */
+.table th, .table td {
+    vertical-align: middle;
+}
+
+code {
+    background-color: #f1f5f9;
+    color: #d63384;
+    padding: 0.15rem 0.4rem;
+    border-radius: 4px;
+    font-size: 0.875em;
+}
+
+/* ==========================================
+   6. Footer
+   ========================================== */
+footer {
+    background-color: var(--brand-dark) !important;
+}

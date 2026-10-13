@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Landing Page - [Thực hành] CodeGym</title>
+    <!-- Bootstrap 5.3.0 CSS CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ==========================================
+         BƯỚC 2.2: TẠO NAVBAR (THANH ĐIỀU HƯỚNG)
+         ========================================== -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow-sm">
+        <div class="container">
+            <!-- Logo thương hiệu -->
+            <a class="navbar-brand fw-bold text-info" href="#">
+                <span class="me-1">🚀</span>MyBrand
+            </a>
+
+            <!-- Nút Toggler (Hamburger menu trên Mobile) -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Danh sách menu điều hướng -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ==========================================
+         BƯỚC 2.3: THÊM HERO SECTION
+         ========================================== -->
+    <header class="bg-primary text-white text-center py-5 hero-section" id="home">
+        <div class="container py-4">
+            <h1 class="display-4 fw-bold mb-3">Chào mừng đến với MyBrand</h1>
+            <p class="lead mb-4 col-md-8 mx-auto">
+                Giải pháp số 1 cho doanh nghiệp của bạn — Tiên phong chuyển đổi số và nâng tầm thương hiệu
+            </p>
+            <div class="d-flex justify-content-center gap-3">
+                <a href="#services" class="btn btn-light btn-lg px-4 shadow-sm fw-semibold">Khám phá ngay</a>
+                <a href="#about" class="btn btn-outline-light btn-lg px-4">Tìm hiểu thêm</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- ==========================================
+         PHẦN ABOUT (GIỚI THIỆU THƯƠNG HIỆU)
+         ========================================== -->
+    <section id="about" class="py-5 bg-white border-bottom">
+        <div class="container">
+            <div class="row align-items-center g-4">
+                <div class="col-lg-6">
+                    <span class="badge bg-primary-subtle text-primary mb-2 px-3 py-2 fs-6">Về chúng tôi</span>
+                    <h2 class="fw-bold mb-3">Kiến tạo tương lai số bền vững cùng MyBrand</h2>
+                    <p class="text-muted leading-relaxed">
+                        Với hơn 8 năm kinh nghiệm trong lĩnh vực công nghệ thông tin, MyBrand tự hào mang đến các giải pháp thiết kế website tân tiến, chiến lược tiếp thị trực tuyến đột phá và hệ thống hạ tầng đám mây an toàn tuyệt đối.
+                    </p>
+                    <div class="row g-3 mt-2">
+                        <div class="col-sm-4 text-center p-3 rounded-3 bg-light">
+                            <h3 class="fw-bold text-primary mb-0">500+</h3>
+                            <small class="text-muted">Dự án hoàn thành</small>
+                        </div>
+                        <div class="col-sm-4 text-center p-3 rounded-3 bg-light">
+                            <h3 class="fw-bold text-success mb-0">99.8%</h3>
+                            <small class="text-muted">Khách hàng hài lòng</small>
+                        </div>
+                        <div class="col-sm-4 text-center p-3 rounded-3 bg-light">
+                            <h3 class="fw-bold text-info mb-0">24/7</h3>
+                            <small class="text-muted">Hỗ trợ kỹ thuật</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="about-card p-4 rounded-4 shadow-sm bg-light border text-center">
+                        <div class="feature-badge mb-3">✨</div>
+                        <h4 class="fw-bold">Tại sao nên chọn MyBrand?</h4>
+                        <p class="text-muted mb-0">
+                            Quy trình làm việc chuyên nghiệp, công nghệ Bootstrap 5 hiện đại, tối ưu chuẩn SEO và trải nghiệm người dùng đẳng cấp quốc tế.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         BƯỚC 2.4: TẠO GRID SYSTEM - SERVICES
+         ========================================== -->
+    <section id="services" class="container py-5">
+        <div class="text-center mb-5">
+            <span class="badge bg-info-subtle text-info px-3 py-2 fs-6 mb-2">Hệ sinh thái dịch vụ</span>
+            <h2 class="text-center fw-bold mb-3">Dịch vụ của chúng tôi</h2>
+            <p class="text-muted col-md-6 mx-auto">
+                Khám phá các gói dịch vụ chất lượng cao giúp tăng trưởng hiệu quả hoạt động kinh doanh của bạn.
+            </p>
+        </div>
+
+        <!-- Bootstrap Grid System: 3 cột đồng đều trên Desktop (col-md-4) -->
+        <div class="row g-4">
+            <!-- Cột 1: Thiết kế Web -->
+            <div class="col-md-4 text-center">
+                <div class="card p-4 h-100 shadow-sm border-0 service-card">
+                    <div class="card-icon mb-3">💻</div>
+                    <h3 class="h4 fw-bold">Thiết kế Web</h3>
+                    <p class="text-muted mb-4">Dịch vụ thiết kế web chuyên nghiệp, giao diện chuẩn UI/UX, thích ứng hoàn hảo mọi kích thước màn hình.</p>
+                    <a href="#contact" class="btn btn-outline-primary btn-sm mt-auto">Đăng ký tư vấn &rarr;</a>
+                </div>
+            </div>
+
+            <!-- Cột 2: SEO & Marketing -->
+            <div class="col-md-4 text-center">
+                <div class="card p-4 h-100 shadow-sm border-0 service-card">
+                    <div class="card-icon mb-3">📈</div>
+                    <h3 class="h4 fw-bold">SEO & Marketing</h3>
+                    <p class="text-muted mb-4">Nâng cao thương hiệu của bạn, tối ưu hóa công cụ tìm kiếm và tiếp cận hàng triệu khách hàng tiềm năng.</p>
+                    <a href="#contact" class="btn btn-outline-primary btn-sm mt-auto">Đăng ký tư vấn &rarr;</a>
+                </div>
+            </div>
+
+            <!-- Cột 3: Hỗ trợ 24/7 -->
+            <div class="col-md-4 text-center">
+                <div class="card p-4 h-100 shadow-sm border-0 service-card">
+                    <div class="card-icon mb-3">🛠️</div>
+                    <h3 class="h4 fw-bold">Hỗ trợ 24/7</h3>
+                    <p class="text-muted mb-4">Chúng tôi luôn sẵn sàng hỗ trợ bạn mọi lúc mọi nơi với đội ngũ kỹ sư giàu kinh nghiệm, nhiệt tình.</p>
+                    <a href="#contact" class="btn btn-outline-primary btn-sm mt-auto">Đăng ký tư vấn &rarr;</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         BẢNG PHÂN TÍCH KỸ THUẬT BOOTSTRAP THỰC HÀNH
+         ========================================== -->
+    <section class="bg-light py-5 border-top border-bottom">
+        <div class="container">
+            <div class="p-4 bg-white rounded-3 shadow-sm border">
+                <h3 class="fw-bold mb-3 text-dark">📋 Bảng Phân Tích Các Thành Phần Bootstrap Trong Bài Thực Hành</h3>
+                <div class="table-responsive">
+                    <table class="table table-hover align-middle mb-0">
+                        <thead class="table-dark">
+                            <tr>
+                                <th scope="col">Thành phần</th>
+                                <th scope="col">Class Bootstrap sử dụng</th>
+                                <th scope="col">Ý nghĩa & Tác dụng kỹ thuật</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>1. Navbar</strong></td>
+                                <td><code>navbar navbar-expand-lg navbar-dark bg-dark</code></td>
+                                <td>Tạo thanh điều hướng nền tối, mở rộng ngang trên màn hình Large (&ge; 992px) và tự động thu gọn dạng Hamburger trên Mobile</td>
+                            </tr>
+                            <tr>
+                                <td><strong>2. Menu Link</strong></td>
+                                <td><code>navbar-nav ms-auto</code></td>
+                                <td>Đẩy toàn bộ liên kết điều hướng dạt sang mép phải (Margin Start Auto)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>3. Hero Section</strong></td>
+                                <td><code>bg-primary text-white text-center py-5</code></td>
+                                <td>Khu vực đầu trang nổi bật với nền màu chính (Primary), chữ trắng căn giữa và padding dọc 3rem</td>
+                            </tr>
+                            <tr>
+                                <td><strong>4. Grid System</strong></td>
+                                <td><code>container &rarr; row &rarr; col-md-4</code></td>
+                                <td>Chia bố cục thành 3 cột đồng đều ($12 / 3 = 4$) trên màn hình Medium trở lên; tự động xếp dọc 1 cột trên Mobile</td>
+                            </tr>
+                            <tr>
+                                <td><strong>5. Cards</strong></td>
+                                <td><code>card p-3 / p-4 h-100 shadow-sm</code></td>
+                                <td>Tạo khối thẻ dịch vụ có đường viền bo góc, bóng mờ và chiều cao đều nhau 100%</td>
+                            </tr>
+                            <tr>
+                                <td><strong>6. Buttons</strong></td>
+                                <td><code>btn btn-light, btn-primary, btn-outline-primary</code></td>
+                                <td>Các nút bấm tương tác chuẩn Bootstrap với nhiều phong cách trực quan</td>
+                            </tr>
+                            <tr>
+                                <td><strong>7. Footer</strong></td>
+                                <td><code>bg-dark text-white text-center py-3</code></td>
+                                <td>Chân trang nền tối, căn giữa thông tin bản quyền và tác giả</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         BƯỚC 2.5: TẠO FOOTER
+         ========================================== -->
+    <footer class="bg-dark text-white text-center py-4" id="contact">
+        <div class="container">
+            <p class="mb-1">&copy; 2026 MyBrand. All rights reserved.</p>
+            <small class="text-secondary">
+                Học viên thực hiện: <strong>Vũ Đức Đạt (VuDucDat2006)</strong> &bull; [Thực hành] Xây dựng Landing Page với Bootstrap &bull; CodeGym
+            </small>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5.3.0 JS Bundle (Bao gồm Popper cho Toggler & Dropdown) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
