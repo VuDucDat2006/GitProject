@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[Thực hành] Sử dụng Box Model 1</title>
+    <style>
+        /* Toàn trang trình bày rõ ràng, dễ nhìn */
+        body {
+            font-family: Arial, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: #f8fafc;
+            color: #1e293b;
+            padding: 30px 20px;
+            margin: 0;
+        }
+
+        .container {
+            max-width: 750px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 30px 35px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            border: 1px solid #e2e8f0;
+        }
+
+        h1 {
+            color: #1e40af;
+            font-size: 24px;
+            margin-top: 0;
+            margin-bottom: 8px;
+            border-bottom: 2px solid #dbeafe;
+            padding-bottom: 10px;
+        }
+
+        .subtitle {
+            color: #64748b;
+            font-size: 14px;
+            margin-bottom: 25px;
+        }
+
+        /* KHỐI DEMO THEO ĐÚNG YÊU CẦU BÀI TẬP */
+        .box-demo {
+            margin: 25px;
+            padding: 35px;
+            width: 200px;
+            background-color: lightseagreen;
+            border: 20px dashed indianred;
+            color: #ffffff;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        /* KHU VỰC GIẢI THÍCH CHI TIẾT */
+        .explanation-card {
+            margin-top: 30px;
+            background-color: #f1f5f9;
+            border-radius: 8px;
+            padding: 20px 24px;
+            border-left: 5px solid #2563eb;
+        }
+
+        .explanation-card h2 {
+            font-size: 16px;
+            color: #1e3a8a;
+            margin-top: 0;
+            margin-bottom: 12px;
+        }
+
+        .calculation-formula {
+            background-color: #1e293b;
+            color: #f8fafc;
+            padding: 12px 18px;
+            border-radius: 6px;
+            font-family: Consolas, Monaco, monospace;
+            font-size: 14px;
+            margin: 10px 0;
+        }
+
+        .table-layers {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+            font-size: 13.5px;
+        }
+
+        .table-layers th, .table-layers td {
+            border: 1px solid #cbd5e1;
+            padding: 8px 12px;
+            text-align: left;
+        }
+
+        .table-layers th {
+            background-color: #e2e8f0;
+            color: #0f172a;
+        }
+
+        .highlight-total {
+            font-weight: bold;
+            background-color: #dbeafe;
+            color: #1d4ed8;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>[Thực hành] Sử dụng Box Model 1</h1>
+        <p class="subtitle">Minh họa trực quan mô hình hộp (Box Model): Content, Padding, Border, Margin</p>
+
+        <!-- Khối phần tử theo đúng đặc tả của bài thực hành -->
+        <div class="box-demo">
+            Content demo box<br/>
+        </div>
+
+        <!-- Bảng giải thích chi tiết cách tính tổng chiều rộng -->
+        <div class="explanation-card">
+            <h2>Cách tính tổng chiều rộng của phần tử (Total Width):</h2>
+            <div class="calculation-formula">
+                Total Width = width + padding(left+right) + border(left+right) + margin(left+right)<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= 200px + (35px + 35px) + (20px + 20px) + (25px + 25px)<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= 200px + 70px + 40px + 50px = 360px
+            </div>
+
+            <table class="table-layers">
+                <thead>
+                    <tr>
+                        <th>Thành phần Box Model</th>
+                        <th>Khai báo CSS</th>
+                        <th>Kích thước đóng góp (Ngang)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Content (Nội dung)</strong></td>
+                        <td><code>width: 200px;</code></td>
+                        <td>200px</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Padding (Khoảng đệm)</strong></td>
+                        <td><code>padding: 35px;</code> (màu lightseagreen)</td>
+                        <td>35px (trái) + 35px (phải) = 70px</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Border (Đường viền)</strong></td>
+                        <td><code>border: 20px dashed indianred;</code></td>
+                        <td>20px (trái) + 20px (phải) = 40px</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Margin (Lề ngoài)</strong></td>
+                        <td><code>margin: 25px;</code> (khoảng trống ngoài)</td>
+                        <td>25px (trái) + 25px (phải) = 50px</td>
+                    </tr>
+                    <tr class="highlight-total">
+                        <td colspan="2"><strong>TỔNG CHIỀU RỘNG THỰC TẾ CHIẾM CHỖ</strong></td>
+                        <td><strong>360px</strong></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
