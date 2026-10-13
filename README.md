@@ -1,16 +1,17 @@
-# [Thực hành] Xây dựng Landing Page với Bootstrap
+# [Thực hành] Tạo Trang Giới Thiệu Doanh Nghiệp với Bootstrap
 
-Dự án bài tập thực hành xây dựng một trang Landing Page hoàn chỉnh, chuyên nghiệp và chuẩn Responsive bằng framework **Bootstrap 5.3**. Trang web tích hợp đầy đủ 5 thành phần cốt lõi: **Navbar**, **Hero Section**, **Grid System**, **Cards**, **Buttons** và **Footer**.
+Dự án bài tập thực hành xây dựng một trang giới thiệu doanh nghiệp chuyên nghiệp, giao diện hiện đại chuẩn thẩm mỹ và tương thích Responsive trên toàn bộ các thiết bị bằng framework **Bootstrap 5.3**. Trang web bao gồm 6 phân vùng chức năng cốt lõi: **Navbar**, **Hero Section**, **About Section**, **Services (Grid Cards)**, **Contact Section** và **Footer**.
 
 ---
 
 ## 🎯 Mục Tiêu Bài Thực Hành
-- Luyện tập sử dụng thư viện **Bootstrap 5.3** để xây dựng giao diện Landing Page chuyên nghiệp.
-- Ứng dụng hệ thống **Grid System** (`container`, `row`, `col-md-4`) để chia cột đồng đều trên Desktop và tự động xếp chồng trên Mobile.
-- Tích hợp thanh điều hướng Responsive **Navbar** với menu tự thu gọn thành nút **Hamburger**.
-- Thiết kế **Hero Section** nổi bật với lời kêu gọi hành động (Call To Action - CTA).
-- Hiển thị danh sách dịch vụ bằng các khối **Cards** trực quan, đồng đều chiều cao (`h-100`).
-- Định dạng chân trang **Footer** cố định thông tin bản quyền và tác giả.
+- Luyện tập sử dụng thư viện **Bootstrap 5.3** để xây dựng trang giới thiệu hồ sơ doanh nghiệp (Company Profile).
+- Ứng dụng thanh điều hướng sáng **Navbar** (`navbar-light bg-light`) có khả năng co giãn tự động theo kích thước màn hình.
+- Thiết kế **Hero Section** nổi bật với tiêu đề lớn và lời kêu gọi hành động (Call To Action - CTA).
+- Triển khai **About Section** giới thiệu tổng quan tầm nhìn, sứ mệnh của công ty.
+- Ứng dụng hệ thống **Grid System** (`container`, `row`, `col-md-4`) để phân chia 3 cột dịch vụ đồng đều trên Desktop và tự động xếp chồng trên Mobile.
+- Xây dựng **Contact Section** hiển thị thông tin Email và Hotline kết nối khách hàng.
+- Định dạng chân trang **Footer** hiển thị bản quyền và tác giả.
 
 ---
 
@@ -30,124 +31,134 @@ Dự án bài tập thực hành xây dựng một trang Landing Page hoàn ch�
 
 ### Bước 2: Xây Dựng Cấu Trúc HTML Từng Bước
 
-#### 2.1. Khởi tạo khung HTML cơ bản
-Tạo file `index.html` với chuẩn HTML5 và khai báo thẻ `meta` viewport để giao diện co giãn chính xác trên thiết bị di động.
+#### 2.1. Khởi tạo cấu trúc HTML cơ bản
+Tạo file `index.html` với cấu trúc HTML5 chuẩn, thiết lập viewport và tiêu đề trang `Giới Thiệu Công Ty`.
 
-#### 2.2. Xây dựng Navbar (Thanh điều hướng)
+#### 2.2. Xây dựng Navbar (Thanh điều hướng sáng)
 ```html
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container">
-        <a class="navbar-brand fw-bold text-info" href="#">🚀 MyBrand</a>
+        <a class="navbar-brand" href="#">Doanh Nghiệp</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
-                <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
-                <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                <li class="nav-item"><a class="nav-link active" href="#">Trang Chủ</a></li>
+                <li class="nav-item"><a class="nav-link" href="#about">Về Chúng Tôi</a></li>
+                <li class="nav-item"><a class="nav-link" href="#services">Dịch Vụ</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contact">Liên Hệ</a></li>
             </ul>
         </div>
     </div>
 </nav>
 ```
-*Điểm lưu ý:* Class `ms-auto` (Margin Start Auto) giúp căn đẩy toàn bộ danh sách menu sang mép phải của thanh Navbar.
+*Tác dụng:* Thanh điều hướng nền sáng (`bg-light`), menu tự động căn phải bằng thuộc tính `ms-auto`, tích hợp nút toggler hỗ trợ di động.
 
-#### 2.3. Xây dựng Hero Section (Đầu trang ấn tượng)
+#### 2.3. Thêm Hero Section (Đầu trang)
 ```html
 <header class="bg-primary text-white text-center py-5">
-    <div class="container py-4">
-        <h1 class="display-4 fw-bold">Chào mừng đến với MyBrand</h1>
-        <p class="lead">Giải pháp số 1 cho doanh nghiệp của bạn</p>
-        <a href="#services" class="btn btn-light btn-lg">Khám phá ngay</a>
-    </div>
+    <h1>Chào mừng đến với Công Ty Chúng Tôi</h1>
+    <p>Chúng tôi cung cấp các giải pháp chuyên nghiệp cho doanh nghiệp của bạn</p>
+    <a href="#services" class="btn btn-light">Tìm Hiểu Ngay</a>
 </header>
 ```
-*Tác dụng:* Nền xanh chính (`bg-primary`), chữ trắng (`text-white`), padding dọc rộng (`py-5`) kết hợp nút bấm sáng (`btn-light`) thu hút sự chú ý của người truy cập.
+*Tác dụng:* Nền xanh chính (`bg-primary`), chữ trắng (`text-white`), padding dọc `py-5`, tạo ấn tượng ban đầu mạnh mẽ.
 
-#### 2.4. Xây dựng Grid System - Services (Danh mục dịch vụ)
+#### 2.4. Tạo About Section (Về chúng tôi)
+```html
+<section id="about" class="container py-5">
+    <h2 class="text-center mb-4">Về Chúng Tôi</h2>
+    <p class="text-center">Công ty chúng tôi chuyên cung cấp các dịch vụ công nghệ, thiết kế website và tiếp thị kỹ thuật số.</p>
+</section>
+```
+*Tác dụng:* Đoạn mô tả trọng tâm giúp người truy cập nhanh chóng nắm bắt lĩnh vực hoạt động của doanh nghiệp.
+
+#### 2.5. Thêm Services Section (Hệ thống lưới Grid 3 cột)
 ```html
 <section id="services" class="container py-5">
-    <h2 class="text-center mb-4 fw-bold">Dịch vụ của chúng tôi</h2>
-    <div class="row g-4">
+    <h2 class="text-center mb-4">Dịch vụ của chúng tôi</h2>
+    <div class="row">
         <div class="col-md-4 text-center">
-            <div class="card p-4 h-100 shadow-sm border-0">
-                <div class="card-icon mb-3">💻</div>
-                <h3 class="h4 fw-bold">Thiết kế Web</h3>
-                <p class="text-muted">Dịch vụ thiết kế web chuyên nghiệp.</p>
+            <div class="card p-3">
+                <h3>Thiết kế Website</h3>
+                <p>Thiết kế giao diện chuyên nghiệp và tối ưu hóa trải nghiệm người dùng.</p>
             </div>
         </div>
         <div class="col-md-4 text-center">
-            <div class="card p-4 h-100 shadow-sm border-0">
-                <div class="card-icon mb-3">📈</div>
-                <h3 class="h4 fw-bold">SEO & Marketing</h3>
-                <p class="text-muted">Nâng cao thương hiệu của bạn.</p>
+            <div class="card p-3">
+                <h3>Marketing Online</h3>
+                <p>Giải pháp tiếp thị số giúp doanh nghiệp của bạn phát triển.</p>
             </div>
         </div>
         <div class="col-md-4 text-center">
-            <div class="card p-4 h-100 shadow-sm border-0">
-                <div class="card-icon mb-3">🛠️</div>
-                <h3 class="h4 fw-bold">Hỗ trợ 24/7</h3>
-                <p class="text-muted">Chúng tôi luôn sẵn sàng hỗ trợ bạn.</p>
+            <div class="card p-3">
+                <h3>Hỗ trợ khách hàng</h3>
+                <p>Chúng tôi cam kết hỗ trợ khách hàng 24/7.</p>
             </div>
         </div>
     </div>
 </section>
 ```
-*Cơ chế Grid:* Mỗi cột dịch vụ có class `col-md-4` $\rightarrow$ Trên màn hình máy tính bảng và máy tính ($12 / 3 = 4$), các khối dàn thành 3 cột đều nhau. Khi thu nhỏ về điện thoại (`< 768px`), các cột tự động trở về `col-12` (xếp dọc 1 cột).
+*Tác dụng:* Phân chia 3 cột dịch vụ đồng đều trên màn hình máy tính (`col-md-4`) và tự động xếp chồng trên điện thoại.
 
-#### 2.5. Xây dựng Footer (Chân trang)
+#### 2.6. Thêm Contact Section (Liên hệ)
 ```html
-<footer class="bg-dark text-white text-center py-4">
-    <div class="container">
-        <p class="mb-1">&copy; 2026 MyBrand. All rights reserved.</p>
-        <small class="text-secondary">Học viên thực hiện: Vũ Đức Đạt (VuDucDat2006)</small>
-    </div>
+<section id="contact" class="container py-5 text-center">
+    <h2>Liên hệ với chúng tôi</h2>
+    <p>Email: contact@company.com</p>
+    <p>Hotline: 0988 123 456</p>
+</section>
+```
+*Tác dụng:* Cung cấp thông tin liên lạc rõ ràng, giúp khách hàng kết nối nhanh chóng với công ty.
+
+#### 2.7. Tạo Footer (Chân trang)
+```html
+<footer class="bg-dark text-white text-center py-3">
+    <p>&copy; 2024 Công Ty Chúng Tôi. All rights reserved.</p>
 </footer>
 ```
 
 ---
 
-## 📋 Bảng Phân Tích Kỹ Thuật Các Class Bootstrap 5
+## 📋 Bảng Phân Tích Các Thành Phần Bootstrap 5 Trong Bài Thực Hành
 
-| Thành phần | Class Bootstrap | Mục đích & Tác dụng kỹ thuật |
+| Thành phần | Class Bootstrap | Ý nghĩa & Tác dụng kỹ thuật |
 | :--- | :--- | :--- |
-| **Navbar** | `navbar navbar-expand-lg navbar-dark bg-dark` | Tạo thanh điều hướng tông màu tối, co giãn tự động trên Desktop và thu gọn trên Mobile |
-| **Căn lề menu** | `ms-auto` | Căn toàn bộ các mục menu sang mép bên phải |
-| **Nút mở menu** | `navbar-toggler`, `data-bs-toggle="collapse"` | Nút Hamburger icon kích hoạt mở/đóng menu khi xem trên điện thoại |
-| **Hero Banner** | `bg-primary text-white text-center py-5` | Khối giới thiệu thương hiệu nổi bật với tiêu đề lớn và lời kêu gọi hành động (CTA) |
-| **Grid System** | `container` $\rightarrow$ `row` $\rightarrow$ `col-md-4` | Khung lưới chia đều 3 cột trên thiết bị có độ phân giải từ Medium ($\ge 768\text{px}$) trở lên |
-| **Cards** | `card p-4 h-100 shadow-sm` | Khối thẻ dịch vụ bo tròn góc, có bóng mờ nhẹ và tự động giãn đều chiều cao 100% |
-| **Buttons** | `btn btn-light`, `btn-outline-primary` | Nút bấm tương tác theo chuẩn thẩm mỹ giao diện phẳng hiện đại |
-| **Footer** | `bg-dark text-white py-4` | Phần chân trang hiển thị bản quyền và tác giả |
+| **Navbar sáng** | `navbar navbar-expand-lg navbar-light bg-light` | Thanh menu nền sáng hiện đại, mở rộng ngang ở màn hình $\ge 992\text{px}$, thu gọn trên Mobile |
+| **Căn lề menu** | `navbar-nav ms-auto` | Đẩy toàn bộ danh mục menu sang mép bên phải |
+| **Hero Banner** | `bg-primary text-white text-center py-5` | Khối banner màu xanh chính, chữ trắng căn giữa thu hút người đọc |
+| **Grid System** | `container` $\rightarrow$ `row` $\rightarrow$ `col-md-4` | Khung lưới 3 cột cân đối ($12 / 3 = 4$) trên Desktop, xếp dọc trên Mobile |
+| **Cards** | `card p-3 / p-4 h-100 shadow-sm border-0` | Khối thẻ dịch vụ bo tròn, đổ bóng mềm và đồng đều chiều cao 100% |
+| **Buttons** | `btn btn-light`, `btn-outline-primary` | Nút tương tác phẳng theo tiêu chuẩn thiết kế UI hiện đại |
+| **Footer** | `bg-dark text-white text-center py-3` | Khối chân trang màu tối hiển thị bản quyền và tác giả |
 
 ---
 
 ## 📁 Cấu Trúc Thư Mục
 ```plaintext
 GitProject/
-├── index.html       # Mã nguồn Landing Page hoàn chỉnh chuẩn Bootstrap 5.3
-├── style.css        # Tùy biến thẩm mỹ: Google Font, hiệu ứng hover thẻ Card, Hero gradient
+├── index.html       # Mã nguồn HTML trang giới thiệu công ty chuẩn Bootstrap 5.3
+├── style.css        # Tùy biến thẩm mỹ: Google Font, hiệu ứng hover card, shadow, divider
 └── README.md        # Tài liệu thuyết minh dự án và hướng dẫn kiểm tra
 ```
 
 ---
 
 ## 🔍 Hướng Dẫn Kiểm Tra & Chạy Thử
-1. **Mở trực tiếp trên Trình duyệt**: Mở file `index.html` bằng trình duyệt web bất kỳ.
-2. **Kiểm tra trên màn hình Desktop (> 992px)**:
-   - Thanh Navbar dàn ngang cố định ở đỉnh trang (`sticky-top`).
-   - Hero Section rực rỡ với nút *Khám phá ngay*.
-   - Khối Dịch vụ hiển thị 3 cột song song cân đối, thẻ Card có hiệu ứng bay nhẹ khi rê chuột.
-3. **Kiểm tra trên màn hình Mobile / Tablet (< 768px)**:
-   - Nhấn `F12` và bật **Device Mode** (`Ctrl + Shift + M`).
-   - Navbar tự động thu gọn lại thành biểu tượng nút bấm Hamburger 3 gạch.
-   - Bấm nút Hamburger để menu mở ra mượt mà.
-   - 3 khối thẻ Dịch vụ tự động chuyển đổi thành 1 cột dọc thẳng đứng dễ đọc.
+1. **Mở trực tiếp trên Trình duyệt**: Mở file `index.html` bằng trình duyệt web bất kỳ (Chrome, Edge, Firefox).
+2. **Kiểm tra trên Desktop (> 992px)**:
+   - Thanh Navbar cố định trên cùng (`sticky-top`) với menu dạt sang bên phải (`ms-auto`).
+   - Hero Banner hiển thị rõ ràng lời kêu gọi *Tìm Hiểu Ngay*.
+   - Khối About và khối Dịch Vụ 3 cột song song cân đối.
+   - Khối Liên hệ hiển thị nổi bật Email và Hotline.
+3. **Kiểm tra trên Mobile (< 768px)**:
+   - Nhấn `F12` $\rightarrow$ Nhấn `Ctrl + Shift + M` để vào chế độ Device Toolbar.
+   - Navbar tự động thu gọn lại thành biểu tượng nút bấm Hamburger 3 gạch $\rightarrow$ Click để mở/đóng menu.
+   - Các khối dịch vụ và khối liên hệ tự động chuyển đổi thành 1 cột dọc thẳng đứng dễ đọc.
 
 ---
 
 **Tác giả thực hiện:** Vũ Đức Đạt (VuDucDat2006)  
 **Khóa học:** CodeGym Web Development  
-**Nhánh GitHub:** [bootstrap-landing-page](https://github.com/VuDucDat2006/GitProject/tree/bootstrap-landing-page)
+**Nhánh GitHub:** [bootstrap-company-profile](https://github.com/VuDucDat2006/GitProject/tree/bootstrap-company-profile)
