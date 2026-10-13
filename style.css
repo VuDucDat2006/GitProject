@@ -1,5 +1,5 @@
 /* ========================================================
-   [Thực hành] Xây dựng Trang Chủ với Bootstrap - Custom CSS
+   [Thực hành] Tạo Bố Cục 3 Cột bằng Bootstrap Grid và Flexbox
    Tác giả: Vũ Đức Đạt (VuDucDat2006)
    ======================================================== */
 
@@ -19,11 +19,11 @@ html {
 body {
     font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     color: #2b303a;
-    background-color: #fdfdfe;
+    background-color: #f8fafc;
 }
 
 /* ==========================================
-   1. Navbar
+   1. Navbar & Header
    ========================================== */
 .navbar {
     background-color: var(--dark-bg) !important;
@@ -46,24 +46,37 @@ body {
 }
 
 /* ==========================================
-   2. Carousel Hero Section
+   2. Grid 3 Cột (Bước 1)
+   ========================================== */
+.grid-box {
+    min-height: 140px;
+    transition: transform var(--transition-smooth), box-shadow var(--transition-smooth);
+}
+
+.grid-box:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08) !important;
+}
+
+/* ==========================================
+   3. Carousel (Bước 4)
    ========================================== */
 .carousel-img {
-    height: 480px;
+    height: 460px;
     object-fit: cover;
-    filter: brightness(0.9);
+    filter: brightness(0.92);
 }
 
 @media (max-width: 768px) {
     .carousel-img {
-        height: 280px;
+        height: 260px;
     }
 }
 
 .carousel-caption {
-    bottom: 40px;
+    bottom: 30px;
     backdrop-filter: blur(8px);
-    max-width: 800px;
+    max-width: 700px;
     margin: 0 auto;
     left: 10%;
     right: 10%;
@@ -77,21 +90,7 @@ body {
 }
 
 /* ==========================================
-   3. Flexbox Welcome Cards
-   ========================================== */
-.flex-feature-card {
-    flex: 1 1 260px;
-    max-width: 320px;
-    transition: transform var(--transition-smooth), box-shadow var(--transition-smooth);
-}
-
-.flex-feature-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 12px 24px rgba(13, 110, 253, 0.1) !important;
-}
-
-/* ==========================================
-   4. Contact Form
+   4. Form Controls (Bước 6)
    ========================================== */
 .form-control {
     border-radius: 10px;
