@@ -1,0 +1,142 @@
+/* ==========================================================================
+   book_landing_page_mobile.css
+   Media queries tùy biến tối ưu hiển thị trên Mobile và Tablet
+   ========================================================================== */
+
+@media only screen and (max-width: 991px) {
+    .navbar {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .navbar-nav .nav-item {
+        padding: 0.3rem 0;
+    }
+
+    .hero-title {
+        font-size: 2.8rem;
+    }
+
+    .author-info-col .panel {
+        margin-left: 0;
+        margin-top: 25px;
+        padding: 30px 25px;
+    }
+
+    .cover .content > h1 {
+        font-size: 2.2rem;
+    }
+
+    .numbers {
+        margin-top: -40px;
+    }
+
+    .numbers .rect {
+        width: 14rem;
+        height: 10rem;
+        margin: 8px;
+    }
+
+    .numbers .rect h1 {
+        font-size: 2.5rem;
+    }
+
+    .purchase .cards .card {
+        width: 100%;
+        max-width: 340px;
+        margin: 15px auto;
+    }
+
+    .section-3 .desktop {
+        width: 100%;
+        max-width: 320px;
+        margin: 10px auto;
+        display: block;
+    }
+
+    .section-3 .col-md-5.text-md-right,
+    .section-3 .col-md-5.text-md-left {
+        text-align: center !important;
+    }
+
+    footer {
+        padding: 60px 20px 30px;
+        text-align: center;
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+
+    .newsletter-form {
+        max-width: 400px;
+        margin: 0 auto;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .hero-content {
+        padding-top: 20px;
+        padding-bottom: 40px;
+    }
+
+    .hero-title {
+        font-size: 2.2rem;
+    }
+
+    .hero-desc {
+        font-size: 1rem;
+    }
+
+    .book-cover-card {
+        width: 230px;
+        height: 330px;
+    }
+
+    .book-front {
+        padding: 25px 15px 15px 30px;
+    }
+
+    .book-front-title {
+        font-size: 1.15rem;
+    }
+
+    .book-icon {
+        font-size: 2.8rem;
+        margin: 10px 0;
+    }
+
+    .cover .content > h1 {
+        font-size: 1.8rem;
+    }
+
+    .cover .content > p {
+        font-size: 0.95rem;
+    }
+
+    .numbers .rect {
+        width: 44%;
+        min-width: 140px;
+        height: 8.5rem;
+        padding: 15px 10px;
+    }
+
+    .numbers .rect h1 {
+        font-size: 2rem;
+    }
+
+    .numbers .rect p {
+        font-size: 0.85rem;
+    }
+
+    .purchase h1,
+    .section-3 h1,
+    .section-4 .container h1 {
+        font-size: 2rem;
+    }
+
+    .hero-btns .btn {
+        width: 100%;
+        margin-right: 0 !important;
+    }
+}
