@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid Layout - [Thá»±c hÃ nh] CodeGym</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <!-- 1. HEADER (TIÃŠU Äá»€ Äáº¦U TRANG) -->
+        <header class="header">
+            <h1>Header</h1>
+            <p class="tagline">Trang web thá»±c hÃ nh xÃ¢y dá»±ng bá»‘ cá»¥c vá»›i CSS Grid Layout</p>
+        </header>
+
+        <!-- 2. SIDEBAR (THANH ÄIá»€U HÆ¯á»šNG / Ná»˜I DUNG PHá»¤) -->
+        <nav class="sidebar">
+            <h3>Sidebar</h3>
+            <ul class="nav-links">
+                <li><a href="#home">Trang chá»§</a></li>
+                <li><a href="#about">Giá»›i thiá»‡u</a></li>
+                <li><a href="#services">Dá»‹ch vá»¥</a></li>
+                <li><a href="#blog">BÃ i viáº¿t</a></li>
+                <li><a href="#contact">LiÃªn há»‡</a></li>
+            </ul>
+            <div class="sidebar-box">
+                <h4>ðŸ“Œ ChÃº thÃ­ch:</h4>
+                <p>Chiáº¿m 1 pháº§n (<code>1fr</code>) trÃªn Desktop. Tá»± Ä‘á»™ng chuyá»ƒn lÃªn trÃªn Content khi xem trÃªn Mobile.</p>
+            </div>
+        </nav>
+
+        <!-- 3. MAIN CONTENT (Ná»˜I DUNG CHÃNH) -->
+        <main class="content">
+            <h2>Ná»™i dung chÃ­nh</h2>
+            <p>
+                ChÃ o má»«ng báº¡n Ä‘áº¿n vá»›i bÃ i thá»±c hÃ nh xÃ¢y dá»±ng bá»‘ cá»¥c trang web hoÃ n chá»‰nh báº±ng <strong>CSS Grid</strong>. Bá»‘ cá»¥c nÃ y sá»­ dá»¥ng ká»¹ thuáº­t <code>grid-template-areas</code> tiÃªn tiáº¿n Ä‘á»ƒ trá»±c quan hÃ³a sÆ¡ Ä‘á»“ hiá»ƒn thá»‹.
+            </p>
+
+            <div class="feature-box">
+                <h3>ðŸ’¡ CÆ¡ cháº¿ hoáº¡t Ä‘á»™ng cá»§a CSS Grid Areas:</h3>
+                <ul>
+                    <li><strong>Desktop (> 768px):</strong> LÆ°á»›i 2 cá»™t (<code>1fr 3fr</code>) gá»“m 3 hÃ ng (<code>auto 1fr auto</code>). Header vÃ  Footer tráº£i dÃ i 2 cá»™t, Sidebar chiáº¿m 1 pháº§n bÃªn trÃ¡i vÃ  Content chiáº¿m 3 pháº§n bÃªn pháº£i.</li>
+                    <li><strong>Mobile (&le; 768px):</strong> LÆ°á»›i chuyá»ƒn sang 1 cá»™t duy nháº¥t (<code>1fr</code>) xáº¿p chá»“ng dá»c theo thá»© tá»±: Header &rarr; Sidebar &rarr; Content &rarr; Footer.</li>
+                </ul>
+            </div>
+
+            <p>
+                Nhá» thuá»™c tÃ­nh <code>height: 100vh</code> vÃ  hÃ ng giá»¯a cÃ³ Ä‘á»™ cao <code>1fr</code>, pháº§n Footer luÃ´n Ä‘Æ°á»£c ghim tá»± nhiÃªn á»Ÿ Ä‘Ã¡y mÃ n hÃ¬nh ngay cáº£ khi ná»™i dung ngáº¯n.
+            </p>
+        </main>
+
+        <!-- 4. FOOTER (CHÃ‚N TRANG) -->
+        <footer class="footer">
+            <p>Footer &bull; Báº£n quyá»n &copy; 2026 CodeGym Web Development</p>
+            <p class="author">Thá»±c hiá»‡n: <strong>VÅ© Äá»©c Äáº¡t (VuDucDat2006)</strong></p>
+        </footer>
+    </div>
+
+</body>
+</html>
