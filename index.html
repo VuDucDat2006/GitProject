@@ -1,0 +1,147 @@
+﻿<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[Thá»±c hÃ nh] CSS | grid-gap Property</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="page-header">
+        <h1>[Thá»±c hÃ nh] CSS | grid-gap Property</h1>
+        <p class="subtitle">TÃ¬m hiá»ƒu vÃ  thá»±c hÃ nh thiáº¿t láº­p khoáº£ng cÃ¡ch giá»¯a cÃ¡c hÃ ng vÃ  cá»™t báº±ng thuá»™c tÃ­nh viáº¿t táº¯t grid-gap / gap</p>
+    </header>
+
+    <main class="container">
+
+        <!-- THÃ”NG TIN LÆ¯U Ã CHUáº¨N HIá»†N Äáº I -->
+        <div class="note-box">
+            <span class="note-icon">ðŸ’¡</span>
+            <div>
+                <strong>LÆ°u Ã½ vá» chuáº©n CSS hiá»‡n Ä‘áº¡i:</strong> Thuá»™c tÃ­nh <code>grid-gap</code> lÃ  cÃ¡ch viáº¿t táº¯t (shorthand) ban Ä‘áº§u cá»§a CSS Grid. Hiá»‡n nay W3C Ä‘Ã£ chuáº©n hÃ³a thÃ nh <code>gap</code> Ä‘á»ƒ dÃ¹ng chung cho cáº£ <strong>CSS Grid</strong> vÃ  <strong>Flexbox</strong>. Trong dá»± Ã¡n nÃ y, chÃºng ta khai bÃ¡o cáº£ hai (<code>grid-gap</code> vÃ  <code>gap</code>) Ä‘á»ƒ Ä‘áº£m báº£o tá»‘i Æ°u tÆ°Æ¡ng thÃ­ch ngÆ°á»£c trÃªn má»i trÃ¬nh duyá»‡t.
+            </div>
+        </div>
+
+        <!-- ==========================================
+             VÃ Dá»¤ 1: KHOáº¢NG CÃCH HÃ€NG VÃ€ Cá»˜T Báº°NG NHAU (20px)
+             ========================================== -->
+        <section class="card">
+            <div class="card-header">
+                <span class="badge badge-blue">VÃ­ dá»¥ 1</span>
+                <h2>Thiáº¿t láº­p khoáº£ng cÃ¡ch hÃ ng vÃ  cá»™t báº±ng nhau (1 giÃ¡ trá»‹: 20px)</h2>
+            </div>
+            <div class="code-banner">
+                <code>grid-gap: 20px; /* TÆ°Æ¡ng Ä‘Æ°Æ¡ng: row-gap: 20px; column-gap: 20px; (Chuáº©n má»›i: gap: 20px;) */</code>
+            </div>
+            <p class="desc">
+                Khi chá»‰ truyá»n <strong>1 giÃ¡ trá»‹</strong> (<code>20px</code>), khoáº£ng cÃ¡ch nÃ y Ä‘Æ°á»£c Ã¡p dá»¥ng Ä‘á»“ng thá»i cho cáº£ khoáº£ng cÃ¡ch giá»¯a cÃ¡c hÃ ng láº«n khoáº£ng cÃ¡ch giá»¯a cÃ¡c cá»™t. LÆ°á»›i gá»“m 2 cá»™t &times; 2 hÃ ng vá»›i cÃ¡c khe há»Ÿ 20px Ä‘á»u nhau xung quanh má»—i Ã´.
+            </p>
+
+            <div class="demo-wrapper">
+                <div class="grid-container example-1">
+                    <div>Ã” 1</div>
+                    <div>Ã” 2</div>
+                    <div>Ã” 3</div>
+                    <div>Ã” 4</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================
+             VÃ Dá»¤ 2: KHOáº¢NG CÃCH HÃ€NG VÃ€ Cá»˜T KHÃC NHAU (30px 10px)
+             ========================================== -->
+        <section class="card">
+            <div class="card-header">
+                <span class="badge badge-green">VÃ­ dá»¥ 2</span>
+                <h2>Thiáº¿t láº­p khoáº£ng cÃ¡ch hÃ ng vÃ  cá»™t khÃ¡c nhau (2 giÃ¡ trá»‹: 30px 10px)</h2>
+            </div>
+            <div class="code-banner">
+                <code>grid-gap: 30px 10px; /* HÃ ng: 30px | Cá»™t: 10px (Chuáº©n má»›i: gap: 30px 10px;) */</code>
+            </div>
+            <p class="desc">
+                Khi truyá»n <strong>2 giÃ¡ trá»‹</strong>:<br>
+                - GiÃ¡ trá»‹ thá»© nháº¥t (<code>30px</code>): Khoáº£ng cÃ¡ch giá»¯a cÃ¡c hÃ ng (<code>grid-row-gap</code>).<br>
+                - GiÃ¡ trá»‹ thá»© hai (<code>10px</code>): Khoáº£ng cÃ¡ch giá»¯a cÃ¡c cá»™t (<code>grid-column-gap</code>).<br>
+                Nhá» váº­y, khoáº£ng cÃ¡ch giá»¯a 2 hÃ ng rá»™ng vÃ  thoÃ¡ng hÆ¡n khoáº£ng cÃ¡ch giá»¯a cÃ¡c cá»™t.
+            </p>
+
+            <div class="demo-wrapper">
+                <div class="grid-container example-2">
+                    <div>Ã” 1</div>
+                    <div>Ã” 2</div>
+                    <div>Ã” 3</div>
+                    <div>Ã” 4</div>
+                    <div>Ã” 5</div>
+                    <div>Ã” 6</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================
+             VÃ Dá»¤ 3: Má»ž Rá»˜NG - CHUáº¨N Má»šI GAP TRONG THá»°C Táº¾
+             ========================================== -->
+        <section class="card">
+            <div class="card-header">
+                <span class="badge badge-purple">VÃ­ dá»¥ 3 (Má»Ÿ rá»™ng)</span>
+                <h2>CÃº phÃ¡p chuáº©n hÃ³a <code>gap</code> trong CSS Grid hiá»‡n Ä‘áº¡i</h2>
+            </div>
+            <div class="code-banner">
+                <code>gap: 15px 35px; /* HÃ ng: 15px | Cá»™t: 35px */</code>
+            </div>
+            <p class="desc">
+                Minh há»a trá»±c quan vá»›i khoáº£ng cÃ¡ch hÃ ng háº¹p (<code>15px</code>) vÃ  khoáº£ng cÃ¡ch cá»™t rá»™ng (<code>35px</code>) Ä‘á»ƒ so sÃ¡nh Ä‘á»‘i chiáº¿u vá»›i VÃ­ dá»¥ 2.
+            </p>
+
+            <div class="demo-wrapper">
+                <div class="grid-container example-3">
+                    <div>Má»¥c A</div>
+                    <div>Má»¥c B</div>
+                    <div>Má»¥c C</div>
+                    <div>Má»¥c D</div>
+                    <div>Má»¥c E</div>
+                    <div>Má»¥c F</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tá»”NG Káº¾T & THÃ”NG TIN Há»ŒC VIÃŠN -->
+        <footer class="summary-footer">
+            <h3>ðŸ“‹ Báº£ng so sÃ¡nh cÃº phÃ¡p thuá»™c tÃ­nh grid-gap vÃ  gap</h3>
+            <table class="summary-table">
+                <thead>
+                    <tr>
+                        <th>CÃº phÃ¡p khai bÃ¡o</th>
+                        <th>Khoáº£ng cÃ¡ch hÃ ng (Row Gap)</th>
+                        <th>Khoáº£ng cÃ¡ch cá»™t (Column Gap)</th>
+                        <th>TÆ°Æ¡ng Ä‘Æ°Æ¡ng viáº¿t tÃ¡ch</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>grid-gap: 20px;</code></td>
+                        <td>20px</td>
+                        <td>20px</td>
+                        <td><code>row-gap: 20px; col-gap: 20px;</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>grid-gap: 30px 10px;</code></td>
+                        <td>30px</td>
+                        <td>10px</td>
+                        <td><code>row-gap: 30px; col-gap: 10px;</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>gap: 15px 35px;</code></td>
+                        <td>15px</td>
+                        <td>35px</td>
+                        <td>Chuáº©n CSS hiá»‡n Ä‘áº¡i (Grid & Flexbox)</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p class="student-info">Thá»±c hiá»‡n: <strong>VÅ© Äá»©c Äáº¡t (VuDucDat2006)</strong> &bull; BÃ i thá»±c hÃ nh: CSS | grid-gap Property</p>
+        </footer>
+
+    </main>
+
+</body>
+</html>
