@@ -1,0 +1,250 @@
+/* ========================================================
+   1. RESET & CẤU HÌNH CƠ BẢN (THEO ĐỀ BÀI)
+   ======================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #333333;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* ========================================================
+   2. HEADER & THANH ĐIỀU HƯỚNG
+   ======================================================== */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #222222;
+    padding: 18px 40px;
+    color: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: -0.5px;
+    color: #ffffff;
+}
+
+.nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav ul li a {
+    text-decoration: none;
+    color: #e0e0e0;
+    font-size: 15px;
+    font-weight: 500;
+    transition: color 0.25s ease;
+}
+
+.nav ul li a:hover {
+    color: #38bdf8;
+}
+
+/* ========================================================
+   3. HERO SECTION
+   ======================================================== */
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+    background: linear-gradient(180deg, #f8fafc 0%, #e2e8f0 100%);
+}
+
+.hero h1 {
+    font-size: 38px;
+    color: #0f172a;
+    margin-bottom: 15px;
+    letter-spacing: -0.5px;
+}
+
+.hero p {
+    font-size: 18px;
+    color: #475569;
+    margin-bottom: 25px;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #0284c7;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 12px 28px;
+    border-radius: 25px;
+    font-weight: bold;
+    font-size: 15px;
+    box-shadow: 0 4px 12px rgba(2, 132, 199, 0.3);
+    transition: all 0.25s ease;
+}
+
+.btn:hover {
+    background-color: #0369a1;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(2, 132, 199, 0.4);
+}
+
+/* ========================================================
+   4. SERVICES SECTION (DỊCH VỤ)
+   ======================================================== */
+.services {
+    text-align: center;
+    padding: 60px 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.services h2 {
+    font-size: 28px;
+    color: #1e293b;
+    margin-bottom: 35px;
+}
+
+.service-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 25px;
+}
+
+.service {
+    flex: 1;
+    min-width: 250px;
+    background-color: #e0f2fe;    /* Màu xanh nhạt theo yêu cầu bài học */
+    padding: 30px 20px;
+    border-radius: 10px;
+    border: 1px solid #bae6fd;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.service:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.service-icon {
+    font-size: 32px;
+    display: block;
+    margin-bottom: 12px;
+}
+
+.service h3 {
+    font-size: 20px;
+    color: #0369a1;
+    margin-bottom: 10px;
+}
+
+.service p {
+    font-size: 14.5px;
+    color: #334155;
+    line-height: 1.6;
+}
+
+/* ========================================================
+   5. TESTIMONIALS SECTION (ĐÁNH GIÁ KHÁCH HÀNG)
+   ======================================================== */
+.testimonials {
+    text-align: center;
+    padding: 60px 20px;
+    background-color: #e2e8f0;    /* Màu xám nền nhẹ theo đề bài */
+}
+
+.testimonials h2 {
+    font-size: 28px;
+    color: #1e293b;
+    margin-bottom: 30px;
+}
+
+.testimonial-container {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.testimonial {
+    flex: 1;
+    min-width: 280px;
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    border-left: 4px solid #0284c7;
+    text-align: left;
+}
+
+.testimonial .quote {
+    font-style: italic;
+    color: #334155;
+    font-size: 15px;
+    margin-bottom: 12px;
+}
+
+.testimonial .author {
+    display: block;
+    font-weight: bold;
+    color: #0369a1;
+    font-size: 13.5px;
+}
+
+/* ========================================================
+   6. FOOTER (CHÂN TRANG)
+   ======================================================== */
+.footer {
+    text-align: center;
+    padding: 25px 20px;
+    background-color: #1e293b;
+    color: #cbd5e1;
+    font-size: 14px;
+}
+
+/* ========================================================
+   7. RESPONSIVE VỚI MEDIA QUERIES (THEO ĐÚNG ĐỀ BÀI)
+   ======================================================== */
+@media (max-width: 768px) {
+    .header {
+        padding: 15px 20px;
+    }
+
+    .nav ul {
+        display: none;            /* Ẩn menu trên mobile theo đề bài */
+    }
+
+    .hero {
+        padding: 60px 20px;
+    }
+
+    .hero h1 {
+        font-size: 26px;
+    }
+
+    .service-container {
+        flex-direction: column;   /* Xếp dọc các khối dịch vụ trên mobile */
+    }
+
+    .service {
+        width: 100%;
+        min-width: unset;
+    }
+
+    .services,
+    .testimonials {
+        padding: 40px 20px;
+    }
+}
