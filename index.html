@@ -1,0 +1,152 @@
+﻿<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[Thá»±c hÃ nh] CSS | flex-grow Property</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="page-header">
+        <h1>[Thá»±c hÃ nh] CSS | flex-grow Property</h1>
+        <p class="subtitle">TÃ¬m hiá»ƒu vÃ  thá»±c hÃ nh kiá»ƒm soÃ¡t kháº£ nÄƒng tÄƒng trÆ°á»Ÿng vÃ  phÃ¢n phá»‘i khÃ´ng gian trá»‘ng cá»§a cÃ¡c Flex Items</p>
+    </header>
+
+    <main class="container">
+
+        <!-- NGUYÃŠN LÃ HOáº T Äá»˜NG Cá»¦A FLEX-GROW -->
+        <div class="note-box">
+            <span class="note-icon">ðŸ’¡</span>
+            <div>
+                <strong>Báº£n cháº¥t cá»§a thuá»™c tÃ­nh flex-grow:</strong>
+                <p>
+                    <code>flex-grow</code> xÃ¡c Ä‘á»‹nh <strong>tá»· lá»‡ pháº§n khÃ´ng gian cÃ²n trá»‘ng</strong> (Available Free Space) trong Flex Container mÃ  item sáº½ nháº­n thÃªm.
+                </p>
+                <ul>
+                    <li>GiÃ¡ trá»‹ máº·c Ä‘á»‹nh lÃ  <code>0</code>: Item giá»¯ nguyÃªn kÃ­ch thÆ°á»›c ban Ä‘áº§u, khÃ´ng má»Ÿ rá»™ng Ä‘á»ƒ chiáº¿m khÃ´ng gian thá»«a.</li>
+                    <li>Náº¿u chá»‰ cÃ³ 1 item cÃ³ <code>flex-grow > 0</code>: Item Ä‘Ã³ sáº½ nháº­n <strong>toÃ n bá»™</strong> pháº§n khÃ´ng gian cÃ²n trá»‘ng trong container.</li>
+                    <li>Náº¿u nhiá»u item cÃ³ <code>flex-grow > 0</code>: Pháº§n khÃ´ng gian thá»«a sáº½ Ä‘Æ°á»£c chia theo tá»· lá»‡ há»‡ sá»‘ cá»§a tá»«ng item.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- ==========================================
+             VÃ Dá»¤ 1 (YÃŠU Cáº¦U Äá»€ BÃ€I): 5 DIV, DIV THá»¨ 2 CÃ“ FLEX-GROW
+             ========================================== -->
+        <section class="card">
+            <div class="card-header">
+                <span class="badge badge-blue">YÃªu cáº§u Ä‘á» bÃ i</span>
+                <h2>VÃ­ dá»¥ 1: VÃ¹ng chá»©a gá»“m 5 div &bull; Ãp dá»¥ng <code>flex-grow</code> trÃªn div thá»© 2</h2>
+            </div>
+            <div class="code-banner">
+                <code>.item { width: 90px; flex-grow: 0; } .item2 { flex-grow: 1; /* Chiáº¿m trá»n khÃ´ng gian thá»«a */ }</code>
+            </div>
+            <p class="desc">
+                Container chá»©a 5 div. Bá»‘n div (1, 3, 4, 5) giá»¯ nguyÃªn kÃ­ch thÆ°á»›c ban Ä‘áº§u (90px) vÃ¬ cÃ³ <code>flex-grow: 0</code>. RiÃªng <strong>Div 2</strong> Ä‘Æ°á»£c gÃ¡n <code>flex-grow: 1</code> nÃªn tá»± Ä‘á»™ng má»Ÿ rá»™ng vÃ  nuá»‘t trá»n toÃ n bá»™ pháº§n khÃ´ng gian cÃ²n trá»‘ng trong container.
+            </p>
+
+            <div class="demo-wrapper">
+                <div class="flex-container example-1">
+                    <div class="item item1">Div 1<br><small>grow: 0</small></div>
+                    <div class="item item2 highlighted-blue">Div 2 (TÄƒng trÆ°á»Ÿng)<br><small>flex-grow: 1</small></div>
+                    <div class="item item3">Div 3<br><small>grow: 0</small></div>
+                    <div class="item item4">Div 4<br><small>grow: 0</small></div>
+                    <div class="item item5">Div 5<br><small>grow: 0</small></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================
+             VÃ Dá»¤ 2: Táº¤T Cáº¢ 5 DIV CÃ™NG CÃ“ FLEX-GROW: 1
+             ========================================== -->
+        <section class="card">
+            <div class="card-header">
+                <span class="badge badge-green">VÃ­ dá»¥ so sÃ¡nh 2</span>
+                <h2>VÃ­ dá»¥ 2: Cáº£ 5 div Ä‘á»u cÃ³ <code>flex-grow: 1</code> (Chia Ä‘á»u khÃ´ng gian)</h2>
+            </div>
+            <div class="code-banner">
+                <code>.item { flex-grow: 1; /* Cáº£ 5 item chia Ä‘á»u 100% chiá»u rá»™ng container */ }</code>
+            </div>
+            <p class="desc">
+                Khi táº¥t cáº£ 5 div Ä‘á»u cÃ³ há»‡ sá»‘ <code>flex-grow: 1</code> nhÆ° nhau, toÃ n bá»™ khÃ´ng gian cÃ²n trá»‘ng Ä‘Æ°á»£c chia Ä‘á»u thÃ nh 5 pháº§n báº±ng nhau, giÃºp cÃ¡c Ã´ cÃ³ chiá»u rá»™ng Ä‘á»“ng Ä‘á»u.
+            </p>
+
+            <div class="demo-wrapper">
+                <div class="flex-container example-2">
+                    <div class="item">Div 1 (grow: 1)</div>
+                    <div class="item">Div 2 (grow: 1)</div>
+                    <div class="item">Div 3 (grow: 1)</div>
+                    <div class="item">Div 4 (grow: 1)</div>
+                    <div class="item">Div 5 (grow: 1)</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================
+             VÃ Dá»¤ 3: PHÃ‚N CHIA Tá»¶ Lá»† TÄ‚NG TRÆ¯á»žNG KHÃC NHAU
+             ========================================== -->
+        <section class="card">
+            <div class="card-header">
+                <span class="badge badge-purple">VÃ­ dá»¥ so sÃ¡nh 3</span>
+                <h2>VÃ­ dá»¥ 3: PhÃ¢n chia khÃ´ng gian theo cÃ¡c tá»· lá»‡ khÃ¡c nhau (1 : 3 : 1 : 2 : 1)</h2>
+            </div>
+            <div class="code-banner">
+                <code>item1: grow 1 | item2: grow 3 | item3: grow 1 | item4: grow 2 | item5: grow 1</code>
+            </div>
+            <p class="desc">
+                KhÃ´ng gian thá»«a Ä‘Æ°á»£c chia thÃ nh <code>1 + 3 + 1 + 2 + 1 = 8 pháº§n</code>. Div 2 nháº­n 3/8 (nhiá»u nháº¥t), Div 4 nháº­n 2/8, cÃ¡c div cÃ²n láº¡i nháº­n 1/8.
+            </p>
+
+            <div class="demo-wrapper">
+                <div class="flex-container example-3">
+                    <div class="item ex3-1">Div 1 (g: 1)</div>
+                    <div class="item ex3-2 highlighted-purple">Div 2 (g: 3)</div>
+                    <div class="item ex3-3">Div 3 (g: 1)</div>
+                    <div class="item ex3-4 highlighted-indigo">Div 4 (g: 2)</div>
+                    <div class="item ex3-5">Div 5 (g: 1)</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tá»”NG Káº¾T & THÃ”NG TIN Há»ŒC VIÃŠN -->
+        <footer class="summary-footer">
+            <h3>ðŸ“‹ Báº£ng tá»•ng há»£p cÃº phÃ¡p thuá»™c tÃ­nh flex-grow</h3>
+            <table class="summary-table">
+                <thead>
+                    <tr>
+                        <th>GiÃ¡ trá»‹</th>
+                        <th>Ã nghÄ©a / MÃ´ táº£</th>
+                        <th>HÃ nh vi hiá»ƒn thá»‹</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>0</code> (máº·c Ä‘á»‹nh)</td>
+                        <td>KhÃ´ng tÄƒng trÆ°á»Ÿng</td>
+                        <td>Giá»¯ nguyÃªn kÃ­ch thÆ°á»›c ban Ä‘áº§u, khÃ´ng má»Ÿ rá»™ng</td>
+                    </tr>
+                    <tr>
+                        <td><code>number</code> (vd: 1, 2, 3...)</td>
+                        <td>Há»‡ sá»‘ tá»· lá»‡ tÄƒng trÆ°á»Ÿng so vá»›i cÃ¡c item khÃ¡c</td>
+                        <td>Nháº­n pháº§n khÃ´ng gian trá»‘ng theo tá»· sá»‘ há»‡ sá»‘ / tá»•ng há»‡ sá»‘</td>
+                    </tr>
+                    <tr>
+                        <td><code>initial</code></td>
+                        <td>ÄÆ°a vá» giÃ¡ trá»‹ máº·c Ä‘á»‹nh cá»§a CSS</td>
+                        <td>TÆ°Æ¡ng Ä‘Æ°Æ¡ng <code>flex-grow: 0;</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>inherit</code></td>
+                        <td>Káº¿ thá»«a giÃ¡ trá»‹ tá»« pháº§n tá»­ cha</td>
+                        <td>Nháº­n cÃ¹ng giÃ¡ trá»‹ flex-grow cá»§a tháº» cha</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p class="student-info">Thá»±c hiá»‡n: <strong>VÅ© Äá»©c Äáº¡t (VuDucDat2006)</strong> &bull; BÃ i thá»±c hÃ nh: CSS | flex-grow Property</p>
+        </footer>
+
+    </main>
+
+</body>
+</html>
