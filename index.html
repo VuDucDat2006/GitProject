@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[Thực hành] Sử dụng Box Model 2</title>
+    <style>
+        body {
+            font-family: Arial, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: #f8fafc;
+            color: #1e293b;
+            padding: 40px 20px;
+            margin: 0;
+        }
+
+        .container {
+            max-width: 650px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 35px 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            border: 1px solid #e2e8f0;
+            text-align: center;
+        }
+
+        h1 {
+            color: #1e40af;
+            font-size: 24px;
+            margin-top: 0;
+            margin-bottom: 8px;
+            border-bottom: 2px solid #dbeafe;
+            padding-bottom: 10px;
+        }
+
+        .subtitle {
+            color: #64748b;
+            font-size: 14px;
+            margin-bottom: 30px;
+        }
+
+        /* KHU VỰC HIỂN THỊ DEMO ĐÚNG THEO MÃ NGUỒN YÊU CẦU */
+        .demo-stage {
+            background-color: #fdf2f2;
+            padding: 40px 20px;
+            border-radius: 10px;
+            border: 1px dashed #fca5a5;
+            margin-bottom: 30px;
+        }
+
+        /* Khối ngoài */
+        .outer-box {
+            margin: auto;
+            padding: 35px;
+            width: 80px;
+            box-shadow: inset 0 0 22px indianred;
+            border-radius: 50%;
+            background-color: #ffffff;
+        }
+
+        /* Khối trong lồng nhau */
+        .outer-box > .inner-box {
+            padding: 0 0px 100px 0px;
+            border-radius: 3%;
+            box-shadow: inset 0 0 22px seagreen;
+            background-color: rgba(46, 139, 87, 0.05);
+        }
+
+        /* GIẢI THÍCH CHI TIẾT CÁC THUỘC TÍNH */
+        .info-card {
+            background-color: #f1f5f9;
+            border-radius: 8px;
+            padding: 20px 24px;
+            text-align: left;
+            border-left: 5px solid #2563eb;
+        }
+
+        .info-card h2 {
+            font-size: 16px;
+            color: #1e3a8a;
+            margin-top: 0;
+            margin-bottom: 12px;
+        }
+
+        .info-list {
+            margin: 0;
+            padding-left: 20px;
+            font-size: 14px;
+            line-height: 1.8;
+            color: #334155;
+        }
+
+        code {
+            background-color: #e2e8f0;
+            color: #1e293b;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: monospace;
+            font-size: 13px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>[Thực hành] Sử dụng Box Model 2</h1>
+        <p class="subtitle">Quan sát hiệu ứng bo góc (border-radius) và đổ bóng bên trong (box-shadow: inset)</p>
+
+        <!-- Khung hiển thị 2 khối div lồng nhau theo đúng đề bài -->
+        <div class="demo-stage">
+            <div class="outer-box">
+                <div class="inner-box"></div>
+            </div>
+        </div>
+
+        <!-- Bảng giải thích cơ chế hoạt động -->
+        <div class="info-card">
+            <h2>Phân tích hiệu ứng CSS được sử dụng:</h2>
+            <ul class="info-list">
+                <li><code>box-shadow: inset 0 0 22px indianred;</code>: Tạo hiệu ứng đổ bóng mờ 22px màu đỏ gạch tỏa ngược từ đường viền <strong>vào phía bên trong</strong> của khối hình tròn bên ngoài.</li>
+                <li><code>border-radius: 50%;</code>: Bo cong 50% biến khối <code>div</code> ngoài cùng thành hình tròn hoàn hảo.</li>
+                <li><code>div > div (inner-box)</code>: Khối bên trong có chiều cao được tạo bởi <code>padding-bottom: 100px;</code> kèm đổ bóng trong màu xanh lá cây <code>box-shadow: inset 0 0 22px seagreen;</code>.</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
