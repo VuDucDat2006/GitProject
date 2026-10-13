@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bá»‘ cá»¥c vá»›i Float vÃ  Overflow - [BÃ i táº­p] CodeGym</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="wrapper">
+        <!-- 1. TIÃŠU Äá»€ H1 THEO YÃŠU Cáº¦U Äá»€ BÃ€I -->
+        <h1>Bá»‘ cá»¥c trang vá»›i float vÃ  overflow</h1>
+        <p class="subtitle">KhÃ¡m phÃ¡ sá»©c máº¡nh cá»§a <code>float</code> Ä‘á»ƒ dÃ n 2 cá»™t vÃ  <code>overflow</code> Ä‘á»ƒ xá»­ lÃ½ ná»™i dung dÃ i láº«n chá»‘ng sáº­p chiá»u cao khá»‘i cha.</p>
+
+        <!-- 2. KHá»I CHá»¨A 2 Cá»˜T DÃ™NG FLOAT (THEO Äá»€ BÃ€I) -->
+        <div class="container">
+            <div class="left-column">
+                <h3>Cá»™t TrÃ¡i (50% - float: left)</h3>
+                <p>Ná»™i dung bÃªn trÃ¡i. Cá»™t nÃ y sá»­ dá»¥ng <code>float: left;</code> Ä‘á»ƒ bÃ¡m sÃ¡t mÃ©p trÃ¡i cá»§a khá»‘i chá»©a.</p>
+                <p>Nhá» cÃ³ <code>box-sizing: border-box;</code>, lá»›p Ä‘á»‡m <code>padding: 20px</code> Ä‘Æ°á»£c tÃ­nh gá»™p bÃªn trong bá» rá»™ng 50%, giÃºp hai cá»™t khÃ´ng bao giá» bá»‹ rá»›t hÃ ng.</p>
+            </div>
+            <div class="right-column">
+                <h3>Cá»™t Pháº£i (50% - float: right)</h3>
+                <p>Ná»™i dung bÃªn pháº£i. Cá»™t nÃ y sá»­ dá»¥ng <code>float: right;</code> Ä‘á»ƒ bÃ¡m sÃ¡t mÃ©p pháº£i cá»§a khá»‘i chá»©a.</p>
+                <p>Khá»‘i cha <code>.container</code> Ã¡p dá»¥ng <code>overflow: hidden;</code> Ä‘á»ƒ táº¡o ngá»¯ cáº£nh Ä‘á»‹nh dáº¡ng khá»‘i (BFC), tá»± Ä‘á»™ng Ã´m trá»n láº¥y hai cá»™t mÃ  khÃ´ng cáº§n thÃªm tháº» clear!</p>
+            </div>
+        </div>
+
+        <!-- 3. KHá»I Ná»˜I DUNG DÃ€I KIá»‚M TRA OVERFLOW (THEO Äá»€ BÃ€I) -->
+        <div class="section-title">
+            <h3>ðŸ“Œ Khá»‘i Kiá»ƒm Tra Thuá»™c TÃ­nh Overflow (300px &times; 100px)</h3>
+            <p>Cuá»™n chuá»™t bÃªn trong Ã´ mÃ u Ä‘á» san hÃ´ bÃªn dÆ°á»›i Ä‘á»ƒ xem thanh cuá»™n hoáº¡t Ä‘á»™ng:</p>
+        </div>
+
+        <div class="overflow-box">
+            ÄÃ¢y lÃ  ná»™i dung ráº¥t dÃ i mÃ  chÃºng ta kiá»ƒm tra overflow. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident!
+        </div>
+
+        <!-- 4. GHI CHÃš Tá»”NG Káº¾T VÃ€ TÃC GIáº¢ -->
+        <footer class="footer-info">
+            <p>âœ… <strong>Tá»•ng káº¿t ká»¹ thuáº­t:</strong> <code>overflow: hidden</code> dá»n sáº¡ch float cho <code>.container</code> &bull; <code>overflow: auto</code> táº¡o thanh cuá»™n mÆ°á»£t mÃ  cho <code>.overflow-box</code>.</p>
+            <p>Báº£n quyá»n &copy; 2026 CodeGym Practice &bull; Há»c viÃªn: <strong>VÅ© Äá»©c Äáº¡t (VuDucDat2006)</strong></p>
+        </footer>
+    </div>
+
+</body>
+</html>
