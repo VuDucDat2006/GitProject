@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bootstrap Grid System Layout - [Bài tập] CodeGym</title>
+    <title>Trang Đăng Ký Tài Khoản - [Bài tập] Bootstrap Forms CodeGym</title>
     <!-- Bootstrap 5.3.0 CSS CDN -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <!-- Custom CSS -->
@@ -12,285 +12,353 @@
 <body>
 
     <!-- ==========================================
-         1. HEADER: TIÊU ĐỀ TRANG WEB
-         ========================================== -->
-    <header class="site-header py-4 bg-primary text-white text-center shadow-sm">
-        <div class="container">
-            <div class="d-inline-block badge bg-white text-primary mb-2 px-3 py-2 fs-6 fw-bold shadow-sm">
-                ⚡ CodeGym Practice Project
-            </div>
-            <h1 class="display-5 fw-bold mb-2">Trang Tin Tức & Công Nghệ Số</h1>
-            <p class="lead mb-0 col-md-8 mx-auto opacity-90">
-                Thực hành ứng dụng toàn diện Bootstrap Containers và Grid System để kiến tạo bố cục 2 cột Responsive đa thiết bị
-            </p>
-        </div>
-    </header>
-
-    <!-- ==========================================
-         2. NAVBAR: THANH ĐIỀU HƯỚNG CÓ DROPDOWN
+         THANH ĐIỀU HƯỚNG NAVBAR
          ========================================== -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow-sm">
         <div class="container">
             <a class="navbar-brand fw-bold text-info" href="#">
-                <span class="brand-icon me-2">🌐</span>TechPortal
+                <span class="me-2">🛡️</span>AuthPortal
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navContent">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <div class="collapse navbar-collapse" id="navContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Trang Chủ</a>
+                        <a class="nav-link" href="#">Trang Chủ</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#main-content">Bài Viết Mới</a>
+                        <a class="nav-link" href="#form-analysis">Phân Tích Bootstrap Form</a>
                     </li>
-                    <!-- Dropdown Chuyên Mục -->
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Chuyên Mục
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#tech">💻 Công Nghệ</a></li>
-                            <li><a class="dropdown-item" href="#webdev">🌐 Lập Trình Web</a></li>
-                            <li><a class="dropdown-item" href="#bootstrap">🎨 Bootstrap 5 Grid</a></li>
-                            <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item" href="#uiux">📱 Thiết Kế UI/UX</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#grid-analysis">Phân Tích Grid</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contact">Liên Hệ</a>
+                    <li class="nav-item ms-lg-2">
+                        <a class="btn btn-outline-light btn-sm px-3" href="#">Đăng Nhập</a>
                     </li>
                 </ul>
-
-                <!-- Form tìm kiếm bổ trợ -->
-                <form class="d-flex" role="search">
-                    <input class="form-control form-control-sm me-2 bg-dark text-white border-secondary" type="search" placeholder="Tìm kiếm bài viết..." aria-label="Search">
-                    <button class="btn btn-outline-info btn-sm" type="submit">Tìm</button>
-                </form>
             </div>
         </div>
     </nav>
 
     <!-- ==========================================
-         3 & 4. BOOTSTRAP CONTAINER & GRID SYSTEM
-         Desktop (>= 992px): 2 cột (Main Content: col-lg-8, Sidebar: col-lg-4)
-         Mobile (< 992px): 1 cột xếp dọc (col-12)
+         CONTAINER CHỨA FORM ĐĂNG KÝ
+         Responsive: Desktop (col-lg-7, col-xl-6), Tablet (col-md-9), Mobile (col-12)
          ========================================== -->
-    <div class="container my-5">
-        <div class="row g-4">
-            
-            <!-- ==========================================
-                 3. MAIN CONTENT: CỘT NỘI DUNG CHÍNH (col-12 col-lg-8)
-                 ========================================== -->
-            <main class="col-12 col-lg-8" id="main-content">
-                <!-- Bài viết tiêu điểm -->
-                <article class="card border-0 shadow-sm rounded-4 overflow-hidden mb-4 main-feature-card">
-                    <div class="card-header-gradient p-4 text-white">
-                        <div class="d-flex justify-content-between align-items-center mb-2">
-                            <span class="badge bg-info text-dark px-3 py-1">Tiêu điểm</span>
-                            <small class="opacity-75">13/10/2026 &bull; Tác giả: Vũ Đức Đạt</small>
+    <main class="container my-5">
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-10 col-lg-8 col-xl-7">
+                
+                <!-- Card bọc Form Đăng Ký -->
+                <div class="card border-0 shadow-lg rounded-4 overflow-hidden register-card">
+                    <!-- Header của Form -->
+                    <div class="card-header bg-primary text-white text-center py-4">
+                        <div class="badge bg-white text-primary mb-2 px-3 py-1 fs-6 shadow-sm">
+                            Đăng Ký Thành Viên
                         </div>
-                        <h2 class="card-title fw-bold h3 mb-2">Làm Chủ Hệ Thống Lưới Bootstrap Grid System Từ Con Số 0</h2>
-                        <p class="card-text opacity-90 mb-0">
-                            Khám phá sức mạnh của hệ thống chia 12 cột linh hoạt của Bootstrap 5 giúp tối ưu hóa giao diện đa nền tảng một cách nhanh chóng và chuẩn xác nhất.
+                        <h2 class="fw-bold mb-1">Tạo Tài Khoản Mới</h2>
+                        <p class="text-white-50 mb-0 small">
+                            Điền thông tin bên dưới để trải nghiệm dịch vụ của chúng tôi
                         </p>
                     </div>
-                    <div class="card-body p-4 bg-white">
-                        <p class="text-muted leading-relaxed">
-                            Bootstrap Grid System sử dụng kỹ thuật <strong>CSS Flexbox</strong> mạnh mẽ được xây dựng sẵn để sắp xếp các phần tử vào một chuỗi các hàng (<code>row</code>) và cột (<code>col-*</code>). Bố cục này cho phép các lập trình viên dễ dàng phân chia tỷ lệ màn hình mà không cần phải viết hàng trăm dòng mã CSS Media Queries thủ công.
-                        </p>
 
-                        <!-- Lưới con lồng nhau (Nested Grid System) -->
-                        <div class="row g-3 my-3">
-                            <div class="col-sm-6">
-                                <div class="p-3 rounded-3 bg-light border h-100 feature-box">
-                                    <h5 class="fw-bold text-primary mb-2">🎯 Cơ Chế 12 Cột</h5>
-                                    <p class="text-muted small mb-0">Mỗi hàng (<code>row</code>) được chia thành tổng cộng 12 phần đơn vị. Chúng ta có thể kết hợp các tỷ lệ như 8:4, 6:6, 4:4:4 để định hình bố cục.</p>
-                                </div>
-                            </div>
-                            <div class="col-sm-6">
-                                <div class="p-3 rounded-3 bg-light border h-100 feature-box">
-                                    <h5 class="fw-bold text-success mb-2">📱 6 Điểm Ngắt Breakpoints</h5>
-                                    <p class="text-muted small mb-0">Hỗ trợ đầy đủ các tiền tố kích thước: <code>col-</code> (&lt;576px), <code>col-sm-</code>, <code>col-md-</code>, <code>col-lg-</code>, <code>col-xl-</code>, và <code>col-xxl-</code> (&ge;1400px).</p>
-                                </div>
-                            </div>
+                    <!-- Thân Form -->
+                    <div class="card-body p-4 p-md-5 bg-white">
+                        
+                        <!-- Thông báo đăng ký thành công (ẩn mặc định) -->
+                        <div class="alert alert-success alert-dismissible fade d-none" id="successAlert" role="alert">
+                            <strong>🎉 Đăng ký thành công!</strong> Cảm ơn bạn đã hoàn tất đăng ký tài khoản.
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                         </div>
 
-                        <p class="text-muted mb-4">
-                            Tại dự án thực hành này, chúng tôi áp dụng <code>col-12 col-lg-8</code> cho khối <strong>Main Content</strong> và <code>col-12 col-lg-4</code> cho khối <strong>Sidebar</strong>. Nhờ vậy, trên màn hình máy tính lớn (Desktop $\ge 992\text{px}$), hai khối hiển thị song song theo tỷ lệ vàng $8:4 = 2:1$; còn trên điện thoại di động ($&lt; 992\text{px}$), cả hai tự động giãn rộng 100% (12 cột) và xếp dọc thứ tự rất tiện theo dõi.
-                        </p>
-
-                        <div class="d-flex justify-content-between align-items-center pt-3 border-top">
-                            <div class="tags">
-                                <span class="badge bg-light text-secondary border me-1">#Bootstrap5</span>
-                                <span class="badge bg-light text-secondary border me-1">#GridSystem</span>
-                                <span class="badge bg-light text-secondary border">#Responsive</span>
+                        <form id="registerForm" class="needs-validation" novalidate>
+                            
+                            <!-- 1. Họ và tên (Input text) -->
+                            <div class="mb-3">
+                                <label for="fullName" class="form-label fw-semibold">
+                                    Họ và tên <span class="text-danger">*</span>
+                                </label>
+                                <input type="text" class="form-control" id="fullName" placeholder="Ví dụ: Nguyễn Văn An" required>
+                                <div class="invalid-feedback">
+                                    Vui lòng nhập họ và tên của bạn.
+                                </div>
                             </div>
-                            <a href="#grid-analysis" class="btn btn-outline-primary btn-sm px-3 rounded-pill fw-semibold">Xem Phân Tích Kỹ Thuật &darr;</a>
-                        </div>
+
+                            <!-- 2. Email (Input email) -->
+                            <div class="mb-3">
+                                <label for="emailInput" class="form-label fw-semibold">
+                                    Địa chỉ Email <span class="text-danger">*</span>
+                                </label>
+                                <input type="email" class="form-control" id="emailInput" placeholder="name@example.com" required>
+                                <div class="form-text text-muted">
+                                    Chúng tôi cam kết không chia sẻ email của bạn với bất kỳ bên thứ ba nào.
+                                </div>
+                                <div class="invalid-feedback">
+                                    Vui lòng nhập định dạng email hợp lệ (ví dụ: name@example.com).
+                                </div>
+                            </div>
+
+                            <!-- 3 & 4. Mật khẩu và Xác nhận mật khẩu (Row 2 cột trên Tablet/Desktop) -->
+                            <div class="row g-3 mb-3">
+                                <!-- Mật khẩu -->
+                                <div class="col-md-6">
+                                    <label for="passwordInput" class="form-label fw-semibold">
+                                        Mật khẩu <span class="text-danger">*</span>
+                                    </label>
+                                    <input type="password" class="form-control" id="passwordInput" placeholder="Tối thiểu 8 ký tự" minlength="8" required>
+                                    <div class="form-text text-muted">
+                                        Ít nhất 8 ký tự.
+                                    </div>
+                                    <div class="invalid-feedback">
+                                        Mật khẩu phải chứa ít nhất 8 ký tự.
+                                    </div>
+                                </div>
+
+                                <!-- Xác nhận mật khẩu -->
+                                <div class="col-md-6">
+                                    <label for="confirmPasswordInput" class="form-label fw-semibold">
+                                        Xác nhận mật khẩu <span class="text-danger">*</span>
+                                    </label>
+                                    <input type="password" class="form-control" id="confirmPasswordInput" placeholder="Nhập lại mật khẩu" required>
+                                    <div class="invalid-feedback" id="confirmPasswordFeedback">
+                                        Vui lòng nhập lại chính xác mật khẩu trên.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 5. Giới tính (Radio buttons) -->
+                            <div class="mb-3 p-3 bg-light rounded-3 border">
+                                <label class="form-label fw-semibold d-block mb-2 text-dark">
+                                    Giới tính <span class="text-danger">*</span>
+                                </label>
+                                <div class="d-flex flex-wrap gap-4">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="gender" id="genderMale" value="male" checked>
+                                        <label class="form-check-label" for="genderMale">
+                                            👨 Nam
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="gender" id="genderFemale" value="female">
+                                        <label class="form-check-label" for="genderFemale">
+                                            👩 Nữ
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="gender" id="genderOther" value="other">
+                                        <label class="form-check-label" for="genderOther">
+                                            🌈 Khác
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 6. Sở thích (Checkboxes) -->
+                            <div class="mb-3 p-3 bg-light rounded-3 border">
+                                <label class="form-label fw-semibold d-block mb-2 text-dark">
+                                    Sở thích cá nhân
+                                </label>
+                                <div class="row g-2">
+                                    <div class="col-sm-6">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="hobbyCoding" checked>
+                                            <label class="form-check-label" for="hobbyCoding">
+                                                💻 Lập trình & Công nghệ
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="hobbyReading">
+                                            <label class="form-check-label" for="hobbyReading">
+                                                📚 Đọc sách & Nghiên cứu
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="hobbyMusic">
+                                            <label class="form-check-label" for="hobbyMusic">
+                                                🎵 Âm nhạc & Giải trí
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="hobbySports">
+                                            <label class="form-check-label" for="hobbySports">
+                                                ⚽ Thể thao & Du lịch
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 7. Quốc gia (Dropdown Select) -->
+                            <div class="mb-4">
+                                <label for="countrySelect" class="form-label fw-semibold">
+                                    Quốc gia <span class="text-danger">*</span>
+                                </label>
+                                <select class="form-select" id="countrySelect" required>
+                                    <option value="" selected disabled>-- Vui lòng chọn quốc gia --</option>
+                                    <option value="VN">🇻🇳 Việt Nam</option>
+                                    <option value="US">🇺🇸 Hoa Kỳ (United States)</option>
+                                    <option value="JP">🇯🇵 Nhật Bản (Japan)</option>
+                                    <option value="KR">🇰🇷 Hàn Quốc (South Korea)</option>
+                                    <option value="SG">🇸🇬 Singapore</option>
+                                    <option value="AU">🇦🇺 Úc (Australia)</option>
+                                    <option value="OTHER">🌐 Quốc gia khác</option>
+                                </select>
+                                <div class="invalid-feedback">
+                                    Vui lòng lựa chọn quốc gia của bạn.
+                                </div>
+                            </div>
+
+                            <!-- Đồng ý điều khoản -->
+                            <div class="mb-4">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="termsCheck" required>
+                                    <label class="form-check-label small text-muted" for="termsCheck">
+                                        Tôi đã đọc và đồng ý với <a href="#" class="text-primary text-decoration-none">Điều khoản dịch vụ</a> và <a href="#" class="text-primary text-decoration-none">Chính sách bảo mật</a>.
+                                    </label>
+                                    <div class="invalid-feedback">
+                                        Bạn phải đồng ý với điều khoản trước khi đăng ký.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 8. Nút bấm tương tác: Submit & Reset Buttons -->
+                            <div class="d-grid gap-2">
+                                <button type="submit" class="btn btn-primary btn-lg shadow-sm fw-semibold">
+                                    🚀 Đăng Ký Tài Khoản
+                                </button>
+                                <button type="reset" class="btn btn-outline-secondary btn-sm" id="resetBtn">
+                                    Làm lại form
+                                </button>
+                            </div>
+
+                            <!-- Text liên kết đăng nhập -->
+                            <p class="text-center text-muted small mt-4 mb-0">
+                                Đã có tài khoản? <a href="#" class="text-primary fw-semibold text-decoration-none">Đăng nhập tại đây</a>
+                            </p>
+                        </form>
                     </div>
-                </article>
+                </div>
 
-                <!-- Bảng phân tích kỹ thuật Grid System -->
-                <section class="card border-0 shadow-sm rounded-4 p-4 mb-4 bg-white" id="grid-analysis">
-                    <h3 class="fw-bold mb-3 text-dark">📋 Bảng Phân Tích Cấu Trúc Grid System Đã Áp Dụng</h3>
+            </div>
+        </div>
+
+        <!-- ==========================================
+             BẢNG PHÂN TÍCH KỸ THUẬT BOOTSTRAP FORMS
+             ========================================== -->
+        <div class="row justify-content-center mt-5" id="form-analysis">
+            <div class="col-12 col-md-10 col-lg-8 col-xl-7">
+                <div class="card border-0 shadow-sm rounded-4 p-4 bg-white">
+                    <h3 class="fw-bold mb-3 text-dark h4">📋 Bảng Phân Tích Các Thành Phần Bootstrap Form Đã Sử Dụng</h3>
                     <div class="table-responsive">
                         <table class="table table-hover align-middle mb-0">
                             <thead class="table-dark">
                                 <tr>
-                                    <th scope="col">Phần tử / Vị trí</th>
+                                    <th scope="col">Thành phần</th>
                                     <th scope="col">Class Bootstrap</th>
-                                    <th scope="col">Hành vi Desktop (&ge;992px)</th>
-                                    <th scope="col">Hành vi Mobile (&lt;992px)</th>
+                                    <th scope="col">Mục đích & Tác dụng kỹ thuật</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td><strong>1. Khung bao bọc</strong></td>
-                                    <td><code>.container</code></td>
-                                    <td>Giới hạn chiều rộng tối đa (1140px/1320px) căn giữa trang</td>
-                                    <td>Tự động co giãn 100% có padding lề 2 bên</td>
+                                    <td><strong>1. Ô nhập liệu (Input)</strong></td>
+                                    <td><code>.form-control</code></td>
+                                    <td>Tạo giao diện input chuẩn, bo tròn viền, có hiệu ứng focus viền xanh sáng</td>
                                 </tr>
                                 <tr>
-                                    <td><strong>2. Hàng phân chia</strong></td>
-                                    <td><code>.row .g-4</code></td>
-                                    <td>Tạo flex container ngang với khoảng cách các cột là 1.5rem (24px)</td>
-                                    <td>Tự động xếp các cột con thành nhiều dòng</td>
+                                    <td><strong>2. Nhãn trường</strong></td>
+                                    <td><code>.form-label</code></td>
+                                    <td>Tạo khoảng cách margin-bottom chuẩn giữa nhãn và ô nhập</td>
                                 </tr>
                                 <tr>
-                                    <td><strong>3. Cột chính (Main)</strong></td>
-                                    <td><code>.col-12 .col-lg-8</code></td>
-                                    <td>Chiếm <strong>8 / 12</strong> cột (khoảng 66.67% chiều ngang)</td>
-                                    <td>Chiếm <strong>12 / 12</strong> cột (100% chiều ngang, nằm trên)</td>
+                                    <td><strong>3. Hộp chọn (Select)</strong></td>
+                                    <td><code>.form-select</code></td>
+                                    <td>Định dạng menu thả xuống có mũi tên chỉ xuống đồng nhất đa trình duyệt</td>
                                 </tr>
                                 <tr>
-                                    <td><strong>4. Cột phụ (Sidebar)</strong></td>
-                                    <td><code>.col-12 .col-lg-4</code></td>
-                                    <td>Chiếm <strong>4 / 12</strong> cột (khoảng 33.33% chiều ngang)</td>
-                                    <td>Chiếm <strong>12 / 12</strong> cột (100% chiều ngang, nằm dưới)</td>
+                                    <td><strong>4. Radio & Checkbox</strong></td>
+                                    <td><code>.form-check .form-check-input .form-check-label</code></td>
+                                    <td>Tạo nút tròn Radio và ô vuông Checkbox chuẩn Bootstrap với kích thước và màu sắc tinh tế</td>
                                 </tr>
                                 <tr>
-                                    <td><strong>5. Menu điều hướng</strong></td>
-                                    <td><code>.navbar-expand-lg</code></td>
-                                    <td>Dàn hàng ngang đầy đủ menu và dropdown</td>
-                                    <td>Thu gọn thành nút bấm icon Hamburger 3 gạch</td>
+                                    <td><strong>5. Chữ hướng dẫn</strong></td>
+                                    <td><code>.form-text .text-muted</code></td>
+                                    <td>Hiển thị dòng ghi chú phụ nhỏ mờ bên dưới ô nhập liệu</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>6. Nút bấm (Button)</strong></td>
+                                    <td><code>.btn .btn-primary .btn-lg</code></td>
+                                    <td>Nút bấm nổi bật kích thước lớn, màu xanh chính, có bóng đổ mềm</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>7. Căn chỉnh lề</strong></td>
+                                    <td><code>.text-center, .mb-3, .p-4</code></td>
+                                    <td>Căn giữa tiêu đề, khoảng cách biên dưới và khoảng cách đệm nội dung chuẩn</td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
-                </section>
-            </main>
-
-            <!-- ==========================================
-                 4. SIDEBAR: CỘT THÔNG TIN PHỤ (col-12 col-lg-4)
-                 Hiển thị bên phải trên Desktop, xếp dưới trên Mobile
-                 ========================================== -->
-            <aside class="col-12 col-lg-4" id="sidebar">
-                <div class="sidebar-wrapper">
-                    
-                    <!-- Khối 1: Tìm kiếm -->
-                    <div class="card border-0 shadow-sm rounded-4 p-4 mb-4 bg-white sidebar-card">
-                        <h4 class="fw-bold h5 mb-3 text-dark">🔍 Tìm Kiếm Thông Tin</h4>
-                        <div class="input-group">
-                            <input type="text" class="form-control" placeholder="Từ khóa tìm kiếm..." aria-label="Tìm kiếm">
-                            <button class="btn btn-primary" type="button">Tìm</button>
-                        </div>
-                    </div>
-
-                    <!-- Khối 2: Chuyên mục danh mục (List Group) -->
-                    <div class="card border-0 shadow-sm rounded-4 p-4 mb-4 bg-white sidebar-card">
-                        <h4 class="fw-bold h5 mb-3 text-dark">📂 Chuyên Mục Nổi Bật</h4>
-                        <div class="list-group list-group-flush">
-                            <a href="#" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center px-0 py-2 border-0">
-                                <span>💻 Bootstrap 5 Components</span>
-                                <span class="badge bg-primary rounded-pill">18</span>
-                            </a>
-                            <a href="#" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center px-0 py-2 border-0">
-                                <span>📱 Grid System & Responsive</span>
-                                <span class="badge bg-success rounded-pill">25</span>
-                            </a>
-                            <a href="#" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center px-0 py-2 border-0">
-                                <span>🎨 CSS Flexbox & Box Model</span>
-                                <span class="badge bg-info text-dark rounded-pill">12</span>
-                            </a>
-                            <a href="#" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center px-0 py-2 border-0">
-                                <span>🚀 Web Design UI/UX</span>
-                                <span class="badge bg-warning text-dark rounded-pill">9</span>
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- Khối 3: Bài viết xem nhiều nhất -->
-                    <div class="card border-0 shadow-sm rounded-4 p-4 mb-4 bg-white sidebar-card">
-                        <h4 class="fw-bold h5 mb-3 text-dark">🔥 Bài Viết Đọc Nhiều</h4>
-                        <div class="recent-posts">
-                            <div class="d-flex align-items-center mb-3">
-                                <span class="badge bg-primary-subtle text-primary me-3 fs-5 p-2 rounded-3">01</span>
-                                <div>
-                                    <a href="#" class="text-decoration-none text-dark fw-semibold small d-block mb-1 hover-primary">
-                                        Hướng dẫn tạo Navbar Responsive với Bootstrap
-                                    </a>
-                                    <small class="text-muted">1.8k lượt xem</small>
-                                </div>
-                            </div>
-                            <div class="d-flex align-items-center mb-3">
-                                <span class="badge bg-success-subtle text-success me-3 fs-5 p-2 rounded-3">02</span>
-                                <div>
-                                    <a href="#" class="text-decoration-none text-dark fw-semibold small d-block mb-1 hover-primary">
-                                        Xây dựng Landing Page doanh nghiệp chuyên nghiệp
-                                    </a>
-                                    <small class="text-muted">1.4k lượt xem</small>
-                                </div>
-                            </div>
-                            <div class="d-flex align-items-center">
-                                <span class="badge bg-info-subtle text-info me-3 fs-5 p-2 rounded-3">03</span>
-                                <div>
-                                    <a href="#" class="text-decoration-none text-dark fw-semibold small d-block mb-1 hover-primary">
-                                        Sự khác biệt giữa CSS Grid và Flexbox hiện đại
-                                    </a>
-                                    <small class="text-muted">950 lượt xem</small>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Khối 4: Thông tin tác giả thực hiện -->
-                    <div class="card border-0 shadow-sm rounded-4 p-4 bg-primary text-white sidebar-card author-box">
-                        <div class="d-flex align-items-center mb-3">
-                            <div class="author-avatar me-3">👨‍💻</div>
-                            <div>
-                                <h5 class="fw-bold mb-0">Vũ Đức Đạt</h5>
-                                <small class="opacity-75">GitHub: VuDucDat2006</small>
-                            </div>
-                        </div>
-                        <p class="small opacity-90 mb-0">
-                            Học viên CodeGym Web Development &bull; Dự án bài tập thiết kế trang web bằng hệ thống lưới Bootstrap Grid System.
-                        </p>
-                    </div>
-
                 </div>
-            </aside>
-            
+            </div>
         </div>
-    </div>
+    </main>
 
     <!-- ==========================================
-         5. FOOTER: CHÂN TRANG
+         FOOTER
          ========================================== -->
-    <footer class="site-footer bg-dark text-white text-center py-4 border-top" id="contact">
+    <footer class="bg-dark text-white text-center py-4 border-top mt-auto">
         <div class="container">
-            <p class="mb-1">&copy; 2026 TechPortal. All rights reserved.</p>
+            <p class="mb-1">&copy; 2026 AuthPortal. All rights reserved.</p>
             <small class="text-secondary">
-                Học viên thực hiện: <strong>Vũ Đức Đạt (VuDucDat2006)</strong> &bull; [Bài tập] Thiết kế Trang Web với Bootstrap Grid System &bull; CodeGym
+                Học viên thực hiện: <strong>Vũ Đức Đạt (VuDucDat2006)</strong> &bull; [Bài tập] Thiết kế Trang Đăng Ký với Bootstrap Forms &bull; CodeGym
             </small>
         </div>
     </footer>
 
-    <!-- Bootstrap 5.3.0 JS Bundle (Bao gồm Popper cho Dropdown & Toggler) -->
+    <!-- Bootstrap 5.3.0 JS Bundle -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Script tương tác xác thực Form Bootstrap -->
+    <script>
+        (() => {
+            'use strict';
+            const form = document.getElementById('registerForm');
+            const password = document.getElementById('passwordInput');
+            const confirmPassword = document.getElementById('confirmPasswordInput');
+            const successAlert = document.getElementById('successAlert');
+
+            form.addEventListener('submit', event => {
+                let isValid = form.checkValidity();
+
+                // Kiểm tra khớp mật khẩu
+                if (password.value !== confirmPassword.value) {
+                    confirmPassword.setCustomValidity('Mật khẩu không khớp!');
+                    isValid = false;
+                } else {
+                    confirmPassword.setCustomValidity('');
+                }
+
+                if (!isValid) {
+                    event.preventDefault();
+                    event.stopPropagation();
+                } else {
+                    event.preventDefault(); // Ngăn submit reload trang cho mục đích demo
+                    successAlert.classList.remove('d-none');
+                    successAlert.classList.add('show');
+                    window.scrollTo({ top: successAlert.offsetTop - 80, behavior: 'smooth' });
+                }
+
+                form.classList.add('was-validated');
+            }, false);
+
+            document.getElementById('resetBtn').addEventListener('click', () => {
+                form.classList.remove('was-validated');
+                successAlert.classList.add('d-none');
+                successAlert.classList.remove('show');
+            });
+        })();
+    </script>
 </body>
 </html>
