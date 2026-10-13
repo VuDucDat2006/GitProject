@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[Thực hành] Tạo menu ngang (Horizontal Dropdown Menu)</title>
+    <style>
+        /* 1. Đặt phông chữ cố định và reset căn lề */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f4f6f9;
+            color: #333333;
+            padding: 40px;
+        }
+
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            background: #ffffff;
+            padding: 30px 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        }
+
+        h1 {
+            font-size: 24px;
+            color: #111111;
+            margin-bottom: 8px;
+            border-bottom: 2px solid #222222;
+            padding-bottom: 8px;
+        }
+
+        .instruction {
+            font-size: 15px;
+            color: #555555;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+
+        /* ---------------------------------------------------- */
+        /* 2. ĐỊNH DẠNG MENU NGANG (HORIZONTAL DROPDOWN MENU)   */
+        /* ---------------------------------------------------- */
+
+        /* Phân vùng cho trình đơn: chiều cao, viền, lề và màu nền */
+        #menu {
+            height: 42px;
+            background-color: #000000;
+            border-radius: 4px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+            position: relative;
+            z-index: 100;
+        }
+
+        #menu ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        /* Các phần tử trong danh sách cấp 1: xếp hàng ngang bằng float: left */
+        #menu ul li {
+            float: left;                /* Xếp các mục nằm ngang thành một hàng */
+            position: relative;         /* Neo toạ độ cho menu con buông xuống */
+            list-style: none;           /* Xoá dấu chấm tròn đầu dòng */
+        }
+
+        /* Định dạng các liên kết trong trình đơn: cố định độ rộng, chiều cao, văn bản */
+        #menu ul li a {
+            display: block;             /* Chiếm trọn không gian ô li */
+            width: 150px;               /* Cố định độ rộng mỗi mục */
+            height: 42px;               /* Chiều cao mục chọn */
+            line-height: 42px;          /* Căn giữa chữ theo chiều dọc */
+            text-align: center;         /* Căn giữa chữ theo chiều ngang */
+            text-decoration: none;      /* Bỏ gạch chân */
+            color: #ffffff;             /* Chữ màu trắng */
+            background-color: #000000;  /* Màu nền đen */
+            font-size: 15px;
+            font-weight: 500;
+            transition: background-color 0.25s ease;
+        }
+
+        /* Khi đưa con trỏ chuột qua: chuyển màu nền liên kết sang màu ĐỎ theo đề bài */
+        #menu ul li a:hover,
+        #menu ul li:hover > a {
+            background-color: #e74c3c;  /* Màu đỏ nổi bật */
+            color: #ffffff;
+        }
+
+        /* Danh sách con (trình đơn con buông xuống): vị trí hiển thị so với mục cha */
+        #menu ul ul {
+            position: absolute;         /* Định vị tuyệt đối theo li cha */
+            top: 42px;                  /* Buông xuống ngay phía dưới menu cha */
+            left: 0;                    /* Căn thẳng mép trái của mục cha */
+            visibility: hidden;         /* Mặc định ẩn menu con */
+            opacity: 0;
+            transition: opacity 0.2s ease, visibility 0.2s ease;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+        }
+
+        /* Các mục li bên trong danh sách con: xếp dọc (xoá bỏ float: left) */
+        #menu ul ul li {
+            float: none;                /* Trình đơn con xếp theo chiều dọc */
+        }
+
+        /* Màu nền riêng cho các mục con */
+        #menu ul ul li a {
+            background-color: #1a1a1a;
+            border-top: 1px solid #333333;
+            text-align: left;
+            padding-left: 20px;
+            width: 180px;               /* Có thể mở rộng để chữ dài không bị xuống dòng */
+        }
+
+        #menu ul ul li a:hover {
+            background-color: #c0392b;  /* Màu đỏ đậm hơn khi hover vào mục con */
+        }
+
+        /* Khi di chuột qua mục cha: hiển thị menu con tương ứng */
+        #menu ul li:hover > ul {
+            visibility: visible;        /* Hiển thị trình đơn con */
+            opacity: 1;
+        }
+
+        /* Clearfix để xử lý tràn float */
+        #menu:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        /* ---------------------------------------------------- */
+        /* 3. KHU VỰC GIẢI THÍCH CHI TIẾT TỪNG BƯỚC */
+        /* ---------------------------------------------------- */
+        .info-card {
+            margin-top: 50px;
+            background: #fafafa;
+            border-left: 4px solid #e74c3c;
+            border-top: 1px solid #e1e4e8;
+            border-right: 1px solid #e1e4e8;
+            border-bottom: 1px solid #e1e4e8;
+            padding: 24px 28px;
+            border-radius: 0 6px 6px 0;
+        }
+
+        .info-card h2 {
+            font-size: 18px;
+            color: #222222;
+            margin-bottom: 15px;
+        }
+
+        .step-list {
+            list-style: decimal;
+            margin-left: 20px;
+            line-height: 1.8;
+            font-size: 14.5px;
+            color: #444444;
+        }
+
+        .step-list code {
+            background-color: #f0f3f6;
+            padding: 2px 6px;
+            border-radius: 3px;
+            color: #c0392b;
+            font-size: 13.5px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>[Thực hành] Tạo menu ngang (Horizontal Dropdown Menu)</h1>
+        <p class="instruction">
+            Rê chuột vào các mục <strong>Khóa học</strong> hoặc <strong>Dịch vụ</strong> để quan sát menu con tự động <strong>buông xuống (dropdown)</strong> và nền đổi sang màu <strong>đỏ</strong>.
+        </p>
+
+        <!-- KHỐI TRÌNH ĐƠN MENU NGANG -->
+        <div id="menu">
+            <ul>
+                <li><a href="#home">Trang chủ</a></li>
+                <li>
+                    <a href="#courses">Khóa học &#9662;</a>
+                    <ul>
+                        <li><a href="#html-css">HTML5 &amp; CSS3</a></li>
+                        <li><a href="#javascript">JavaScript Pro</a></li>
+                        <li><a href="#react">ReactJS &amp; Redux</a></li>
+                        <li><a href="#nodejs">NodeJS &amp; Express</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#services">Dịch vụ &#9662;</a>
+                    <ul>
+                        <li><a href="#web-design">Thiết kế Web</a></li>
+                        <li><a href="#app-dev">Lập trình Mobile</a></li>
+                        <li><a href="#seo">Tối ưu SEO</a></li>
+                    </ul>
+                </li>
+                <li><a href="#news">Tin tức</a></li>
+                <li><a href="#about">Giới thiệu</a></li>
+                <li><a href="#contact">Liên hệ</a></li>
+            </ul>
+        </div>
+
+        <!-- GIẢI THÍCH CHI TIẾT CÁC BƯỚC THỰC HIỆN -->
+        <div class="info-card">
+            <h2>💡 Các bước & Thuộc tính quan trọng:</h2>
+            <ol class="step-list">
+                <li><strong>Xếp ngang các mục chính</strong>: Sử dụng <code>float: left;</code> trên các thẻ <code>#menu ul li</code> cấp 1 để các mục nằm thẳng hàng ngang.</li>
+                <li><strong>Tạo mốc toạ độ</strong>: Thiết lập <code>position: relative;</code> trên <code>#menu ul li</code> giúp menu con biết vị trí để buông xuống.</li>
+                <li><strong>Cố định kích thước & định dạng chữ</strong>: Thẻ <code>#menu ul li a</code> có <code>display: block; width: 150px; height: 42px; line-height: 42px; text-align: center;</code>.</li>
+                <li><strong>Hiệu ứng hover màu đỏ</strong>: <code>#menu ul li a:hover</code> chuyển <code>background-color: #e74c3c;</code> (màu đỏ) theo yêu cầu bài học.</li>
+                <li><strong>Định vị menu con buông xuống</strong>: <code>#menu ul ul</code> dùng <code>position: absolute; top: 42px; left: 0;</code> để nằm ngay dưới mục cha.</li>
+                <li><strong>Ẩn và hiện khi di chuột</strong>: Sử dụng <code>visibility: hidden;</code> trên menu con và kích hoạt lại bằng bộ chọn <code>#menu ul li:hover &gt; ul { visibility: visible; }</code>.</li>
+                <li><strong>Xếp dọc các mục con</strong>: Sử dụng <code>#menu ul ul li { float: none; }</code> để các mục con không tiếp tục float ngang mà rơi xuống dạng cột dọc.</li>
+            </ol>
+        </div>
+    </div>
+
+</body>
+</html>
