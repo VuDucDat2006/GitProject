@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phân tích & Xây dựng Cấu Trúc Website Template - MDN Web Docs</title>
+    <!-- Liên kết stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="website_template_analysis.css">
+</head>
+<body>
+
+    <!-- ==========================================
+         1. PHẦN HEADER (ĐẦU TRANG)
+         Chứa logo, tiêu đề trang và thanh tìm kiếm
+         ========================================== -->
+    <header class="header">
+        <div class="header-container">
+            <div class="brand-box">
+                <div class="brand-logo">MDN</div>
+                <div class="header-titles">
+                    <h1>MDN Web Docs - Cấu Trúc Website Template</h1>
+                    <p>Phân tích kiến trúc giao diện & xây dựng bố cục trang web chuẩn quốc tế</p>
+                </div>
+            </div>
+            <div class="search-box">
+                <input type="text" placeholder="Tìm kiếm tài liệu web...">
+                <button type="button">Tìm kiếm</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- ==========================================
+         2. PHẦN NAVIGATION MENU (THANH ĐIỀU HƯỚNG)
+         Ít nhất 4 mục điều hướng, dính cố định khi cuộn
+         ========================================== -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <ul class="nav-list">
+                <li><a href="#home" class="active">Trang chủ</a></li>
+                <li><a href="#html-css">HTML &amp; CSS</a></li>
+                <li><a href="#javascript">JavaScript</a></li>
+                <li><a href="#tutorials">Tài liệu Hướng dẫn</a></li>
+                <li><a href="#community">Cộng đồng</a></li>
+                <li><a href="#contact">Liên hệ</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- ==========================================
+         3. PHẦN CONTENT SECTION (KHU VỰC NỘI DUNG)
+         Bố cục 2 cột: Cột nội dung chính + Sidebar
+         ========================================== -->
+    <div class="main-wrapper" id="home">
+        
+        <!-- CỘT CHÍNH (MAIN CONTENT - 70%) -->
+        <main class="main-content">
+            <span class="content-badge">Báo cáo phân tích cấu trúc</span>
+            <h2>Phân Tích Cấu Trúc Bố Cục Trang Web Thực Tế</h2>
+            
+            <p class="intro-text">
+                Trong bài tập này, chúng ta tiến hành khảo sát và phân tích cấu trúc trang web tài liệu lập trình tiêu chuẩn 
+                <strong>MDN Web Docs (developer.mozilla.org)</strong>. Đây là một trong những website có cấu trúc chuẩn mực nhất thế giới,
+                được chia thành 4 khối chức năng rõ ràng giúp tối ưu trải nghiệm đọc (UX), điều hướng linh hoạt và chuẩn SEO.
+            </p>
+
+            <!-- 1. HÌNH ẢNH SƠ ĐỒ CẤU TRÚC (ARCHITECTURE DIAGRAM) -->
+            <figure class="image-showcase">
+                <img src="images/structure_diagram.png" alt="Sơ đồ cấu trúc Website Template">
+                <figcaption class="image-caption">Hình 1: Sơ đồ kiến trúc 4 khối thành phần của một Website Template chuẩn</figcaption>
+            </figure>
+
+            <!-- BẢNG PHÂN TÍCH 4 THÀNH PHẦN -->
+            <div class="analysis-grid">
+                
+                <div class="analysis-card">
+                    <h3>1. Header (Đầu trang)</h3>
+                    <p>
+                        Đặt ở trên cùng trang web, chiếm trọn 100% bề ngang. Chứa nhận diện thương hiệu (Logo, tiêu đề trang) 
+                        và công cụ tìm kiếm nhanh. Giúp người dùng xác định ngay lập tức trang web họ đang truy cập là gì.
+                    </p>
+                </div>
+
+                <div class="analysis-card">
+                    <h3>2. Navigation Menu (Thanh điều hướng)</h3>
+                    <p>
+                        Nằm ngay dưới Header, được ghim cố định (Sticky) khi cuộn chuột. Chứa 6 liên kết điều hướng cấp 1 
+                        (Trang chủ, HTML/CSS, JavaScript, Tài liệu, Cộng đồng, Liên hệ) với hiệu ứng gạch chân khi hover.
+                    </p>
+                </div>
+
+                <div class="analysis-card">
+                    <h3>3. Content Section (Nội dung chính)</h3>
+                    <p>
+                        Chia thành 2 cột bất đối xứng bằng CSS Grid/Flexbox: Cột chính (70%) chứa tiêu đề, bài viết, hình ảnh 
+                        minh họa và thẻ tóm tắt; Cột phụ (30%) chứa mục lục và các liên kết tham khảo nhanh.
+                    </p>
+                </div>
+
+                <div class="analysis-card">
+                    <h3>4. Footer (Chân trang)</h3>
+                    <p>
+                        Nằm ở đáy trang với nền màu tối tương phản. Cung cấp thông tin bản quyền pháp lý, chính sách bảo mật, 
+                        điều khoản sử dụng, tác giả thực hiện và liên kết mạng xã hội của cộng đồng.
+                    </p>
+                </div>
+
+            </div>
+
+            <!-- 2. HÌNH ẢNH CHỤP MÀN HÌNH TRANG GỐC (ORIGINAL SCREENSHOT) -->
+            <h3 style="margin-top: 30px; margin-bottom: 12px; color: #0f172a;">Ảnh Chụp Màn Hình Trang Web Gốc Đã Phân Tích</h3>
+            <p class="intro-text">
+                Dưới đây là hình ảnh chụp giao diện thực tế của website <strong>MDN Web Docs</strong> thể hiện trực quan 
+                vị trí sắp xếp của Header, Navbar, Main Content và Footer:
+            </p>
+
+            <figure class="image-showcase">
+                <img src="images/original_website_screenshot.png" alt="Ảnh chụp màn hình trang web gốc MDN Web Docs">
+                <figcaption class="image-caption">Hình 2: Ảnh chụp màn hình giao diện trang web gốc MDN Web Docs (developer.mozilla.org)</figcaption>
+            </figure>
+
+            <h3 style="margin-top: 25px; margin-bottom: 12px; color: #0f172a;">Đánh Giá Ưu Điểm Của Bố Cục Này</h3>
+            <p class="intro-text">
+                • <strong>Tính khoa học:</strong> Phân cấp thị giác rõ ràng, mắt người dùng quét từ trên xuống dưới một cách tự nhiên.<br>
+                • <strong>Dễ mở rộng:</strong> Khi cần thêm nội dung mới, cấu trúc thẻ (Card) và lưới (Grid) cho phép chèn linh hoạt mà không vỡ khung.<br>
+                • <strong>Thân thiện di động:</strong> Trên màn hình nhỏ, hệ thống 2 cột tự động chuyển thành 1 cột dọc đơn giản, dễ đọc.
+            </p>
+        </main>
+
+        <!-- CỘT THANH BÊN (SIDEBAR - 30%) -->
+        <aside class="sidebar">
+            
+            <div class="sidebar-widget">
+                <h3>Mục Lục Nhanh (TOC)</h3>
+                <ul class="sidebar-links">
+                    <li><a href="#home">👉 1. Tổng quan phân tích</a></li>
+                    <li><a href="#home">👉 2. Sơ đồ kiến trúc 4 phần</a></li>
+                    <li><a href="#home">👉 3. Chi tiết Header &amp; Nav</a></li>
+                    <li><a href="#home">👉 4. Chi tiết Content &amp; Footer</a></li>
+                    <li><a href="#home">👉 5. Ảnh chụp màn hình trang gốc</a></li>
+                </ul>
+            </div>
+
+            <div class="sidebar-widget pro-tip">
+                <h3>💡 Lời Khuyên Thiết Kế</h3>
+                <p>
+                    Luôn sử dụng các thẻ ngữ nghĩa (Semantic HTML5) như <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, 
+                    <code>&lt;main&gt;</code>, <code>&lt;aside&gt;</code>, <code>&lt;footer&gt;</code> thay vì lạm dụng thẻ <code>&lt;div&gt;</code>. 
+                    Điều này giúp bộ máy tìm kiếm (SEO) và trình đọc màn hình dễ dàng hiểu cấu trúc trang web của bạn.
+                </p>
+            </div>
+
+            <div class="sidebar-widget">
+                <h3>Công Nghệ Áp Dụng</h3>
+                <ul class="sidebar-links">
+                    <li><a href="#">• HTML5 Semantic Elements</a></li>
+                    <li><a href="#">• CSS Grid 2-Column Layout</a></li>
+                    <li><a href="#">• CSS Flexbox Alignment</a></li>
+                    <li><a href="#">• Sticky Navigation Bar</a></li>
+                    <li><a href="#">• Responsive Media Queries</a></li>
+                </ul>
+            </div>
+
+        </aside>
+
+    </div>
+
+    <!-- ==========================================
+         4. PHẦN FOOTER (CHÂN TRANG)
+         Chứa thông tin bản quyền và liên kết điều khoản
+         ========================================== -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-col">
+                <h4>Về Dự Án Phân Tích</h4>
+                <p>
+                    Bài tập phân tích và xây dựng cấu trúc Website Template dựa trên mô hình thực tế của MDN Web Docs. 
+                    Trang web được thiết kế bằng HTML5 và CSS3 thuần túy, chú trọng bố cục chuẩn và trải nghiệm người dùng.
+                </p>
+            </div>
+            <div class="footer-col">
+                <h4>Điều Hướng Nhanh</h4>
+                <ul>
+                    <li><a href="#home">Trang chủ</a></li>
+                    <li><a href="#html-css">Tài liệu HTML &amp; CSS</a></li>
+                    <li><a href="#javascript">Tài liệu JavaScript</a></li>
+                    <li><a href="#tutorials">Hướng dẫn thực hành</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Chính Sách &amp; Pháp Lý</h4>
+                <ul>
+                    <li><a href="#">Chính sách bảo mật</a></li>
+                    <li><a href="#">Điều khoản sử dụng</a></li>
+                    <li><a href="#">Giấy phép mã nguồn</a></li>
+                    <li><a href="#">Hỗ trợ học viên</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div>
+                &copy; 2026 MDN Web Docs Analysis. All rights reserved. &bull; Thực hiện bởi: <strong>Vũ Đức Đạt (VuDucDat2006)</strong>
+            </div>
+            <div>
+                Khóa học: <a href="#">Lập trình Web Front-End (CodeGym)</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
