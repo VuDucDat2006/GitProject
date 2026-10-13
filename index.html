@@ -1,0 +1,84 @@
+﻿<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang Chá»§ Giáº£n LÆ°á»£c - Fixed Header & Flexbox Layout</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- 1. HEADER Cá» Äá»ŠNH (FIXED HEADER) -->
+    <header class="main-header">
+        <h1>CodeGym Portal</h1>
+        <nav>
+            <ul>
+                <li><a href="#home" class="active">Trang chá»§</a></li>
+                <li><a href="#about">Giá»›i thiá»‡u</a></li>
+                <li><a href="#services">Dá»‹ch vá»¥</a></li>
+                <li><a href="#contact">LiÃªn há»‡</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- 2. KHU Vá»°C Bá» Cá»¤C CHÃNH (PAGE CONTAINER) -->
+    <div class="page-container">
+        <!-- SIDEBAR TRÃI -->
+        <aside class="sidebar left-sidebar">
+            <h3>Sidebar TrÃ¡i</h3>
+            <ul>
+                <li><a href="#">ðŸ“Œ KhÃ³a há»c Front-End</a></li>
+                <li><a href="#">ðŸ“Œ Láº­p trÃ¬nh HTML/CSS</a></li>
+                <li><a href="#">ðŸ“Œ CSS Box Model</a></li>
+                <li><a href="#">ðŸ“Œ CSS Flexbox Layout</a></li>
+                <li><a href="#">ðŸ“Œ Thuá»™c tÃ­nh Position</a></li>
+                <li><a href="#">ðŸ“Œ Quáº£n lÃ½ Layer z-index</a></li>
+            </ul>
+            <div class="sidebar-widget">
+                <h4>ðŸŽ¯ Lá»i khuyÃªn</h4>
+                <p>LuÃ´n thiáº¿t láº­p <code>padding-top</code> cho <code>body</code> khi dÃ¹ng Fixed Header Ä‘á»ƒ ná»™i dung khÃ´ng bá»‹ che khuáº¥t!</p>
+            </div>
+        </aside>
+
+        <!-- KHU Vá»°C Ná»˜I DUNG CHÃNH -->
+        <main class="main-content">
+            <h2>Ná»™i dung chÃ­nh cá»§a trang web</h2>
+            <p>ÄÃ¢y lÃ  khu vá»±c chá»©a ná»™i dung quan trá»ng nháº¥t cá»§a trang web. ChÃºng ta káº¿t há»£p <code>position: fixed</code> cho pháº§n Header vÃ  bá»‘ cá»¥c <code>Flexbox</code> cho 3 cá»™t ná»™i dung.</p>
+            
+            <div class="feature-card">
+                <h3>ðŸ’¡ PhÃ¢n tÃ­ch ká»¹ thuáº­t bá»‘ cá»¥c:</h3>
+                <ul>
+                    <li><strong><code>position: fixed; top: 0; left: 0; width: 100%;</code></strong>: Giá»¯ cho thanh Header luÃ´n dÃ­nh cháº·t mÃ©p trÃªn cÃ¹ng cá»§a mÃ n hÃ¬nh khi ngÆ°á»i dÃ¹ng cuá»™n chuá»™t.</li>
+                    <li><strong><code>z-index: 1000;</code></strong>: Äáº£m báº£o Header luÃ´n náº±m á»Ÿ lá»›p trÃªn cÃ¹ng (layer cao nháº¥t), khÃ´ng bá»‹ cÃ¡c pháº§n tá»­ ná»™i dung cuá»™n Ä‘Ã¨ lÃªn.</li>
+                    <li><strong><code>body { padding-top: 70px; }</code></strong>: BÃ¹ Ä‘áº¯p khoáº£ng khÃ´ng gian vÃ¬ Header Ä‘Ã£ tÃ¡ch khá»i luá»“ng tÃ i liá»‡u (document flow).</li>
+                    <li><strong><code>.page-container { display: flex; gap: 20px; }</code></strong>: Dá»… dÃ ng chia 3 cá»™t (Sidebar trÃ¡i 220px, Main Content tá»± co giÃ£n <code>flex-grow: 1</code>, Sidebar pháº£i 220px).</li>
+                </ul>
+            </div>
+
+            <h3>BÃ i viáº¿t chi tiáº¿t</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, amet. Magnam, cumque. Repellendus, ea! Reprehenderit, quod. Ullam, quas. Dolorum, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, amet. Magnam, cumque. Repellendus, ea! Reprehenderit, quod. Ullam, quas. Dolorum, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, amet. Magnam, cumque. Repellendus, ea! Reprehenderit, quod. Ullam, quas. Dolorum, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, amet. Magnam, cumque. Repellendus, ea! Reprehenderit, quod. Ullam, quas. Dolorum, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, amet. Magnam, cumque. Repellendus, ea! Reprehenderit, quod. Ullam, quas. Dolorum, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, amet. Magnam, cumque. Repellendus, ea! Reprehenderit, quod. Ullam, quas. Dolorum, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo.</p>
+        </main>
+
+        <!-- SIDEBAR PHáº¢I -->
+        <aside class="sidebar right-sidebar">
+            <h3>Sidebar Pháº£i</h3>
+            <div class="ad-box">
+                <h4>Quáº£ng cÃ¡o &amp; Tin ná»•i báº­t</h4>
+                <p>KhÃ³a há»c Láº­p trÃ¬nh Web Fullstack 2026 khai giáº£ng hÃ ng thÃ¡ng!</p>
+                <a href="#" class="btn-detail">Xem chi tiáº¿t</a>
+            </div>
+            <div class="author-box">
+                <h4>ThÃ´ng tin há»c viÃªn</h4>
+                <p>Há» tÃªn: <strong>VÅ© Äá»©c Äáº¡t</strong></p>
+                <p>GitHub: <code>VuDucDat2006</code></p>
+            </div>
+        </aside>
+    </div>
+
+</body>
+</html>
