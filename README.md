@@ -1,26 +1,19 @@
 ﻿# GitProject
 
-Dự án thực hành các thao tác cơ bản với Git và GitHub (CodeGym).
+Dự án thực hành các thao tác cơ bản với Git, GitHub và HTML cơ bản (CodeGym).
 
-## Mục Tiêu Thực Hành
-- Làm quen và thực hành các thao tác cơ bản với Git và GitHub.
-- Nắm được quy trình làm việc từ tạo repository, clone dự án về máy tính, đến đẩy mã nguồn lên GitHub.
+## Nhánh: `table-rowspan-colspan`
+Bài tập: **[Thực hành] Gộp ô trong bảng với rowspan và colspan**
 
-## Cấu Trúc Dự Án
-```plaintext
-GitProject/
-├── README.md
-└── source/
-    ├── index.html
-    └── news.html
-```
+### Mục tiêu:
+- Luyện tập sử dụng thuộc tính `rowspan` và `colspan` để gộp ô trong bảng HTML.
+- Tạo bảng Thời khóa biểu gồm các cột: `Thứ`, `Môn học`, `Giáo viên`.
+  - Gộp 2 hàng với `rowspan="2"` cho ô "Thứ Hai" (gồm môn Toán và Văn).
+  - Gộp 2 cột với `colspan="2"` cho ô "Nghỉ học" vào ngày Thứ Ba.
 
-## Các Bước Đã Thực Hiện
-1. Tạo repository `GitProject` trên GitHub.
-2. Clone repository về máy tính cá nhân bằng lệnh `git clone`.
-3. Tạo file `README.md`, đưa vào Staging Area (`git add`) và commit (`git commit -m "Add README.md"`).
-4. Đẩy file `README.md` lên GitHub (`git push origin main`).
-5. Tạo thư mục `source` chứa `index.html` và `news.html`.
-6. Đẩy thư mục `source` lên GitHub (`git add source/`, `git commit -m "Add source files"`, `git push origin main`).
+### Cấu trúc file:
+- `index.html`: File chính chứa bảng thời khóa biểu có định dạng CSS rõ ràng.
+- `timetable.html`: Trang hiển thị thời khóa biểu.
+- `table_span_simple.html`: File HTML cơ bản nguyên bản theo bài thực hành.
 
 Tác giả: Vũ Đức Đạt (VuDucDat2006)
