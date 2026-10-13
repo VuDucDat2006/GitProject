@@ -1,0 +1,85 @@
+﻿<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sticky Navigation - Thá»±c hÃ nh CSS position: sticky</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header pháº§n giá»›i thiá»‡u Ä‘áº§u trang (tuá»³ chá»n giÃºp quan sÃ¡t rÃµ hiá»‡u á»©ng sticky khi cuá»™n) -->
+    <header class="header-intro">
+        <div class="header-content">
+            <span class="badge">CSS Position: Sticky</span>
+            <h1>Demo Thanh Äiá»u HÆ°á»›ng DÃ­nh (Sticky Navigation)</h1>
+            <p>Cuá»™n chuá»™t xuá»‘ng phÃ­a dÆ°á»›i Ä‘á»ƒ tráº£i nghiá»‡m thanh menu tá»± Ä‘á»™ng dÃ­nh cháº·t vÃ o Ä‘á»‰nh mÃ n hÃ¬nh khi lÆ°á»›t trang.</p>
+        </div>
+    </header>
+
+    <!-- THANH ÄIá»€U HÆ¯á»šNG STICKY (THEO Äá»€ BÃ€I) -->
+    <nav class="sticky-menu">
+        <ul>
+            <li><a href="#home">Trang chá»§</a></li>
+            <li><a href="#about">Giá»›i thiá»‡u</a></li>
+            <li><a href="#services">Dá»‹ch vá»¥</a></li>
+            <li><a href="#contact">LiÃªn há»‡</a></li>
+        </ul>
+    </nav>
+    
+    <!-- CÃC SECTION Ná»˜I DUNG (THEO Äá»€ BÃ€I) -->
+    <section id="home">
+        <div class="content-box">
+            <h1>ChÃ o má»«ng Ä‘áº¿n vá»›i trang web cá»§a chÃºng tÃ´i</h1>
+            <p class="lead">HÃ£y cuá»™n xuá»‘ng Ä‘á»ƒ xem hiá»‡u á»©ng <code>position: sticky</code> hoáº¡t Ä‘á»™ng.</p>
+            <div class="card-highlight">
+                <h3>ðŸ’¡ Äiá»ƒm khÃ¡c biá»‡t giá»¯a Sticky vÃ  Fixed:</h3>
+                <ul>
+                    <li><strong><code>position: fixed</code></strong>: Pháº§n tá»­ luÃ´n luÃ´n ghim cháº·t vÃ o khung nhÃ¬n (viewport) ngay tá»« Ä‘áº§u, bá»‹ tÃ¡ch khá»i luá»“ng tÃ i liá»‡u thÃ´ng thÆ°á»ng.</li>
+                    <li><strong><code>position: sticky</code></strong>: Pháº§n tá»­ hoáº¡t Ä‘á»™ng nhÆ° <code>relative</code> khi náº±m trong vÃ¹ng hiá»ƒn thá»‹ bÃ¬nh thÆ°á»ng, nhÆ°ng sáº½ tá»± Ä‘á»™ng biáº¿n thÃ nh <code>fixed</code> dÃ­nh cháº·t khi Ä‘áº¡t Ä‘áº¿n ngÆ°á»¡ng (vÃ­ dá»¥: <code>top: 0</code>).</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    
+    <section id="about">
+        <div class="content-box">
+            <h2>Giá»›i thiá»‡u</h2>
+            <p>Ná»™i dung giá»›i thiá»‡u ráº¥t dÃ i... á»ž pháº§n nÃ y, báº¡n cÃ³ thá»ƒ tháº¥y thanh menu mÃ u Ä‘en phÃ­a trÃªn váº«n bÃ¡m cháº¯c cháº¯n á»Ÿ mÃ©p trÃªn cÃ¹ng cá»§a trÃ¬nh duyá»‡t.</p>
+            <p>Thuá»™c tÃ­nh <code>z-index: 1000</code> Ä‘áº£m báº£o thanh menu luÃ´n ná»•i lÃªn phÃ­a trÃªn toÃ n bá»™ cÃ¡c khá»‘i ná»™i dung khi cuá»™n qua.</p>
+        </div>
+    </section>
+    
+    <section id="services">
+        <div class="content-box">
+            <h2>Dá»‹ch vá»¥</h2>
+            <p>Danh sÃ¡ch cÃ¡c dá»‹ch vá»¥ cháº¥t lÆ°á»£ng cao mÃ  chÃºng tÃ´i cung cáº¥p:</p>
+            <div class="grid-services">
+                <div class="service-item">
+                    <h4>ðŸŒ Thiáº¿t Káº¿ Web</h4>
+                    <p>XÃ¢y dá»±ng giao diá»‡n Responsive, chuáº©n SEO vÃ  tá»‘i Æ°u tráº£i nghiá»‡m ngÆ°á»i dÃ¹ng.</p>
+                </div>
+                <div class="service-item">
+                    <h4>ðŸ“± á»¨ng Dá»¥ng Di Äá»™ng</h4>
+                    <p>PhÃ¡t triá»ƒn app di Ä‘á»™ng Ä‘a ná»n táº£ng mÆ°á»£t mÃ , hiá»‡u nÄƒng cao.</p>
+                </div>
+                <div class="service-item">
+                    <h4>â˜ï¸ Äiá»‡n ToÃ¡n ÄÃ¡m MÃ¢y</h4>
+                    <p>Giáº£i phÃ¡p lÆ°u trá»¯, báº£o máº­t vÃ  má»Ÿ rá»™ng háº¡ táº§ng trá»±c tuyáº¿n.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="contact">
+        <div class="content-box">
+            <h2>LiÃªn há»‡</h2>
+            <p>ThÃ´ng tin liÃªn há»‡ chi tiáº¿t:</p>
+            <p>ðŸ“§ Email: contact@codegym.vn | ðŸ“ž Äiá»‡n thoáº¡i: 024-668-9977</p>
+            <p>ðŸ¢ Äá»‹a chá»‰: HÃ  Ná»™i &amp; TP. Há»“ ChÃ­ Minh, Viá»‡t Nam</p>
+            <p class="footer-note">Há»c viÃªn thá»±c hiá»‡n: <strong>VÅ© Äá»©c Äáº¡t (VuDucDat2006)</strong></p>
+        </div>
+    </section>
+
+</body>
+</html>
