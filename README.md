@@ -2,25 +2,23 @@
 
 Dự án thực hành các thao tác cơ bản với Git và GitHub (CodeGym).
 
-## Mục Tiêu Thực Hành
-- Làm quen và thực hành các thao tác cơ bản với Git và GitHub.
-- Nắm được quy trình làm việc từ tạo repository, clone dự án về máy tính, đến đẩy mã nguồn lên GitHub.
+## Nhánh: `html-styles-exercise`
+Bài tập: **Định dạng văn bản với HTML Styles (CSS nội tuyến / Inline Styles)**.
 
-## Cấu Trúc Dự Án
+### Yêu cầu bài tập:
+1. `<h1>`: Màu xanh dương (`style="color: blue;"`) - *"Bài viết của tôi"*.
+2. `<p>` (1): Màu đỏ và chữ in đậm (`style="color: red; font-weight: bold;"`) - *"Đây là đoạn văn được định dạng màu sắc"*.
+3. `<p>` (2): Chữ in nghiêng và căn giữa (`style="font-style: italic; text-align: center;"`) - *"Tôi đang học HTML Styles"*.
+4. `<p>` (3): Kích thước chữ 20px và gạch chân (`style="font-size: 20px; text-decoration: underline;"`) - *"Định dạng văn bản giúp trang web đẹp hơn"*.
+
+### Cấu Trúc Thư Mục
 ```plaintext
 GitProject/
 ├── README.md
+├── index.html        # Trang web thực hành thuộc tính style inline
 └── source/
     ├── index.html
     └── news.html
 ```
-
-## Các Bước Đã Thực Hiện
-1. Tạo repository `GitProject` trên GitHub.
-2. Clone repository về máy tính cá nhân bằng lệnh `git clone`.
-3. Tạo file `README.md`, đưa vào Staging Area (`git add`) và commit (`git commit -m "Add README.md"`).
-4. Đẩy file `README.md` lên GitHub (`git push origin main`).
-5. Tạo thư mục `source` chứa `index.html` và `news.html`.
-6. Đẩy thư mục `source` lên GitHub (`git add source/`, `git commit -m "Add source files"`, `git push origin main`).
 
 Tác giả: Vũ Đức Đạt (VuDucDat2006)
