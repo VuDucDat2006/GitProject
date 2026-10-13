@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+  <defs>
+    <linearGradient id="cartGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff9900"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+  </defs>
+  <!-- Shopping cart body -->
+  <path d="M15 20 H25 L38 65 H80 L90 32 H30" fill="none" stroke="url(#cartGrad)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Grid lines inside cart -->
+  <path d="M40 40 H85 M43 50 H82 M50 35 L46 60 M65 35 L63 60 M78 35 L76 58" stroke="#ffb74d" stroke-width="2" stroke-linecap="round"/>
+  <!-- Wheels -->
+  <circle cx="45" cy="78" r="8" fill="#333333"/>
+  <circle cx="45" cy="78" r="3" fill="#ffffff"/>
+  <circle cx="75" cy="78" r="8" fill="#333333"/>
+  <circle cx="75" cy="78" r="3" fill="#ffffff"/>
+</svg>
