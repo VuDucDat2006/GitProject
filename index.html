@@ -1,0 +1,181 @@
+﻿<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[Thá»±c hÃ nh] CSS | grid-column-start Property</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="page-header">
+        <h1>[Thá»±c hÃ nh] CSS | grid-column-start Property</h1>
+        <p class="subtitle">KhÃ¡m phÃ¡ cÃ¡ch xÃ¡c Ä‘á»‹nh Ä‘Æ°á»ng káº» cá»™t (Column Line) báº¯t Ä‘áº§u cá»§a Grid Item trong CSS Grid</p>
+    </header>
+
+    <main class="container">
+
+        <!-- ==========================================
+             SÆ  Äá»’ TRá»°C QUAN ÄÆ¯á»œNG Káºº Cá»˜T (COLUMN LINES)
+             ========================================== -->
+        <section class="card diagram-card">
+            <h2>ðŸ“ SÆ¡ Ä‘á»“ nguyÃªn lÃ½ Ä‘Æ°á»ng káº» cá»™t (Column Lines) trong Grid 4 cá»™t</h2>
+            <p class="desc">
+                Trong lÆ°á»›i cÃ³ <strong>4 cá»™t</strong>, trÃ¬nh duyá»‡t sáº½ Ä‘Ã¡nh sá»‘ <strong>5 Ä‘Æ°á»ng káº» cá»™t</strong> tá»« trÃ¡i sang pháº£i (tá»« 1 Ä‘áº¿n 5). Thuá»™c tÃ­nh <code>grid-column-start</code> xÃ¡c Ä‘á»‹nh item sáº½ báº¯t Ä‘áº§u neo tá»« Ä‘Æ°á»ng káº» nÃ o:
+            </p>
+            <div class="grid-ruler">
+                <div class="ruler-col">
+                    <span class="line-tag start">Line 1</span>
+                    <span class="col-name">Cá»™t 1</span>
+                </div>
+                <div class="ruler-col">
+                    <span class="line-tag start">Line 2</span>
+                    <span class="col-name">Cá»™t 2</span>
+                </div>
+                <div class="ruler-col">
+                    <span class="line-tag start">Line 3</span>
+                    <span class="col-name">Cá»™t 3</span>
+                </div>
+                <div class="ruler-col">
+                    <span class="line-tag start">Line 4</span>
+                    <span class="col-name">Cá»™t 4</span>
+                    <span class="line-tag end">Line 5</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================
+             VÃ Dá»¤ 1: GIÃ TRá»Š AUTO
+             ========================================== -->
+        <section class="card">
+            <div class="card-header">
+                <span class="badge badge-blue">VÃ­ dá»¥ 1</span>
+                <h2>GiÃ¡ trá»‹ <code>auto</code> (Máº·c Ä‘á»‹nh theo luá»“ng sáº¯p xáº¿p)</h2>
+            </div>
+            <div class="code-banner">
+                <code>.item1 { grid-column-start: auto; }</code>
+            </div>
+            <p class="desc">
+                Khi sá»­ dá»¥ng <code>auto</code>, pháº§n tá»­ khÃ´ng thay Ä‘á»•i vá»‹ trÃ­ Ä‘áº·c biá»‡t nÃ o mÃ  tuÃ¢n theo thá»© tá»± sáº¯p xáº¿p máº·c Ä‘á»‹nh cá»§a Grid (báº¯t Ä‘áº§u táº¡i Ä‘Æ°á»ng káº» sá»‘ 1 cá»§a hÃ ng Ä‘áº§u tiÃªn).
+            </p>
+
+            <div class="demo-wrapper">
+                <div class="grid-container example-auto">
+                    <div class="item item1">Item 1 (auto)</div>
+                    <div class="item">Item 2</div>
+                    <div class="item">Item 3</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================
+             VÃ Dá»¤ 2: GIÃ TRá»Š SPAN N
+             ========================================== -->
+        <section class="card">
+            <div class="card-header">
+                <span class="badge badge-green">VÃ­ dá»¥ 2</span>
+                <h2>GiÃ¡ trá»‹ <code>span n</code> (KÃ©o dÃ i qua n cá»™t)</h2>
+            </div>
+            <div class="code-banner">
+                <code>.item1 { grid-column-start: span 2; }</code>
+            </div>
+            <p class="desc">
+                Pháº§n tá»­ <code>.item1</code> Ä‘Æ°á»£c bá»‘ trÃ­ kÃ©o dÃ i qua <strong>2 cá»™t</strong> (tÆ°Æ¡ng Ä‘Æ°Æ¡ng vá»›i viá»‡c chiáº¿m tá»« Ä‘Æ°á»ng káº» báº¯t Ä‘áº§u hiá»‡n táº¡i sang 2 khoáº£ng cá»™t). CÃ¡c pháº§n tá»­ tiáº¿p theo sáº½ tá»± Ä‘á»™ng dá»‹ch chuyá»ƒn sang cá»™t 3 vÃ  cá»™t 4.
+            </p>
+
+            <div class="demo-wrapper">
+                <div class="grid-container example-span">
+                    <div class="item item1 highlighted">Item 1 (span 2 cá»™t)</div>
+                    <div class="item">Item 2</div>
+                    <div class="item">Item 3</div>
+                    <div class="item">Item 4</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================
+             VÃ Dá»¤ 3: GIÃ TRá»Š COLUMN-LINE (ÄÆ¯á»œNG Káºº Cá»¤ THá»‚)
+             ========================================== -->
+        <section class="card">
+            <div class="card-header">
+                <span class="badge badge-purple">VÃ­ dá»¥ 3</span>
+                <h2>GiÃ¡ trá»‹ <code>column-line</code> (Chá»‰ Ä‘á»‹nh Ä‘Æ°á»ng káº» báº¯t Ä‘áº§u)</h2>
+            </div>
+            <div class="code-banner">
+                <code>.item1 { grid-column-start: 2; }</code>
+            </div>
+            <p class="desc">
+                Pháº§n tá»­ <code>.item1</code> Ä‘Æ°á»£c chá»‰ Ä‘á»‹nh báº¯t Ä‘áº§u chÃ­nh xÃ¡c tá»« <strong>Ä‘Æ°á»ng káº» cá»™t sá»‘ 2</strong> (Line 2). Do Ä‘Ã³, cá»™t 1 (tá»« Line 1 &rarr; Line 2) sáº½ bá»‹ bá» trá»‘ng á»Ÿ Ä‘áº§u hÃ ng, vÃ  Item 1 chiáº¿m Cá»™t 2, cÃ¡c Item tiáº¿p theo ná»‘i tiáº¿p á»Ÿ Cá»™t 3 vÃ  Cá»™t 4.
+            </p>
+
+            <div class="demo-wrapper">
+                <div class="grid-container example-line">
+                    <div class="item item1 highlighted-purple">Item 1 (báº¯t Ä‘áº§u táº¡i Line 2)</div>
+                    <div class="item">Item 2</div>
+                    <div class="item">Item 3</div>
+                    <div class="item">Item 4</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================
+             VÃ Dá»¤ 4: Káº¾T Há»¢P Báº®T Äáº¦U Vá»Š TRÃ Äáº¶C BIá»†T
+             ========================================== -->
+        <section class="card">
+            <div class="card-header">
+                <span class="badge badge-coral">VÃ­ dá»¥ 4 (Má»Ÿ rá»™ng)</span>
+                <h2>Báº¯t Ä‘áº§u táº¡i Ä‘Æ°á»ng káº» sá»‘ 3 (<code>grid-column-start: 3;</code>)</h2>
+            </div>
+            <div class="code-banner">
+                <code>.item1 { grid-column-start: 3; }</code>
+            </div>
+            <p class="desc">
+                Minh há»a khi Item 1 báº¯t Ä‘áº§u táº¡i <strong>Ä‘Æ°á»ng káº» cá»™t sá»‘ 3</strong> (Line 3). Hai cá»™t Ä‘áº§u tiÃªn (Cá»™t 1 vÃ  Cá»™t 2) Ä‘á»ƒ trá»‘ng, Item 1 xuáº¥t hiá»‡n táº¡i Cá»™t 3 vÃ  Item 2 xuáº¥t hiá»‡n táº¡i Cá»™t 4. CÃ¡c Item cÃ²n láº¡i (Item 3, 4) sáº½ rá»›t xuá»‘ng hÃ ng tiáº¿p theo.
+            </p>
+
+            <div class="demo-wrapper">
+                <div class="grid-container example-line3">
+                    <div class="item item1 highlighted-coral">Item 1 (Line 3)</div>
+                    <div class="item">Item 2</div>
+                    <div class="item">Item 3</div>
+                    <div class="item">Item 4</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tá»”NG Káº¾T & THÃ”NG TIN Há»ŒC VIÃŠN -->
+        <footer class="summary-footer">
+            <h3>ðŸ“‹ Báº£ng so sÃ¡nh cÃ¡c giÃ¡ trá»‹ cá»§a grid-column-start</h3>
+            <table class="summary-table">
+                <thead>
+                    <tr>
+                        <th>CÃº phÃ¡p giÃ¡ trá»‹</th>
+                        <th>Ã nghÄ©a & HÃ nh vi</th>
+                        <th>Hiá»‡u á»©ng hiá»ƒn thá»‹</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>auto</code></td>
+                        <td>Äáº·t theo luá»“ng máº·c Ä‘á»‹nh cá»§a Grid</td>
+                        <td>Chiáº¿m 1 Ã´ táº¡i vá»‹ trÃ­ tiáº¿p theo cÃ³ sáºµn</td>
+                    </tr>
+                    <tr>
+                        <td><code>span n</code></td>
+                        <td>KÃ©o dÃ i qua <em>n</em> cá»™t tÃ­nh tá»« Ä‘iá»ƒm hiá»‡n táº¡i</td>
+                        <td>Má»Ÿ rá»™ng kÃ­ch thÆ°á»›c item chiáº¿m Ä‘Ãºng <em>n</em> cá»™t</td>
+                    </tr>
+                    <tr>
+                        <td><code>column-line</code> (vd: <code>2</code>, <code>3</code>)</td>
+                        <td>Báº¯t Ä‘áº§u táº¡i Ä‘Æ°á»ng káº» cá»™t chá»‰ Ä‘á»‹nh cá»¥ thá»ƒ</td>
+                        <td>Dá»‹ch chuyá»ƒn vá»‹ trÃ­ item Ä‘áº¿n Ä‘Æ°á»ng káº» tÆ°Æ¡ng á»©ng, táº¡o khoáº£ng trá»‘ng náº¿u cáº§n</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p class="student-info">Thá»±c hiá»‡n: <strong>VÅ© Äá»©c Äáº¡t (VuDucDat2006)</strong> &bull; BÃ i thá»±c hÃ nh: CSS | grid-column-start Property</p>
+        </footer>
+
+    </main>
+
+</body>
+</html>
