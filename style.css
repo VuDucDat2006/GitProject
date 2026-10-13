@@ -1,0 +1,323 @@
+/* ========================================================
+   1. RESET & PHONG CÁCH CHUNG
+   ======================================================== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #f8fafc;
+    color: #1e293b;
+    line-height: 1.6;
+    padding-bottom: 40px;
+}
+
+/* Header */
+.page-header {
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+    color: #ffffff;
+    padding: 35px 20px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.page-header h1 {
+    font-size: 28px;
+    margin-bottom: 8px;
+    font-weight: 700;
+}
+
+.page-header .subtitle {
+    font-size: 15px;
+    color: #94a3b8;
+}
+
+/* Container */
+.container {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+/* Card */
+.card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 24px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e2e8f0;
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.card-header h2 {
+    font-size: 20px;
+    color: #0f172a;
+    font-weight: 600;
+}
+
+/* Badges */
+.badge {
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 4px 10px;
+    border-radius: 9999px;
+    letter-spacing: 0.5px;
+}
+
+.badge-blue   { background-color: #e0f2fe; color: #0284c7; }
+.badge-green  { background-color: #dcfce7; color: #16a34a; }
+.badge-purple { background-color: #f3e8ff; color: #9333ea; }
+.badge-coral  { background-color: #ffe4e6; color: #e11d48; }
+
+/* Code Banner */
+.code-banner {
+    background-color: #0f172a;
+    color: #38bdf8;
+    padding: 12px 16px;
+    border-radius: 6px;
+    font-family: "Fira Code", Consolas, Monaco, monospace;
+    font-size: 14.5px;
+    margin-bottom: 12px;
+}
+
+.desc {
+    color: #475569;
+    font-size: 14.5px;
+    margin-bottom: 18px;
+    line-height: 1.6;
+}
+
+.desc code {
+    background-color: #f1f5f9;
+    color: #0f172a;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-weight: 600;
+}
+
+/* ========================================================
+   2. SƠ ĐỒ RULER ĐƯỜNG KẺ CỘT (COLUMN LINES DIAGRAM)
+   ======================================================== */
+.diagram-card h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #0f172a;
+}
+
+.grid-ruler {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    background-color: #f1f5f9;
+    padding: 20px 14px 14px 14px;
+    border-radius: 8px;
+    border: 2px dashed #94a3b8;
+    margin-top: 15px;
+}
+
+.ruler-col {
+    position: relative;
+    background-color: #e2e8f0;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    border: 1px solid #cbd5e1;
+}
+
+.col-name {
+    font-weight: 600;
+    color: #475569;
+    font-size: 14px;
+}
+
+.line-tag {
+    position: absolute;
+    top: -24px;
+    background-color: #0284c7;
+    color: #ffffff;
+    font-size: 11px;
+    font-weight: bold;
+    padding: 2px 6px;
+    border-radius: 3px;
+    transform: translateX(-50%);
+}
+
+.line-tag.start {
+    left: 0;
+}
+
+.line-tag.end {
+    right: -24px;
+    transform: translateX(0);
+    background-color: #0369a1;
+}
+
+/* ========================================================
+   3. KHUNG DEMO & PHẦN TỬ CHUNG
+   ======================================================== */
+.demo-wrapper {
+    background-color: #f8fafc;
+    border: 2px dashed #cbd5e1;
+    border-radius: 8px;
+    padding: 16px;
+}
+
+.grid-container {
+    background-color: #ffffff;
+    padding: 12px;
+    border-radius: 6px;
+    border: 1px solid #e2e8f0;
+}
+
+.item {
+    background-color: #e2e8f0;
+    color: #475569;
+    padding: 20px 15px;
+    text-align: center;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 14.5px;
+    border: 1px solid #cbd5e1;
+    transition: all 0.2s ease;
+}
+
+/* Highlighted Item Styles */
+.highlighted {
+    background-color: #bbf7d0 !important;
+    color: #15803d !important;
+    border-color: #86efac !important;
+}
+
+.highlighted-purple {
+    background-color: #e9d5ff !important;
+    color: #7e22ce !important;
+    border-color: #d8b4fe !important;
+}
+
+.highlighted-coral {
+    background-color: #fecdd3 !important;
+    color: #be123c !important;
+    border-color: #fda4af !important;
+}
+
+/* ========================================================
+   4. VÍ DỤ 1: GRID-COLUMN-START: AUTO
+   ======================================================== */
+.example-auto {
+    display: grid;
+    grid-template-columns: 100px 100px 100px;
+    gap: 10px;
+}
+
+.example-auto .item1 {
+    grid-column-start: auto;
+    background-color: #bae6fd;
+    color: #0284c7;
+    border-color: #7dd3fc;
+}
+
+/* ========================================================
+   5. VÍ DỤ 2: GRID-COLUMN-START: SPAN 2
+   ======================================================== */
+.example-span {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.example-span .item1 {
+    grid-column-start: span 2;
+}
+
+/* ========================================================
+   6. VÍ DỤ 3: GRID-COLUMN-START: 2 (COLUMN-LINE 2)
+   ======================================================== */
+.example-line {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.example-line .item1 {
+    grid-column-start: 2;
+}
+
+/* ========================================================
+   7. VÍ DỤ 4: GRID-COLUMN-START: 3 (COLUMN-LINE 3)
+   ======================================================== */
+.example-line3 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.example-line3 .item1 {
+    grid-column-start: 3;
+}
+
+/* ========================================================
+   8. TỔNG KẾT & BẢNG SO SÁNH
+   ======================================================== */
+.summary-footer {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 24px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e2e8f0;
+}
+
+.summary-footer h3 {
+    margin-bottom: 16px;
+    color: #0f172a;
+    font-size: 18px;
+}
+
+.summary-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 16px;
+}
+
+.summary-table th,
+.summary-table td {
+    padding: 12px 14px;
+    text-align: left;
+    border-bottom: 1px solid #e2e8f0;
+    font-size: 14px;
+}
+
+.summary-table th {
+    background-color: #f8fafc;
+    color: #334155;
+    font-weight: 600;
+}
+
+.summary-table code {
+    background-color: #f1f5f9;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-weight: 600;
+    color: #0284c7;
+}
+
+.student-info {
+    font-size: 13.5px;
+    color: #64748b;
+    border-top: 1px solid #e2e8f0;
+    padding-top: 12px;
+}
