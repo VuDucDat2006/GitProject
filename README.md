@@ -1,26 +1,23 @@
 ﻿# GitProject
 
-Dự án thực hành các thao tác cơ bản với Git và GitHub (CodeGym).
+Dự án thực hành các thao tác cơ bản với Git, GitHub và HTML Form cơ bản (CodeGym).
 
-## Mục Tiêu Thực Hành
-- Làm quen và thực hành các thao tác cơ bản với Git và GitHub.
-- Nắm được quy trình làm việc từ tạo repository, clone dự án về máy tính, đến đẩy mã nguồn lên GitHub.
+## Nhánh: `user-registration-form`
+Bài tập: **[Bài tập] Tạo giao diện form đăng ký người dùng**
 
-## Cấu Trúc Dự Án
-```plaintext
-GitProject/
-├── README.md
-└── source/
-    ├── index.html
-    └── news.html
-```
+### Mô tả bài tập:
+- Tạo form đăng ký người dùng và gửi dữ liệu lên server CodeGym mẫu:
+  - **Endpoint / Action**: `http://demo.codegym.vn/6/registration_form/register.php`
+  - **Phương thức (Method)**: `POST`
+- **Các trường dữ liệu**:
+  - Họ và tên: `name="name"`
+  - Email: `name="email"`
+  - Số điện thoại: `name="phone"`
+  - Giới tính: `name="gender"` (Radio: Nam, Nữ, Khác)
+  - Nút đăng ký: Submit button
 
-## Các Bước Đã Thực Hiện
-1. Tạo repository `GitProject` trên GitHub.
-2. Clone repository về máy tính cá nhân bằng lệnh `git clone`.
-3. Tạo file `README.md`, đưa vào Staging Area (`git add`) và commit (`git commit -m "Add README.md"`).
-4. Đẩy file `README.md` lên GitHub (`git push origin main`).
-5. Tạo thư mục `source` chứa `index.html` và `news.html`.
-6. Đẩy thư mục `source` lên GitHub (`git add source/`, `git commit -m "Add source files"`, `git push origin main`).
+### Cấu trúc file:
+- `index.html`: Giao diện form đăng ký người dùng hoàn chỉnh với CSS card hiện đại, căn chỉnh và màu sắc trực quan.
+- `registration_form.html`: File HTML dự phòng tương đương.
 
 Tác giả: Vũ Đức Đạt (VuDucDat2006)
