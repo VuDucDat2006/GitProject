@@ -2,25 +2,26 @@
 
 Dự án thực hành các thao tác cơ bản với Git và GitHub (CodeGym).
 
-## Mục Tiêu Thực Hành
-- Làm quen và thực hành các thao tác cơ bản với Git và GitHub.
-- Nắm được quy trình làm việc từ tạo repository, clone dự án về máy tính, đến đẩy mã nguồn lên GitHub.
+## Nhánh: `simple-order-form`
+Bài tập: **Tạo form đơn giản (simpleform.html) với các phần tử text, button, radio, select**.
 
-## Cấu Trúc Dự Án
+### Các thành phần form đã triển khai:
+1. Thẻ `<form method="get" action="simpleform.html" class="wufoo">`.
+2. Font chữ theo yêu cầu: `"Lucida Grande", "Lucida Sans Unicode", Tahoma, sans-serif`.
+3. Dropdown lựa chọn sản phẩm với `<select>` và `<option>`.
+4. Nút chọn số lượng với `<input type="radio" name="rd"/>`.
+5. Trường nhập họ tên, email và số điện thoại với `<input type="text"/>`.
+6. Nút gửi form với `<input type="button" name="btSubmit" value="Submit"/>`.
+
+### Cấu Trúc Thư Mục
 ```plaintext
 GitProject/
 ├── README.md
+├── simpleform.html   # File giao diện Form đặt hàng Order Form
+├── index.html        # Trang chủ của nhánh (đồng bộ với simpleform.html)
 └── source/
     ├── index.html
     └── news.html
 ```
-
-## Các Bước Đã Thực Hiện
-1. Tạo repository `GitProject` trên GitHub.
-2. Clone repository về máy tính cá nhân bằng lệnh `git clone`.
-3. Tạo file `README.md`, đưa vào Staging Area (`git add`) và commit (`git commit -m "Add README.md"`).
-4. Đẩy file `README.md` lên GitHub (`git push origin main`).
-5. Tạo thư mục `source` chứa `index.html` và `news.html`.
-6. Đẩy thư mục `source` lên GitHub (`git add source/`, `git commit -m "Add source files"`, `git push origin main`).
 
 Tác giả: Vũ Đức Đạt (VuDucDat2006)
