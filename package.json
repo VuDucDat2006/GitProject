@@ -1,0 +1,18 @@
+{
+  "name": "sass-npm-cli-practice",
+  "version": "1.0.0",
+  "description": "Thực hành cài đặt và sử dụng SASS bằng npm & SASS CLI",
+  "scripts": {
+    "build:single": "sass styles.scss styles.css",
+    "watch:single": "sass styles.scss styles.css --watch",
+    "build:multi": "sass scss/:css/",
+    "watch:multi": "sass scss/:css/ --watch",
+    "build:compressed": "sass scss/:css/ --style=compressed",
+    "build": "npm run build:single && npm run build:multi"
+  },
+  "devDependencies": {
+    "sass": "^1.105.1"
+  },
+  "author": "VuDucDat2006",
+  "license": "MIT"
+}

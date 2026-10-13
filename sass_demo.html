@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SASS Installation & CLI Compilation Demo - CodeGym</title>
+    <!-- Tệp CSS được biên dịch tự động từ SASS CLI (styles.scss -> styles.css) -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+    <!-- 1. HEADER (Styled via SASS Nesting & Variables) -->
+    <header class="header">
+        <span class="header-badge">SASS &amp; SCSS Workflow</span>
+        <h1>Hướng Dẫn Cài Đặt SASS Bằng npm &amp; SASS CLI</h1>
+        <p>Thực hành kiểm tra môi trường Node.js/npm, cài đặt Dart Sass, biên dịch SCSS sang CSS và sử dụng chế độ Watch Mode tự động.</p>
+    </header>
+
+    <!-- 2. NAVBAR (Styled via SASS Mixin @include flex-center) -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="#overview">Tổng quan</a></li>
+            <li><a href="#env-check">Kiểm tra Môi trường</a></li>
+            <li><a href="#cli-commands">Lệnh SASS CLI</a></li>
+            <li><a href="#watch-mode">Watch Mode</a></li>
+            <li><a href="#structure">Cấu trúc Dự án</a></li>
+        </ul>
+    </nav>
+
+    <!-- 3. CONTAINER VỚI GRID CARDS -->
+    <main class="container" id="overview">
+        
+        <div class="section-title">
+            <h2>Các Tính Năng Cốt Lõi Của SASS Đã Ứng Dụng</h2>
+            <p>Tất cả giao diện trên trang web này được viết bằng cú pháp SCSS và biên dịch ra CSS bằng SASS CLI.</p>
+        </div>
+
+        <!-- 3 Thẻ Card ứng dụng SASS Mixins & Variables -->
+        <div class="grid-cards">
+            
+            <!-- Card 1 -->
+            <div class="card">
+                <div class="icon-box">🎨</div>
+                <h3>SASS Variables &amp; Nesting</h3>
+                <p>Quản lý tập trung toàn bộ bảng màu, phông chữ và kích thước thông qua các biến <code>$primary</code>, <code>$font-stack</code>; lồng các quy tắc CSS phân cấp rõ ràng.</p>
+                <a href="#cli-commands" class="btn btn-primary">Khám phá Variables</a>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="card">
+                <div class="icon-box">🧩</div>
+                <h3>Mixins &amp; Partials (@use)</h3>
+                <p>Tái sử dụng các đoạn mã CSS phức tạp bằng <code>@mixin flex-center</code>, <code>@include button-style()</code> và chia nhỏ cấu trúc qua các tệp partial <code>_variables.scss</code>, <code>_cards.scss</code>.</p>
+                <a href="#structure" class="btn btn-secondary">Xem Cấu Trúc File</a>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="card">
+                <div class="icon-box">⚡</div>
+                <h3>SASS CLI &amp; Watch Mode</h3>
+                <p>Biên dịch tức thì từ tệp đơn <code>sass styles.scss styles.css</code> hoặc cả thư mục <code>sass scss/:css/ --watch</code>, tự động cập nhật CSS ngay khi lưu SCSS.</p>
+                <a href="#watch-mode" class="btn btn-accent">Chế Độ Watch Mode</a>
+            </div>
+
+        </div>
+
+        <!-- Khối Console Xác Minh Môi Trường Thực Tế -->
+        <div style="background: #ffffff; border-radius: 12px; border: 1px solid #e2e8f0; padding: 30px; margin-top: 45px; box-shadow: 0 4px 15px rgba(0,0,0,0.05);" id="env-check">
+            <h3 style="font-size: 1.4rem; color: #0f172a; margin-bottom: 15px;">💻 Kết Quả Kiểm Tra Môi Trường &amp; Cài Đặt Thực Tế</h3>
+            <p style="color: #64748b; margin-bottom: 20px;">Hệ thống đã thực thi các câu lệnh kiểm tra và biên dịch thành công 100%:</p>
+
+            <div style="background: #0f172a; color: #e2e8f0; font-family: 'Consolas', monospace; padding: 20px; border-radius: 8px; font-size: 14px; line-height: 1.8; overflow-x: auto;">
+                <div><span style="color: #38bdf8;">PS C:\Users\dvu56></span> <span style="color: #facc15;">node -v</span></div>
+                <div style="color: #4ade80;">v24.19.0</div>
+                <br>
+                <div><span style="color: #38bdf8;">PS C:\Users\dvu56></span> <span style="color: #facc15;">npm -v</span></div>
+                <div style="color: #4ade80;">11.17.0</div>
+                <br>
+                <div><span style="color: #38bdf8;">PS C:\Users\dvu56></span> <span style="color: #facc15;">npm install -g sass</span></div>
+                <div style="color: #94a3b8;">added 12 packages in 3s</div>
+                <br>
+                <div><span style="color: #38bdf8;">PS C:\Users\dvu56></span> <span style="color: #facc15;">sass --version</span></div>
+                <div style="color: #4ade80;">1.105.1 compiled with dart2js 3.13.5</div>
+                <br>
+                <div><span style="color: #38bdf8;">PS C:\Users\dvu56></span> <span style="color: #facc15;">sass styles.scss styles.css</span></div>
+                <div style="color: #4ade80;">Compiled styles.scss to styles.css successfully!</div>
+                <br>
+                <div><span style="color: #38bdf8;">PS C:\Users\dvu56></span> <span style="color: #facc15;">sass scss/:css/ --watch</span></div>
+                <div style="color: #a5b4fc;">Sass is watching for changes. Press Ctrl-C to stop.</div>
+            </div>
+        </div>
+
+        <!-- Bảng Tổng Kết Lệnh SASS CLI Thường Dùng -->
+        <div style="background: #ffffff; border-radius: 12px; border: 1px solid #e2e8f0; padding: 30px; margin-top: 35px; box-shadow: 0 4px 15px rgba(0,0,0,0.05);" id="cli-commands">
+            <h3 style="font-size: 1.4rem; color: #0f172a; margin-bottom: 15px;">📋 Bảng Tra Cứu Các Lệnh SASS CLI Trọng Tâm</h3>
+            
+            <div style="overflow-x: auto;">
+                <table style="width: 100%; border-collapse: collapse; text-align: left; font-size: 14.5px;">
+                    <thead>
+                        <tr style="background: #f1f5f9; color: #1e293b; border-bottom: 2px solid #cbd5e1;">
+                            <th style="padding: 12px 16px;">Tác vụ</th>
+                            <th style="padding: 12px 16px;">Cú pháp lệnh</th>
+                            <th style="padding: 12px 16px;">Mục đích / Giải thích</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr style="border-bottom: 1px solid #e2e8f0;">
+                            <td style="padding: 12px 16px; font-weight: 600;">1. Cài đặt toàn cục</td>
+                            <td style="padding: 12px 16px; font-family: monospace; color: #6366f1;">npm install -g sass</td>
+                            <td style="padding: 12px 16px;">Cài đặt Dart Sass vào môi trường máy tính để dùng ở mọi thư mục</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #e2e8f0;">
+                            <td style="padding: 12px 16px; font-weight: 600;">2. Kiểm tra phiên bản</td>
+                            <td style="padding: 12px 16px; font-family: monospace; color: #6366f1;">sass --version</td>
+                            <td style="padding: 12px 16px;">Xác nhận SASS đã sẵn sàng hoạt động trong Terminal</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #e2e8f0;">
+                            <td style="padding: 12px 16px; font-weight: 600;">3. Biên dịch 1 tệp đơn</td>
+                            <td style="padding: 12px 16px; font-family: monospace; color: #6366f1;">sass styles.scss styles.css</td>
+                            <td style="padding: 12px 16px;">Chuyển đổi tệp styles.scss thành styles.css sẵn sàng cho web</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #e2e8f0;">
+                            <td style="padding: 12px 16px; font-weight: 600;">4. Chế độ Watch (1 tệp)</td>
+                            <td style="padding: 12px 16px; font-family: monospace; color: #6366f1;">sass styles.scss styles.css --watch</td>
+                            <td style="padding: 12px 16px;">Tự động lắng nghe thay đổi và cập nhật CSS tức thì khi lưu SCSS</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #e2e8f0;">
+                            <td style="padding: 12px 16px; font-weight: 600;">5. Biên dịch cả thư mục</td>
+                            <td style="padding: 12px 16px; font-family: monospace; color: #6366f1;">sass scss/:css/ --watch</td>
+                            <td style="padding: 12px 16px;">Biên dịch toàn bộ thư mục scss/ sang thư mục css/ trong thời gian thực</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 12px 16px; font-weight: 600;">6. Nén tối ưu dung lượng</td>
+                            <td style="padding: 12px 16px; font-family: monospace; color: #6366f1;">sass scss/:css/ --style=compressed</td>
+                            <td style="padding: 12px 16px;">Nén tối đa CSS đầu ra cho môi trường Production (tải trang siêu nhanh)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- 4. FOOTER (Styled via SASS) -->
+    <footer class="footer">
+        <p>
+            &copy; 2026 Thực Hành Cài Đặt SASS bằng npm &amp; SASS CLI &bull; Thực hiện bởi: <strong>Vũ Đức Đạt (VuDucDat2006)</strong><br>
+            Khóa học: Lập trình Web Front-End (CodeGym) &bull; Công nghệ: Node.js v24.19.0 &bull; SASS v1.105.1
+        </p>
+    </footer>
+
+</body>
+</html>

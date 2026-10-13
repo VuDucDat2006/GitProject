@@ -1,0 +1,23 @@
+// ==========================================================================
+// main.scss - Tệp SCSS trung tâm gom nhóm các partials
+// Biên dịch ra css/main.css thông qua lệnh: sass scss/:css/
+// ==========================================================================
+
+@use 'variables' as *;
+@use 'mixins' as *;
+@use 'header';
+@use 'cards';
+@use 'footer';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: $font-stack;
+}
+
+body {
+  background-color: #f8fafc;
+  color: $text-main;
+  line-height: 1.6;
+}
