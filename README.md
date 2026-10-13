@@ -1,110 +1,129 @@
-# [Thực hành] Tạo layout trong Bootstrap
+# [Thực hành] Xây dựng Trang Chủ với Bootstrap
 
-Dự án bài tập thực hành áp dụng toàn diện các thành phần của framework **Bootstrap 3.3.7** (`container`, `header`, `navbar-inverse`, `glyphicons`, `panel`, `list-group`, `grid system col-sm-9 / col-sm-3 / col-sm-4`) để xây dựng một trang web mua sắm trực tuyến (**Online Shopping Mall**) hoàn chỉnh.
+Dự án bài tập thực hành áp dụng toàn diện các kỹ thuật của framework **Bootstrap 5.3.3** kết hợp thư viện biểu tượng **Font Awesome 6.5.2** để xây dựng một Trang Chủ (Homepage) hoàn chỉnh, tương tác sinh động và chuẩn Responsive.
 
 ---
 
 ## 🎯 Mục Tiêu Bài Thực Hành
-- Sử dụng các thành phần có sẵn của Bootstrap để tạo bố cục và nội dung trang web cơ bản.
-- Áp dụng hệ thống lưới Bootstrap Grid (`col-sm-9`, `col-sm-3`, `col-sm-4`, `col-sm-5`, `col-sm-7`).
-- Thiết kế thanh điều hướng tối màu (`navbar-inverse`) tích hợp hệ thống biểu tượng **Glyphicons**.
-- Sử dụng các khối giao diện **Panel** (`panel-heading`, `panel-body`, `panel-footer`) để thiết kế sản phẩm, giỏ hàng và danh mục.
-- Tùy biến kiểu dáng nâng cao qua file `poly.css` (`.shopping-mall`, `.poly-cart`, `.poly-prod`).
+- Luyện tập sử dụng **Bootstrap 5.3.3** để tạo bố cục trang web linh hoạt.
+- Ứng dụng thuộc tính hiển thị (**Display Property**) và hệ thống đo khoảng cách lề (**Margin & Padding** utilities: `py-5`, `mt-4`, `mb-3`, `gap-4`).
+- Vận dụng **CSS Flexbox** (`d-flex`, `justify-content-center`, `align-items-center`) để căn giữa nội dung hoàn hảo.
+- Tích hợp component **Carousel** (`carousel slide`, `data-bs-ride="carousel"`, indicators, caption) để tạo slideshow trình chiếu hình ảnh tự động.
+- Nhúng thư viện biểu tượng nổi tiếng **Font Awesome 6.5.2** vào Navbar, Cards và Form liên hệ.
+- Ứng dụng **Bootstrap Forms** (`form-control`, `form-label`, `btn-primary`) để xây dựng form gửi liên hệ người dùng.
 
 ---
 
 ## 🚀 Các Bước Thực Hiện Chi Tiết
 
-### Bước 1: Tạo file `layout.html`
-- Khởi tạo cấu trúc HTML5 và nhúng thư viện Bootstrap 3.3.7 & jQuery 3.2.1 qua CDN:
+### Bước 1: Cài đặt Bootstrap 5.3.3 & Font Awesome 6.5.2
+- **Bootstrap CSS**:
   ```html
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   ```
-- Phân chia bố cục khung tổng thể:
-  - Khung bao bọc: `<div class="container" style="height: auto">`
-  - Header: `<header class="row">`
-  - Menu điều hướng: `<nav class="navbar navbar-inverse">`
-  - Thân trang chia 2 cột: `<div class="row">` gồm `<article class="col-sm-9">` và `<aside class="col-sm-3">`
-  - Chân trang: `<footer class="panel panel-default">`
-
-### Bước 2 & 3: Thiết kế Header & Định dạng `.shopping-mall`
-- Đặt tiêu đề lớn, khẩu hiệu và hình ảnh trang trí đẩy sang mép phải bằng `.pull-right`:
+- **Bootstrap JS Bundle** (đã tích hợp sẵn Popper):
   ```html
-  <header class="row">
-      <div class="shopping-mall">
-          <h1>Online shopping mall</h1>
-          <h5>The center point of the professional programming</h5>
-      </div>
-      <img class="pull-right" src="images/header-object.png" alt="Header Object"/>
-  </header>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   ```
-- Định dạng CSS cho `.shopping-mall` trong `poly.css`:
-  ```css
-  header { position: relative; }
-  .shopping-mall { position: absolute; bottom: 20px; font-variant: small-caps; }
-  .shopping-mall > h1 { font-family: Impact; font-size: 50px; color: white; text-shadow: 0 0 2px black; }
-  .shopping-mall > h5 { margin-top: 5px; letter-spacing: 0.5px; }
+- **Font Awesome 6.5.2**:
+  ```html
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
   ```
 
-### Bước 4: Thiết kế Menu `<nav class="navbar navbar-inverse">`
-- Đổi từ `.navbar-default` sang `.navbar-inverse` cho nền tối sang trọng.
-- Bổ sung các icon Glyphicons chuẩn vào từng mục menu:
-  - `<span class="glyphicon glyphicon-home"></span> Trang chủ`
-  - `<span class="glyphicon glyphicon-list-alt"></span> Giới thiệu`
-  - `<span class="glyphicon glyphicon-earphone"></span> Liên hệ`
-  - `<span class="glyphicon glyphicon-envelope"></span> Góp ý`
-  - `<span class="glyphicon glyphicon-question-sign"></span> Hỏi đáp`
-  - `<span class="glyphicon glyphicon-user"></span> Tài khoản` (Menu con thả xuống: Đăng nhập, Đăng ký, Quên mật khẩu)
+---
 
-### Bước 5: Thiết kế Cột Phụ `<aside class="col-sm-3">`
-1. **Giỏ hàng (`.poly-cart`)**: Panel chia 2 phần (`col-sm-5` hình ảnh giỏ hàng + `col-sm-7` thông tin số lượng 100 items, tổng tiền $56.8 và link xem giỏ hàng).
-2. **Ô tìm kiếm**: Panel chứa ô input `form-control` placeholder `Keywords`.
-3. **Chủng loại hàng**: Panel kết hợp `list-group` hiển thị danh sách: *Điện thoại di động, Máy tính xách tay, Máy tính để bàn, Quạt máy, Tivi, Tủ lạnh*.
+### Bước 2: Tạo Navbar với Font Awesome
+```html
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+        <a class="navbar-brand" href="#"><i class="fas fa-home"></i> MyWebsite</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-house me-1"></i> Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-info-circle me-1"></i> About</a></li>
+                <li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-cogs me-1"></i> Services</a></li>
+                <li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-envelope me-1"></i> Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+```
 
-### Bước 6: Thiết kế Cột Sản Phẩm `<article class="col-sm-9">`
-- Sử dụng lưới chia mỗi hàng 3 sản phẩm, mỗi sản phẩm chiếm 4 cột (`col-sm-4 poly-prod`).
-- Ứng dụng cấu trúc Panel cho từng sản phẩm:
-  - `.panel-heading`: Tên sản phẩm (*Nokia, Samsung Galaxy, Apple iPhone, Dell, Sony, HP*).
-  - `.panel-body`: Hình ảnh sản phẩm `computer.png`.
-  - `.panel-footer`: Đơn giá (ví dụ: `$ 100.25`).
-- Định dạng `.poly-prod` trong `poly.css`:
-  ```css
-  .poly-prod { text-align: center; padding: 5px; }
-  .poly-prod .panel-body img { height: 150px; max-width: 95%; object-fit: contain; }
-  ```
+---
 
-### Bước 7: Kiểm tra & Chạy Thử
-- Mở file `layout.html` trên trình duyệt và kiểm tra toàn bộ giao diện theo bản mẫu chuẩn: `http://demo.codegym.vn/web/15/layout-bootstrap/`.
+### Bước 3: Tạo Hero Section với Carousel
+```html
+<div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="image1.jpg" class="d-block w-100" alt="Slide 1">
+        </div>
+        <div class="carousel-item">
+            <img src="image2.jpg" class="d-block w-100" alt="Slide 2">
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+    </button>
+</div>
+```
+
+---
+
+### Bước 4: Thêm Section với Flexbox
+```html
+<div class="d-flex justify-content-center align-items-center bg-light py-5">
+    <h2>Chào mừng đến với trang web của chúng tôi!</h2>
+</div>
+```
+
+---
+
+### Bước 5: Tạo Contact Form với Bootstrap Form
+```html
+<form class="container mt-4">
+    <div class="mb-3">
+        <label for="name" class="form-label">Tên của bạn</label>
+        <input type="text" class="form-control" id="name" placeholder="Nhập tên">
+    </div>
+    <div class="mb-3">
+        <label for="email" class="form-label">Email</label>
+        <input type="email" class="form-control" id="email" placeholder="Nhập email">
+    </div>
+    <button type="submit" class="btn btn-primary">Gửi</button>
+</form>
+```
 
 ---
 
 ## 📁 Cấu Trúc Thư Mục
 ```plaintext
 GitProject/
-├── index.html           # File giao diện chính (bản sao của layout.html phục vụ GitHub Pages)
-├── layout.html          # File bài tập layout.html chuẩn theo giáo trình
-├── poly.css             # File định dạng CSS cho Shopping Mall, Giỏ hàng, Sản phẩm
-├── images/              # Thư mục hình ảnh dự án
-│   ├── header-object.png# Ảnh biểu tượng trang trí header
-│   ├── shoppingcart.gif # Ảnh biểu tượng giỏ hàng
-│   └── computer.png     # Ảnh sản phẩm điện tử máy tính
-└── README.md            # Tài liệu thuyết minh dự án và hướng dẫn nộp bài
+├── index.html       # Mã nguồn HTML trang chủ tích hợp Bootstrap 5.3.3 & Font Awesome
+├── style.css        # Tùy biến CSS: Chiều cao ảnh Carousel, hiệu ứng hover thẻ Flexbox
+├── image1.jpg       # Hình ảnh minh họa slide 1
+├── image2.jpg       # Hình ảnh minh họa slide 2
+└── README.md        # Tài liệu thuyết minh dự án và hướng dẫn kiểm tra
 ```
 
 ---
 
-## 🔍 Hướng Dẫn Chạy & Kiểm Tra
-1. Mở file `layout.html` hoặc `index.html` trực tiếp bằng trình duyệt (Chrome, Edge, Firefox).
-2. Kiểm tra các thành phần:
-   - Header chữ lớn `Online shopping mall` font Impact bóng đổ cùng ảnh góc phải.
-   - Thanh Navbar màu đen với đầy đủ icon Glyphicons và menu Tài khoản xổ xuống.
-   - Thân trang chia 2 cột: Bên trái là lưới sản phẩm 3 cột đều đặn (`col-sm-4`), bên phải là Giỏ hàng, Ô tìm kiếm và Danh mục chủng loại.
-   - Chân trang hiển thị thông tin bản quyền CodeGym.
+## 🔍 Hướng Dẫn Kiểm Tra & Chạy Thử
+1. **Mở trực tiếp trên Trình duyệt**: Mở file `index.html` bằng trình duyệt web bất kỳ.
+2. **Kiểm tra Carousel**: Quan sát slideshow tự động chuyển đổi slide hình ảnh mượt mà mỗi 4 giây, hoặc bấm nút mũi tên Prev/Next để đổi slide thủ công.
+3. **Kiểm tra Navbar**: Các biểu tượng Font Awesome hiển thị đồng bộ bên cạnh chữ menu.
+4. **Kiểm tra Flexbox Center**: Khối tiêu đề chào mừng được căn giữa hoàn hảo cả ngang lẫn dọc.
+5. **Kiểm tra Form Liên Hệ**: Nhập thử Tên, Email và bấm nút *Gửi Tin Nhắn* để xem thông báo tương tác.
+6. **Kiểm tra Mobile**: Bấm `F12` $\rightarrow$ `Ctrl + Shift + M` để thấy giao diện co giãn Responsive 100% không bị vỡ bố cục.
 
 ---
 
 **Tác giả thực hiện:** Vũ Đức Đạt (VuDucDat2006)  
 **Khóa học:** CodeGym Web Development  
-**Nhánh GitHub:** [bootstrap-layout-practice](https://github.com/VuDucDat2006/GitProject/tree/bootstrap-layout-practice)
+**Nhánh GitHub:** [bootstrap-homepage](https://github.com/VuDucDat2006/GitProject/tree/bootstrap-homepage)
