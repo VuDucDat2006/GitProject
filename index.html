@@ -1,0 +1,138 @@
+﻿<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[BÃ i táº­p] Táº¡o bá»‘ cá»¥c responsive báº±ng CSS Grid - CodeGym</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="grid-layout">
+        <!-- ==========================================
+             1. HEADER: HIá»‚N THá»Š TIÃŠU Äá»€ TRANG
+             ========================================== -->
+        <header class="header">
+            <div class="header-content">
+                <div class="logo">
+                    <span class="logo-icon">ðŸŒ</span>
+                    <span class="logo-text">TechGrid News</span>
+                </div>
+                <div class="header-slogan">
+                    <h1>Cá»•ng ThÃ´ng Tin CÃ´ng Nghá»‡ &amp; Thiáº¿t Káº¿ Web</h1>
+                    <p>BÃ i táº­p thá»±c hÃ nh: Táº¡o bá»‘ cá»¥c Responsive báº±ng CSS Grid Layout</p>
+                </div>
+            </div>
+        </header>
+
+        <!-- ==========================================
+             2. NAVIGATION: MENU ÄIá»€U HÆ¯á»šNG
+             ========================================== -->
+        <nav class="navigation">
+            <ul class="nav-menu">
+                <li><a href="#home" class="active">Trang chá»§</a></li>
+                <li><a href="#news">Tin tá»©c</a></li>
+                <li><a href="#html-css">HTML5 &amp; CSS3</a></li>
+                <li><a href="#grid">CSS Grid Master</a></li>
+                <li><a href="#tutorials">HÆ°á»›ng dáº«n</a></li>
+                <li><a href="#contact">LiÃªn há»‡</a></li>
+            </ul>
+        </nav>
+
+        <!-- ==========================================
+             3. MAIN CONTENT: Ná»˜I DUNG CHÃNH
+             ========================================== -->
+        <main class="main-content">
+            <article class="article-card">
+                <span class="article-category">ChuyÃªn Ä‘á» CSS Grid</span>
+                <h2 class="article-title">BÃ­ Quyáº¿t XÃ¢y Dá»±ng Bá»‘ Cá»¥c Web Äá»™t PhÃ¡ Báº±ng CSS Grid Layout</h2>
+                <div class="article-meta">
+                    <span>âœï¸ TÃ¡c giáº£: <strong>VÅ© Äá»©c Äáº¡t (VuDucDat2006)</strong></span>
+                    <span>ðŸ“… NgÃ y xuáº¥t báº£n: 13/10/2026</span>
+                    <span>â±ï¸ Thá»i gian Ä‘á»c: 5 phÃºt</span>
+                </div>
+
+                <div class="article-banner">
+                    <img src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=1200&h=500&q=80" alt="Thiáº¿t káº¿ web vá»›i CSS Grid" class="banner-img">
+                </div>
+
+                <div class="article-body">
+                    <p>
+                        <strong>CSS Grid Layout</strong> lÃ  há»‡ thá»‘ng lÆ°á»›i hai chiá»u (2D) máº¡nh máº½ nháº¥t tá»«ng Ä‘Æ°á»£c giá»›i thiá»‡u trong ngÃ´n ngá»¯ CSS. KhÃ¡c vá»›i <em>Flexbox</em> (há»‡ thá»‘ng dÃ n trang má»™t chiá»u theo hÃ ng hoáº·c cá»™t), CSS Grid cho phÃ©p chÃºng ta chia giao diá»‡n trang web thÃ nh cáº£ hÃ ng (rows) vÃ  cá»™t (columns) cÃ¹ng lÃºc.
+                    </p>
+
+                    <h3>ðŸ’¡ Táº¡i sao nÃªn sá»­ dá»¥ng <code>grid-template-areas</code>?</h3>
+                    <p>
+                        Báº±ng cÃ¡ch Ä‘áº·t tÃªn cho tá»«ng khu vá»±c giao diá»‡n nhÆ° <code>header</code>, <code>nav</code>, <code>main</code>, <code>sidebar</code>, vÃ  <code>footer</code>, cáº¥u trÃºc CSS trá»Ÿ nÃªn trá»±c quan nhÆ° má»™t báº£n váº½ kiáº¿n trÃºc:
+                    </p>
+                    <pre class="code-snippet"><code>grid-template-areas:
+    "header  header"
+    "nav     nav"
+    "main    sidebar"
+    "footer  footer";</code></pre>
+
+                    <h3>ðŸ“± CÆ¡ cháº¿ thÃ­ch á»©ng tá»± Ä‘á»™ng (Responsive):</h3>
+                    <ul>
+                        <li><strong>MÃ n hÃ¬nh Desktop (&gt; 768px):</strong> Ná»™i dung chÃ­nh (chiáº¿m 1fr) vÃ  Sidebar (cá»‘ Ä‘á»‹nh 300px) náº±m cáº¡nh nhau song song, Header, Nav vÃ  Footer tráº£i dÃ i toÃ n bá»™ chiá»u ngang.</li>
+                        <li><strong>MÃ n hÃ¬nh Mobile (&le; 768px):</strong> ToÃ n bá»™ 5 khá»‘i tá»± Ä‘á»™ng chuyá»ƒn vá» 1 cá»™t dá»c (1fr), xáº¿p theo thá»© tá»± Header &rarr; Navigation &rarr; Main Content &rarr; Sidebar &rarr; Footer, tá»‘i Æ°u thao tÃ¡c vuá»‘t cuá»™n trÃªn smartphone.</li>
+                    </ul>
+                </div>
+            </article>
+        </main>
+
+        <!-- ==========================================
+             4. SIDEBAR: Ná»˜I DUNG PHá»¤ (TIN Tá»¨C, QUáº¢NG CÃO)
+             ========================================== -->
+        <aside class="sidebar">
+            <!-- Widget 1: Tin tá»©c má»›i nháº¥t -->
+            <div class="widget">
+                <h3 class="widget-title">ðŸ”¥ Tin Tá»©c Má»›i Nháº¥t</h3>
+                <ul class="widget-list">
+                    <li>
+                        <a href="#post1">Lá»™ trÃ¬nh há»c Front-end Web Developer 2026</a>
+                        <span class="widget-date">HÃ´m nay</span>
+                    </li>
+                    <li>
+                        <a href="#post2">So sÃ¡nh chi tiáº¿t CSS Grid vs CSS Flexbox</a>
+                        <span class="widget-date">HÃ´m qua</span>
+                    </li>
+                    <li>
+                        <a href="#post3">Top 10 máº¹o tá»‘i Æ°u Responsive Web Design (RWD)</a>
+                        <span class="widget-date">3 ngÃ y trÆ°á»›c</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Widget 2: KhÃ³a há»c láº­p trÃ¬nh -->
+            <div class="widget">
+                <h3 class="widget-title">ðŸŽ“ KhÃ³a Há»c Ná»•i Báº­t</h3>
+                <div class="course-card">
+                    <h4>CodeGym Web Development</h4>
+                    <p>ÄÃ o táº¡o láº­p trÃ¬nh viÃªn chuyÃªn nghiá»‡p tá»« cÆ¡ báº£n Ä‘áº¿n nÃ¢ng cao.</p>
+                    <a href="#enroll" class="btn-primary">TÃ¬m hiá»ƒu ngay &rarr;</a>
+                </div>
+            </div>
+
+            <!-- Widget 3: Khá»‘i quáº£ng cÃ¡o (Banner Ad) -->
+            <div class="widget ad-widget">
+                <div class="ad-badge">Quáº£ng cÃ¡o</div>
+                <div class="ad-content">
+                    <h4>ðŸš€ Cloud Hosting SiÃªu Tá»‘c</h4>
+                    <p>Tráº£i nghiá»‡m dá»‹ch vá»¥ Ä‘Ã¡m mÃ¢y tá»‘i Æ°u cho láº­p trÃ¬nh viÃªn Front-end.</p>
+                </div>
+            </div>
+        </aside>
+
+        <!-- ==========================================
+             5. FOOTER: THÃ”NG TIN CUá»I TRANG
+             ========================================== -->
+        <footer class="footer">
+            <div class="footer-content">
+                <p>&copy; 2026 TechGrid News &bull; [BÃ i táº­p] Táº¡o bá»‘ cá»¥c responsive báº±ng CSS Grid &bull; CodeGym</p>
+                <p class="author">Há»c viÃªn thá»±c hiá»‡n: <strong>VÅ© Äá»©c Äáº¡t (VuDucDat2006)</strong></p>
+            </div>
+        </footer>
+    </div>
+
+</body>
+</html>
