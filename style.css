@@ -1,0 +1,415 @@
+/* ========================================================
+   1. RESET & MÔ HÌNH HỘP BOX-SIZING
+   ======================================================== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #f1f5f9;
+    color: #1e293b;
+    line-height: 1.6;
+}
+
+/* ========================================================
+   2. BỐ CỤC TỔNG THỂ FLEX CONTAINER (DESKTOP)
+   ======================================================== */
+.flex-layout {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 20px;
+    gap: 20px;
+}
+
+/* ========================================================
+   3. PHÂN VÙNG HEADER (TIÊU ĐỀ TRANG)
+   ======================================================== */
+.header {
+    background: linear-gradient(135deg, #1e293b, #0f172a);
+    color: #ffffff;
+    padding: 24px 28px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.header-inner {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: rgba(255, 255, 255, 0.08);
+    padding: 10px 16px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.brand-logo {
+    font-size: 26px;
+}
+
+.brand-name {
+    font-size: 19px;
+    font-weight: 700;
+    color: #38bdf8;
+    white-space: nowrap;
+}
+
+.header-titles h1 {
+    font-size: 22px;
+    margin-bottom: 4px;
+    font-weight: 700;
+}
+
+.header-titles .tagline {
+    font-size: 13.5px;
+    color: #94a3b8;
+}
+
+/* ========================================================
+   4. PHÂN VÙNG NAVIGATION (MENU ĐIỀU HƯỚNG)
+   ======================================================== */
+.navigation {
+    background-color: #ffffff;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+    overflow: hidden;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+}
+
+.nav-menu li {
+    flex: 1;
+    min-width: 120px;
+    text-align: center;
+}
+
+.nav-menu a {
+    display: block;
+    padding: 14px 16px;
+    color: #475569;
+    text-decoration: none;
+    font-size: 14.5px;
+    font-weight: 600;
+    transition: all 0.2s ease;
+    border-bottom: 3px solid transparent;
+}
+
+.nav-menu a:hover,
+.nav-menu a.active {
+    color: #0284c7;
+    background-color: #f0f9ff;
+    border-bottom: 3px solid #0284c7;
+}
+
+/* ========================================================
+   5. KHUNG CHỨA MAIN BODY (MAIN CONTENT + SIDEBAR)
+   ======================================================== */
+.main-body {
+    display: flex;
+    gap: 20px;
+    flex: 1;
+}
+
+/* ========================================================
+   6. MAIN CONTENT (NỘI DUNG CHÍNH - CHIẾM 3 PHẦN = 75%)
+   ======================================================== */
+.main-content {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+}
+
+.article-box {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 30px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+}
+
+.category-badge {
+    display: inline-block;
+    background-color: #e0f2fe;
+    color: #0284c7;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+    letter-spacing: 0.5px;
+}
+
+.article-title {
+    font-size: 26px;
+    color: #0f172a;
+    line-height: 1.35;
+    margin-bottom: 12px;
+    font-weight: 700;
+}
+
+.article-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    font-size: 13.5px;
+    color: #64748b;
+    margin-bottom: 20px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.article-image {
+    margin-bottom: 22px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.article-image img {
+    width: 100%;
+    height: auto;
+    max-height: 380px;
+    object-fit: cover;
+    display: block;
+}
+
+.article-text {
+    font-size: 15.5px;
+    color: #334155;
+    line-height: 1.75;
+}
+
+.article-text p {
+    margin-bottom: 16px;
+}
+
+.article-text h3 {
+    font-size: 18px;
+    color: #0f172a;
+    margin: 22px 0 10px 0;
+}
+
+.article-text ul {
+    margin: 12px 0 16px 20px;
+}
+
+.article-text li {
+    margin-bottom: 8px;
+}
+
+.article-text code {
+    background-color: #f1f5f9;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-weight: 600;
+    color: #0284c7;
+}
+
+/* ========================================================
+   7. SIDEBAR (NỘI DUNG PHỤ - CHIẾM 1 PHẦN = 25%)
+   ======================================================== */
+.sidebar {
+    flex: 1;
+    min-width: 280px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.widget {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.widget-title {
+    font-size: 16px;
+    color: #0f172a;
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #e2e8f0;
+    font-weight: 700;
+}
+
+.widget-links {
+    list-style: none;
+}
+
+.widget-links li {
+    padding: 10px 0;
+    border-bottom: 1px dashed #f1f5f9;
+}
+
+.widget-links li:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.widget-links a {
+    display: block;
+    color: #334155;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.4;
+    transition: color 0.2s ease;
+}
+
+.widget-links a:hover {
+    color: #0284c7;
+}
+
+.post-date {
+    display: block;
+    font-size: 12px;
+    color: #94a3b8;
+    margin-top: 4px;
+}
+
+.course-box h4 {
+    color: #0284c7;
+    font-size: 15px;
+    margin-bottom: 6px;
+}
+
+.course-box p {
+    font-size: 13.5px;
+    color: #64748b;
+    margin-bottom: 12px;
+}
+
+.btn-enroll {
+    display: inline-block;
+    background-color: #0284c7;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 8px 14px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 600;
+    transition: background-color 0.2s ease;
+}
+
+.btn-enroll:hover {
+    background-color: #0369a1;
+}
+
+.ad-card {
+    background: linear-gradient(135deg, #fef3c7, #fde68a);
+    border: 1px solid #fcd34d;
+    position: relative;
+}
+
+.ad-tag {
+    position: absolute;
+    top: 10px;
+    right: 12px;
+    background-color: rgba(0, 0, 0, 0.1);
+    color: #78350f;
+    font-size: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 2px 6px;
+    border-radius: 4px;
+}
+
+.ad-card h4 {
+    color: #78350f;
+    font-size: 15px;
+    margin-bottom: 4px;
+}
+
+.ad-card p {
+    color: #92400e;
+    font-size: 13px;
+}
+
+/* ========================================================
+   8. FOOTER (CHÂN TRANG)
+   ======================================================== */
+.footer {
+    background-color: #1e293b;
+    color: #ffffff;
+    border-radius: 10px;
+    padding: 22px;
+    text-align: center;
+}
+
+.footer-inner p {
+    font-size: 14px;
+    margin: 4px 0;
+    color: #cbd5e1;
+}
+
+.footer-inner .author {
+    font-size: 13px;
+    color: #94a3b8;
+}
+
+/* ========================================================
+   9. MEDIA QUERIES (RESPONSIVE TRÊN MOBILE <= 768PX)
+   ======================================================== */
+@media (max-width: 768px) {
+    .flex-layout {
+        padding: 12px;
+        gap: 15px;
+    }
+
+    .header-inner {
+        flex-direction: column;
+        text-align: center;
+        gap: 12px;
+    }
+
+    .header-titles h1 {
+        font-size: 19px;
+    }
+
+    .nav-menu {
+        flex-direction: column;
+    }
+
+    .nav-menu li {
+        width: 100%;
+    }
+
+    .nav-menu a {
+        padding: 12px 16px;
+        border-bottom: 1px solid #f1f5f9;
+    }
+
+    /* Trên Mobile: Main Body chuyển sang xếp dọc (column) */
+    .main-body {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        min-width: 100%;
+    }
+
+    .article-box {
+        padding: 20px 16px;
+    }
+
+    .article-title {
+        font-size: 21px;
+    }
+}

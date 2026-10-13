@@ -1,0 +1,129 @@
+﻿<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[BÃ i táº­p] Táº¡o bá»‘ cá»¥c responsive báº±ng CSS Flexbox - CodeGym</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="flex-layout">
+        <!-- ==========================================
+             1. HEADER: TIÃŠU Äá»€ TRANG & THÆ¯Æ NG HIá»†U
+             ========================================== -->
+        <header class="header">
+            <div class="header-inner">
+                <div class="brand">
+                    <span class="brand-logo">âš¡</span>
+                    <span class="brand-name">FlexPulse Magazine</span>
+                </div>
+                <div class="header-titles">
+                    <h1>Cá»•ng ThÃ´ng Tin CÃ´ng Nghá»‡ &amp; Thiáº¿t Káº¿ Web</h1>
+                    <p class="tagline">[BÃ i táº­p] Táº¡o bá»‘ cá»¥c responsive báº±ng CSS Flexbox &bull; CodeGym</p>
+                </div>
+            </div>
+        </header>
+
+        <!-- ==========================================
+             2. NAVIGATION: MENU ÄIá»€U HÆ¯á»šNG RESPONSIVE
+             ========================================== -->
+        <nav class="navigation">
+            <ul class="nav-menu">
+                <li><a href="#home" class="active">Trang chá»§</a></li>
+                <li><a href="#news">Tin cÃ´ng nghá»‡</a></li>
+                <li><a href="#flexbox">CSS Flexbox</a></li>
+                <li><a href="#tutorials">Thá»±c hÃ nh</a></li>
+                <li><a href="#about">Giá»›i thiá»‡u</a></li>
+                <li><a href="#contact">LiÃªn há»‡</a></li>
+            </ul>
+        </nav>
+
+        <!-- ==========================================
+             3 & 4. KHUNG THÃ‚N TRANG (MAIN CONTENT + SIDEBAR)
+             ========================================== -->
+        <div class="main-body">
+            <!-- 3. MAIN CONTENT: Ná»˜I DUNG CHÃNH -->
+            <main class="main-content">
+                <article class="article-box">
+                    <span class="category-badge">ChuyÃªn Ä‘á» Flexbox</span>
+                    <h2 class="article-title">LÃ m Chá»§ CSS Flexbox Trong XÃ¢y Dá»±ng Bá»‘ Cá»¥c Web Hiá»‡n Äáº¡i</h2>
+                    <div class="article-meta">
+                        <span>âœï¸ TÃ¡c giáº£: <strong>VÅ© Äá»©c Äáº¡t (VuDucDat2006)</strong></span>
+                        <span>ðŸ“… Xuáº¥t báº£n: 13/10/2026</span>
+                        <span>â±ï¸ Thá»i lÆ°á»£ng Ä‘á»c: 5 phÃºt</span>
+                    </div>
+
+                    <div class="article-image">
+                        <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=1200&h=500&q=80" alt="Láº­p trÃ¬nh web vá»›i CSS Flexbox">
+                    </div>
+
+                    <div class="article-text">
+                        <p>
+                            <strong>CSS Flexible Box Module (Flexbox)</strong> lÃ  má»™t trong nhá»¯ng chuáº©n thiáº¿t káº¿ giao diá»‡n quan trá»ng nháº¥t trong láº­p trÃ¬nh Front-end. Flexbox giáº£i quyáº¿t triá»‡t Ä‘á»ƒ cÃ¡c váº¥n Ä‘á» phá»©c táº¡p trÆ°á»›c Ä‘Ã¢y nhÆ° cÄƒn chá»‰nh giá»¯a theo chiá»u dá»c (vertical alignment), chia cá»™t linh hoáº¡t vÃ  tá»± Ä‘á»™ng thÃ­ch á»©ng vá»›i nhiá»u Ä‘á»™ phÃ¢n giáº£i mÃ n hÃ¬nh khÃ¡c nhau.
+                        </p>
+
+                        <h3>ðŸ’¡ CÃ¡c thuá»™c tÃ­nh Flexbox cá»‘t lÃµi Ä‘Æ°á»£c á»©ng dá»¥ng:</h3>
+                        <ul>
+                            <li><strong><code>display: flex</code> &amp; <code>flex-direction: column</code>:</strong> Ãp dá»¥ng cho container ngoÃ i cÃ¹ng Ä‘á»ƒ xáº¿p Header, Nav, Main Body vÃ  Footer theo trá»¥c dá»c.</li>
+                            <li><strong><code>.main-body { display: flex; flex: 1; }</code>:</strong> Táº¡o khung chá»©a hai cá»™t cho phÃ©p Main Content vÃ  Sidebar co giÃ£n mÆ°á»£t mÃ .</li>
+                            <li><strong><code>flex: 3</code> (Main Content) &amp; <code>flex: 1</code> (Sidebar):</strong> PhÃ¢n bá»• khÃ´ng gian ngang vá»›i tá»· lá»‡ 3 : 1 (75% cho ná»™i dung chÃ­nh vÃ  25% cho ná»™i dung phá»¥).</li>
+                            <li><strong>Media Queries (Mobile):</strong> Khi mÃ n hÃ¬nh &le; 768px, <code>.main-body</code> tá»± Ä‘á»™ng chuyá»ƒn sang <code>flex-direction: column</code>, Ä‘Æ°a Sidebar xuá»‘ng dÆ°á»›i Content.</li>
+                        </ul>
+                    </div>
+                </article>
+            </main>
+
+            <!-- 4. SIDEBAR: Ná»˜I DUNG PHá»¤ (TIN Tá»¨C, QUáº¢NG CÃO) -->
+            <aside class="sidebar">
+                <!-- Widget 1: Tin má»›i nháº¥t -->
+                <div class="widget">
+                    <h3 class="widget-title">ðŸ”¥ Tin Má»›i Nháº¥t</h3>
+                    <ul class="widget-links">
+                        <li>
+                            <a href="#post1">Lá»™ trÃ¬nh há»c Front-end Web Developer 2026</a>
+                            <span class="post-date">10 phÃºt trÆ°á»›c</span>
+                        </li>
+                        <li>
+                            <a href="#post2">Tá»‘i Æ°u hiá»‡u nÄƒng Flexbox vÃ  CSS Grid</a>
+                            <span class="post-date">1 giá» trÆ°á»›c</span>
+                        </li>
+                        <li>
+                            <a href="#post3">Xu hÆ°á»›ng thiáº¿t káº¿ UI/UX Responsive</a>
+                            <span class="post-date">HÃ´m qua</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Widget 2: KhÃ³a há»c ná»•i báº­t -->
+                <div class="widget">
+                    <h3 class="widget-title">ðŸŽ“ KhÃ³a Há»c TiÃªu Biá»ƒu</h3>
+                    <div class="course-box">
+                        <h4>CodeGym Web Master</h4>
+                        <p>LÃ m chá»§ HTML5, CSS3, JavaScript vÃ  React tá»« cÆ¡ báº£n Ä‘áº¿n chuyÃªn sÃ¢u.</p>
+                        <a href="#learn-more" class="btn-enroll">ÄÄƒng kÃ½ ngay &rarr;</a>
+                    </div>
+                </div>
+
+                <!-- Widget 3: Quáº£ng cÃ¡o / Banner Ä‘á»‘i tÃ¡c -->
+                <div class="widget ad-card">
+                    <span class="ad-tag">Quáº£ng cÃ¡o</span>
+                    <h4>ðŸš€ Cloud Hosting Tá»‘c Äá»™ Cao</h4>
+                    <p>Khá»Ÿi táº¡o mÃ¡y chá»§ phÃ¡t triá»ƒn web trong 30 giÃ¢y vá»›i bÄƒng thÃ´ng khÃ´ng giá»›i háº¡n.</p>
+                </div>
+            </aside>
+        </div>
+
+        <!-- ==========================================
+             5. FOOTER: THÃ”NG TIN CUá»I TRANG
+             ========================================== -->
+        <footer class="footer">
+            <div class="footer-inner">
+                <p>&copy; 2026 FlexPulse Magazine &bull; [BÃ i táº­p] Táº¡o bá»‘ cá»¥c responsive báº±ng CSS Flexbox &bull; CodeGym</p>
+                <p class="author">Há»c viÃªn thá»±c hiá»‡n: <strong>VÅ© Äá»©c Äáº¡t (VuDucDat2006)</strong></p>
+            </div>
+        </footer>
+    </div>
+
+</body>
+</html>
