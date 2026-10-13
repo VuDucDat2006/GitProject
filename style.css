@@ -1,0 +1,194 @@
+﻿/* style.css - [Thực hành] Danh sách trong CSS */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #f1f5f9;
+    color: #1e293b;
+    padding: 40px 20px;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 860px;
+    margin: 0 auto;
+}
+
+header.page-header {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+header.page-header h1 {
+    font-size: 28px;
+    color: #1e40af;
+    margin-bottom: 8px;
+}
+
+header.page-header p {
+    color: #64748b;
+    font-size: 15px;
+}
+
+.card {
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 24px 28px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e2e8f0;
+}
+
+.card h2 {
+    font-size: 18px;
+    color: #0f172a;
+    margin-bottom: 12px;
+    border-bottom: 1px solid #e2e8f0;
+    padding-bottom: 8px;
+}
+
+.card .description {
+    font-size: 13.5px;
+    color: #64748b;
+    margin-bottom: 14px;
+}
+
+.badge {
+    background: #eff6ff;
+    color: #2563eb;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-family: monospace;
+    font-weight: 600;
+}
+
+/* 2. Thay đổi kiểu đánh dấu danh sách (list-style-type: square) */
+.list-square {
+    list-style-type: square;
+    padding-left: 30px;
+}
+.list-square li {
+    padding: 4px 0;
+}
+
+/* 3. Thay đổi kiểu đánh dấu danh sách có thứ tự (list-style-type: upper-roman) */
+.list-roman {
+    list-style-type: upper-roman;
+    padding-left: 35px;
+}
+.list-roman li {
+    padding: 4px 0;
+}
+
+/* 4. Sử dụng hình ảnh làm dấu đánh dấu (list-style-image) */
+.list-image {
+    list-style-image: url('star.svg');
+    padding-left: 35px;
+}
+.list-image li {
+    padding: 6px 0;
+}
+
+/* 5. Thay đổi vị trí dấu đánh dấu (list-style-position: outside vs inside) */
+.position-demo-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+@media (max-width: 650px) {
+    .position-demo-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+.box-outside, .box-inside {
+    border: 2px dashed #94a3b8;
+    background: #f8fafc;
+    border-radius: 6px;
+    padding: 15px;
+}
+
+.box-outside h3, .box-inside h3 {
+    font-size: 14px;
+    margin-bottom: 8px;
+    color: #475569;
+}
+
+.list-outside {
+    list-style-position: outside;
+    list-style-type: disc;
+    padding-left: 20px;
+}
+.list-outside li {
+    background: #e2e8f0;
+    margin-bottom: 6px;
+    padding: 4px 8px;
+    border-radius: 4px;
+}
+
+.list-inside {
+    list-style-position: inside;
+    list-style-type: disc;
+    padding-left: 0;
+}
+.list-inside li {
+    background: #e2e8f0;
+    margin-bottom: 6px;
+    padding: 4px 8px;
+    border-radius: 4px;
+}
+
+/* 6. Thuộc tính rút gọn list-style */
+.list-shorthand {
+    list-style: square inside;
+    padding-left: 10px;
+}
+.list-shorthand li {
+    padding: 5px 0;
+}
+
+/* 7. Tạo kiểu danh sách với màu sắc, padding, margin */
+.list-colored {
+    background-color: #1e293b;
+    padding: 20px 30px;
+    border-radius: 8px;
+    list-style-type: circle;
+}
+.list-colored li {
+    color: #38bdf8;
+    font-weight: 500;
+    margin: 8px 0;
+    padding: 6px 12px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 4px;
+}
+
+/* 8. Bài tập tổng hợp: Lộ trình học lập trình Web */
+.roadmap-list {
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+    color: #f8fafc;
+    padding: 24px 35px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(15, 23, 42, 0.15);
+    list-style: decimal inside;
+}
+.roadmap-list li {
+    margin: 10px 0;
+    padding: 10px 16px;
+    background: rgba(255, 255, 255, 0.07);
+    border-left: 4px solid #38bdf8;
+    border-radius: 0 6px 6px 0;
+    font-weight: 600;
+    transition: transform 0.2s, background-color 0.2s;
+}
+.roadmap-list li:hover {
+    transform: translateX(6px);
+    background: rgba(255, 255, 255, 0.12);
+}

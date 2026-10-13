@@ -1,26 +1,23 @@
 ﻿# GitProject
 
-Dự án thực hành các thao tác cơ bản với Git và GitHub (CodeGym).
+Dự án thực hành các thao tác cơ bản với Git, GitHub và CSS định kiểu danh sách (CodeGym).
 
-## Mục Tiêu Thực Hành
-- Làm quen và thực hành các thao tác cơ bản với Git và GitHub.
-- Nắm được quy trình làm việc từ tạo repository, clone dự án về máy tính, đến đẩy mã nguồn lên GitHub.
+## Nhánh: `css-list-styling`
+Bài tập: **[Thực hành] Danh sách trong CSS**
 
-## Cấu Trúc Dự Án
-```plaintext
-GitProject/
-├── README.md
-└── source/
-    ├── index.html
-    └── news.html
-```
+### Nội dung thực hành:
+1. **Liên kết CSS ngoại tuyến**: Sử dụng thẻ `<link rel="stylesheet" href="style.css">`.
+2. **Kiểu đánh dấu danh sách không có thứ tự**: Sử dụng `list-style-type: square;` cho danh sách môn học (HTML, CSS, JavaScript, Git).
+3. **Kiểu đánh dấu danh sách có thứ tự**: Sử dụng `list-style-type: upper-roman;` cho các bước học (I, II, III, IV).
+4. **Sử dụng hình ảnh làm bullet**: Sử dụng `list-style-image: url('star.svg');` cho các công cụ học tập.
+5. **Vị trí của dấu đánh dấu**: So sánh trực quan giữa `list-style-position: outside;` và `list-style-position: inside;`.
+6. **Thuộc tính rút gọn**: Sử dụng thuộc tính `list-style: square inside;` tích hợp nhiều giá trị.
+7. **Định dạng màu sắc và khoảng cách**: Tùy biến `background-color`, `color`, `padding`, `margin` cho danh sách ngôn ngữ lập trình.
+8. **Bài tập tổng hợp**: Tạo giao diện "Lộ trình học lập trình Web" hiện đại, trực quan.
 
-## Các Bước Đã Thực Hiện
-1. Tạo repository `GitProject` trên GitHub.
-2. Clone repository về máy tính cá nhân bằng lệnh `git clone`.
-3. Tạo file `README.md`, đưa vào Staging Area (`git add`) và commit (`git commit -m "Add README.md"`).
-4. Đẩy file `README.md` lên GitHub (`git push origin main`).
-5. Tạo thư mục `source` chứa `index.html` và `news.html`.
-6. Đẩy thư mục `source` lên GitHub (`git add source/`, `git commit -m "Add source files"`, `git push origin main`).
+### Cấu trúc file:
+- `index.html`: Cấu trúc HTML của bài thực hành.
+- `style.css`: Toàn bộ mã CSS định kiểu danh sách.
+- `star.svg`: Icon vector ngôi sao dùng làm hình ảnh đánh dấu.
 
 Tác giả: Vũ Đức Đạt (VuDucDat2006)
