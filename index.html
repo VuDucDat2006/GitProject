@@ -1,0 +1,92 @@
+﻿<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quáº£n lÃ½ Overflow - [Thá»±c hÃ nh] CodeGym</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <header class="header">
+            <span class="badge">CSS Box Overflow</span>
+            <h1>[Thá»±c hÃ nh] Quáº£n lÃ½ ná»™i dung bá»‹ trÃ n vá»›i Overflow</h1>
+            <p class="subtitle">KhÃ¡m phÃ¡ cÃ¡ch thuá»™c tÃ­nh <code>overflow</code> kiá»ƒm soÃ¡t ná»™i dung vÆ°á»£t quÃ¡ kÃ­ch thÆ°á»›c cá»§a pháº§n tá»­ HTML.</p>
+        </header>
+
+        <!-- PHáº¦N 1: BÃ€I TOÃN CHÃNH THEO Äá»€ BÃ€I -->
+        <section class="main-exercise-section">
+            <h2>ðŸ“Œ Khá»‘i Thá»­ Nghiá»‡m ChÃ­nh (Theo Äá» BÃ i)</h2>
+            <p>Khá»‘i <code>.overflow-box</code> cÃ³ kÃ­ch thÆ°á»›c cá»‘ Ä‘á»‹nh <code>300px x 100px</code>, sá»­ dá»¥ng <code>overflow: auto;</code>:</p>
+            
+            <div class="exercise-demo">
+                <div class="overflow-box">
+                    ÄÃ¢y lÃ  má»™t Ä‘oáº¡n vÄƒn báº£n ráº¥t dÃ i mÃ  chÃºng ta sáº½ kiá»ƒm tra cÃ¡ch <code>overflow</code> hoáº¡t Ä‘á»™ng khi ná»™i dung vÆ°á»£t quÃ¡ kÃ­ch thÆ°á»›c cá»§a pháº§n tá»­. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ultricies nunc in mauris pharetra, a ultricies justo fermentum. ThÃªm dÃ²ng chá»¯ Ä‘á»ƒ thanh cuá»™n dá»c hoáº¡t Ä‘á»™ng mÆ°á»£t mÃ  khi báº¡n kÃ©o cuá»™n ná»™i dung bÃªn trong!
+                </div>
+            </div>
+            <p class="note">âœ… <strong>Káº¿t quáº£:</strong> Nhá» cÃ³ <code>overflow: auto;</code>, thanh cuá»™n chá»‰ xuáº¥t hiá»‡n khi vÄƒn báº£n dÃ i vÆ°á»£t quÃ¡ chiá»u cao <code>100px</code>.</p>
+        </section>
+
+        <!-- PHáº¦N 2: Báº¢NG SO SÃNH TRá»°C QUAN CÃC GIÃ TRá»Š Cá»¦A OVERFLOW -->
+        <section class="comparison-section">
+            <h2>ðŸ’¡ Báº£ng So SÃ¡nh CÃ¡c GiÃ¡ Trá»‹ Cá»§a Thuá»™c TÃ­nh Overflow</h2>
+            <div class="grid-boxes">
+                <!-- 1. Visible -->
+                <div class="card">
+                    <div class="card-header">
+                        <h3>1. overflow: visible</h3>
+                        <span class="tag">Máº·c Ä‘á»‹nh</span>
+                    </div>
+                    <p class="card-desc">Ná»™i dung trÃ n ra ngoÃ i khung viá»n cá»§a pháº§n tá»­, cÃ³ thá»ƒ Ä‘Ã¨ lÃªn cÃ¡c pháº§n tá»­ khÃ¡c.</p>
+                    <div class="demo-box box-visible">
+                        Ná»™i dung nÃ y ráº¥t dÃ i vÃ  sáº½ trÃ n tá»± do ra khá»i khung 100px mÃ  khÃ´ng bá»‹ cáº¯t hay cuá»™n. Lorem ipsum dolor sit amet.
+                    </div>
+                </div>
+
+                <!-- 2. Hidden -->
+                <div class="card">
+                    <div class="card-header">
+                        <h3>2. overflow: hidden</h3>
+                        <span class="tag">áº¨n pháº§n trÃ n</span>
+                    </div>
+                    <p class="card-desc">Pháº§n ná»™i dung vÆ°á»£t quÃ¡ kÃ­ch thÆ°á»›c sáº½ bá»‹ cáº¯t bá» hoÃ n toÃ n, khÃ´ng hiá»ƒn thá»‹ thanh cuá»™n.</p>
+                    <div class="demo-box box-hidden">
+                        Ná»™i dung dÃ i nÃ y sáº½ bá»‹ cáº¯t máº¥t á»Ÿ mÃ©p Ä‘Ã¡y 100px. NgÆ°á»i dÃ¹ng khÃ´ng thá»ƒ tháº¥y pháº§n vÄƒn báº£n bá»‹ che khuáº¥t. Lorem ipsum dolor sit amet.
+                    </div>
+                </div>
+
+                <!-- 3. Scroll -->
+                <div class="card">
+                    <div class="card-header">
+                        <h3>3. overflow: scroll</h3>
+                        <span class="tag">LuÃ´n hiá»‡n thanh cuá»™n</span>
+                    </div>
+                    <p class="card-desc">LuÃ´n luÃ´n hiá»ƒn thá»‹ thanh cuá»™n (cáº£ ngang vÃ  dá»c) ngay cáº£ khi ná»™i dung ngáº¯n khÃ´ng bá»‹ trÃ n.</p>
+                    <div class="demo-box box-scroll">
+                        Äoáº¡n vÄƒn nÃ y cÃ³ cáº£ thanh cuá»™n ngang vÃ  dá»c xuáº¥t hiá»‡n sáºµn sÃ ng báº¥t ká»ƒ Ä‘á»™ dÃ i ná»™i dung.
+                    </div>
+                </div>
+
+                <!-- 4. Auto -->
+                <div class="card">
+                    <div class="card-header">
+                        <h3>4. overflow: auto</h3>
+                        <span class="tag highlight">Äá» xuáº¥t / Tá»‘i Æ°u</span>
+                    </div>
+                    <p class="card-desc">Thanh cuá»™n <strong>chá»‰ xuáº¥t hiá»‡n khi thá»±c sá»± cáº§n thiáº¿t</strong> (khi ná»™i dung bá»‹ trÃ n kÃ­ch thÆ°á»›c).</p>
+                    <div class="demo-box box-auto">
+                        Äoáº¡n vÄƒn báº£n tá»± Ä‘á»™ng hiá»ƒn thá»‹ thanh cuá»™n khi vÆ°á»£t quÃ¡ kÃ­ch thÆ°á»›c há»™p 100px vÃ  áº©n Ä‘i náº¿u ná»™i dung vá»«a váº·n.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FOOTER THÃ”NG TIN Há»ŒC VIÃŠN -->
+        <footer class="footer-info">
+            <p>Há»c viÃªn thá»±c hiá»‡n: <strong>VÅ© Äá»©c Äáº¡t (VuDucDat2006)</strong> &bull; KhÃ³a Ä‘Ã o táº¡o Láº­p trÃ¬nh Web Front-End</p>
+        </footer>
+    </div>
+
+</body>
+</html>
