@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[Thực hành] Sử dụng Box Model 3</title>
+    <style>
+        body {
+            font-family: Arial, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: #f8fafc;
+            color: #1e293b;
+            padding: 40px 20px;
+            margin: 0;
+        }
+
+        .container {
+            max-width: 700px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 35px 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            border: 1px solid #e2e8f0;
+        }
+
+        h1 {
+            color: #1e40af;
+            font-size: 24px;
+            margin-top: 0;
+            margin-bottom: 8px;
+            border-bottom: 2px solid #dbeafe;
+            padding-bottom: 10px;
+        }
+
+        .subtitle {
+            color: #64748b;
+            font-size: 14px;
+            margin-bottom: 30px;
+        }
+
+        /* KHU VỰC HIỂN THỊ ĐÚNG THEO MÃ NGUỒN CỦA ĐỀ BÀI */
+        .stage-wrapper {
+            background-color: #f1f5f9;
+            padding: 35px 25px;
+            border-radius: 10px;
+            border: 1px dashed #cbd5e1;
+            margin-bottom: 30px;
+            display: flex;
+            justify-content: center;
+        }
+
+        /* Khối cha #demo */
+        #demo {
+            width: 350px;
+            display: flex;
+            float: left;
+            border: 6px solid black;
+            border-radius: 6%;
+            background-color: #ffffff;
+            padding: 10px 0;
+            align-items: center;
+        }
+
+        /* Khối con .d1 */
+        .d1 {
+            margin-left: 20px;
+            width: 150px;
+            height: 80px;
+            box-shadow: 0 0 0 4px mediumslateblue;
+            box-sizing: border-box;
+            border-radius: 36%;
+            background-color: rgba(123, 104, 238, 0.15);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 13px;
+            font-weight: bold;
+            color: mediumslateblue;
+        }
+
+        /* Khối con .d2 */
+        .d2 {
+            width: 150px;
+            height: 80px;
+            padding: 30px;
+            box-shadow: 0 0 0 4px darkred;
+            box-sizing: border-box;
+            border-radius: 36%;
+            background-color: rgba(139, 0, 0, 0.15);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 13px;
+            font-weight: bold;
+            color: darkred;
+            margin-left: 10px;
+        }
+
+        /* BẢNG PHÂN TÍCH VÀ GIẢI THÍCH */
+        .info-card {
+            background-color: #f8fafc;
+            border-radius: 8px;
+            padding: 20px 24px;
+            border-left: 5px solid #2563eb;
+            font-size: 14px;
+        }
+
+        .info-card h2 {
+            font-size: 16px;
+            color: #1e3a8a;
+            margin-top: 0;
+            margin-bottom: 12px;
+        }
+
+        .info-list {
+            margin: 0;
+            padding-left: 20px;
+            line-height: 1.8;
+            color: #334155;
+        }
+
+        code {
+            background-color: #e2e8f0;
+            color: #0f172a;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: monospace;
+            font-size: 13px;
+        }
+
+        .highlight-box {
+            margin-top: 15px;
+            padding: 12px 16px;
+            background-color: #eff6ff;
+            border-radius: 6px;
+            color: #1e40af;
+            font-size: 13.5px;
+            border: 1px solid #bfdbfe;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>[Thực hành] Sử dụng Box Model 3</h1>
+        <p class="subtitle">Khảo sát tác dụng của box-sizing: border-box, box-shadow spread và Flexbox</p>
+
+        <!-- Khung hiển thị phần tử #demo chứa .d1 và .d2 -->
+        <div class="stage-wrapper">
+            <div id="demo">
+                <div class="d1">.d1</div>
+                <div class="d2">.d2</div>
+            </div>
+        </div>
+
+        <!-- Phân tích chi tiết -->
+        <div class="info-card">
+            <h2>Phân tích kỹ thuật CSS trong bài:</h2>
+            <ul class="info-list">
+                <li><code>display: flex;</code> trong <code>#demo</code>: Xếp hai khối <code>.d1</code> và <code>.d2</code> nằm ngang cạnh nhau một cách tự nhiên.</li>
+                <li><code>box-sizing: border-box;</code>: <strong>Điểm cốt lõi!</strong> Mặc dù khối <code>.d2</code> có thêm <code>padding: 30px</code>, nhưng nhờ có <code>border-box</code>, padding được tính <em>vào bên trong</em> kích thước 150px × 80px đã khai báo, giúp <code>.d2</code> <strong>không bị phình to</strong> hơn <code>.d1</code>!</li>
+                <li><code>box-shadow: 0 0 0 4px ...;</code>: Sử dụng giá trị spread radius (4px) của box-shadow để tạo viền màu mà không làm thay đổi kích thước chiếm chỗ vật lý của phần tử.</li>
+                <li><code>border-radius: 36%;</code>: Bo góc mềm mại tạo dáng hình thuôn cho hai khối con.</li>
+            </ul>
+
+            <div class="highlight-box">
+                💡 <strong>Ghi nhớ:</strong> Với <code>box-sizing: content-box</code> (mặc định), padding sẽ cộng thêm vào chiều rộng (150px + 60px = 210px). Nhưng với <code>box-sizing: border-box</code>, chiều rộng tổng thể luôn cố định đúng 150px.
+            </div>
+        </div>
+    </div>
+</body>
+</html>
