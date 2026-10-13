@@ -2,25 +2,24 @@
 
 Dự án thực hành các thao tác cơ bản với Git và GitHub (CodeGym).
 
-## Mục Tiêu Thực Hành
-- Làm quen và thực hành các thao tác cơ bản với Git và GitHub.
-- Nắm được quy trình làm việc từ tạo repository, clone dự án về máy tính, đến đẩy mã nguồn lên GitHub.
+## Nhánh: `favorite-foods-travel-list`
+Bài tập: **Sử dụng danh sách không có thứ tự (`<ul>`) và danh sách có thứ tự (`<ol>`) trong HTML**.
 
-## Cấu Trúc Dự Án
+### Yêu cầu bài tập:
+- Tạo tệp `index.html`.
+- Thẻ `<h1>`: *"Những món ăn yêu thích của tôi"*.
+- Thẻ `<ul>`: Liệt kê ít nhất 5 món ăn yêu thích (Phở bò, Bún chả, Bánh mì, Cơm tấm, Gỏi cuốn,...).
+- Thẻ `<h2>`: *"Các bước chuẩn bị cho một chuyến du lịch"*.
+- Thẻ `<ol>`: Mô tả ít nhất 5 bước chuẩn bị trước khi đi du lịch (Lên kế hoạch, Đặt vé/phòng, Soạn hành lý, Kiểm tra giấy tờ, Xuất phát).
+
+### Cấu Trúc Thư Mục
 ```plaintext
 GitProject/
 ├── README.md
+├── index.html        # Trang web thực hành thẻ ul và ol
 └── source/
     ├── index.html
     └── news.html
 ```
-
-## Các Bước Đã Thực Hiện
-1. Tạo repository `GitProject` trên GitHub.
-2. Clone repository về máy tính cá nhân bằng lệnh `git clone`.
-3. Tạo file `README.md`, đưa vào Staging Area (`git add`) và commit (`git commit -m "Add README.md"`).
-4. Đẩy file `README.md` lên GitHub (`git push origin main`).
-5. Tạo thư mục `source` chứa `index.html` và `news.html`.
-6. Đẩy thư mục `source` lên GitHub (`git add source/`, `git commit -m "Add source files"`, `git push origin main`).
 
 Tác giả: Vũ Đức Đạt (VuDucDat2006)
