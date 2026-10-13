@@ -1,0 +1,232 @@
+/* ========================================================
+   1. RESET & MÔ HÌNH HỘP BOX-SIZING
+   ======================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    color: #333333;
+    line-height: 1.6;
+}
+
+/* ========================================================
+   2. KHUNG CONTAINER CHÍNH (XẾP DỌC BẰNG FLEXBOX)
+   ======================================================== */
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+/* ========================================================
+   3. PHÂN VÙNG HEADER & FOOTER
+   ======================================================== */
+.header, .footer {
+    background-color: #333333;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px;
+}
+
+.header h1 {
+    font-size: 26px;
+    margin-bottom: 4px;
+    letter-spacing: -0.5px;
+}
+
+.header .tagline {
+    font-size: 13.5px;
+    color: #cbd5e1;
+}
+
+.footer p {
+    font-size: 14px;
+    margin: 3px 0;
+}
+
+.footer .author {
+    font-size: 13px;
+    color: #94a3b8;
+}
+
+/* ========================================================
+   4. PHÂN VÙNG NAVIGATION (MENU ĐIỀU HƯỚNG)
+   ======================================================== */
+.nav {
+    background-color: #444444;
+    color: #ffffff;
+    text-align: center;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14.5px;
+    font-weight: 500;
+    padding: 6px 14px;
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+}
+
+.nav a:hover {
+    background-color: #555555;
+    color: #38bdf8;
+}
+
+/* ========================================================
+   5. PHÂN VÙNG MAIN-CONTAINER (CHỨA CONTENT & SIDEBAR)
+   ======================================================== */
+.main-container {
+    display: flex;
+    flex: 1;
+    overflow-y: auto;
+}
+
+/* Nội dung chính chiếm 3 phần (flex: 3 = 75%) */
+.content {
+    flex: 3;
+    padding: 30px;
+    background-color: #ffffff;
+    overflow-y: auto;
+}
+
+.content h2 {
+    font-size: 24px;
+    color: #0f172a;
+    margin-bottom: 12px;
+}
+
+.content p {
+    margin-bottom: 16px;
+    font-size: 15px;
+    color: #475569;
+}
+
+.feature-box {
+    background-color: #f8fafc;
+    border-left: 4px solid #0284c7;
+    padding: 18px 22px;
+    border-radius: 0 6px 6px 0;
+    margin: 20px 0;
+    border-top: 1px solid #e2e8f0;
+    border-right: 1px solid #e2e8f0;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.feature-box h3 {
+    color: #0369a1;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.feature-box ul {
+    padding-left: 20px;
+}
+
+.feature-box li {
+    font-size: 14px;
+    color: #334155;
+    margin-bottom: 8px;
+}
+
+.feature-box code {
+    background-color: #e0f2fe;
+    color: #0369a1;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-weight: 600;
+}
+
+/* Nội dung phụ Sidebar chiếm 1 phần (flex: 1 = 25%) */
+.sidebar {
+    flex: 1;
+    background-color: #f4f4f4;
+    padding: 25px 20px;
+    border-left: 1px solid #e2e8f0;
+    overflow-y: auto;
+}
+
+.sidebar h3 {
+    font-size: 18px;
+    color: #1e293b;
+    margin-bottom: 16px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #cbd5e1;
+}
+
+.sidebar-widget {
+    background-color: #ffffff;
+    padding: 16px;
+    border-radius: 6px;
+    margin-bottom: 18px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.sidebar-widget h4 {
+    font-size: 14.5px;
+    color: #0f172a;
+    margin-bottom: 10px;
+}
+
+.sidebar-links {
+    list-style: none;
+}
+
+.sidebar-links li {
+    margin-bottom: 8px;
+}
+
+.sidebar-links a {
+    color: #0284c7;
+    text-decoration: none;
+    font-size: 13.5px;
+    transition: color 0.2s ease;
+}
+
+.sidebar-links a:hover {
+    text-decoration: underline;
+    color: #0369a1;
+}
+
+.sidebar-note {
+    font-size: 13px;
+    color: #64748b;
+    line-height: 1.5;
+}
+
+/* ========================================================
+   6. RESPONSIVE VỚI MEDIA QUERIES (MOBILE <= 768PX)
+   ======================================================== */
+@media (max-width: 768px) {
+    .container {
+        height: auto;
+        min-height: 100vh;
+    }
+
+    .main-container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        border-left: none;
+        border-top: 1px solid #e2e8f0;
+    }
+
+    .content {
+        padding: 20px 15px;
+    }
+
+    .sidebar {
+        padding: 20px 15px;
+    }
+}

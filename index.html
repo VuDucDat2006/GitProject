@@ -1,0 +1,80 @@
+﻿<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Layout - [Thá»±c hÃ nh] CodeGym</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <!-- 1. HEADER (TIÃŠU Äá»€ Äáº¦U TRANG) -->
+        <header class="header">
+            <h1>Header</h1>
+            <p class="tagline">Trang web thá»±c hÃ nh xÃ¢y dá»±ng bá»‘ cá»¥c vá»›i CSS Flexbox</p>
+        </header>
+
+        <!-- 2. NAVIGATION (MENU ÄIá»€U HÆ¯á»šNG) -->
+        <nav class="nav">
+            <a href="#home">Trang chá»§</a>
+            <a href="#services">Dá»‹ch vá»¥</a>
+            <a href="#tutorials">Há»c Flexbox</a>
+            <a href="#about">Giá»›i thiá»‡u</a>
+            <a href="#contact">LiÃªn há»‡</a>
+        </nav>
+
+        <!-- 3. MAIN-CONTAINER (CHá»¨A Ná»˜I DUNG CHÃNH VÃ€ SIDEBAR) -->
+        <div class="main-container">
+            <!-- Khu vá»±c ná»™i dung chÃ­nh (chiáº¿m 3 pháº§n: flex: 3) -->
+            <main class="content">
+                <h2>Main Content</h2>
+                <p>
+                    ChÃ o má»«ng báº¡n Ä‘áº¿n vá»›i bÃ i thá»±c hÃ nh xÃ¢y dá»±ng bá»‘ cá»¥c trang web responsive báº±ng <strong>CSS Flexbox</strong>. ÄÃ¢y lÃ  mÃ´ hÃ¬nh dÃ n trang hiá»‡n Ä‘áº¡i, linh hoáº¡t vÃ  Ä‘Æ°á»£c á»©ng dá»¥ng rá»™ng rÃ£i nháº¥t trong phÃ¡t triá»ƒn giao diá»‡n web hiá»‡n nay.
+                </p>
+
+                <div class="feature-box">
+                    <h3>ðŸ’¡ CÆ¡ cháº¿ phÃ¢n chia khÃ´ng gian báº±ng Flexbox:</h3>
+                    <ul>
+                        <li><strong>Tháº» bao ngoÃ i (.container):</strong> Thiáº¿t láº­p <code>display: flex; flex-direction: column; height: 100vh;</code> Ä‘á»ƒ sáº¯p xáº¿p Header, Nav, Main-container vÃ  Footer theo trá»¥c dá»c.</li>
+                        <li><strong>Khung giá»¯a (.main-container):</strong> Mang thuá»™c tÃ­nh <code>flex: 1; display: flex;</code> giÃºp co dÃ£n chiáº¿m toÃ n bá»™ chiá»u cao mÃ n hÃ¬nh cÃ²n láº¡i.</li>
+                        <li><strong>Tá»· lá»‡ phÃ¢n chia ngang (Desktop):</strong> Content cÃ³ <code>flex: 3</code> (chiáº¿m 75%), trong khi Sidebar cÃ³ <code>flex: 1</code> (chiáº¿m 25%).</li>
+                        <li><strong>CÆ¡ cháº¿ Responsive (Mobile &le; 768px):</strong> <code>.main-container</code> chuyá»ƒn thÃ nh <code>flex-direction: column</code>, tá»± Ä‘á»™ng Ä‘Æ°a Sidebar xuá»‘ng dÆ°á»›i Content.</li>
+                    </ul>
+                </div>
+
+                <p>
+                    Vá»›i cÃ¡ch tiáº¿p cáº­n nÃ y, chÃ¢n trang (Footer) luÃ´n Ä‘Æ°á»£c ghim tá»± nhiÃªn á»Ÿ Ä‘Ã¡y mÃ n hÃ¬nh, Ä‘á»“ng thá»i ná»™i dung tá»± Ä‘á»™ng thÃ­ch á»©ng mÆ°á»£t mÃ  khi ngÆ°á»i dÃ¹ng thay Ä‘á»•i kÃ­ch thÆ°á»›c cá»­a sá»• trÃ¬nh duyá»‡t.
+                </p>
+            </main>
+
+            <!-- Khu vá»±c ná»™i dung phá»¥ Sidebar (chiáº¿m 1 pháº§n: flex: 1) -->
+            <aside class="sidebar">
+                <h3>Sidebar</h3>
+                <div class="sidebar-widget">
+                    <h4>ðŸ”¥ Tin tá»©c cÃ´ng nghá»‡</h4>
+                    <ul class="sidebar-links">
+                        <li><a href="#news1">Cáº©m nang lÃ m chá»§ Flexbox 2026</a></li>
+                        <li><a href="#news2">So sÃ¡nh Flexbox vÃ  CSS Grid</a></li>
+                        <li><a href="#news3">Thiáº¿t káº¿ Responsive khÃ´ng cáº§n Framework</a></li>
+                    </ul>
+                </div>
+
+                <div class="sidebar-widget">
+                    <h4>ðŸ’¡ Ghi chÃº ká»¹ thuáº­t</h4>
+                    <p class="sidebar-note">
+                        Sidebar chiáº¿m 1/4 chiá»u rá»™ng trÃªn Desktop (<code>flex: 1</code>). Khi xem trÃªn Ä‘iá»‡n thoáº¡i di Ä‘á»™ng, Sidebar sáº½ tá»± Ä‘á»™ng chuyá»ƒn xuá»‘ng dÆ°á»›i Main Content.
+                    </p>
+                </div>
+            </aside>
+        </div>
+
+        <!-- 4. FOOTER (CHÃ‚N TRANG) -->
+        <footer class="footer">
+            <p>Footer &bull; Báº£n quyá»n &copy; 2026 CodeGym Web Development</p>
+            <p class="author">Há»c viÃªn thá»±c hiá»‡n: <strong>VÅ© Äá»©c Äáº¡t (VuDucDat2006)</strong></p>
+        </footer>
+    </div>
+
+</body>
+</html>
