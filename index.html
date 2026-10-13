@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page - Tái Cấu Trúc Bằng SASS | CodeGym</title>
+    <!-- CSS đã biên dịch từ SCSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ========================================================
+         1. [BÀI TẬP] NAVIGATION VÀ HEADER CỦA LANDING PAGE
+         ======================================================== -->
+    <header class="header">
+        <div class="logo">
+            <span class="logo-icon">🚀</span>
+            <span class="brand-name">MyBrand</span>
+        </div>
+
+        <nav class="nav">
+            <ul>
+                <li><a href="#home" class="active">Trang chủ</a></li>
+                <li><a href="#products">Sản phẩm nổi bật</a></li>
+                <li><a href="#stats">Số liệu thống kê</a></li>
+                <li><a href="#testimonials">Đánh giá</a></li>
+                <li><a href="#contact">Liên hệ</a></li>
+            </ul>
+        </nav>
+
+        <div class="header-actions">
+            <a href="#contact" class="btn btn-sm">Tư vấn ngay</a>
+        </div>
+    </header>
+
+    <!-- HERO / BANNER SECTION -->
+    <section class="hero" id="home">
+        <div class="hero-container">
+            <div class="hero-badge">
+                <span>✨</span> Nền Tảng Chuyển Đổi Số Hiện Đại 2026
+            </div>
+            <h1>
+                Kiến Tạo Trải Nghiệm Số <span class="highlight-text">Đột Phá</span> Cho Doanh Nghiệp
+            </h1>
+            <p class="hero-subtitle">
+                Giải pháp toàn diện all-in-one giúp tối ưu hóa quy trình vận hành, nâng cao trải nghiệm khách hàng và thúc đẩy tăng trưởng doanh số bền vững.
+            </p>
+            <div class="hero-buttons">
+                <a href="#products" class="btn btn-lg">Khám phá sản phẩm</a>
+                <a href="#stats" class="btn btn-lg btn-outline">Xem số liệu thống kê</a>
+            </div>
+            <div class="hero-trust">
+                <span class="star-rating">★★★★★</span>
+                <span>Được tin dùng bởi hơn 15,000+ doanh nghiệp trên toàn quốc</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================================
+         2. [BÀI TẬP] DỰNG PHẦN SẢN PHẨM NỔI BẬT CỦA LANDING PAGE
+         ======================================================== -->
+    <section class="featured-products services" id="products">
+        <div class="section-header">
+            <span class="section-badge">Sản phẩm &amp; Dịch vụ</span>
+            <h2 class="section-title">Sản Phẩm Nổi Bật Của Chúng Tôi</h2>
+            <p class="section-desc">
+                Được phát triển với công nghệ tân tiến nhất, đáp ứng trọn vẹn mọi nhu cầu kinh doanh từ doanh nghiệp khởi nghiệp đến tập đoàn lớn.
+            </p>
+        </div>
+
+        <div class="products-grid service-container">
+            <!-- Sản phẩm 1 -->
+            <div class="product-card service">
+                <span class="card-badge">Bán chạy</span>
+                <span class="product-icon service-icon">💻</span>
+                <h3>Thiết kế Website Chuẩn SEO</h3>
+                <p>Xây dựng giao diện website hiện đại, tương thích hoàn hảo trên mọi thiết bị (Responsive) và tối ưu trải nghiệm người dùng (UX/UI).</p>
+                <div class="product-meta">
+                    <span class="price-tag">Từ 2.990.000đ</span>
+                    <a href="#contact" class="btn-link">Chi tiết &rarr;</a>
+                </div>
+            </div>
+
+            <!-- Sản phẩm 2 -->
+            <div class="product-card service">
+                <span class="card-badge">Phổ biến</span>
+                <span class="product-icon service-icon">⚙️</span>
+                <h3>Hệ Thống ERP &amp; Quản Trị</h3>
+                <p>Cung cấp giải pháp phần mềm quản lý doanh nghiệp tùy chỉnh, kiểm soát chuỗi cung ứng, nhân sự và tài chính an toàn, bảo mật tuyệt đối.</p>
+                <div class="product-meta">
+                    <span class="price-tag">Từ 499.000đ/tháng</span>
+                    <a href="#contact" class="btn-link">Chi tiết &rarr;</a>
+                </div>
+            </div>
+
+            <!-- Sản phẩm 3 -->
+            <div class="product-card service">
+                <span class="card-badge">Hiệu quả</span>
+                <span class="product-icon service-icon">📈</span>
+                <h3>Marketing Số &amp; Tăng Trưởng</h3>
+                <p>Chiến lược tiếp thị số đa kênh toàn diện, tối ưu hóa tỷ lệ chuyển đổi khách hàng tiềm năng và đột phá doanh thu kinh doanh.</p>
+                <div class="product-meta">
+                    <span class="price-tag">Từ 1.490.000đ/tháng</span>
+                    <a href="#contact" class="btn-link">Chi tiết &rarr;</a>
+                </div>
+            </div>
+
+            <!-- Sản phẩm 4 -->
+            <div class="product-card service">
+                <span class="card-badge">Mới nhất</span>
+                <span class="product-icon service-icon">📱</span>
+                <h3>Ứng Dụng Di Động &amp; AI</h3>
+                <p>Phát triển ứng dụng iOS/Android mượt mà, tích hợp trí tuệ nhân tạo (AI Chatbot, đề xuất thông minh) tự động hóa chăm sóc khách hàng 24/7.</p>
+                <div class="product-meta">
+                    <span class="price-tag">Từ 5.990.000đ</span>
+                    <a href="#contact" class="btn-link">Chi tiết &rarr;</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================================
+         3. [BÀI TẬP] DỰNG PHẦN SỐ LIỆU THỐNG KÊ CỦA LANDING PAGE
+         ======================================================== -->
+    <section class="stats-section" id="stats">
+        <div class="section-header">
+            <span class="section-badge">Thành tựu &amp; Số liệu</span>
+            <h2 class="section-title">Số Liệu Thống Kê Nổi Bật</h2>
+            <p class="section-desc">
+                Những con số ấn tượng khẳng định sự uy tín, năng lực triển khai và chất lượng đồng hành của MyBrand cùng khách hàng.
+            </p>
+        </div>
+
+        <div class="stats-grid">
+            <!-- Thẻ thống kê 1 -->
+            <div class="stat-card">
+                <span class="stat-icon">👥</span>
+                <div class="stat-number">15,000+</div>
+                <div class="stat-label">Khách Hàng Tin Cậy</div>
+                <p class="stat-desc">Hơn 15 nghìn đối tác và doanh nghiệp trên toàn quốc đã lựa chọn hệ sinh thái MyBrand.</p>
+            </div>
+
+            <!-- Thẻ thống kê 2 -->
+            <div class="stat-card">
+                <span class="stat-icon">🚀</span>
+                <div class="stat-number">500+</div>
+                <div class="stat-label">Dự Án Triển Khai</div>
+                <p class="stat-desc">Hoàn thành đúng tiến độ với tiêu chuẩn quốc tế về hiệu năng tải trang và bảo mật dữ liệu.</p>
+            </div>
+
+            <!-- Thẻ thống kê 3 -->
+            <div class="stat-card">
+                <span class="stat-icon">⭐</span>
+                <div class="stat-number">99.8%</div>
+                <div class="stat-label">Tỷ Lệ Hài Lòng</div>
+                <p class="stat-desc">Khách hàng đánh giá chất lượng sản phẩm 5 sao và tiếp tục gia hạn hợp đồng hàng năm.</p>
+            </div>
+
+            <!-- Thẻ thống kê 4 -->
+            <div class="stat-card">
+                <span class="stat-icon">⚡</span>
+                <div class="stat-number">24/7</div>
+                <div class="stat-label">Hỗ Trợ Kỹ Thuật</div>
+                <p class="stat-desc">Đội ngũ kỹ sư chuyên môn cao luôn túc trực, phản hồi và giải quyết sự cố trong vòng 15 phút.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS SECTION (ĐÁNH GIÁ KHÁCH HÀNG) -->
+    <section class="testimonials" id="testimonials">
+        <div class="section-header">
+            <span class="section-badge">Phản hồi khách hàng</span>
+            <h2 class="section-title">Khách Hàng Nói Gì Về Chúng Tôi?</h2>
+            <p class="section-desc">
+                Lắng nghe chia sẻ thực tế từ các nhà quản lý đã trực tiếp sử dụng dịch vụ của MyBrand.
+            </p>
+        </div>
+
+        <div class="testimonial-container">
+            <div class="testimonial">
+                <div class="rating-stars">★★★★★</div>
+                <p class="quote">"Dịch vụ tuyệt vời! Đội ngũ hỗ trợ nhiệt tình, giải pháp công nghệ hiện đại và sản phẩm hoàn thiện vượt trên cả kỳ vọng ban đầu của công ty chúng tôi."</p>
+                <div class="author-info">
+                    <div class="author-avatar">A</div>
+                    <div class="author-details">
+                        <span class="author">Nguyễn Văn An</span>
+                        <span class="author-role">CEO &bull; TechCorp Vietnam</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial">
+                <div class="rating-stars">★★★★★</div>
+                <p class="quote">"Tôi rất hài lòng với MyBrand. Giao diện trực quan, tốc độ tải nhanh và dễ sử dụng. Doanh thu của chúng tôi đã tăng 45% sau khi ứng dụng hệ thống mới."</p>
+                <div class="author-info">
+                    <div class="author-avatar">B</div>
+                    <div class="author-details">
+                        <span class="author">Trần Thị Bích</span>
+                        <span class="author-role">Founder &bull; Startup X Innovation</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================================
+         4. [BÀI TẬP] DỰNG PHẦN FOOTER CỦA LANDING PAGE
+         ======================================================== -->
+    <footer class="footer" id="contact">
+        <div class="footer-container">
+            <div class="footer-grid">
+                <!-- Cột 1: Thông tin thương hiệu -->
+                <div class="footer-col">
+                    <h4 class="col-title">Về MyBrand</h4>
+                    <p class="brand-desc">
+                        MyBrand là đơn vị tiên phong trong lĩnh vực tư vấn chuyển đổi số, thiết kế web và cung cấp phần mềm quản trị thông minh cho doanh nghiệp thời đại mới.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" title="Facebook">🌐</a>
+                        <a href="#" title="Twitter">🐦</a>
+                        <a href="#" title="LinkedIn">💼</a>
+                        <a href="#" title="GitHub">🐙</a>
+                    </div>
+                </div>
+
+                <!-- Cột 2: Liên kết nhanh -->
+                <div class="footer-col">
+                    <h4 class="col-title">Liên Kết Nhanh</h4>
+                    <ul class="footer-links">
+                        <li><a href="#home">Trang chủ</a></li>
+                        <li><a href="#products">Sản phẩm nổi bật</a></li>
+                        <li><a href="#stats">Số liệu thống kê</a></li>
+                        <li><a href="#testimonials">Khách hàng đánh giá</a></li>
+                        <li><a href="#contact">Liên hệ tư vấn</a></li>
+                    </ul>
+                </div>
+
+                <!-- Cột 3: Giải pháp công nghệ -->
+                <div class="footer-col">
+                    <h4 class="col-title">Giải Pháp</h4>
+                    <ul class="footer-links">
+                        <li><a href="#products">Thiết kế Web Responsive</a></li>
+                        <li><a href="#products">Phần mềm quản trị ERP</a></li>
+                        <li><a href="#products">Hệ sinh thái CRM bán hàng</a></li>
+                        <li><a href="#products">Ứng dụng di động iOS/Android</a></li>
+                        <li><a href="#products">Bảo mật dữ liệu đám mây</a></li>
+                    </ul>
+                </div>
+
+                <!-- Cột 4: Thông tin liên hệ -->
+                <div class="footer-col">
+                    <h4 class="col-title">Thông Tin Liên Hệ</h4>
+                    <ul class="contact-list">
+                        <li>
+                            <span class="contact-icon">📍</span>
+                            <span>Tòa nhà Sáng Tạo, Số 8 Tôn Thất Thuyết, Cầu Giấy, Hà Nội</span>
+                        </li>
+                        <li>
+                            <span class="contact-icon">📞</span>
+                            <span>Hotline: 1900 6868 &bull; 0987 654 321</span>
+                        </li>
+                        <li>
+                            <span class="contact-icon">✉️</span>
+                            <span>Email: contact@mybrand.vn</span>
+                        </li>
+                        <li>
+                            <span class="contact-icon">🕒</span>
+                            <span>Giờ làm việc: Thứ 2 - Thứ 7 (8:00 - 18:00)</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Chân trang bản quyền và thông tin học viên -->
+            <div class="footer-bottom">
+                <p>&copy; 2026 MyBrand. All rights reserved. &bull; Thiết kế &amp; Tái cấu trúc mã nguồn bằng <strong>SASS / SCSS</strong>.</p>
+                <p class="footer-badge">
+                    Học viên thực hiện: <strong>Vũ Đức Đạt (VuDucDat2006)</strong> &bull; [Bài tập] Tái cấu trúc mã CSS của các bài tập đã làm &bull; CodeGym
+                </p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

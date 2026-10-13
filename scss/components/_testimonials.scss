@@ -1,0 +1,97 @@
+// ==========================================================================
+// landing_page_sass/components/_testimonials.scss
+// Testimonials Section (Đánh giá khách hàng)
+// ==========================================================================
+
+.testimonials {
+  @include section-padding(70px, 20px);
+  background-color: $bg-alt; // #f1f5f9 / #e2e8f0 nền nhẹ
+  text-align: center;
+
+  .testimonial-container {
+    max-width: 960px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    justify-content: center;
+  }
+
+  .testimonial {
+    flex: 1;
+    min-width: 280px;
+    background: $bg-white;
+    padding: 28px;
+    border-radius: $radius-md;
+    box-shadow: $shadow-sm;
+    border-left: 4px solid $primary-color;
+    text-align: left;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+
+    &:hover {
+      transform: translateY(-4px);
+      box-shadow: $shadow-md;
+    }
+
+    .rating-stars {
+      color: $accent-color;
+      font-size: 14px;
+      margin-bottom: 12px;
+      letter-spacing: 2px;
+    }
+
+    .quote {
+      font-style: italic;
+      color: $text-color;
+      font-size: $font-size-base;
+      line-height: 1.6;
+      margin-bottom: 16px;
+    }
+
+    .author-info {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+
+      .author-avatar {
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        background-color: $primary-light;
+        color: $primary-dark;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: $font-weight-bold;
+        font-size: 16px;
+      }
+
+      .author-details {
+        .author {
+          font-weight: $font-weight-bold;
+          color: $primary-dark;
+          font-size: $font-size-sm + 1;
+          display: block;
+        }
+
+        .author-role {
+          font-size: $font-size-xs + 1;
+          color: $text-light;
+        }
+      }
+    }
+  }
+
+  @include respond-to(tablet) {
+    padding: 45px 20px;
+
+    .testimonial-container {
+      flex-direction: column;
+    }
+
+    .testimonial {
+      width: 100%;
+      min-width: unset;
+    }
+  }
+}

@@ -1,0 +1,52 @@
+// ==========================================================================
+// landing_page_sass/components/_buttons.scss
+// Các biến thể nút bấm tái sử dụng
+// ==========================================================================
+
+.btn {
+  @include button-style($primary-color, $text-white);
+
+  &-secondary {
+    @include button-style($secondary-color, $text-white);
+  }
+
+  &-accent {
+    @include button-style($accent-color, #1e293b);
+  }
+
+  &-outline {
+    background-color: transparent;
+    color: $primary-color;
+    border-color: $primary-color;
+    box-shadow: none;
+
+    &:hover {
+      background-color: $primary-color;
+      color: $text-white;
+      transform: translateY(-2px);
+    }
+  }
+
+  &-outline-light {
+    background-color: transparent;
+    color: $text-white;
+    border-color: rgba(255, 255, 255, 0.6);
+    box-shadow: none;
+
+    &:hover {
+      background-color: $text-white;
+      color: $dark-bg;
+      transform: translateY(-2px);
+    }
+  }
+
+  &-sm {
+    padding: 8px 18px;
+    font-size: $font-size-sm;
+  }
+
+  &-lg {
+    padding: 14px 34px;
+    font-size: $font-size-md;
+  }
+}

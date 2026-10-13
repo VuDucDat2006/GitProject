@@ -1,0 +1,115 @@
+// ==========================================================================
+// landing_page_sass/components/_hero.scss
+// Hero / Banner Section với background gradient và typography ấn tượng
+// ==========================================================================
+
+.hero {
+  text-align: center;
+  padding: 100px 20px;
+  background: linear-gradient(180deg, #f8fafc 0%, #e2e8f0 100%);
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle at center, rgba(2, 132, 199, 0.05) 0%, transparent 60%);
+    pointer-events: none;
+  }
+
+  .hero-container {
+    max-width: 860px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+  }
+
+  .hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #e0f2fe;
+    color: $primary-dark;
+    font-size: $font-size-sm;
+    font-weight: $font-weight-semibold;
+    padding: 6px 16px;
+    border-radius: $radius-full;
+    margin-bottom: $spacing-lg;
+    box-shadow: $shadow-sm;
+    border: 1px solid $primary-subtle;
+  }
+
+  h1 {
+    font-size: $font-size-hero;
+    color: $secondary-color;
+    margin-bottom: $spacing-md;
+    letter-spacing: -1px;
+    line-height: 1.2;
+
+    .highlight-text {
+      color: $primary-color;
+      background: linear-gradient(135deg, $primary-color, #2563eb);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+
+  p.hero-subtitle {
+    font-size: $font-size-md;
+    color: $text-light;
+    margin-bottom: $spacing-xl;
+    line-height: 1.6;
+    max-width: 680px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-bottom: $spacing-xl;
+  }
+
+  .hero-trust {
+    font-size: $font-size-sm;
+    color: $text-light;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+
+    .star-rating {
+      color: #f59e0b;
+      letter-spacing: 2px;
+    }
+  }
+
+  // Responsive Hero
+  @include respond-to(tablet) {
+    padding: 60px 20px;
+
+    h1 {
+      font-size: 28px;
+    }
+
+    p.hero-subtitle {
+      font-size: $font-size-base;
+    }
+
+    .hero-buttons {
+      flex-direction: column;
+      width: 100%;
+
+      .btn {
+        width: 100%;
+      }
+    }
+  }
+}

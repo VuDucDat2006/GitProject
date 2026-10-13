@@ -1,0 +1,151 @@
+// ==========================================================================
+// landing_page_sass/layout/_footer.scss
+// Bài tập: Dựng phần Footer của landing page thiết kế sẵn
+// ==========================================================================
+
+.footer {
+  background-color: $darker-bg;
+  color: $text-footer;
+  padding: 60px 20px 25px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+
+  .footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .footer-grid {
+    @include grid-auto(240px, 35px);
+    margin-bottom: 45px;
+  }
+
+  .footer-col {
+    h4.col-title {
+      color: $text-white;
+      font-size: $font-size-md;
+      font-weight: $font-weight-bold;
+      margin-bottom: 20px;
+      position: relative;
+      padding-bottom: 10px;
+
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 36px;
+        height: 2px;
+        background-color: $primary-color;
+      }
+    }
+
+    p {
+      color: $text-footer;
+      font-size: $font-size-sm;
+      line-height: 1.7;
+    }
+
+    .brand-desc {
+      margin-bottom: 20px;
+    }
+
+    .social-links {
+      display: flex;
+      gap: 12px;
+
+      a {
+        width: 38px;
+        height: 38px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.08);
+        color: $text-white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 15px;
+        transition: $transition-normal;
+
+        &:hover {
+          background-color: $primary-color;
+          color: $text-white;
+          transform: translateY(-3px);
+        }
+      }
+    }
+
+    .footer-links {
+      li {
+        margin-bottom: 10px;
+
+        a {
+          color: $text-footer;
+          font-size: $font-size-sm;
+          transition: $transition-fast;
+          display: inline-flex;
+          align-items: center;
+          gap: 6px;
+
+          &::before {
+            content: "›";
+            color: $primary-color;
+            font-size: 16px;
+            font-weight: bold;
+          }
+
+          &:hover {
+            color: #38bdf8;
+            transform: translateX(4px);
+          }
+        }
+      }
+    }
+
+    .contact-list {
+      li {
+        display: flex;
+        align-items: flex-start;
+        gap: 10px;
+        margin-bottom: 12px;
+        font-size: $font-size-sm;
+        color: $text-footer;
+
+        .contact-icon {
+          color: $primary-color;
+          font-size: 16px;
+          margin-top: 2px;
+        }
+      }
+    }
+  }
+
+  .footer-bottom {
+    padding-top: 25px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    text-align: center;
+
+    p {
+      color: #94a3b8;
+      font-size: $font-size-sm;
+      margin-bottom: 6px;
+
+      strong {
+        color: $text-white;
+      }
+    }
+
+    .footer-badge {
+      font-size: $font-size-xs;
+      color: #64748b;
+    }
+  }
+
+  // Responsive Footer
+  @include respond-to(tablet) {
+    padding: 45px 20px 20px;
+
+    .footer-grid {
+      grid-template-columns: 1fr;
+      gap: 30px;
+    }
+  }
+}

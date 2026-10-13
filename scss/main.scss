@@ -1,0 +1,24 @@
+// ==========================================================================
+// landing_page_sass/main.scss
+// Tệp SCSS chính: Tái cấu trúc mã CSS Landing Page bằng SASS
+// Học viên: Vũ Đức Đạt (VuDucDat2006) - CodeGym
+// ==========================================================================
+
+// 1. ABSTRACTS (Hệ thống Biến và Mixin tái sử dụng)
+@import "abstracts/variables";
+@import "abstracts/mixins";
+
+// 2. BASE (Thiết lập Reset CSS, cấu hình cơ sở và Typography)
+@import "base/reset";
+@import "base/typography";
+
+// 3. COMPONENTS (Các khối giao diện tái sử dụng)
+@import "components/buttons";
+@import "components/hero";
+@import "components/products";
+@import "components/stats";
+@import "components/testimonials";
+
+// 4. LAYOUT (Bố cục cấu trúc Header và Footer)
+@import "layout/header";
+@import "layout/footer";
