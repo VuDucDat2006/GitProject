@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 120" width="200" height="120">
+  <defs>
+    <linearGradient id="g1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00c6ff"/>
+      <stop offset="100%" stop-color="#0072ff"/>
+    </linearGradient>
+  </defs>
+  <rect x="10" y="20" width="120" height="80" rx="8" fill="url(#g1)" opacity="0.9"/>
+  <rect x="20" y="30" width="100" height="55" rx="4" fill="#ffffff" opacity="0.95"/>
+  <circle cx="70" cy="57" r="16" fill="#0072ff" opacity="0.3"/>
+  <path d="M60 57 L68 65 L82 50" stroke="#0072ff" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Shopping Bag beside -->
+  <rect x="140" y="40" width="45" height="55" rx="6" fill="#ff7675"/>
+  <path d="M152 40 C152 28, 173 28, 173 40" stroke="#d63031" stroke-width="4" fill="none" stroke-linecap="round"/>
+  <circle cx="162" cy="65" r="8" fill="#ffffff" opacity="0.9"/>
+  <path d="M159 65 L162 68 L167 62" stroke="#d63031" stroke-width="2" fill="none"/>
+</svg>
