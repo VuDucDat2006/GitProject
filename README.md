@@ -1,75 +1,80 @@
-# [Bài tập] Thiết kế Trang Đăng Ký với Bootstrap Forms
+# [Bài tập] Tạo Landing Page với Bootstrap và Hình Ảnh
 
-Dự án bài tập thực hành áp dụng toàn diện hệ thống **Bootstrap Forms**, **Buttons**, **Grid Controls** và **Text Utilities** của framework Bootstrap 5.3 để xây dựng một trang web đăng ký tài khoản người dùng chuyên nghiệp, chuẩn thẩm mỹ UI/UX và tương thích Responsive mượt mà trên cả máy tính (Desktop) và thiết bị di động (Mobile).
+Dự án bài tập thực hành áp dụng toàn diện **Bootstrap Containers**, **Grid System**, **Bootstrap Buttons** và **Bootstrap Images** (`.img-fluid`) để xây dựng một Landing Page hiện đại, chuẩn thẩm mỹ UI/UX cao cấp và tương thích Responsive mượt mà trên mọi thiết bị.
 
 ---
 
 ## 🎯 Mục Tiêu Bài Tập
-- Luyện tập sử dụng **Bootstrap Forms** để tạo khung nhập liệu người dùng chuẩn xác.
-- Áp dụng các điều khiển biểu mẫu: `form-control`, `form-select`, `form-check`, `form-check-input`, `form-check-label`.
-- Sử dụng **Bootstrap Buttons** (`btn btn-primary btn-lg`, `btn-outline-secondary`) để làm nổi bật lời kêu gọi hành động gửi dữ liệu.
-- Định dạng **Bootstrap Text** (`text-muted`, `text-center`, `form-text`, `fw-semibold`, v.v.) để gia tăng tính trực quan và hướng dẫn người dùng.
-- Tích hợp đầy đủ 8 trường nhập liệu theo yêu cầu và cơ chế kiểm tra tính hợp lệ dữ liệu (Client-side Form Validation).
+- Luyện tập sử dụng **Bootstrap Containers** và **Grid System** để bố trí các phân vùng trang web cân đối, hài hòa.
+- Ứng dụng **Bootstrap Images**, đặc biệt là lớp `.img-fluid` (`max-width: 100%; height: auto;`), để hình ảnh co giãn linh hoạt và không bị tràn khung trên thiết bị di động.
+- Sử dụng **Bootstrap Buttons** (`btn-primary`, `btn-lg`, `btn-light`, `rounded-pill`) để tạo các nút kêu gọi hành động (Call to Action - CTA) nổi bật.
+- Nắm vững sự thay đổi quan trọng giữa các phiên bản Bootstrap: **Bootstrap 5 đã loại bỏ hoàn toàn component Jumbotron**; thay vào đó, khu vực Banner/Hero được tự xây dựng bằng các lớp tiện ích (`container`, `py-5`, `bg-*`, `text-center`, flex utilities) kết hợp CSS tùy biến.
 
 ---
 
-## 📋 Danh Sách 8 Trường Nhập Liệu Bắt Buộc
+## 🏛️ Cấu Trúc 4 Phân Vùng Cốt Lõi
 
-| STT | Trường thông tin | Loại phần tử HTML & Class Bootstrap | Mô tả chi tiết |
-| :---: | :--- | :--- | :--- |
-| **1** | **Họ và tên** | `<input type="text" class="form-control">` | Ô nhập văn bản tên người dùng kèm nhãn `form-label` |
-| **2** | **Email** | `<input type="email" class="form-control">` | Ô nhập email chuẩn, có dòng ghi chú bảo mật `form-text text-muted` |
-| **3** | **Mật khẩu** | `<input type="password" class="form-control">` | Ô nhập mật khẩu bảo mật (tối thiểu 8 ký tự) |
-| **4** | **Xác nhận mật khẩu** | `<input type="password" class="form-control">` | Ô nhập lại mật khẩu kiểm tra trùng khớp |
-| **5** | **Giới tính** | `<input type="radio" class="form-check-input">` | Lựa chọn 1 trong 3 giới tính: *Nam*, *Nữ*, *Khác* (`form-check`) |
-| **6** | **Sở thích** | `<input type="checkbox" class="form-check-input">` | Hộp chọn nhiều sở thích: *Lập trình*, *Đọc sách*, *Âm nhạc*, *Thể thao* |
-| **7** | **Quốc gia** | `<select class="form-select">` | Menu thả xuống lựa chọn quốc gia (*Việt Nam*, *Hoa Kỳ*, *Nhật Bản*, v.v.) |
-| **8** | **Nút Submit** | `<button type="submit" class="btn btn-primary btn-lg">` | Nút bấm gửi form kích thước lớn, màu xanh nổi bật |
+```plaintext
+Landing Page
+│
+├── 1. Banner / Hero (Tự xây dựng theo chuẩn Bootstrap 5, không dùng .jumbotron)
+│   ├── Tiêu đề lớn & đoạn giới thiệu ấn tượng
+│   ├── Cặp nút CTA: "Đăng Ký Ngay" & "Xem Thêm"
+│   └── Hình ảnh công nghệ nổi bật (img-fluid rounded-4 shadow)
+│
+├── 2. Giới thiệu (About Showcase)
+│   ├── Row 2 cột: Hình ảnh sản phẩm (img-fluid) + Nội dung mô tả tính năng
+│   └── Huy hiệu thống kê nổi bật (Floating Stat Badge)
+│
+├── 3. Tính năng (Features)
+│   ├── Row 4 cột trên Desktop (col-lg-3), 2 cột Tablet (col-md-6), 1 cột Mobile (col-12)
+│   └── 4 Card tính năng: Tốc độ siêu tốc ⚡, Bảo mật 🛡️, Responsive 📱, Hỗ trợ 24/7 🎧
+│
+└── 4. Kêu Gọi Hành Động (CTA Section)
+    └── Khối biểu ngữ kêu gọi đăng ký dùng thử 30 ngày với nút bấm lớn
+```
 
 ---
 
-## 🏛️ Bảng Phân Tích Kỹ Thuật Bootstrap Form Controls
+## 📋 Bảng Phân Tích Kỹ Thuật Bootstrap 5 & Images
 
-| Class Bootstrap | Vị trí sử dụng | Tác dụng kỹ thuật |
+| Phân vùng | Class Bootstrap áp dụng | Tác dụng kỹ thuật |
 | :--- | :--- | :--- |
-| `.form-control` | Thẻ `<input>` | Định dạng chiều rộng 100%, bo tròn góc, viền xám nhạt và hiệu ứng phát sáng xanh khi kích hoạt (Focus) |
-| `.form-select` | Thẻ `<select>` | Tạo hộp lựa chọn Dropdown có biểu tượng mũi tên chỉ xuống chuẩn hóa đa trình duyệt |
-| `.form-label` | Thẻ `<label>` | Khoảng cách margin lề dưới chuẩn giữa nhãn và trường nhập |
-| `.form-check` | Thẻ `<div>` bọc | Khung chứa nhóm Radio hoặc Checkbox |
-| `.form-check-input` | Thẻ `<input>` | Tùy biến nút chọn tròn hoặc vuông sắc nét, đổi màu xanh khi Checked |
-| `.form-check-label` | Thẻ `<label>` | Nhãn đi kèm nút chọn, cho phép nhấp chuột vào chữ để kích hoạt |
-| `.form-text .text-muted` | Thẻ `<div>` / `<small>` | Dòng văn bản ghi chú hướng dẫn phụ mờ bên dưới ô nhập |
-| `.btn .btn-primary` | Thẻ `<button>` | Nút bấm giao diện phẳng hiện đại, chuyển màu và đổ bóng khi hover |
-| `.needs-validation` | Thẻ `<form>` | Kích hoạt bộ giao diện phản hồi trạng thái hợp lệ / không hợp lệ của Bootstrap |
+| **Hero / Banner** | `.hero-section .container .py-5` | Khu vực đầu trang tự dựng thay thế cho Jumbotron cũ, có gradient và họa tiết |
+| **Ảnh Banner** | `.img-fluid .rounded-4 .shadow` | Hình ảnh tự động co giãn 100% độ rộng cột, bo tròn 4 góc 16px và đổ bóng |
+| **Khối Giới thiệu** | `.row .align-items-center &rarr; .col-lg-6` | Căn giữa theo trục dọc 2 cột ảnh và chữ trên máy tính, tự xếp chồng trên điện thoại |
+| **Lưới Tính năng** | `.row &rarr; .col-12 .col-md-6 .col-lg-3` | Chia 4 cột cân đối ($12/4 = 3$) trên Desktop, 2 cột trên Tablet và 1 cột trên Mobile |
+| **Thẻ Tính năng** | `.card .h-100 .p-4 .border-0 .shadow-sm` | Khối thẻ tính năng có chiều cao bằng nhau 100%, hiệu ứng hover bay nhẹ |
+| **Nút bấm CTA** | `.btn .btn-primary .btn-lg, .btn-light` | Nút bấm nổi bật kích thước lớn, bo tròn mềm mại và chuyển màu khi rê chuột |
+| **Chân trang** | `.bg-dark .text-white .py-4` | Phần chân trang màu tối hiển thị bản quyền và sinh viên thực hiện |
 
 ---
 
 ## 📁 Cấu Trúc Thư Mục
 ```plaintext
 GitProject/
-├── index.html       # Mã nguồn Form đăng ký đầy đủ 8 trường & kịch bản xác thực
-├── style.css        # Tùy biến thẩm mỹ: Google Font Plus Jakarta Sans, Soft Shadow, Gradient Card Header
+├── index.html       # Mã nguồn Landing Page hoàn chỉnh chuẩn Bootstrap 5.3
+├── style.css        # Tùy biến thẩm mỹ: Google Font Plus Jakarta Sans, Hero Radial Gradient, Card Hover
 └── README.md        # Tài liệu thuyết minh dự án và hướng dẫn kiểm tra
 ```
 
 ---
 
 ## 🔍 Hướng Dẫn Kiểm Tra & Chạy Thử
-1. **Mở trực tiếp trên Trình duyệt**: Mở file `index.html` bằng trình duyệt web bất kỳ.
-2. **Kiểm tra trên Desktop**:
-   - Card đăng ký được căn giữa trang sang trọng (`justify-content-center`, `col-lg-8`).
-   - Mật khẩu và Xác nhận mật khẩu dàn thành 2 cột ngang đều nhau (`row g-3`).
-   - Kiểm tra các trường: Radio giới tính (chọn 1), Checkbox sở thích (chọn nhiều), Dropdown quốc gia.
-3. **Kiểm tra chức năng Xác thực dữ liệu (Validation)**:
-   - Thử bấm **Đăng Ký Tài Khoản** khi chưa điền dữ liệu $\rightarrow$ Trình duyệt hiển thị cảnh báo đỏ viền các trường thiếu thông tin.
-   - Thử nhập 2 mật khẩu khác nhau $\rightarrow$ Hệ thống cảnh báo *Mật khẩu không khớp*.
-   - Nhập đầy đủ thông tin hợp lệ $\rightarrow$ Hệ thống hiển thị hộp thông báo xanh **🎉 Đăng ký thành công!**.
-4. **Kiểm tra trên Mobile**:
-   - Bấm `F12` $\rightarrow$ `Ctrl + Shift + M` để chuyển sang chế độ điện thoại.
-   - Form tự động co giãn 100% màn hình, các trường mật khẩu tự xếp dọc dễ thao tác ngón tay.
+1. **Mở trực tiếp trên Trình duyệt**: Mở file `index.html` bằng bất kỳ trình duyệt web nào (Chrome, Edge, Firefox, Cốc Cốc).
+2. **Kiểm tra trên Desktop (> 992px)**:
+   - Thanh Navbar cố định trên cùng (`sticky-top`) với nút đăng ký bo tròn viền.
+   - Khu vực Hero Banner hiển thị 2 cột cân đối: chữ bên trái và hình ảnh sắc nét bên phải.
+   - Khối Giới thiệu ảnh và nội dung song song.
+   - Khối Tính năng dàn trải đều 4 cột trên 1 hàng ngang, thẻ card có hiệu ứng bay nhẹ khi rê chuột.
+   - Khối CTA cuối trang nổi bật với nút bấm lớn.
+3. **Kiểm tra trên Mobile (< 768px)**:
+   - Nhấn `F12` $\rightarrow$ Nhấn tổ hợp `Ctrl + Shift + M` để bật chế độ giả lập điện thoại.
+   - Hình ảnh tự động co nhỏ vừa vặn với chiều rộng màn hình nhờ thuộc tính `.img-fluid`, không gây thanh cuộn ngang vỡ trang.
+   - Tất cả các khối tự động chuyển thành 1 cột dọc thẳng đứng dễ đọc và thao tác ngón tay.
 
 ---
 
 **Tác giả thực hiện:** Vũ Đức Đạt (VuDucDat2006)  
 **Khóa học:** CodeGym Web Development  
-**Nhánh GitHub:** [bootstrap-registration-form](https://github.com/VuDucDat2006/GitProject/tree/bootstrap-registration-form)
+**Nhánh GitHub:** [bootstrap-landing-page-images](https://github.com/VuDucDat2006/GitProject/tree/bootstrap-landing-page-images)
