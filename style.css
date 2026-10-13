@@ -1,0 +1,160 @@
+﻿/* style.css - [Bài tập] Sử dụng Box Model 1 */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background-color: #f8fafc;
+    color: #1e293b;
+    margin: 0;
+    padding: 30px 20px;
+    line-height: 1.5;
+}
+
+.page-header {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.page-header h1 {
+    color: #1e40af;
+    font-size: 26px;
+    margin-bottom: 6px;
+}
+
+.page-header p {
+    color: #64748b;
+    font-size: 15px;
+}
+
+/* Khung bọc chứa 3 thẻ card */
+.cards-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 40px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+/* ==============================================================
+   QUY TẮC CSS THEO ĐÚNG YÊU CẦU ĐỀ BÀI CHO CÁC THẺ .CARD
+   ============================================================== */
+
+/* Mỗi thẻ có width: 280px, height: 150px, padding: 20px, border: 5px solid #3498db, margin: 20px */
+.card {
+    width: 280px;
+    height: 150px;
+    padding: 20px;
+    border: 5px solid #3498db;
+    margin: 20px;
+    border-radius: 6px;
+    color: #ffffff;
+    overflow: hidden;
+}
+
+.card h3 {
+    margin-top: 0;
+    margin-bottom: 8px;
+    font-size: 17px;
+}
+
+.card p {
+    margin: 0;
+    font-size: 13.5px;
+    line-height: 1.4;
+}
+
+/* Thẻ thứ nhất (.card:nth-child(1)): box-sizing: content-box; background-color: #2ecc71; */
+.card:nth-child(1) {
+    box-sizing: content-box;
+    background-color: #2ecc71;
+}
+
+/* Thẻ thứ hai (.card:nth-child(2)): box-sizing: border-box; background-color: #f1c40f; */
+.card:nth-child(2) {
+    box-sizing: border-box;
+    background-color: #f1c40f;
+    color: #1e293b;
+}
+
+/* Thẻ thứ ba (.card:nth-child(3)): box-sizing: border-box; background-color: #e74c3c; */
+.card:nth-child(3) {
+    box-sizing: border-box;
+    background-color: #e74c3c;
+}
+
+/* ==============================================================
+   BẢNG ĐỐI CHIẾU SO SÁNH KÍCH THƯỚC COMPUTED
+   ============================================================== */
+.comparison-section {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 25px 30px;
+    border-radius: 10px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.comparison-section h2 {
+    color: #1e3a8a;
+    font-size: 18px;
+    margin-top: 0;
+    margin-bottom: 16px;
+    border-bottom: 2px solid #e2e8f0;
+    padding-bottom: 8px;
+}
+
+.comparison-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+
+.comparison-table th,
+.comparison-table td {
+    border: 1px solid #cbd5e1;
+    padding: 10px 14px;
+    text-align: left;
+}
+
+.comparison-table th {
+    background-color: #eff6ff;
+    color: #1e3a8a;
+    font-weight: 700;
+}
+
+.highlight-row {
+    background-color: #eff6ff;
+    color: #1d4ed8;
+}
+
+.color-badge {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.bg-green { background-color: #2ecc71; }
+.bg-yellow { background-color: #f1c40f; color: #1e293b; }
+.bg-red { background-color: #e74c3c; }
+
+code {
+    background-color: #f1f5f9;
+    color: #0f172a;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-family: monospace;
+    font-size: 13px;
+}
