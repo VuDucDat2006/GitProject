@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[Thực hành] Tạo menu dọc (Vertical Dropdown Menu)</title>
+    <style>
+        /* 1. Reset thuộc tính căn lề cơ bản */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f0f2f5;
+            color: #333333;
+            padding: 40px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #ffffff;
+            padding: 30px 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+
+        h1 {
+            font-size: 24px;
+            color: #111111;
+            margin-bottom: 10px;
+            border-bottom: 2px solid #000000;
+            padding-bottom: 8px;
+        }
+
+        .instruction {
+            font-size: 15px;
+            color: #555555;
+            margin-bottom: 25px;
+            line-height: 1.6;
+        }
+
+        .demo-area {
+            display: flex;
+            gap: 40px;
+            margin-top: 20px;
+            align-items: flex-start;
+        }
+
+        /* ---------------------------------------------------- */
+        /* 2. ĐỊNH DẠNG MENU DỌC (VERTICAL DROPDOWN MENU) */
+        /* ---------------------------------------------------- */
+
+        #menu {
+            position: relative;
+            z-index: 10;
+        }
+
+        #menu ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        /* Định dạng phần tử li cấp 1 và cấp 2 */
+        #menu ul li {
+            list-style: none;           /* Bỏ ký hiệu đầu dòng (bullet) */
+            position: relative;         /* Điểm neo tọa độ cho menu con absolute */
+            width: 140px;               /* Chiều rộng ô menu */
+            height: 35px;               /* Chiều cao ô menu */
+            padding: 0 15px;            /* Đệm lề trái phải cho chữ bên trong */
+            background-color: black;    /* Màu nền đen */
+            line-height: 35px;          /* Căn giữa dòng chữ theo chiều cao */
+            cursor: pointer;            /* Con trỏ dạng bàn tay */
+            border-bottom: 1px solid #333333;
+            transition: background-color 0.25s ease;
+        }
+
+        /* Định dạng liên kết thẻ a bên trong li */
+        #menu ul li a {
+            text-decoration: none;      /* Bỏ gạch chân liên kết */
+            color: white;               /* Màu chữ trắng */
+            display: block;             /* Chiếm trọn không gian ô li */
+            font-size: 14px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        /* Đổi màu nền khi rê chuột vào mục li */
+        #menu ul li:hover {
+            background-color: #e74c3c;  /* Màu nền đỏ cam nổi bật khi hover */
+        }
+
+        /* Định dạng danh sách menu con (sub-menu) */
+        #menu ul li ul {
+            position: absolute;         /* Định vị tuyệt đối theo li cha */
+            top: 0;                     /* Căn bằng mép trên của li cha */
+            left: 140px;                /* Đặt ngay cạnh phải của li cha (bằng width của li) */
+            visibility: hidden;         /* Mặc định ẩn menu con */
+            opacity: 0;                 /* Tạo hiệu ứng mờ dần */
+            transition: opacity 0.25s ease, visibility 0.25s ease;
+            box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Hiển thị danh sách con khi rê chuột vào li cha tương ứng */
+        #menu ul li:hover > ul {
+            visibility: visible;        /* Hiện menu con */
+            opacity: 1;
+        }
+
+        /* Màu riêng cho menu con để dễ nhận biết phân cấp */
+        #menu ul li ul li {
+            background-color: #222222;
+            border-bottom: 1px solid #444444;
+        }
+
+        #menu ul li ul li:hover {
+            background-color: #c0392b;
+        }
+
+        /* ---------------------------------------------------- */
+        /* 3. KHU VỰC GIẢI THÍCH LÝ THUYẾT */
+        /* ---------------------------------------------------- */
+        .explanation-box {
+            flex: 1;
+            background: #fafafa;
+            border: 1px solid #e1e4e8;
+            border-left: 4px solid #e74c3c;
+            padding: 20px 24px;
+            border-radius: 4px;
+        }
+
+        .explanation-box h3 {
+            margin-top: 0;
+            color: #222222;
+            font-size: 17px;
+            margin-bottom: 12px;
+        }
+
+        .explanation-box ul {
+            margin-left: 20px;
+            font-size: 14px;
+            color: #555555;
+            line-height: 1.8;
+        }
+
+        .explanation-box code {
+            background-color: #eef1f5;
+            padding: 2px 6px;
+            border-radius: 3px;
+            color: #d63031;
+            font-size: 13px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>[Thực hành] Tạo menu dọc (Vertical Dropdown Menu)</h1>
+        <p class="instruction">
+            Rê chuột (hover) vào các mục <strong>Khóa học</strong> hoặc <strong>Dịch vụ</strong> để xem menu con (sub-menu) bay sang bên phải.
+        </p>
+
+        <div class="demo-area">
+            <!-- VÙNG CHỨA MENU DỌC (ID="MENU") THEO ĐỀ BÀI -->
+            <div id="menu">
+                <ul>
+                    <li><a href="#home">Trang chủ</a></li>
+                    <li>
+                        <a href="#courses">Khóa học &#9656;</a>
+                        <ul>
+                            <li><a href="#html">HTML &amp; CSS</a></li>
+                            <li><a href="#js">JavaScript</a></li>
+                            <li><a href="#react">ReactJS</a></li>
+                            <li><a href="#nodejs">Node.js</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#services">Dịch vụ &#9656;</a>
+                        <ul>
+                            <li><a href="#webdesign">Thiết kế Web</a></li>
+                            <li><a href="#appdev">Lập trình App</a></li>
+                            <li><a href="#seo">SEO Marketing</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#blog">Bài viết</a></li>
+                    <li><a href="#about">Giới thiệu</a></li>
+                    <li><a href="#contact">Liên hệ</a></li>
+                </ul>
+            </div>
+
+            <!-- BẢNG GIẢI THÍCH CHI TIẾT CÁC THUỘC TÍNH CSS -->
+            <div class="explanation-box">
+                <h3>💡 Giải thích các thuộc tính quan trọng:</h3>
+                <ul>
+                    <li><code>position: relative;</code> trên <code>li</code>: Đóng vai trò làm mốc toạ độ tham chiếu cho menu con bên trong.</li>
+                    <li><code>position: absolute;</code> trên <code>ul</code> con: Đưa menu con ra khỏi dòng chảy bình thường để định vị tự do cạnh thẻ cha.</li>
+                    <li><code>top: 0; left: 140px;</code> trên <code>ul</code> con: Căn mép trên bằng với mục cha và mép trái nằm ngay cạnh phải (bằng chiều rộng của menu cha).</li>
+                    <li><code>visibility: hidden;</code>: Mặc định ẩn menu con khỏi màn hình.</li>
+                    <li><code>#menu ul li:hover &gt; ul { visibility: visible; }</code>: Kích hoạt hiển thị menu con khi người dùng di chuột qua mục cha.</li>
+                    <li><code>list-style: none;</code>: Xóa bỏ các ký hiệu dấu chấm đen đầu mục danh sách.</li>
+                    <li><code>text-decoration: none; color: white;</code>: Bỏ gạch chân liên kết và đổi màu chữ thành màu trắng.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
