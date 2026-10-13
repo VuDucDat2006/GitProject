@@ -1,0 +1,355 @@
+/* ========================================================
+   1. RESET & CẤU HÌNH GIAO DIỆN CHUNG
+   ======================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: #f0f2f5;
+    color: #333333;
+    line-height: 1.6;
+    padding: 30px 15px;
+}
+
+.site-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+}
+
+/* ========================================================
+   2. THẺ HEADER (ĐẦU TRANG)
+   ======================================================== */
+header.site-header {
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    color: #ffffff;
+    padding: 35px 30px;
+    border-bottom: 3px solid #f39c12;
+}
+
+.header-inner .logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 8px;
+}
+
+.header-inner .logo-icon {
+    font-size: 32px;
+}
+
+.header-inner h1 {
+    font-size: 28px;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+}
+
+.header-inner .tagline {
+    font-size: 15px;
+    color: #dbeafe;
+    margin: 0;
+}
+
+/* ========================================================
+   3. THẺ NAV (THANH ĐIỀU HƯỚNG)
+   ======================================================== */
+nav.site-nav {
+    background-color: #1e293b;
+    padding: 0 25px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+nav.site-nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+nav.site-nav ul li a {
+    display: block;
+    padding: 14px 18px;
+    color: #cbd5e1;
+    text-decoration: none;
+    font-size: 14.5px;
+    font-weight: 600;
+    transition: all 0.25s ease;
+}
+
+nav.site-nav ul li a:hover,
+nav.site-nav ul li a.active {
+    color: #ffffff;
+    background-color: #334155;
+    border-bottom: 3px solid #f39c12;
+}
+
+/* ========================================================
+   4. THÂN TRANG: KHU VỰC CHỨA SECTION & ASIDE
+   ======================================================== */
+.content-body {
+    display: flex;
+    gap: 30px;
+    padding: 30px;
+    align-items: flex-start;
+}
+
+/* --------------------------------------------------------
+   THẺ SECTION (KHU VỰC BÀI VIẾT CHÍNH)
+   -------------------------------------------------------- */
+section.main-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+/* THẺ ARTICLE (BÀI VIẾT ĐỘC LẬP) */
+article.post-article {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 24px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+article.post-article:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.article-header h2 {
+    font-size: 20px;
+    color: #1e293b;
+    margin-bottom: 8px;
+    line-height: 1.4;
+}
+
+.post-meta {
+    font-size: 13px;
+    color: #64748b;
+    margin-bottom: 16px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.article-content p {
+    font-size: 15px;
+    color: #475569;
+    margin-bottom: 15px;
+    line-height: 1.7;
+}
+
+.callout-box {
+    background-color: #f0fdf4;
+    border-left: 4px solid #22c55e;
+    padding: 16px 20px;
+    border-radius: 0 6px 6px 0;
+    margin: 15px 0;
+}
+
+.callout-box h4 {
+    color: #15803d;
+    font-size: 15px;
+    margin-bottom: 8px;
+}
+
+.callout-box ul {
+    margin-left: 20px;
+    font-size: 14px;
+    color: #166534;
+    line-height: 1.7;
+}
+
+.tags-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.tag-card {
+    background-color: #f8fafc;
+    border: 1px solid #e2e8f0;
+    padding: 14px;
+    border-radius: 6px;
+}
+
+.tag-card code {
+    display: inline-block;
+    background-color: #e0e7ff;
+    color: #4338ca;
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 13px;
+    margin-bottom: 6px;
+}
+
+.tag-card p {
+    font-size: 13px;
+    color: #64748b;
+    margin-bottom: 0;
+    line-height: 1.5;
+}
+
+/* --------------------------------------------------------
+   THẺ ASIDE (SIDEBAR BÊN LỀ)
+   -------------------------------------------------------- */
+aside.sidebar-aside {
+    width: 320px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.widget {
+    background-color: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.widget h3 {
+    font-size: 16.5px;
+    color: #1e293b;
+    border-bottom: 2px solid #e2e8f0;
+    padding-bottom: 8px;
+    margin-bottom: 14px;
+}
+
+.aside-links {
+    list-style: none;
+}
+
+.aside-links li {
+    margin-bottom: 8px;
+    border-bottom: 1px dashed #e2e8f0;
+    padding-bottom: 6px;
+}
+
+.aside-links li:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.aside-links li a {
+    color: #475569;
+    text-decoration: none;
+    font-size: 14px;
+    transition: all 0.2s;
+    display: block;
+}
+
+.aside-links li a:hover {
+    color: #2563eb;
+    padding-left: 6px;
+    font-weight: 600;
+}
+
+.trending-posts {
+    list-style: none;
+}
+
+.trending-posts li {
+    margin-bottom: 12px;
+}
+
+.trending-posts li a {
+    display: block;
+    color: #334155;
+    text-decoration: none;
+    font-size: 13.5px;
+    font-weight: 600;
+    line-height: 1.4;
+    transition: color 0.2s;
+}
+
+.trending-posts li a:hover {
+    color: #2563eb;
+}
+
+.trending-posts .post-date {
+    font-size: 12px;
+    color: #94a3b8;
+}
+
+.author-widget {
+    background-color: #fefce8;
+    border-color: #fef08a;
+    border-left: 4px solid #eab308;
+}
+
+.author-widget p {
+    font-size: 13.5px;
+    color: #713f12;
+    margin-bottom: 6px;
+}
+
+.author-widget code {
+    background-color: #ffffff;
+    padding: 2px 6px;
+    border-radius: 4px;
+    color: #b45309;
+    font-weight: bold;
+}
+
+/* ========================================================
+   5. THẺ FOOTER (CHÂN TRANG)
+   ======================================================== */
+footer.site-footer {
+    background-color: #0f172a;
+    color: #94a3b8;
+    padding: 25px 30px;
+    border-top: 3px solid #1e3c72;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    font-size: 13.5px;
+}
+
+.footer-links {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+.footer-links li a {
+    color: #cbd5e1;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.footer-links li a:hover {
+    color: #f39c12;
+}
+
+/* ========================================================
+   6. RESPONSIVE DESIGN (TƯƠNG THÍCH MÀN HÌNH DI ĐỘNG)
+   ======================================================== */
+@media (max-width: 860px) {
+    .content-body {
+        flex-direction: column;
+    }
+
+    aside.sidebar-aside {
+        width: 100%;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+}

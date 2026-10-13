@@ -1,26 +1,26 @@
-﻿# GitProject
+﻿# [Bài tập] Tạo layout với các thẻ HTML5 và CSS
 
-Dự án thực hành các thao tác cơ bản với Git và GitHub (CodeGym).
+Dự án áp dụng đầy đủ các thẻ ngữ nghĩa (**Semantic HTML5 Tags**) kết hợp hệ thống bố cục hiện đại bằng **CSS Flexbox** để xây dựng cấu trúc website chuẩn SEO, dễ tiếp cận và tối ưu trải nghiệm người dùng.
 
-## Mục Tiêu Thực Hành
-- Làm quen và thực hành các thao tác cơ bản với Git và GitHub.
-- Nắm được quy trình làm việc từ tạo repository, clone dự án về máy tính, đến đẩy mã nguồn lên GitHub.
+## 📌 Các Thẻ Ngữ Nghĩa HTML5 Được Sử Dụng
+1. **\<header>\**: Phân vùng đầu trang chứa logo, tên thương hiệu và slogan giới thiệu.
+2. **\<nav>\**: Thanh điều hướng chứa danh sách liên kết chính của trang web.
+3. **\<section>\**: Khu vực chứa các bài viết chính, phân chia theo chủ đề học tập và công nghệ.
+4. **\<article>\**: Đại diện cho từng bài viết hoàn chỉnh, độc lập (*standalone content*) bên trong section.
+5. **\<aside>\**: Cột bên lề (*sidebar*) chứa chuyên mục nổi bật, bài viết xem nhiều và thông tin tác giả.
+6. **\<footer>\**: Chân trang chứa thông tin bản quyền và liên kết điều khoản chính sách.
 
-## Cấu Trúc Dự Án
-```plaintext
+## 🛠 Cấu Trúc Thư Mục
+\\\plaintext
 GitProject/
-├── README.md
-└── source/
-    ├── index.html
-    └── news.html
-```
+├── index.html       # Mã nguồn HTML5 chuẩn Semantic Tags
+├── style.css        # Định dạng CSS Flexbox, màu sắc, Typography & Responsive
+└── README.md        # Hướng dẫn chi tiết dự án
+\\\
 
-## Các Bước Đã Thực Hiện
-1. Tạo repository `GitProject` trên GitHub.
-2. Clone repository về máy tính cá nhân bằng lệnh `git clone`.
-3. Tạo file `README.md`, đưa vào Staging Area (`git add`) và commit (`git commit -m "Add README.md"`).
-4. Đẩy file `README.md` lên GitHub (`git push origin main`).
-5. Tạo thư mục `source` chứa `index.html` và `news.html`.
-6. Đẩy thư mục `source` lên GitHub (`git add source/`, `git commit -m "Add source files"`, `git push origin main`).
+## 🚀 Cách Xem Và Kiểm Tra Dự Án
+- Mở trực tiếp file \index.html\ trên bất kỳ trình duyệt web nào.
+- Quan sát cấu trúc giao diện mạch lạc, chuẩn SEO và khả năng co giãn linh hoạt (Responsive) trên cả PC, máy tính bảng và điện thoại di động.
+- Xem trực tiếp trên GitHub: [HTML5 Semantic Layout](https://github.com/VuDucDat2006/GitProject/tree/html5-semantic-layout)
 
 Tác giả: Vũ Đức Đạt (VuDucDat2006)
